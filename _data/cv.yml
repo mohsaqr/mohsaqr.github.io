@@ -292,57 +292,19 @@
   contents:
     - title: Major Journals
       items:
-           - Computers \& Education
-          - Computers In Human Behaviors
-          - British Journal Of Education Technology
-          - Journal of the Learning Sciences
-          - Studies in Higher Education
-          - Behaviour \& Information Technology
-          - British Journal of Educational Psychology
-          - Journal Of Computer Assisted Learning
-          - International Journal of Computer-Supported Collaborative Learning
-          - Journal Of Learning Analytics
-          - IEEE Transactions on Learning Technologies
-          - PLoS One
-          - Advances in Health Sciences Education
-          - Medical Teacher
-          - International Journal Of Computers And Applications
-          - WIREs Data Mining and Knowledge Discovery
-          - ACM Transactions on Computing Education
-          - Complexity
-          - Artificial Intelligence Review
-          - IEEE Access
-          - Memory
-          - BMC Medical Education
-          - Koli Calling Conference
-          - Canadian Journal of Learning and Technology
-          - International Society of the Learning Sciences Conference
-          - Networks in the Global World
-          - International Journal Of Health Sciences
-          - Interactive Learning Environments
-          - Advances In Medical Education And Practice
-          - Smart Learning Environments
-          - International Journal of Emerging Technologies In Learning
-          - International Journal Of Learning Analytics And Artificial Intelligence For Education
-          - Multimodal Learning Analytics Book
-          - Computing Education Book
-          - Quality of Life Research
-          - International Journal of Computers for Mathematical Learning
-          - Learning and Motivation
-          - Expert Systems With Applications
-    - title: Conferences
+        - Computers & Education
+        - Computers In Human Behaviors
+        - British Journal Of Education Technology
+        - Journal of the Learning Sciences
+        - Studies in Higher Education
+        - IEEE Transactions on Learning Technologies
+        - PLoS One
+    - title: Major Conferences
       items:
         - Learning Analytics Conference And Knowledge (LAK)
         - International Conference on Computers in Education
         - European Conference on Technology-Enhanced Learning (EC-TEL)
         - International Conference on Artificial Intelligence in Education
-        - Education Data Mining Conference
-        - FLAIEC Conference
-        - E-Learning Conference Belgrade
-        - SIMEC International Conference In Medical Education
-        - Augmented Intelligence To Empower Education Conference
-       - ICCE Sub-Conference on Advanced Learning Technologies (ALT)
-        - International Conference on Computers in Education
 
 - title: Professional Reviews of Grant Applications
   type: list

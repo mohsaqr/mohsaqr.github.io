@@ -1,4 +1,4 @@
-title: Mohammed Saqr Website
+title: Dr Mohammed Saqr, PhD
 first_name: Mohammed
 middle_name: null
 last_name: Saqr
@@ -277,7 +277,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Saqr]
-  first_name: [Mohammed]
+  first_name: [M.]
 
   style: apa
   locale: en

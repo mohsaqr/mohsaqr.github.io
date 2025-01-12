@@ -15,7 +15,7 @@ footer_text: >
   href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a
   href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from
   <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: Computer Science, Artificial Intelligence, Learning Analytics, Network Science, Science of Science, Medicine # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -88,8 +88,8 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Saqr Blog # blog_name will be displayed in your blog page
+blog_description: A blog by Mohammed Saqr
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -99,7 +99,7 @@ pagination:
 
 related_blog_posts:
   enabled: false
-  max_related: 3
+  max_related: 0
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
@@ -155,12 +155,12 @@ collections:
     permalink: /:collection/:title/
 
 announcements:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
@@ -276,8 +276,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Saqr]
+  first_name: [Mohammed]
 
   style: apa
   locale: en
@@ -331,6 +331,7 @@ filtered_bibtex_keywords:
     selected,
     slides,
     supp,
+    note,
     video,
     website,
   ]

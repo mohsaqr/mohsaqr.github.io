@@ -1,481 +1,323 @@
-- title: Curriculum Vitae
+- title: General Information
   type: map
   contents:
-    - name: Name
-      value: Mohammed Saqr
-    - name: Title
-      value: Associate Professor of Computer Science
-    - name: Affiliation
-      value: Head of Learning Analytics Unit, University of Eastern Finland
-
-- title: Personal Statement
-  type: map
-  contents:
-      - value: "I am an Associate Professor of Computer Science at the School of Computing, University of Eastern Finland (UEF), where I also lead UEF’s Learning Analytics Unit. Over the past five years, my unit ––– although small ––– has been the most productive laboratory in Europe and ranked second worldwide in learning analytics research in 2023.\n\nIn the field of \\textit{learning analytics}, I am the third most published author globally, according to \\texttt{Web of Science} and \\texttt{Scopus} and I have more first-author publications than any other researcher in the field. My work has frequently appeared in prestigious outlets, including \\textit{Computers and Education}, the highest-ranked empirical journal in educational technology, where I have more publications than any other researcher based in Finland. My scholarly impact is reflected in several international accolades, including the \textbf{Stanford Top 2\% Scientist Ranking} in 2024 and awards for best papers at LAK 2024, ICCE 2020, SITE 2022, TEEM 2023 and 2024, nominations for ECTEL 2024 and ICALT 2024 and was honored with the \textbf{Europe Emerging Scholar Award} in 2023. My research has secured funding from esteemed organizations, such as the \\textit{Academy of Finland} (as Principal Investigator) and the \\textit{Swedish Research Council} (as Co-Principal Investigator). I serve on the editorial boards of six prominent journals, including the \\textit{British Journal of Educational Technology}, \\textit{IEEE Transactions on Learning Technologies}, and \\textit{PLOS ONE}. I have also chaired several conference tracks, been invited for over 20 keynotes and guest lectures, and contributed to special issues as an editor. Notably, I collaborate with over 200 researchers from 30 countries and have consulted for governmental organizations and private enterprises. Additionally, I have participated in the evaluation of the \\textit{World Academy of Sciences}, a UNESCO organization."
-
-
-- title: Personal Details
-  type: map
-  contents:
-    - name: Name
+    - name: Full Name
       value: Mohammed Saqr
     - name: Full Legal Name
       value: Mohamed Sacr Abdelgalil
+    - name: Current Position
+      value: Associate Professor of Computer Science, Head of Learning Analytics Unit
+    - name: Institution
+      value: University of Eastern Finland
     - name: Professional Website
-      value: <a href="https://saqr.me">https://saqr.me</a>
+      value: https://saqr.me
     - name: ORCID
-      value: <a href="https://orcid.org/0000-0001-5881-3109">https://orcid.org/0000-0001-5881-3109</a>
+      value: https://orcid.org/0000-0001-5881-3109
     - name: Google Scholar
-      value: <a href="https://scholar.google.com/citations?user=U-O6R7YAAAAJ">https://scholar.google.com/citations?user=U-O6R7YAAAAJ</a>
+      value: https://scholar.google.com/citations?user=U-O6R7YAAAAJ
     - name: Web of Science ResearcherID
       value: AAH-2520-2020
     - name: Scopus ID
       value: 57193957679
 
+- title: Personal Statement
+  type: text
+  contents: >
+    I am an Associate Professor of Computer Science at the School of Computing, University of Eastern Finland (UEF), where I also lead UEF's Learning Analytics Unit. Over the past five years, my unit ––– although small ––– has been the most productive laboratory in Europe and ranked second worldwide in learning analytics research in 2023. In the field of learning analytics, I am the third most published author globally, according to Web of Science and Scopus and I have more first-author publications than any other researcher in the field. My work has frequently appeared in prestigious outlets, including Computers and Education, the highest-ranked empirical journal in educational technology, where I have more publications than any other researcher based in Finland. My scholarly impact is reflected in several international accolades, including the Stanford Top 2% Scientist Ranking in 2024 and awards for best papers at LAK 2024, ICCE 2020, SITE 2022, TEEM 2023 and 2024, nominations for ECTEL 2024 and ICALT 2024 and was honored with the Europe Emerging Scholar Award in 2023. My research has secured funding from esteemed organizations, such as the Academy of Finland (as Principal Investigator) and the Swedish Research Council (as Co-Principal Investigator). I serve on the editorial boards of six prominent journals, including the British Journal of Educational Technology, IEEE Transactions on Learning Technologies, and PLOS ONE. I have also chaired several conference tracks, been invited for over 20 keynotes and guest lectures, and contributed to special issues as an editor. Notably, I collaborate with over 200 researchers from 30 countries and have consulted for governmental organizations and private enterprises. Additionally, I have participated in the evaluation of the World Academy of Sciences, a UNESCO organization.
+
 - title: Education and Key Qualifications
   type: time_table
   contents:
-    - title: "PhD in Computer Science and Information Society, Department of Computer and Systems Sciences, Stockholm University (Sweden). Title: ``Using Learning Analytics to Understand and Support Collaborative Learning''"
-      year: 22/10/2018
-    - title: "Title of Docent in Learning Analytics, Oulu University (Finland)"
-      year: 08/06/2022
+    - title: PhD in Computer Science and Information Society
+      institution: Stockholm University, Department of Computer and Systems Sciences
+      year: 2018
+      description:
+        - "Thesis: Using Learning Analytics to Understand and Support Collaborative Learning"
+    - title: Title of Docent in Learning Analytics
+      institution: Oulu University
+      year: 2022
 
-- title: Current Position
+- title: Academic Positions
   type: time_table
   contents:
-    - title: "Associate Professor of Computer Science, Head of Learning Analytics Unit, Faculty of Science, Forestry and Technology, University of Eastern Finland (Finland)"
-      year: "2023 - Present"
-
-- title: Previous Positions
-  type: time_table
-  contents:
-    - title: Senior Researcher, University of Eastern Finland (UEF), School of Computing (Finland)
-      year: "2020-2023"
-    - title: Postdoctoral Researcher, KTH Royal Institute of Technology, School of Electrical Engineering and Computer Science (combined with UEF) (Sweden)
-      year: "2020-2021"
-    - title: Postdoctoral Researcher, University of Eastern Finland, School of Computing (Finland)
-      year: "2019-2020"
-    - title: Researcher, Stockholm University, Department of Computer and System Sciences (Sweden)
+    - title: Associate Professor of Computer Science
+      institution: University of Eastern Finland
+      year: 2023 - Present
+      description:
+        - Head of Learning Analytics Unit
+        - Faculty of Science, Forestry and Technology
+    - title: Senior Researcher
+      institution: University of Eastern Finland, School of Computing
+      year: 2020-2023
+    - title: Postdoctoral Researcher
+      institution: KTH Royal Institute of Technology
+      year: 2020-2021
+      description:
+        - School of Electrical Engineering and Computer Science (combined with UEF)
+    - title: Postdoctoral Researcher
+      institution: University of Eastern Finland, School of Computing
+      year: 2019-2020
+    - title: Researcher
+      institution: Stockholm University
       year: 2019
-    - title: Postdoctoral Researcher, Paris Cité University, Center for Research Interdisciplinarity (France)
-      year: "2018-2019"
-- title: Awards
+      description:
+        - Department of Computer and System Sciences
+    - title: Postdoctoral Researcher
+      institution: Paris Cité University
+      year: 2018-2019
+      description:
+        - Center for Research Interdisciplinarity
+
+- title: Awards and Honors
   type: time_table
   contents:
     - year: 2024
       items:
-        - "<b>Best Full Paper Award</b> at International Conference on Learning Analytics and Knowledge (LAK24), Kyoto, Japan"
-    - year: 2024
-      items:
-        - "<b>Best Paper Award</b> at TEEM 2024 Conference, Spain. Track: ``Unveiling Learning Analytics and Grey-Box Modelling: Bridging Theory and Data-Driven Insights''"
-    - year: 2024
-      items:
-        - "Nominated for <b>Best Paper Award</b> at IEEE ICALT 2024 Conference, Nicosia, Cyprus"
-    - year: 2024
-      items:
-        - "Nominated for <b>Best Poster Award</b> at EC-TEL 2024 Conference, Krems, Austria"
+        - Best Full Paper Award at International Conference on Learning Analytics and Knowledge (LAK24)
+        - Best Paper Award at TEEM 2024 Conference
+        - Nominated for Best Paper Award at IEEE ICALT 2024 Conference
+        - Nominated for Best Poster Award at EC-TEL 2024 Conference
     - year: 2023
       items:
-        - "Europe <b>Emerging Scholar Award</b> by the Society of Learning Analytics Research (SoLAR) <br> <i>``Noteworthy research leading to significant knowledge and understanding of learning analytics and the impact of their research on learning analytics application adoption and professional development in Europe''</i>"
-    - year: 2023
-      items:
-        - "<b>Best Paper Award</b> at TEEM 2023 Conference, Bragança, Portugal. Track: ``Data-Driven Education: Overcoming Hurdles for the Future of Learning Analytics''"
-    - year: 2023
-      items:
-        - "<b>Best Paper Award</b> at TEEM 2023 Conference, Bragança, Portugal. Track: ``Gamification and Games for Learning''"
+        - Europe Emerging Scholar Award by the Society of Learning Analytics Research (SoLAR)
+        - Best Paper Award at TEEM 2023 Conference (Track: Data-Driven Education)
+        - Best Paper Award at TEEM 2023 Conference (Track: Gamification and Games for Learning)
     - year: 2022
       items:
-        - "<b>Outstanding Paper Award</b> at SITE 2022 Conference"
+        - Outstanding Paper Award at SITE 2022 Conference
     - year: 2020
       items:
-        - "<b>Best Paper Award</b> at the 28th International Conference on Computers in Education (ICCE 2020)"
+        - Best Paper Award at the 28th International Conference on Computers in Education (ICCE 2020)
     - year: 2018
       items:
-        - "<b>Best Thesis Award</b>, Stockholm University Computer Science Department"
+        - Best Thesis Award, Stockholm University Computer Science Department
+
 - title: Research Funding
   type: time_table
   contents:
-    - year: 2022:2025
-      title: "Finnish Research Council (PI): TOPEILA, 231.6K Euros (2022:2025) Toward Precision explainable Artificial Intelligence in Education"
-    - year: 2020
-      title: "European Council Erasmus Project (PI): ENVISION, 288K Euros (46K for UEF) (2020)"
-    - year: 2021
-      title: "European Council Erasmus Project (Co-PI): ILEDA, 227K Euros (61K for UEF) (2021)"
-    - year: 2019
-      title: "Swedish Research Council (Co-PI 20%): 6 million SEK (2019)"
-    - year: 2023
-      title: "Finnish National Agency for Education: 17.1K Euros (2023)"
-    - year: 2018
-      title: "Office of Academic Innovation, University of Michigan (USA): 10K USD (2018)"
-    - year: Other Team Member Funding
+    - title: TOPEILA
+      institution: Finnish Research Council
+      year: 2022-2025
       description:
-        - "BalticSeaBioMed, 68K Euros (2023)"
-        - "Finnish Academy of Science ``Generation AI'', 886.391 Euros (2022)"
-        - "European Council Erasmus Project (Co-PI): ISILA, 250K Euros (78K for UEF) (2023)"
+        - Role: Principal Investigator
+        - Amount: 231.6K Euros
+        - "Project: Toward Precision explainable Artificial Intelligence in Education"
+    - title: ENVISION
+      institution: European Council Erasmus Project
+      year: 2020
+      description:
+        - Role: Principal Investigator
+        - "Total Amount: 288K Euros (46K for UEF)"
+    - title: ILEDA
+      institution: European Council Erasmus Project
+      year: 2021
+      description:
+        - Role: Co-Principal Investigator
+        - "Total Amount: 227K Euros (61K for UEF)"
+    - title: Swedish Research Council Grant
+      year: 2019
+      description:
+        - Role: Co-Principal Investigator (20%)
+        - Amount: 6 million SEK
+    - title: Other Team Member Funding
+      description:
+        - "BalticSeaBioMed: 68K Euros (2023)"
+        - "Finnish Academy of Science 'Generation AI': 886.391 Euros (2022)"
+        - "ISILA Erasmus Project: 250K Euros (78K for UEF) (2023)"
 
-- title: Key Academic Merits and Roles
+- title: Editorial Roles
   type: nested_list
   contents:
     - title: Editorial Board Memberships
       items:
-        - "<b>2023–Present:</b> Editorial Board Member, <i>British Journal of Educational Technology</i>"
-        - "<b>2022–Present:</b> Associate Editor, <i>IEEE Transactions on Learning Technologies</i>"
-        - "<b>2019–Present:</b> Academic Editor, <i>PLOS One</i>"
-        - "<b>2022–Present:</b> Associate Editor, <i>Frontiers in Computer Science</i>"
-        - "<b>2022–Present:</b> Associate Editor, <i>Frontiers in Education</i>"
-    - title: Editorial Leadership Roles
+        - "British Journal of Educational Technology (2023–Present)"
+        - "IEEE Transactions on Learning Technologies (2022–Present)"
+        - "PLOS One (2019–Present)"
+        - "Frontiers in Computer Science (2022–Present)"
+        - "Frontiers in Education (2022–Present)"
+    - title: Editor-in-Chief Positions
       items:
-        - "<b>2023:204</b> Editor-in-Chief, <i>Book title: Learning Analytics Methods and Tutorials</i>, <i>Springer</i>"
-        - "<b>2021–2022:</b> Editor-in-Chief, <i>Book title:Past, Present and Future of Computing Education Research A Global Perspective</i>, <i>Springer</i>"
-        - "<b>2021:</b> Special Collection Editor, <i>Diversity in the Social Sciences</i>, <i>Frontiers in Education</i>"
-        - "<b>2021:</b> Special Collection Editor, <i>Reduced Inequalities</i>, <i>Frontiers in Education</i>"
-        - "<b>2019:</b> Academic Editor, <i>Science of Stories Collection</i>, <i>PLOS One</i>"
-        - "<b>2024–2025:</b> Editor-in-Chief, <i>Book title: AI, Precision and Complexity Book (forthcoming)</i>, <i>Springer</i>"
-    - title: Editor Roles in Special Issues
+        - "Learning Analytics Methods and Tutorials, Springer (2023-2024)"
+        - "Past, Present and Future of Computing Education Research: A Global Perspective, Springer (2021-2022)"
+        - "Diversity in the Social Sciences, Frontiers in Education (2021)"
+        - "Reduced Inequalities, Frontiers in Education (2021)"
+        - "Science of Stories Collection, PLOS One (2019)"
+        - "AI, Precision and Complexity Book, Springer (forthcoming, 2024-2025)"
+    - title: Special Issue Editor
       items:
-        - "<b>2025–2026:</b> Guest Editor, Special Issue on <i>Complex Dynamics</i>, <i>British Journal of Educational Technology</i>"
-        - "<b>2023–2024:</b> Guest Editor, Special Issue on <i>Teaching and Learning Artificial Intelligence</i>, <i>Discover Education</i>"
-        - "<b>2024–2025:</b> Guest Editor, Special Issue on <i>Global Perspectives on Technology</i>, <i>British Journal of Educational Technology</i>"
-        - "<b>2024–2025:</b> Guest Editor, Special Issue on <i>AI and Diversity</i>, <i>Education Review</i>"
-        - "<b>2023–2024:</b> Guest Editor, Special Issue on <i>Diversity</i>, <i>Learning and Individual Differences</i>"
-        - "<b>2023:</b> Special Issue Editor, <i>Education Reimagined</i>, <i>Frontiers in Psychology: Education</i>"
+        - "Complex Dynamics, British Journal of Educational Technology (2025-2026)"
+        - "Teaching and Learning Artificial Intelligence, Discover Education (2023-2024)"
+        - "Global Perspectives on Technology, British Journal of Educational Technology (2024-2025)"
+        - "AI and Diversity, Education Review (2024-2025)"
+        - "Diversity, Learning and Individual Differences (2023-2024)"
+        - "Education Reimagined, Frontiers in Psychology: Education (2023)"
 
-- title: Organizing Committee
-  type: time_table
+- title: Conference Organization
+  type: nested_list
   contents:
-    - title: Finnish Learning Analytics and Artificial Intelligence in Education (FLAIEC)
-      year: 2024
-    - title: E-learning Conference, Belgrade, Serbia
-      year: 2024
-    - title: E-learning Conference, Belgrade, Serbia
-      year: 2023
-    - title: Nordic Learning Analytics Summer Institute
-      year: 2021
-    - title: NetSciLA Workshop (LAK22, LAK21)
-      year: "2022, 2021"
-    - title: Finnish Learning Analytics and AI in Education (FLAIEC)
-      year: 2022
-    - title: Quantitative Ethnography as a Framework for Network Analysis (LAK20)
-      year: 2020
-
-- title: Conference Track Chair
-  type: time_table
-  contents:
-    - title: Chair, Learning Analytics Track, International Conference on Computers in Education (ICCE)
-      year: "2021 (28th edition), 2022 (29th edition)"
-    - title: Chair, Learning Analytics Track, Technological Ecosystems for Enhancing Multiculturality (TEEM)
-      year: "2023 (11th edition)"
-    - title: Senior Program Committee, International Conference on Learning Analytics & Knowledge (LAK)
-      year: 2025
-    - title: Senior Program Committee, International Conference on Artificial Intelligence in Education (AIED)
-      year: 2024
-    - title: Senior Program Committee, European Conference on Technology-Enhanced Learning (EC-TEL)
-      year: 2023
+    - title: Conference Track Chair
+      items:
+        - "Learning Analytics Track, ICCE 2021 (28th edition) and 2022 (29th edition)"
+        - "Learning Analytics Track, TEEM 2023 (11th edition)"
+        - "Senior Program Committee, LAK 2025"
+        - "Senior Program Committee, AIED 2024"
+        - "Senior Program Committee, EC-TEL 2023"
+    - title: Organizing Committee
+      items:
+        - "Finnish Learning Analytics and Artificial Intelligence in Education (FLAIEC) 2024"
+        - "E-learning Conference, Belgrade, Serbia (2023, 2024)"
+        - "Nordic Learning Analytics Summer Institute 2021"
+        - "NetSciLA Workshop (LAK22, LAK21)"
+        - "FLAIEC 2022"
+        - "Quantitative Ethnography Workshop LAK20"
 
 - title: Proceedings Editor
   type: time_table
   contents:
-    - title: The Thirteenth International Conference on E-learning
-      year: "2024 (forthcoming)"
-    - title: Technology-Enhanced Learning in Laboratories Symposium
-      year: 2023
-    - title: The Thirteenth International Conference on E-learning
-      year: 2022
-    - title: Finnish Learning Analytics and AI in Education Conference
-      year: 2022
-    - title: Networks and Learning Analytics: Addressing Educational Challenges
-      year: 2022
-    - title: Using Network Science in Learning Analytics: Building Bridges towards a Common Agenda
-      year: 2022
-    - title: "STELLA Symposium 2020: Harnessing the Potentials of Technology to Support Self-Directed Language Learning in Online Learning Settings"
-      year: 2020
-
+    - year: 2024
+      items:
+        - The Thirteenth International Conference on E-learning (forthcoming)
+    - year: 2023
+      items:
+        - Technology-Enhanced Learning in Laboratories Symposium
+    - year: 2022
+      items:
+        - The Thirteenth International Conference on E-learning
+        - Finnish Learning Analytics and AI in Education Conference
+        - Networks and Learning Analytics: Addressing Educational Challenges
+        - Using Network Science in Learning Analytics: Building Bridges towards a Common Agenda
+    - year: 2020
+      items:
+        - STELLA Symposium: Harnessing the Potentials of Technology to Support Self-Directed Language Learning
 
 - title: Invited Speaker and Lectures
   type: time_table
   contents:
-    - title: "Have been invited to give 20+ keynotes and lectures, including:"
-    - title: "Invited Keynote - Finnish Learning Analytics and Artificial Intelligence in Education"
-      year: 2024
-    - title: "Invited Guest Lecture - Aalto University, Finland"
-      year: 2024
-    - title: "Invited Guest Lecture - University of Technology Sydney, Australia"
-      year: 2024
-    - title: "Invited Guest Lecture - Monash University, Australia"
-      year: 2024
-    - title: "Invited Guest Lecture - Melbourne University, Australia"
-      year: 2024
-    - title: "Invited Guest Lecture - Toulouse University, France"
-      year: 2024
-    - title: "Invited Keynote - 14th International Conference on eLearning"
-      year: 2023
-    - title: "Invited Guest Lecture - Centre for the Science of Learning & Technology (SLATE)"
-      year: 2023
-    - title: "Invited Keynote - Helsinki Node Network Analysis Research on Teaching and Learning"
-      year: 2023
-    - title: "Invited Keynote - Spanish Network of Learning Analytics (SNOLA)"
-      year: 2021
-    - title: "Invited Lecture - Bridging from Remote to In-Person Teaching, Åbo Akademi University"
-      year: 2022
-    - title: "Invited Lecture - Swedish Higher Education and E-Learning (HEEL)"
-      year: 2021
-    - title: "Invited Lecture - Virtual Congress on E-learning Design and Use of Learning Analytics"
-      year: 2020
-    - title: "Other invited lectures were given at:"
-      description:
-        - "University of Bergen, Norway"
-        - "Osnabruck University, Germany"
-        - "Turku University, Finland"
-        - "Digital Futures, Sweden"
-        - "Leeds University, UK"
-        - "Kassel University, Germany"
-        - "Oulu University, Finland"
-        - "American University Cairo, Egypt"
-        - "Åbo Akademi, Finland"
+    - year: 2024
+      items:
+        - "Keynote: Finnish Learning Analytics and Artificial Intelligence in Education"
+        - "Guest Lecture: Aalto University, Finland"
+        - "Guest Lecture: University of Technology Sydney, Australia"
+        - "Guest Lecture: Monash University, Australia"
+        - "Guest Lecture: Melbourne University, Australia"
+        - "Guest Lecture: Toulouse University, France"
+    - year: 2023
+      items:
+        - "Keynote: 14th International Conference on eLearning"
+        - "Guest Lecture: Centre for the Science of Learning & Technology (SLATE)"
+        - "Keynote: Helsinki Node Network Analysis Research on Teaching and Learning"
+    - year: 2021-2022
+      items:
+        - "Keynote: Spanish Network of Learning Analytics (SNOLA)"
+        - "Lecture: Bridging from Remote to In-Person Teaching, Åbo Akademi University"
+        - "Lecture: Swedish Higher Education and E-Learning (HEEL)"
 
 - title: Research Stays
   type: time_table
   contents:
-    - title: Monash University (Australia)
-      year: November 2024
-    - title: Universidad Politécnica de Madrid (Spain)
-      year: May 2022
-    - title: Osnabrück University (Germany)
-      year: November 2022
-    - title: Oulu University (Finland)
-      year: April 2023
-    - title: Cairo University (Egypt)
-      year: November 2023
+    - year: 2024
+      items:
+        - Monash University (Australia)
+    - year: 2023
+      items:
+        - Cairo University (Egypt)
+        - Oulu University (Finland)
+    - year: 2022
+      items:
+        - Universidad Politécnica de Madrid (Spain)
+        - Osnabrück University (Germany)
 
 - title: Supervision
   type: nested_list
   contents:
-      - title: Completed PhD Theses
-        items:
-          - "Elmoazen, Ramy. 2024. “Using Learning Analytics to Capture Social and Temporal Dimensions of Collaborative Learning.” Itä-Suomen yliopisto. https://erepo.uef.fi/handle/123456789/33491."
-      - title: "Completed Master's Theses"
-        items:
-          - "Nanayakkara, S. (2024). <i>Sequence and Process Mining Analysis on Project-Based Collaborative Learning of University Students</i> (Master's thesis, Itä-Suomen yliopisto)."
-          - "Zhang, J. (2023). <i>Language in Motion: NLP Analysis of Movie Subtitles</i> (Master's thesis, Itä-Suomen yliopisto)."
-          - "Rai, P. (2023). <i>Early Prediction of Student Performance in Learning Analytics: A Machine Learning Comparison Across Different Times</i> (Master's thesis, Itä-Suomen yliopisto)."
-          - "Khan, M. (2021). <i>Epistemic Network Analysis in Problem-Based Learning</i> (Master's thesis, Itä-Suomen yliopisto)."
-          - "Hafiz, M. (2021). <i>Identification of Influence Maximizers in Students’ Social Networks</i> (Master's thesis, Itä-Suomen yliopisto)."
-          - "Hossain, J. (2021). <i>Analysis of Student Interaction in Project-Based Learning</i> (Master's thesis, Itä-Suomen yliopisto)."
-          - "Winberg, M. (2021). <i>Implementation of a Mobile Device Eye-Tracking System Using Augmented Reality</i> (Issue 2021:645). KTH, School of Electrical Engineering and Computer Science (EECS)."
-          - "Tavakoli, M. (2021). <i>Optimizing the Usability of Reading Assessments with Eye-Tracking on a Mobile Device</i> (Issue 2021:646). KTH, School of Electrical Engineering and Computer Science (EECS)."
-          - "Johansson, E. (2021). <i>Applying Gamification to a Mobile Application to Motivate Children to Learn Math</i> (Issue 2021:389). KTH, School of Electrical Engineering and Computer Science (EECS)."
-      - title: "Completed Undergraduate Theses"
-        items:
-          - "Holmberg, M., & Modee, A. (2021). <i>Random Rewards in Video Games and Their Impact on Player Engagement</i> (Issue 2021:624, p. 11)."
-          - "Obreykov, N. (2021). <i>Evaluating Network Generation Algorithms for Decentralized Social Media Platforms</i> (Issue 2021:631)."
-          - "Svanholm, F., & von Schele, L. (2021). <i>Fonts and Their Correlation to Reading Speed and Information Recall</i> (Issue 2021:625, p. 9)."
-          - "Tor, S., & von Huth, S. (2021). <i>The Impact of Gesture Navigation on Mobile Usage</i> (Issue 2021:626, p. 9)."
-      - title: "PhD Supervision"
-        items:
-            - "Sami Heikkinen: Self-regulation of students in business education"
-            - "Fitsum Deriba: Accessibility and inclusivity in learning analytics"
-            - "Hesham Ahmed: Explainable artificial intelligence"
-            - "Rhythm Bahtia: Person-centered analytics"
-            - "Maria Miiro Kafuko: Social interaction at scale"
-            - "Yazid Al-Badarin: Artificial intelligence in computing education"
-            - "Maya Taki: Learning analytics"
-            - "Bonface Abima: Temporal learning analytics"
-            - "Aisha Khairat: Analytics of community learning"
-            - "Mabberi Enock: Artificial intelligence in community schools"
-      - title: "Post-Doc and Intern Supervision"
-        items:
-            - "Post-Docs:"
-            - "Javier Conde, Universidad Politécnica de Madrid"
-            - "Halil Kayaduman, Inonu University"
-            - "Interns: Six students from Fracnce, Italy and Spain"
-      - title: "Thesis Committee and Opponent Roles"
-        items:
-          - "<b>PhD Thesis:</b> Bergen University, Norway - First opponent for Kamila Misiejuk's PhD thesis, 2023"
-          - "<b>PhD Thesis:</b> Toulouse University - Examination Committee, Esteban Villalobos."
-          - "<b>PhD Thesis:</b> KU Leuven - Examination Committee, Pavani Vemuri"
-          - "<b>PhD Thesis:</b> Eindhoven University of Technology- Examination Committee, Tudor Cristea"
+    - title: Completed PhD Theses
+      items:
+        - "Elmoazen, Ramy (2024): Using Learning Analytics to Capture Social and Temporal Dimensions of Collaborative Learning"
+    - title: Current PhD Supervision
+      items:
+        - "Sami Heikkinen: Self-regulation of students in business education"
+        - "Fitsum Deriba: Accessibility and inclusivity in learning analytics"
+        - "Hesham Ahmed: Explainable artificial intelligence"
+        - "Rhythm Bahtia: Person-centered analytics"
+        - "Maria Miiro Kafuko: Social interaction at scale"
+        - "Yazid Al-Badarin: Artificial intelligence in computing education"
+        - "Maya Taki: Learning analytics"
+        - "Bonface Abima: Temporal learning analytics"
+        - "Aisha Khairat: Analytics of community learning"
+        - "Mabberi Enock: Artificial intelligence in community schools"
+    - title: Completed Master's Theses
+      items:
+        - "Nanayakkara, S. (2024): Sequence and Process Mining Analysis on Project-Based Collaborative Learning"
+        - "Zhang, J. (2023): Language in Motion: NLP Analysis of Movie Subtitles"
+        - "Rai, P. (2023): Early Prediction of Student Performance in Learning Analytics"
+        - "Khan, M. (2021): Epistemic Network Analysis in Problem-Based Learning"
+        - "Hafiz, M. (2021): Identification of Influence Maximizers in Students' Social Networks"
+        - "Hossain, J. (2021): Analysis of Student Interaction in Project-Based Learning"
+        - "Winberg, M. (2021): Implementation of a Mobile Device Eye-Tracking System Using Augmented Reality"
+        - "Tavakoli, M. (2021): Optimizing the Usability of Reading Assessments with Eye-Tracking"
+        - "Johansson, E. (2021): Applying Gamification to a Mobile Application to Motivate Children to Learn Math"
+
+- title: Thesis Committee and Opponent Roles
+  type: time_table
+  contents:
+    - year: 2023
+      items:
+        - "First opponent for Kamila Misiejuk's PhD thesis, Bergen University, Norway"
+        - "Examination Committee, Esteban Villalobos, Toulouse University"
+        - "Examination Committee, Pavani Vemuri, KU Leuven"
+        - "Examination Committee, Tudor Cristea, Eindhoven University of Technology"
+
 - title: Collaborations
   type: nested_list
   contents:
     - title: International
       items:
-        - "I maintain a strong collaboration and co-authorship network with some of the world’s leading learning analytics researchers, such as Dragan Gasevic, Jelena Jovanovic, Barbara Wasson, Olexandra Poquet, Mohammad Khalil, Samuel Grief, Rogers Kaliisa, Ángel Hernández-García, and Miguel Conde-González. Additionally, I collaborate with researchers from diverse fields across countries like Germany, Switzerland, the USA, the UK, Sweden, Luxembourg, the Netherlands, Serbia, Bulgaria, Turkey, Australia, and Austria."
+        - "Collaboration network with leading researchers including Dragan Gasevic, Jelena Jovanovic, Barbara Wasson"
+        - "Research partnerships across Germany, Switzerland, USA, UK, Sweden, Luxembourg, Netherlands, Serbia, Bulgaria, Turkey, Australia, Austria"
     - title: Methodological
       items:
-          - "My interdisciplinary methodological collaborations extend beyond my field, involving experts who contribute significantly to methodological innovations. These include Satu Helske (Mixed Hidden Markov Models), Luca Scrucca (clustering software), Mathias Struder and Gilbert Ritschard (TraMineR sequence analysis), and Leonie Vogelsmeier (transition analysis)."
+        - "Satu Helske (Mixed Hidden Markov Models)"
+        - "Luca Scrucca (clustering software)"
+        - "Mathias Struder and Gilbert Ritschard (TraMineR sequence analysis)"
+        - "Leonie Vogelsmeier (transition analysis)"
     - title: Within Finland
       items:
-          - "I work with leading education and computer science researchers from Oulu University (Sanna Järvelä, Hanna Järvenoja, Jonna Malmberg), the University of Helsinki (Petri Ihantola), Aalto University (Lauri Malmi), and the University of Jyväskylä (Pekka Mertala)."
-    - title: Within My University
-      items:
-          - "At my university, I collaborate with prominent pedagogical and computer science researchers, including Laura Hirsto, Teemu Valtonen, Henriikka Vartiainen, Erkko Sointu, Kwok Ng, and Sonsoles López-Pernas."
+        - "Oulu University: Sanna Järvelä, Hanna Järvenoja, Jonna Malmberg"
+        - "University of Helsinki: Petri Ihantola"
+        - "Aalto University: Lauri Malmi"
+        - "University of Jyväskylä: Pekka Mertala"
 
 - title: Peer Reviews
   type: nested_list
   contents:
-    - title: Journals and Conferences
+    - title: Major Journals
       items:
-        - "Computers \& Education"
-        - "Computers In Human Behaviors"
-        - "British Journal Of Education Technology"
-        - "Journal of the Learning Sciences"
-        - "Studies in Higher Education"
-        - "Behaviour \& Information Technology"
-        - "British Journal of Educational Psychology"
-        - "Journal Of Computer Assisted Learning"
-        - "International Journal of Computer-Supported Collaborative Learning"
-        - "Journal Of Learning Analytics"
-        - "IEEE Transactions on Learning Technologies"
-        - "PLoS One"
-        - "Learning Analytics Conference And Knowledge (LAK)"
-        - "Advances in Health Sciences Education"
-        - "Medical Teacher"
-        - "International Journal Of Computers And Applications"
-        - "WIREs Data Mining and Knowledge Discovery"
-        - "ACM Transactions on Computing Education"
-        - "Complexity"
-        - "Artificial Intelligence Review"
-        - "IEEE Access"
-        - "Memory"
-        - "BMC Medical Education"
-        - "ICCE Sub-Conference on Advanced Learning Technologies (ALT)"
-        - "Augmented Intelligence To Empower Education Conference"
-        - "Koli Calling Conference"
-        - "Canadian Journal of Learning and Technology"
-        - "International Society of the Learning Sciences Conference"
-        - "Networks in the Global World"
-        - "International Journal Of Health Sciences"
-        - "Interactive Learning Environments"
-        - "Advances In Medical Education And Practice"
-        - "Smart Learning Environments"
-        - "International Journal of Emerging Technologies In Learning"
-        - "SIMEC International Conference In Medical Education"
-        - "International Journal Of Learning Analytics And Artificial Intelligence For Education"
-        - "International Conference on Computers in Education"
-        - "European Conference on Technology-Enhanced Learning (EC-TEL)"
-        - "International Conference on Artificial Intelligence in Education"
-        - "Multimodal Learning Analytics Book"
-        - "Computing Education Book"
-        - "Quality of Life Research"
-        - "International Journal of Computers for Mathematical Learning"
-        - "Learning and Motivation"
-        - "Education Data Mining Conference"
-        - "Expert Systems With Applications"
-        - "FLAIEC Conference"
-        - "E-Learning Conference Belgrade"
+        - Computers & Education
+        - Computers In Human Behaviors
+        - British Journal Of Education Technology
+        - Journal of the Learning Sciences
+        - Studies in Higher Education
+        - IEEE Transactions on Learning Technologies
+        - PLoS One
+    - title: Major Conferences
+      items:
+        - Learning Analytics Conference And Knowledge (LAK)
+        - International Conference on Computers in Education
+        - European Conference on Technology-Enhanced Learning (EC-TEL)
+        - International Conference on Artificial Intelligence in Education
 
-- title: Professional Reviews of Grant applications
+- title: Professional Reviews of Grant Applications
   type: list
   contents:
-    - "Reviewed for KU Leuven (University of Leuven, Belgium)"
-    - "Dutch Research Council (NWO)"
-    - "The World Academy of Sciences (TWAS)"
-    - "Research Council of Oman"
+    - KU Leuven (University of Leuven, Belgium)
+    - Dutch Research Council (NWO)
+    - The World Academy of Sciences (TWAS)
+    - Research Council of Oman
+
 - title: Industry Collaboration
-  type: list
-  contents:
-    - "City of Helsinki (Finland): AI in education development (2020)"
-    - "Dugga e-Assessment: Psychometrics and analytics inclusion (2018-2019)"
-
-- title: Accreditation Reviews
-  type: list
-  contents:
-    - "Qassim University: Academic Accreditation (2018)"
-    - "World Federation of Medical Education: Program Accreditation (2015)"
-
-- title: Membership in Societies
-  type: list
-  contents:
-    - "Association for Computing Machinery (ACM)"
-    - "American Psychological Association (APA)"
-    - "Society for Learning Analytics Research (SoLAR)"
-    - "European Association for Technology-Enhanced Learning (EATEL)"
-    - "International Association For Medical Education (AMEE)"
-    - "Geneva Foundation For Medical Education And Research."
-    - "The Open courseware Consortium."
-    - "Educause International Technology In Education."
-    - "The Society Of Simulation In Health"
-    - "International Association for Mobile Learning."
-
-- title: Roles I served
-  type: list
-  contents:
-    - "Member of the university e-learning committee"
-    - "E-learning consultant for the university e-learning deanship"
-    - "Member of the accreditation steering committee."
-    - "Member of the university strategic planning committee."
-    - "Assistant manager of the university ranking project."
-    - "Supervisor of the e-learning unit."
-    - "Coordinator of the virtual patient committee"
-    - "Task force for stanford university collaboration project."
-    - "Maastricht university collaboration committee"
-    - "Member of the quality assurance unit."
-    - "Member of the faculty development unit."
-    - "Coordinator of the internship committee."
-    - "Member of the college e-learning committee."
-    - "Member of the evidence based medicine committee."
-    - "Member of the exam bank committee."
-    - "Member of the graduates and community service committee."
-    - "Member of the university planning for flu committee."
-
-
-- title: Teaching
-  type: nested_list
-  contents:
-    - title: Courses
-      items:
-          - "Learning analytics course (5 ECTS): The course is the largest learning analytics course in Europe with around 50 enrolled students with yearly growth of 20%. The course is interned to ground students in how to understand, develop and apply learning analytics techniques (2019-2021)."
-          - "Learning analytics summer course (5 ECTS) (2022)."
-          - "Social Network Analysis (5 ECTS): The course introduces students to the paradigm of networks, enables them to analyze several types of networks in several domains, and most importantly, create their own networks (2019-2022)"
-    - title: "Besides these courses, I have participated in teaching:"
-      items:
-          - "Nordic Learning Analytics 2021 (5 ECTS) in collaboration with universities from Sweden, Denmark, and Norway"
-          - "<b>Austria:</b> Vienna University of Technology - Philosophy of Computer Science"
-          - "<b>Norway:</b> Bergen University - SLATE: Centre for the Science of Learning & Technology"
-          - "<b>Sweden:</b> Royal Institute of Technology (KTH) - Social Network Analysis in Education and Beyond"
-          - "<b>Sweden:</b> Royal Institute of Technology (KTH) - Degree Project in Media Technology"
-          - "<b>Finland:</b> Oulu University - Contributed to the teaching of the EdTech course"
-          - "<b>Germany:</b> Osnabruck University - Contributed to the teaching of the Information System course"
-- title: Projects
   type: time_table
   contents:
-    - title: TOPEILA
-      year: 2022
-      description:
-        - University of Eastern Finland, Academy of Finland funded project on idiographic learning analytics
-    - title: Generation AI
-      year: 2022
-      description:
-        - Multi-university project on AI for the new generation, total funding approx. 6 million Euros
-    - title: ENVISION
-      year: 2020
-      description:
-        - Erasmus project on Virtual Laboratory and Virtual Teamwork modules, including LA integration
-    - title: ILEDA
-      year: 2021
-      description:
-        - Erasmus+ project on developing LA frameworks and tools for online and blended learning
-    - title: OAHOT
-      year: 2019
-      description:
-        - Research on key elements of learning processes using LA
-    - title: Co-inform
-      year: "2018-2019"
-      description:
-        - Pilot project on misinformation resilience
-    - title: IGEM
-      year: 2018
-      description:
-        - Social network analysis and machine learning in scientific interactions
-    - title: Dugga e-Assessment
-      year: 2018
-      description:
-        - Analytics integration in e-assessment platforms
-    - title: Progress Test Project
-      year: "2011-2017"
-      description:
-        - E-assessment analytics implementation among 30 universities
-    - title: Preventive Medicine Project
-      year: "2012-2014"
-      description:
-        - Education technology for disease prevention curriculum at Stanford University
+    - year: 2020
+      items:
+        - "City of Helsinki (Finland): AI in education development"
+    - year: 2018-2019

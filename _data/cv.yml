@@ -368,7 +368,7 @@
         - Learning and Motivation
         - Expert Systems With Applications
 
-    - title: Conferences and books
+    - title: Major Conferences
       items:
         - Learning Analytics Conference And Knowledge (LAK)
         - ICCE Sub-Conference on Advanced Learning Technologies (ALT)
@@ -387,12 +387,14 @@
         - Computing education book
 
 - title: Professional Reviews of Grant Applications
-  type: list
+  type: nested_list
   contents:
-    - KU Leuven (University of Leuven, Belgium)
-    - Dutch Research Council (NWO)
-    - The World Academy of Sciences (TWAS)
-    - Research Council of Oman
+    - title: Institutions
+      items:
+        - KU Leuven (University of Leuven, Belgium)
+        - Dutch Research Council (NWO)
+        - The World Academy of Sciences (TWAS)
+        - Research Council of Oman
 
 - title: Industry Collaboration
   type: time_table
@@ -401,8 +403,9 @@
       items:
         - "City of Helsinki (Finland): AI in education development"
     - year: 2018-2019
-items:
+      items:
         - "Dugga e-Assessment project - Stockholm University: Inclusion of analytics in e-assessment platforms."
+
 - title: Projects
   type: time_table
   contents:
@@ -425,7 +428,6 @@ items:
     - year: 2018
       items:
         - "IGEM - Paris Descartes University: I analyzed scientific interactions using proximity sensors using social network analysis and machine learning (Multimodal learning analytics)."
-        - "Dugga e-Assessment project - Stockholm University: Inclusion of analytics in e-assessment platforms."
     - year: 2013-2018
       items:
         - "Project-based learning curriculum implementation - Wright State University: Using education technology to deliver curriculum and learning resources, transfer, and optimization."
@@ -437,39 +439,43 @@ items:
         - "Progress test project - Maastricht University: I implemented e-assessment analytics among 30 universities, using item response and comparative analytics."
 
 - title: Membership in Societies
-  type: list
+  type: nested_list
   contents:
-    - Association for Computing Machinery (ACM)
-    - American Psychological Association (APA)
-    - Society for Learning Analytics Research (SoLAR)
-    - European Association for Technology-Enhanced Learning (EATEL)
-    - International Association For Medical Education (AMEE)
-    - Geneva Foundation For Medical Education And Research
-    - The Open courseware Consortium
-    - Educause International Technology In Education
-    - The Society Of Simulation In Health
-    - International Association for Mobile Learning
+    - title: Societies
+      items:
+        - Association for Computing Machinery (ACM)
+        - American Psychological Association (APA)
+        - Society for Learning Analytics Research (SoLAR)
+        - European Association for Technology-Enhanced Learning (EATEL)
+        - International Association For Medical Education (AMEE)
+        - Geneva Foundation For Medical Education And Research
+        - The Open courseware Consortium
+        - Educause International Technology In Education
+        - The Society Of Simulation In Health
+        - International Association for Mobile Learning
 
 - title: Roles I Served
-  type: list
+  type: nested_list
   contents:
-    - Member of the university e-learning committee
-    - E-learning consultant for the university e-learning deanship
-    - Member of the accreditation steering committee
-    - Member of the university strategic planning committee
-    - Assistant manager of the university ranking project
-    - Supervisor of the e-learning unit
-    - Coordinator of the virtual patient committee
-    - Task force for Stanford University collaboration project
-    - Maastricht University collaboration committee
-    - Member of the quality assurance unit
-    - Member of the faculty development unit
-    - Coordinator of the internship committee
-    - Member of the college e-learning committee
-    - Member of the evidence-based medicine committee
-    - Member of the exam bank committee
-    - Member of the graduates and community service committee
-    - Member of the university planning for flu committee
+    - title: Roles
+      items:
+        - Member of the university e-learning committee
+        - E-learning consultant for the university e-learning deanship
+        - Member of the accreditation steering committee
+        - Member of the university strategic planning committee
+        - Assistant manager of the university ranking project
+        - Supervisor of the e-learning unit
+        - Coordinator of the virtual patient committee
+        - Task force for Stanford University collaboration project
+        - Maastricht University collaboration committee
+        - Member of the quality assurance unit
+        - Member of the faculty development unit
+        - Coordinator of the internship committee
+        - Member of the college e-learning committee
+        - Member of the evidence-based medicine committee
+        - Member of the exam bank committee
+        - Member of the graduates and community service committee
+        - Member of the university planning for flu committee
 
 - title: Teaching
   type: nested_list
@@ -482,9 +488,9 @@ items:
     - title: Additional Teaching Contributions
       items:
         - "Nordic Learning Analytics 2021 (5 ECTS) in collaboration with universities from Sweden, Denmark, and Norway"
-        - "**Austria**: Vienna University of Technology - Philosophy of Computer Science"
-        - "**Norway**: Bergen University - SLATE: Centre for the Science of Learning & Technology"
-        - "**Sweden**: Royal Institute of Technology (KTH) - Social Network Analysis in Education and Beyond"
-        - "**Sweden**: Royal Institute of Technology (KTH) - Degree Project in Media Technology"
-        - "**Finland**: Oulu University - Contributed to the teaching of the EdTech course"
-        - "**Germany**: Osnabruck University - Contributed to the teaching of the Information System course"
+        - "Austria: Vienna University of Technology - Philosophy of Computer Science"
+        - "Norway: Bergen University - SLATE: Centre for the Science of Learning & Technology"
+        - "Sweden: Royal Institute of Technology (KTH) - Social Network Analysis in Education and Beyond"
+        - "Sweden: Royal Institute of Technology (KTH) - Degree Project in Media Technology"
+        - "Finland: Oulu University - Contributed to the teaching of the EdTech course"
+        - "Germany: Osnabruck University - Contributed to the teaching of the Information System course"

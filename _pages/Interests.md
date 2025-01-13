@@ -9,11 +9,10 @@ nav_order: 6
 
 My research interests are interdisciplinary, focusing on the intersection of analytics, novel methods, open science, and education. A central theme of my work is **idiographic analytics**, which aims to derive insights from individual data to generate personalized recommendations. This approach is key to understanding **individual differences** in learning and behavior, allowing for the creation of tailored solutions while addressing privacy and ethical concerns. I explore how these individual differences influence learning processes and outcomes, particularly in the context of engagement and collaborative environments. Additionally, I draw on the power of big data and artificial intelligence to unlock new insights and push the boundaries of methodological advances.
 
-<img src="/assets/img/labook.jpeg" style="width:20%;"/>
-
 Beyond idiographic approaches, I also investigate the **temporality**, **heterogeneity**, and dynamics of learning, aiming to create personalized, equitable, and unbiased science. My work spans a wide range of methods, such as machine learning, mixture models, network science, sequence analysis, process mining, Markov models, psychological networks, temporal networks, meta-analysis, topic modeling, and scientometrics. Below, I summarize the main themes of my research:
 
 ### Network Analysis in Education
+<img src="/assets/img/labook.jpeg" style="width:20%;float:left;"/>
 A significant area of my research focuses on networks and network analysis. I have published on networks in collaborative learning, problem-based learning, language learning, and computer science education. I have explored optimal methods for network analysis, conducted large-scale empirical studies on centrality measures, and performed meta-analyses to identify which centrality measures predict student achievement. My work also includes interventions based on network analysis, modeling knowledge diffusion and social contagion, analyzing conflict and robustness in networks, and studying group influence on collaborative dynamics. I have contributed to best practices in network analysis and outlined future research directions and challenges.
 
 ### Temporal Networks

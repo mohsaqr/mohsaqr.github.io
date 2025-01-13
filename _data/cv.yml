@@ -1,24 +1,33 @@
 - title: General Information
-  type: map
+  type: nested_list
   contents:
-    - name: "**Full Name**"
-      value: Mohammed Saqr
-    - name: "**Full Legal Name**"
-      value: Mohamed Sacr Abdelgalil
-    - name: "**Current Position**"
-      value: Associate Professor of Computer Science, Head of Learning Analytics Unit
-    - name: "**Institution**"
-      value: University of Eastern Finland
-    - name: "**Professional Website**"
-      value: "[https://saqr.me](https://saqr.me)"
-    - name: "**ORCID**"
-      value: "[https://orcid.org/0000-0001-5881-3109](https://orcid.org/0000-0001-5881-3109)"
-    - name: "**Google Scholar**"
-      value: "[https://scholar.google.com/citations?user=U-O6R7YAAAAJ](https://scholar.google.com/citations?user=U-O6R7YAAAAJ)"
-    - name: "**Web of Science ResearcherID**"
-      value: AAH-2520-2020
-    - name: "**Scopus ID**"
-      value: 57193957679
+    - title: Full Name
+      items:
+        - Mohammed Saqr
+    - title: Full Legal Name
+      items:
+        - Mohamed Sacr Abdelgalil
+    - title: Current Position
+      items:
+        - Associate Professor of Computer Science, Head of Learning Analytics Unit
+    - title: Institution
+      items:
+        - University of Eastern Finland
+    - title: Professional Website
+      items:
+        - https://saqr.me
+    - title: ORCID
+      items:
+        - https://orcid.org/0000-0001-5881-3109
+    - title: Google Scholar
+      items:
+        - https://scholar.google.com/citations?user=U-O6R7YAAAAJ
+    - title: Web of Science ResearcherID
+      items:
+        - AAH-2520-2020
+    - title: Scopus ID
+      items:
+        - 57193957679
 
 - title: Personal Statement
   type: text
@@ -359,7 +368,7 @@
         - Learning and Motivation
         - Expert Systems With Applications
 
-    - title: Major Conferences
+    - title: Conferences and books
       items:
         - Learning Analytics Conference And Knowledge (LAK)
         - ICCE Sub-Conference on Advanced Learning Technologies (ALT)
@@ -392,7 +401,8 @@
       items:
         - "City of Helsinki (Finland): AI in education development"
     - year: 2018-2019
-
+items:
+        - "Dugga e-Assessment project - Stockholm University: Inclusion of analytics in e-assessment platforms."
 - title: Projects
   type: time_table
   contents:

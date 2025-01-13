@@ -48,6 +48,31 @@ layout: default
       {% include news.liquid limit=true %}
     {% endif %}
 
+   <!-- Social -->
+    {% if page.social %}
+     <br/><hr/>
+      <div class="social">
+        <div class="contact-icons">{% include social.liquid %}</div>
+
+        <div class="">{{ site.contact_note }}</div>
+      </div>
+      <br/><hr/>
+    {% endif %}
+
+  
+    <!-- Books -->
+    {% if page.special %}
+      <h2>
+       Books
+      </h2>
+      {% include special.liquid %}
+    {% endif %}
+
+   {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      {% include newsletter.liquid center=true %}
+    {% endif %}
+
+
     <!-- Latest posts -->
     {% if site.latest_posts and site.latest_posts.enabled %}
       <h2>
@@ -64,29 +89,5 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-   <!-- Social -->
-    {% if page.social %}
-     <br/><hr/>
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="">{{ site.contact_note }}</div>
-      </div>
-      <br/><hr/>
-    {% endif %}
-  
-    
-
-    <!-- Books -->
-    {% if page.special %}
-      <h2>
-       Books
-      </h2>
-      {% include special.liquid %}
-    {% endif %}
-
-   {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+    </article>
 </div>

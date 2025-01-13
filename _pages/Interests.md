@@ -1,13 +1,11 @@
 ---
 layout: page
 permalink: /Interests/
-title: teaching
-description: Research interests
+title: Interests
+description:
 nav: true
 nav_order: 6
 ---
-
-# Interests
 
 My research interests are interdisciplinary, focusing on the intersection of analytics, novel methods, open science, and education. A central theme of my work is **idiographic analytics**, which aims to derive insights from individual data to generate personalized recommendations. This approach is key to understanding **individual differences** in learning and behavior, allowing for the creation of tailored solutions while addressing privacy and ethical concerns. I explore how these individual differences influence learning processes and outcomes, particularly in the context of engagement and collaborative environments. Additionally, I draw on the power of big data and artificial intelligence to unlock new insights and push the boundaries of methodological advances.
 

@@ -194,6 +194,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - INSTALL.md
+  - profile.md
+  - repositories.md
   - LICENSE
   - lighthouse_results/
   - package.json

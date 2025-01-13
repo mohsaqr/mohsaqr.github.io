@@ -16,7 +16,7 @@ profile:
 news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
-special: true
+special: true  # includes a list of papers in special.bib
 ---
 
 Dr. Mohammed Saqr, PhD is an Associate Professor of Computer Science at the School of Computing, University of Eastern Finland. He leads UEF’s Learning Analytics Unit, which has emerged as Europe’s most productive learning analytics lab, as recognized by Scopus and Web of Science over the past five years (2019-2023). 

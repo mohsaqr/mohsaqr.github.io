@@ -502,13 +502,6 @@ ninja.data = [{
           window.open("mailto:%6D%6F%68%61%6D%6D%65%64.%73%61%71%72@%75%65%66.%66%69", "_blank");
         },
       },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',

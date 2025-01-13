@@ -64,15 +64,7 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Special -->
-    {% if page.special %}
-      <h2>
-       Books
-      </h2>
-      {% include special.liquid %}
-    {% endif %}
-
-    <!-- Social -->
+   <!-- Social -->
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
@@ -81,7 +73,17 @@ layout: default
       </div>
     {% endif %}
 
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+    
+
+    <!-- Books -->
+    {% if page.special %}
+      <h2>
+       Books
+      </h2>
+      {% include special.liquid %}
+    {% endif %}
+
+   {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
   </article>

@@ -9,7 +9,9 @@ nav_order: 6
 
 **In the grand scheme of things, my interests are interdisciplinary, situated at the intersection of analytics, novel methods, open science, and education. I explore temporality, individual differences, and heterogeneity as an overarching analytical framework for personalized, equitable, and debiasing science. My methodological toolkit includes machine learning, mixture models, network science, sequence analysis, process mining, Markov models, psychological networks, temporal networks, meta-analyses, topic modeling, and scientometrics. 
 
-![assets/img/erc.png]()
+<p align="center">
+  <img src="assets/img/erc.png" alt="Image">
+</p>
 
 The main themes of my research can be summarized in the following:
 

@@ -1,8 +1,9 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2024-12-20 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Ramy has completed my PhD in Computer Science from the Learning analytics unit at the School of Computing, University of Eastern Finland! 🎉
+![](https://media.licdn.com/dms/image/v2/D4D22AQEnddTlsxZYfQ/feedshare-shrink_800/B4DZPaSqcEHYAg-/0/1734534148875?e=1740009600&v=beta&t=MKmRlNxIpfd3Q1IZOgo7IgFyKYc6lSv_kSyGtvPJTGk)

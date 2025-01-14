@@ -95,8 +95,8 @@ ninja.data = [{
             },},{id: "news-just-got-a-turksih-chapter-published-and-it-feels-great-having-my-research-in-other-languages",
           title: 'Just got a Turksih chapter published and it feels great having my research...',
           description: "",
-          section: "News",},{id: "news-️transition-network-analysis-released-️",
-          title: '⚠️Transition network analysis released ⚠️',
+          section: "News",},{id: "news-transition-network-analysis-released",
+          title: 'Transition network analysis released',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";

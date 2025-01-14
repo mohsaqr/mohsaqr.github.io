@@ -146,6 +146,13 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%6F%68%61%6D%6D%65%64.%73%61%71%72@%75%65%66.%66%69", "_blank");
+        },
+      },{
         id: 'social-acm',
         title: 'ACM DL',
         section: 'Socials',
@@ -153,11 +160,18 @@ ninja.data = [{
           window.open("https://dl.acm.org/profile/99659510490/", "_blank");
         },
       },{
-        id: 'social-email',
-        title: 'email',
+        id: 'social-scholar',
+        title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6D%6F%68%61%6D%6D%65%64.%73%61%71%72@%75%65%66.%66%69", "_blank");
+          window.open("https://scholar.google.com/citations?user=U-O6R7YAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/248/4721.html", "_blank");
         },
       },{
         id: 'social-ieee',
@@ -188,11 +202,11 @@ ninja.data = [{
           window.open("https://www.researchgate.net/profile/Mohammed-Saqr/", "_blank");
         },
       },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
+        id: 'social-scopus',
+        title: 'Scopus',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=U-O6R7YAAAAJ", "_blank");
+          window.open("https://www.scopus.com/authid/detail.uri?authorId=57193957679", "_blank");
         },
       },{
         id: 'social-semanticscholar',

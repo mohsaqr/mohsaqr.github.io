@@ -87,7 +87,12 @@ ninja.data = [{
           window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
         
       },
-    },{id: "news-ramy-defended-his-thesis-in-learning-analytics",
+    },{id: "news-transition-network-analysis-is-released",
+          title: 'Transition Network Analysis is released',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-ramy-defended-his-thesis-in-learning-analytics",
           title: 'Ramy defended his thesis in learning analytics',
           description: "",
           section: "News",handler: () => {
@@ -95,12 +100,7 @@ ninja.data = [{
             },},{id: "news-just-got-a-turksih-chapter-published-and-it-feels-great-having-my-research-in-other-languages",
           title: 'Just got a Turksih chapter published and it feels great having my research...',
           description: "",
-          section: "News",},{id: "news-transition-network-analysis-released",
-          title: 'Transition network analysis released',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "projects-project-1",
+          section: "News",},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {

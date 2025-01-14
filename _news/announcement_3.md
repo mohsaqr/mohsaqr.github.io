@@ -2,7 +2,7 @@
 layout: post
 title: Ramy defended his thesis in learning analytics
 date: 2024-12-20 15:59:00-0400
-inline: true
+inline: false
 related_posts: false
 ---
 

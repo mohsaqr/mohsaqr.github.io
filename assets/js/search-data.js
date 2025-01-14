@@ -146,11 +146,25 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
+        id: 'social-acm',
+        title: 'ACM DL',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dl.acm.org/profile/99659510490/", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
           window.open("mailto:%6D%6F%68%61%6D%6D%65%64.%73%61%71%72@%75%65%66.%66%69", "_blank");
+        },
+      },{
+        id: 'social-ieee',
+        title: 'IEEE Xplore',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://ieeexplore.ieee.org/author/37088456911/", "_blank");
         },
       },{
         id: 'social-linkedin',
@@ -179,6 +193,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=U-O6R7YAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-semanticscholar',
+        title: 'Semantic Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.semanticscholar.org/author/9637182", "_blank");
         },
       },{
         id: 'social-x',

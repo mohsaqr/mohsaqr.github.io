@@ -1,12 +1,14 @@
 # this file contains the social media links and usernames of the author
 # the commented lines are the default social media links supported by the template
 # the socials will be displayed in the order they are defined here
+email: mohammed.saqr@uef.fi # your email address
 acm_id: 99659510490 # your dl.acm.org/profile/id
+scholar_userid: U-O6R7YAAAAJ # your Google Scholar ID
+# rss_icon: true # set to true to show the RSS icon
 # blogger_url: # your blogger URL
 # bluesky_url: # your bluesky URL
-# dblp_url: # your DBLP profile url
+dblp_url: https://dblp.org/pid/248/4721.html # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
-email: mohammed.saqr@uef.fi # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
 # github_username: # your GitHub user name
@@ -29,8 +31,7 @@ orcid_id: 0000-0001-5881-3109
 # quora_username: # your Quora username
 research_gate_profile: Mohammed-Saqr
 # rss_icon: true # set to true to show the RSS icon
-scholar_userid: U-O6R7YAAAAJ # your Google Scholar ID
-# scopus_id: # your profile on Scopus
+scopus_id: 57193957679 # your profile on Scopus
 semanticscholar_id: 9637182 # your Semantic Scholar ID
 # spotify_id: # your spotify id
 # stackoverflow_id: # your stackoverflow id

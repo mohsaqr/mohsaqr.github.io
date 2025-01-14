@@ -12,9 +12,7 @@ description: >
 footer_text: >
   Powered by <a href="https://jekyllrb.com/"
   target="_blank">Jekyll</a> with <a
-  href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a
-  href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from
-  <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  href="https://github.com/alshedivat/al-folio">al-folio</a>.
 keywords: Computer Science, Artificial Intelligence, Learning Analytics, Network Science, Science of Science, Medicine # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -50,7 +48,7 @@ rss_icon: true
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 bib_search: true
@@ -200,7 +198,9 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
+  - _pages/repositories.md
+  - _pages/profiles.md
+  - _pages/projects.md
   - purgecss.config.js
   - README.md
   - readme_preview/

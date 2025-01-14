@@ -417,18 +417,20 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-transition-network-analysis-available",
-          title: 'Transition network analysis available',
+    },{id: "news-ramy-defended-his-thesis-in-learning-analytics",
+          title: 'Ramy defended his thesis in learning analytics',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_3/";
+            },},{id: "news-just-got-a-turksih-chapter-published-and-it-feels-great-having-my-research-in-other-languages",
+          title: 'Just got a Turksih chapter published and it feels great having my research...',
+          description: "",
+          section: "News",},{id: "news-️transition-network-analysis-released-️",
+          title: '⚠️Transition network analysis released ⚠️',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-ramy-has-completed-my-phd-in-computer-science-from-the-learning-analytics-unit-at-the-school-of-computing-university-of-eastern-finland",
-          title: 'Ramy has completed my PhD in Computer Science from the Learning analytics unit...',
-          description: "",
-          section: "News",},{id: "news-just-got-a-turksih-chapter-published-and-it-feels-great-having-my-research-in-other-languages",
-          title: 'Just got a Turksih chapter published and it feels great having my research...',
-          description: "",
-          section: "News",},{id: "projects-project-1",
+            },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {

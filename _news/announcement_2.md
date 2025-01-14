@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ⚠️Transition network analysis released ⚠️
+title: Transition network analysis released
 date: 2025-12-11 16:11:00-0400
 inline: false
 related_posts: false

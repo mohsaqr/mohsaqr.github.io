@@ -15,7 +15,7 @@ footer_text: >
   href="https://github.com/alshedivat/al-folio">al-folio</a>.
 keywords: Computer Science, Artificial Intelligence, Learning Analytics, Network Science, Science of Science, Medicine # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: Ⓜ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://mohsaqr.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -121,13 +121,13 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+#external_sources:
+# - name: medium.com
+#   rss_url: https://medium.com/@al-folio/feed
+# - name: Google Blog
+#   posts:
+#    - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
+#       published_date: 2024-05-14
 
 # -----------------------------------------------------------------------------
 # Newsletter

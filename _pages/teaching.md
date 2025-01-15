@@ -30,13 +30,3 @@ Learning analytics course -5 ECTS (available to everyone in Finland if at PhD le
 Learning analytics Summer course-5 ECTS (available to anyone in the world) the course is a more interactive hands-on course that has been attended by students from more than 50 countries and continues to be offered in the summer of each year.
 
 Social Network Analysis -5 ECTS: The course introduces students to the paradigm of networks, enables them to analyze several types of networks in several domains, and most importantly, create their own networks.
-
-Courses I have participated teaching:
-
--   Nordic learning analytics course 2021 (5 ECTS): a combined course with several Nordic universities from Sweden, Denmark and Norway. 
--   Austria: Vienna University of Technology: Philosophy of computer science 
--   Norway: Bergen University: SLATE: Centre for the Science of Learning & Technology: Analysis of relational data in education
--   Sweden: Royal institute of Technology (KTH): Social network analysis in education and beyond.
--   Sweden: Royal Institute of Technology (KTH): Degree Project in Computer Science and Engineering
--   Sweden:Royal Institute of Technology (KTH):Degree Project in Media Technology, First Cycle (DM128X).
--   Finland, Oulu University: Learning analytics lecture.

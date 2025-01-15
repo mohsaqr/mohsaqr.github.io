@@ -11,15 +11,9 @@ nav_order: 1
 <div class="publications">
 A more updated list of publications can be found on 
 <div>
-  <a href="https://www.researchgate.net/profile/Mohammed-Saqr/">
-    <img src="path/to/researchgate-icon.png" alt="Researchgate" style="width:16px;height:16px;">
-    Researchgate
-  </a>
+  <a href="https://www.researchgate.net/profile/Mohammed-Saqr/">**Researchgate**</a>
   or
-  <a href="https://scholar.google.com/citations?user=U-O6R7YAAAAJ">
-    <img src="path/to/google-scholar-icon.png" alt="Google Scholar" style="width:16px;height:16px;">
-    Google Scholar
-  </a>
+  <a href="https://scholar.google.com/citations?user=U-O6R7YAAAAJ">**Google Scholar**</a>
 </div>
 {%- for y in page.years %}
   <h2 class="year">{{y}}</h2>

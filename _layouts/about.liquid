@@ -48,18 +48,6 @@ layout: default
       {% include news.liquid limit=true %}
     {% endif %}
 
-   <!-- SocialX -->
-    {% if pageX.social %}
-     <br/><hr/>
-      <div class="social">
-        <div class="contact-icons">{% include socialX.liquid %}</div>
-
-        <div class="">{{ site.contact_note }}</div>
-      </div>
-      <br/><hr/>
-    {% endif %}
-
-  
     <!-- Books -->
     {% if page.special %}
       <h2>
@@ -71,6 +59,17 @@ layout: default
    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
+
+
+   <!-- SocialX -->
+    {% if page.social %}
+     <br/><hr/>
+      <div class="social">
+        <div class="">{{ site.contact_note }}</div>
+      </div>
+      <br/><hr/>
+    {% endif %}
+
 
 
     <!-- Latest posts -->

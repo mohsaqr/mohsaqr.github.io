@@ -40,6 +40,15 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+   <!-- SocialX -->
+    {% if page.social %}
+     <br/><hr/>
+      <div class="social">
+        <div class="">{{ site.contact_note }}</div>
+      </div>
+      <br/><hr/>
+    {% endif %}
+
     <!-- News -->
     {% if page.news and site.announcements and site.announcements.enabled %}
       <h2>
@@ -59,18 +68,6 @@ layout: default
    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
-
-
-   <!-- SocialX -->
-    {% if page.social %}
-     <br/><hr/>
-      <div class="social">
-        <div class="">{{ site.contact_note }}</div>
-      </div>
-      <br/><hr/>
-    {% endif %}
-
-
 
     <!-- Latest posts -->
     {% if site.latest_posts and site.latest_posts.enabled %}

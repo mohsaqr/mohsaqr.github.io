@@ -201,6 +201,7 @@ exclude:
   - package-lock.json
   - _pages/repositories.md
   - _pages/profiles.md
+  - _pages/dropdown.md
   - _pages/projects.md
   - purgecss.config.js
   - README.md

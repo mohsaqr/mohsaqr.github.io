@@ -9,12 +9,9 @@ nav_order: 1
 ---
 <!-- _pages/publications.md -->
 <div class="publications">
-A more updated list of publications can be found on 
-<div>
-  <a href="https://www.researchgate.net/profile/Mohammed-Saqr/">**Researchgate**</a>
-  or
-  <a href="https://scholar.google.com/citations?user=U-O6R7YAAAAJ">**Google Scholar**</a>
-</div>
+<p>A more updated list of publications can be found on 
+<a href="https://www.researchgate.net/profile/Mohammed-Saqr/">Researchgate</a> or
+<a href="https://scholar.google.com/citations?user=U-O6R7YAAAAJ">Google Scholar</a>.</p>
 {%- for y in page.years %}
   <h2 class="year">{{y}}</h2>
   {% bibliography -f papers -q @*[year={{y}}]* %}

@@ -1,0 +1,24 @@
+{% for social in site.data.socials %}
+  {% case social[0] %}
+    {% when 'email' %}
+      <a href="mailto:{{ social[1] | encode_email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
+    {% when 'research_gate_profile' %}
+      <a href="https://www.researchgate.net/profile/{{ social[1] }}/" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+    {% when 'scholar_userid' %}
+      <a href="https://scholar.google.com/citations?user={{ social[1] }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+    {% else %}
+      <a href="{{ social[1].url }}" title="{{ social[1].title }}">
+        {% assign file_ext = social[1].logo | split: '.' | last %}
+        {% if file_ext == 'svg' %}
+          <svg>
+            <image xlink:href="{% if social[1].logo contains '://' %}{{ social[1].logo }}{% else %}{{ social[1].logo | relative_url }}{% endif %}" />
+          </svg>
+        {% else %}
+          <img
+            src="{% if social[1].logo contains '://' %}{{ social[1].logo }}{% else %}{{ social[1].logo | relative_url }}{% endif %}"
+            alt="{{ social[1].title }}"
+          >
+        {% endif %}
+      </a>
+  {% endcase %}
+{% endfor %}

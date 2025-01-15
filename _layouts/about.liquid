@@ -80,6 +80,18 @@ layout: default
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
+	
+    <!-- Social -->
+     {% if page.social %}
+      <br/><hr/>
+       <div class="social">
+         <div class="contact-icons">{% include social.liquid %}</div>
+
+         <div class="">{{ site.contact_note }}</div>
+       </div>
+       <br/><hr/>
+     {% endif %}
+	 
 
     <!-- Selected papers -->
     {% if page.selected_papers %}

@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/Interests/";
           },
+        },{id: "nav-teaching",
+          title: "Teaching",
+          description: "As an academic, teaching and learning are central to everyday job. From teaching formal courses, to supervision tasks to mentoring students. Here, I describe my teaching and assessment philosophy. I also list my courses and how you can enrol in them. If you are looking for a PhD supervision or",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
         },{id: "dropdown-publications",
               title: "publications",
               description: "",

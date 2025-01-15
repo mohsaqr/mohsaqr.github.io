@@ -2,7 +2,8 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: As an academic, teaching and learning are central to everyday job. From teaching formal courses, to supervision tasks to mentoring students. Here, I describe my teaching and assessment philosophy. I also list my courses and how you can enrol in them. 
+If you are looking for a PhD supervision or 
 nav: true
 nav_order: 6
 ---

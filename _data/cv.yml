@@ -68,29 +68,29 @@
   contents:
     - year: 2024
       items:
-        - Best Full Paper Award at International Conference on Learning Analytics and Knowledge (LAK24)
-        - Best Paper Award at TEEM 2024 Conference
-        - Nominated for Best Paper Award at IEEE ICALT 2024 Conference
-        - Nominated for Best Poster Award at EC-TEL 2024 Conference
+        - "Best Full Paper Award at International Conference on Learning Analytics and Knowledge (LAK24)"
+        - "Best Paper Award at TEEM 2024 Conference"
+        - "Nominated for Best Paper Award at IEEE ICALT 2024 Conference"
+        - "Nominated for Best Poster Award at EC-TEL 2024 Conference"
     - year: 2023
       items:
-        - Europe Emerging Scholar Award by the Society of Learning Analytics Research (SoLAR)
-        - Best Paper Award at TEEM 2023 Conference (Track: Data-Driven Education)
-        - Best Paper Award at TEEM 2023 Conference (Track: Gamification and Games for Learning)
+        - "Europe Emerging Scholar Award by the Society of Learning Analytics Research (SoLAR)"
+        - "Best Paper Award at TEEM 2023 Conference (Track: Data-Driven Education)"
+        - "Best Paper Award at TEEM 2023 Conference (Track: Gamification and Games for Learning)"
     - year: 2022
       items:
-        - Outstanding Paper Award at SITE 2022 Conference
+        - "Outstanding Paper Award at SITE 2022 Conference"
     - year: 2020
       items:
-        - Best Paper Award at the 28th International Conference on Computers in Education (ICCE 2020)
+        - "Best Paper Award at the 28th International Conference on Computers in Education (ICCE 2020)"
     - year: 2018
       items:
-        - Best Thesis Award, Stockholm University Computer Science Department
+        - "Best Thesis Award, Stockholm University Computer Science Department"
 
 - title: Research Funding
   type: time_table
   contents:
-    - year: 2025-2022 # Combined to ensure TOPEILA comes first since 2022 is listed first
+    - year: 2025-2022
       items:
        - title: TOPEILA
          institution: Finnish Research Council

@@ -93,44 +93,27 @@
     - year: 2025-2022
       items:
        - title: TOPEILA
-         institution: Finnish Research Council
-         description:
-           - "Role: Principal Investigator"
-           - "Amount: 231.6K Euros"
-           - "Project: Toward Precision explainable Artificial Intelligence in Education"
+         description: "Finnish Research Council, Role: Principal Investigator, Amount: 231.6K Euros, Project: Toward Precision explainable Artificial Intelligence in Education"
        - title: Finnish Academy of Science 'Generation AI'
-         description:
-           - "Role: Co-Investigator"
-           - "Amount: 886.391 Euros"
+         description: "Role: Co-Investigator, Amount: 886.391 Euros"
     - year: 2023
       items:
         - title: BalticSeaBioMed
-          description:
-            - "Amount: 68K Euros"
+          description: "Amount: 68K Euros"
         - title: ISILA Erasmus Project
-          description:
-            - "Role: Principal Investigator"
-            - "Total Amount: 250K Euros (78K for UEF)"
+          description: "Role: Principal Investigator, Total Amount: 250K Euros (78K for UEF)"
     - year: 2021
       items:
         - title: ILEDA
-          institution: European Council Erasmus Project
-          description:
-            - "Role: Co-Principal Investigator"
-            - "Total Amount: 227K Euros (61K for UEF)"
+          description: "European Council Erasmus Project, Role: Co-Principal Investigator, Total Amount: 227K Euros (61K for UEF)"
     - year: 2020
       items:
         - title: ENVISION
-          institution: European Council Erasmus Project
-          description:
-            - "Role: Principal Investigator"
-            - "Total Amount: 288K Euros (46K for UEF)"
+          description: "European Council Erasmus Project, Role: Principal Investigator, Total Amount: 288K Euros (46K for UEF)"
     - year: 2019
       items:
         - title: Swedish Research Council Grant
-          description:
-            - "Role: Co-Principal Investigator (20%)"
-            - "Amount: 6 million SEK"
+          description: "Role: Co-Principal Investigator (20%), Amount: 6 million SEK"
 
 - title: Editorial Roles
   type: time_table

@@ -92,28 +92,21 @@
   contents:
     - year: 2025-2022
       items:
-       - title: TOPEILA
-         description: "Finnish Research Council, Role: Principal Investigator, Amount: 231.6K Euros, Project: Toward Precision explainable Artificial Intelligence in Education"
-       - title: Finnish Academy of Science 'Generation AI'
-         description: "Role: Co-Investigator, Amount: 886.391 Euros"
+       - "Finnish Research Council, Principal Investigator (Amount: 231.6K Euros): Toward Precision explainable Artificial Intelligence in Education"
+       - "Co-Investigator (Amount: 886.391 Euros), Finnish Academy of Science 'Generation AI'"
     - year: 2023
       items:
-        - title: BalticSeaBioMed
-          description: "Amount: 68K Euros"
-        - title: ISILA Erasmus Project
-          description: "Role: Principal Investigator, Total Amount: 250K Euros (78K for UEF)"
+        - "Amount: 68K Euros, BalticSeaBioMed"
+        - "Role: Principal Investigator, Total Amount: 250K Euros (78K for UEF), ISILA Erasmus Project"
     - year: 2021
       items:
-        - title: ILEDA
-          description: "European Council Erasmus Project, Role: Co-Principal Investigator, Total Amount: 227K Euros (61K for UEF)"
+        - "European Council Erasmus Project, Role: Co-Principal Investigator, Total Amount: 227K Euros (61K for UEF), ILEDA"
     - year: 2020
       items:
-        - title: ENVISION
-          description: "European Council Erasmus Project, Role: Principal Investigator, Total Amount: 288K Euros (46K for UEF)"
+        - "European Council Erasmus Project, Role: Principal Investigator, Total Amount: 288K Euros (46K for UEF), ENVISION"
     - year: 2019
       items:
-        - title: Swedish Research Council Grant
-          description: "Role: Co-Principal Investigator (20%), Amount: 6 million SEK"
+        - "Role: Co-Principal Investigator (20%), Amount: 6 million SEK, Swedish Research Council Grant"
 
 - title: Editorial Roles
   type: time_table
@@ -377,7 +370,7 @@
 
 - title: Projects
   type: time_table
-  contents:
+   contents:
     - year: 2022
       items:
         - "TOPEILA - University of Eastern Finland: Academy of Finland funded project to study idiographic learning analytics"

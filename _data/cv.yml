@@ -1,19 +1,24 @@
 - title: General Information
-  type: nested_list
+  type: map
   contents:
-    - title: Personal Information
-      items:
-        - "Full Name: Mohammed Saqr"
-        - "Full Legal Name: Mohamed Sacr Abdelgalil"
-        - "Current Position: Associate Professor of Computer Science and Head of Learning Analytics Unit"
-        - "Institution: University of Eastern Finland"
-        - "Professional Website: https://saqr.me"
-    - title: Research IDs
-      items:
-        - "ORCID: https://orcid.org/0000-0001-5881-3109"
-        - "Google Scholar: https://scholar.google.com/citations?user=U-O6R7YAAAAJ"
-        - "Web of Science ResearcherID: AAH-2520-2020"
-        - "Scopus ID: 57193957679"
+    - name: Full Name
+      value: Mohammed Saqr
+    - name: Full Legal Name
+      value: Mohamed Sacr Abdelgalil
+    - name: Current Position
+      value: Associate Professor of Computer Science and Head of Learning Analytics Unit
+    - name: Institution
+      value: University of Eastern Finland
+    - name: Professional Website
+      value: https://saqr.me
+    - name: ORCID
+      value: https://orcid.org/0000-0001-5881-3109
+    - name: Google Scholar
+      value: https://scholar.google.com/citations?user=U-O6R7YAAAAJ
+    - name: Web of Science ResearcherID
+      value: AAH-2520-2020
+    - name: Scopus ID
+      value: 57193957679
 
 - title: Personal Statement
   type: text
@@ -207,19 +212,19 @@
   contents:
     - year: 2024
       items:
-        - The Thirteenth International Conference on E-learning (forthcoming)
+        - "The Thirteenth International Conference on E-learning (forthcoming)"
     - year: 2023
       items:
-        - Technology-Enhanced Learning in Laboratories Symposium
+        - "Technology-Enhanced Learning in Laboratories Symposium"
     - year: 2022
       items:
-        - The Thirteenth International Conference on E-learning
-        - Finnish Learning Analytics and AI in Education Conference
-        - Networks and Learning Analytics: Addressing Educational Challenges
-        - Using Network Science in Learning Analytics: Building Bridges towards a Common Agenda
+        - "The Thirteenth International Conference on E-learning"
+        - "Finnish Learning Analytics and AI in Education Conference"
+        - "Networks and Learning Analytics: Addressing Educational Challenges"
+        - "Using Network Science in Learning Analytics: Building Bridges towards a Common Agenda"
     - year: 2020
       items:
-        - STELLA Symposium: Harnessing the Potentials of Technology to Support Self-Directed Language Learning
+        - "STELLA Symposium: Harnessing the Potentials of Technology to Support Self-Directed Language Learning"
 
 - title: Invited Speaker and Lectures
   type: time_table

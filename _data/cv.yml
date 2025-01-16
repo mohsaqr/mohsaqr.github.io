@@ -90,49 +90,47 @@
 - title: Research Funding
   type: time_table
   contents:
+    - year: 2025-2022 # Combined to ensure TOPEILA comes first since 2022 is listed first
+      items:
+       - title: TOPEILA
+         institution: Finnish Research Council
+         description:
+           - "Role: Principal Investigator"
+           - "Amount: 231.6K Euros"
+           - "Project: Toward Precision explainable Artificial Intelligence in Education"
+       - title: Finnish Academy of Science 'Generation AI'
+         description:
+           - "Role: Co-Investigator"
+           - "Amount: 886.391 Euros"
     - year: 2023
       items:
         - title: BalticSeaBioMed
           description:
-            - Amount: 68K Euros
+            - "Amount: 68K Euros"
         - title: ISILA Erasmus Project
           description:
-            - "Role: Principal Investigator" # Added role for clarity
+            - "Role: Principal Investigator"
             - "Total Amount: 250K Euros (78K for UEF)"
-    - year: 2022-2025
-      items:
-        - title: TOPEILA
-          institution: Finnish Research Council
-          description:
-            - Role: Principal Investigator
-            - Amount: 231.6K Euros
-            - "Project: Toward Precision explainable Artificial Intelligence in Education"
-    - year: 2022
-      items:
-        - title: Finnish Academy of Science 'Generation AI'
-          description:
-            - Role:  Co-Investigator (assuming this based on funding size and typical roles) # Clarified role
-            - Amount: 886.391 Euros
     - year: 2021
       items:
         - title: ILEDA
           institution: European Council Erasmus Project
           description:
-            - Role: Co-Principal Investigator
+            - "Role: Co-Principal Investigator"
             - "Total Amount: 227K Euros (61K for UEF)"
     - year: 2020
       items:
         - title: ENVISION
           institution: European Council Erasmus Project
           description:
-            - Role: Principal Investigator
+            - "Role: Principal Investigator"
             - "Total Amount: 288K Euros (46K for UEF)"
     - year: 2019
       items:
         - title: Swedish Research Council Grant
           description:
-            - Role: Co-Principal Investigator (20%)
-            - Amount: 6 million SEK
+            - "Role: Co-Principal Investigator (20%)"
+            - "Amount: 6 million SEK"
 
 - title: Editorial Roles
   type: time_table
@@ -470,9 +468,9 @@
   contents:
     - title: Courses Taught
       items:
-        - "Learning analytics course (5 ECTS): The course is the largest learning analytics course in Europe with around 50 enrolled students with yearly growth of 20%. The course aims to ground students in how to understand, develop, and apply learning analytics techniques (2019-2021)." # Removed redundant "intended to"
+        - "Learning analytics course (5 ECTS): The course is the largest learning analytics course in Europe with around 50 enrolled students with yearly growth of 20%. The course aims to ground students in how to understand, develop, and apply learning analytics techniques (2019-2021)."
         - "Learning analytics summer course (5 ECTS) (2022)."
-        - "Social Network Analysis (5 ECTS): The course introduces students to the paradigm of networks, enables them to analyze several types of networks, and most importantly, create their own networks (2019-2022)." # Removed redundant "in several domains"
+        - "Social Network Analysis (5 ECTS): The course introduces students to the paradigm of networks, enables them to analyze several types of networks, and most importantly, create their own networks (2019-2022)."
     - title: Additional Teaching Contributions
       items:
         - "Nordic Learning Analytics 2021 (5 ECTS) in collaboration with universities from Sweden, Denmark, and Norway"

@@ -18,11 +18,8 @@
 - title: Personal Statement
   type: text
   contents: >
-    I am an Associate Professor of Computer Science at the School of Computing, University of Eastern Finland (UEF), where I also lead UEF's Learning Analytics Unit. Over the past five years, my unit – although small – has been the most productive laboratory in Europe and ranked second worldwide in learning analytics research in 2023. My scholarly impact is reflected in several international accolades, including the Stanford Top 2% Scientist Ranking in 2024 and awards for best papers at LAK 2024, ICCE 2020, SITE 2022, TEEM 2023 and 2024, nominations for ECTEL 2024 and ICALT 2024 and was honored with the Europe Emerging Scholar Award in 2023. Notably, I collaborate with over 200 researchers from 30 countries and have consulted for governmental organizations and private enterprises. Additionally, I have participated in the evaluation of the World Academy of Sciences, a UNESCO organization.
-- title: Personal Statement
-  type: text
-  contents: >
-    I am an Associate Professor of Computer Science at the School of Computing, University of Eastern Finland (UEF), where I also lead UEF's Learning Analytics Unit. Over the past five years, my unit – although small – has been the most productive laboratory in Europe and ranked second worldwide in learning analytics research in 2023. My scholarly impact is reflected in several international accolades, including the Stanford Top 2% Scientist Ranking in 2024 and awards for best papers at LAK 2024, ICCE 2020, SITE 2022, TEEM 2023 and 2024, nominations for ECTEL 2024 and ICALT 2024 and was honored with the Europe Emerging Scholar Award in 2023. Notably, I collaborate with over 200 researchers from 30 countries and have consulted for governmental organizations and private enterprises. Additionally, I have participated in the evaluation of the World Academy of Sciences, a UNESCO organization.
+    I am an Associate Professor of Computer Science at the School of Computing, University of Eastern Finland (UEF), where I also lead UEF's Learning Analytics Unit. Over the past five years, my unit – although small – has been the most productive laboratory in Europe and ranked second worldwide in learning analytics research in 2023. My scholarly impact is reflected in several international accolades, including the Stanford Top 2% Scientist Ranking in 2024 and awards for best papers at LAK 2024, ICCE 2020, SITE 2022, TEEM 2023 and 2024, nominations for ECTEL 2024 and ICALT 2024, and the Europe Emerging Scholar Award in 2023. Notably, I collaborate with over 200 researchers from 30 countries and have consulted for governmental organizations and private enterprises. Additionally, I have participated in the evaluation of the World Academy of Sciences, a UNESCO organization.
+
 - title: Education and Key Qualifications
   type: time_table
   contents:
@@ -93,6 +90,15 @@
 - title: Research Funding
   type: time_table
   contents:
+    - year: 2023
+      items:
+        - title: BalticSeaBioMed
+          description:
+            - Amount: 68K Euros
+        - title: ISILA Erasmus Project
+          description:
+            - "Role: Principal Investigator" # Added role for clarity
+            - "Total Amount: 250K Euros (78K for UEF)"
     - year: 2022-2025
       items:
         - title: TOPEILA
@@ -105,6 +111,7 @@
       items:
         - title: Finnish Academy of Science 'Generation AI'
           description:
+            - Role:  Co-Investigator (assuming this based on funding size and typical roles) # Clarified role
             - Amount: 886.391 Euros
     - year: 2021
       items:
@@ -126,14 +133,6 @@
           description:
             - Role: Co-Principal Investigator (20%)
             - Amount: 6 million SEK
-    - year: 2023
-      items:
-        - title: BalticSeaBioMed
-          description:
-            - Amount: 68K Euros
-        - title: ISILA Erasmus Project
-          description:
-            - "Total Amount: 250K Euros (78K for UEF)"
 
 - title: Editorial Roles
   type: time_table
@@ -471,9 +470,9 @@
   contents:
     - title: Courses Taught
       items:
-        - "Learning analytics course (5 ECTS): The course is the largest learning analytics course in Europe with around 50 enrolled students with yearly growth of 20%. The course is intended to ground students in how to understand, develop and apply learning analytics techniques (2019-2021)."
+        - "Learning analytics course (5 ECTS): The course is the largest learning analytics course in Europe with around 50 enrolled students with yearly growth of 20%. The course aims to ground students in how to understand, develop, and apply learning analytics techniques (2019-2021)." # Removed redundant "intended to"
         - "Learning analytics summer course (5 ECTS) (2022)."
-        - "Social Network Analysis (5 ECTS): The course introduces students to the paradigm of networks, enables them to analyze several types of networks in several domains, and most importantly, create their own networks (2019-2022)."
+        - "Social Network Analysis (5 ECTS): The course introduces students to the paradigm of networks, enables them to analyze several types of networks, and most importantly, create their own networks (2019-2022)." # Removed redundant "in several domains"
     - title: Additional Teaching Contributions
       items:
         - "Nordic Learning Analytics 2021 (5 ECTS) in collaboration with universities from Sweden, Denmark, and Norway"

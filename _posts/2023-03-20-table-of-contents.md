@@ -13,33 +13,15 @@ toc:
 
 This post shows how to add a table of contents in the beginning of the post.
 
-## Adding a Table of Contents
-
-To add a table of contents to a post, simply add
-
-```yml
-toc:
-  beginning: true
-```
-
-to the front matter of the post. The table of contents will be automatically generated from the headings in the post.
-
 ### Example of Sub-Heading 1
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+My recent research is primarily revolving around the applications of Learning Analytics and Artificial Intelligence (AI) within the educational sphere.  I've been particularly interested in the potential of using AI and idiographic learning analytics to tailor educational solutions to the specific needs and behaviors of individual learners.  This approach recognizes the diversity in learning approaches  and aims to create a more personalized and effective learning environment for all students. AI also plays a significant role in my current research interests. I believe AI has the potential to dramatically enhance our understanding of self-regulated learning and to develop tools that offer personalized feedback and support, empowering students to take control of their learning journey.\
+\
+Additionally, I've been examining the dynamic relationship between student learning and achievement, recognizing that engagement isn't static but fluctuates over time and across different contexts.  Understanding these fluctuations can provide critical insights into how to better support learners and foster sustained engagement.\
+\
+Collaboration and social interaction remain crucial components of the learning process, and I'm keen to explore how these interactions can be optimized in both online and offline settings.  Ultimately, my goal is to contribute to the development of a future of learning that is both personalized and precise, leveraging technology to create a truly student-centric educational experience. 
+\
+More importantly I am thinking of expanding the available methods. Recently, we have worked on Transition Network Analysis and soon we are adding more funcitons, integrations and possibilities. I believe there is vast potentials to the methods, especially adding more rigor and reliability functions.
 
-### Example of another Sub-Heading 1
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
 
-## Table of Contents Options
-
-If you want to learn more about how to customize the table of contents, you can check the [jekyll-toc](https://github.com/toshimaru/jekyll-toc) repository.
-
-### Example of Sub-Heading 2
-
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
-
-### Example of another Sub-Heading 2
-
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.

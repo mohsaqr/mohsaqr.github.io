@@ -370,7 +370,7 @@
 
 - title: Projects
   type: time_table
-   contents:
+  contents:
     - year: 2022
       items:
         - "TOPEILA - University of Eastern Finland: Academy of Finland funded project to study idiographic learning analytics"

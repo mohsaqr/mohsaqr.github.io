@@ -25,12 +25,10 @@
   contents:
     - title: PhD in Computer Science and Information Society
       institution: Stockholm University, Department of Computer and Systems Sciences
-      year: 2018
       description:
         - "Thesis: Using Learning Analytics to Understand and Support Collaborative Learning"
     - title: Title of Docent in Learning Analytics
       institution: Oulu University
-      year: 2022
 
 - title: Academic Positions
   type: time_table

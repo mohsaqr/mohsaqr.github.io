@@ -1,24 +1,19 @@
 - title: General Information
-  type: map
+  type: nested_list
   contents:
-    - name: Full Name
-      value: Mohammed Saqr
-    - name: Full Legal Name
-      value: Mohamed Sacr Abdelgalil
-    - name: Current Position
-      value: Associate Professor of Computer Science and Head of Learning Analytics Unit
-    - name: Institution
-      value: University of Eastern Finland
-    - name: Professional Website
-      value: https://saqr.me
-    - name: ORCID
-      value: https://orcid.org/0000-0001-5881-3109
-    - name: Google Scholar
-      value: https://scholar.google.com/citations?user=U-O6R7YAAAAJ
-    - name: Web of Science ResearcherID
-      value: AAH-2520-2020
-    - name: Scopus ID
-      value: 57193957679
+    - title: Personal Information
+      items:
+        - "Full Name: Mohammed Saqr"
+        - "Full Legal Name: Mohamed Sacr Abdelgalil"
+        - "Current Position: Associate Professor of Computer Science and Head of Learning Analytics Unit"
+        - "Institution: University of Eastern Finland"
+        - "Professional Website: https://saqr.me"
+    - title: Research IDs
+      items:
+        - "ORCID: https://orcid.org/0000-0001-5881-3109"
+        - "Google Scholar: https://scholar.google.com/citations?user=U-O6R7YAAAAJ"
+        - "Web of Science ResearcherID: AAH-2520-2020"
+        - "Scopus ID: 57193957679"
 
 - title: Personal Statement
   type: text

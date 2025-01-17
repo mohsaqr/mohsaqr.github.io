@@ -54,8 +54,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_3/";
-            },},{id: "news-just-got-a-turksih-chapter-published-and-it-feels-great-having-my-research-in-other-languages",
-          title: 'Just got a Turksih chapter published and it feels great having my research...',
+            },},{id: "news-just-got-a-turkish-chapter-published-and-it-feels-great-having-my-research-in-other-languages",
+          title: 'Just got a Turkish chapter published and it feels great having my research...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',

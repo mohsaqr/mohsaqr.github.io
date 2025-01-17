@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: 
-    <p>Office number 344B </p>
+    <p>Office number B344 </p>
     <p>Lansikatu 15</p>
     <p>Joensuu, 80100, Finland</p>
 

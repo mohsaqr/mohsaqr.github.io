@@ -631,4 +631,7 @@ third_party_libraries:
       js: "sha256-LsGXHsHMMmTcz3KqTaWvLv6ome+7pRiic2LPnzTfiSo="
     url:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
-      js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist
+      js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
+    version: "2.1.8"
+
+# --------------------------------

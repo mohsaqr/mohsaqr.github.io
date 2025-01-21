@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: https://mohsaqr.github.io/sitemap.xml
+User-agent: * Disallow: Sitemap: https://saqr/sitemap.xml

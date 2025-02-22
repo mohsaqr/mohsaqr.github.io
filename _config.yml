@@ -203,6 +203,7 @@ exclude:
   - _pages/profiles.md
   - _pages/dropdown.md
   - _pages/projects.md
+  - _pages/Get_in_Touch.md
   - purgecss.config.js
   - README.md
   - readme_preview/

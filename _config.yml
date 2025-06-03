@@ -149,7 +149,7 @@ collections:
     output: true
     permalink: /:collection/:title/
   projects:
-    output: true
+    output: false # Changed from true
     permalink: /:collection/:title/
 
 announcements:

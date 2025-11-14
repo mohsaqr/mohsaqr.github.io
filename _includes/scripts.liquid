@@ -219,6 +219,20 @@
   <script defer src="{{ '/assets/js/google-analytics-setup.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+
+
+
 {% if site.enable_cronitor_analytics %}
   <!-- Cronitor RUM -->
   <script async src="https://rum.cronitor.io/script.js"></script>

@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle: Associate Professor of Computer Science
+subtitle: Professor of Computer Science
 
 profile:
   align: right

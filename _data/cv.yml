@@ -178,30 +178,56 @@
       items:
         - "Academic Editor, PLOS One"
 
-- title: Conference Organization
-  type: nested_list
+- title: Organizing Committee
+  type: time_table
   contents:
-    - title: Organizing Committee
+    - year: 2025
       items:
-        - "2025: The 9th International Conference on Smart Learning Environments (Program Chair)"
-        - "2024: Finnish Learning Analytics and Artificial Intelligence in Education (FLAIEC)"
-        - "2024: eLearning Conference, Belgrade, Serbia"
-        - "2023: eLearning Conference, Belgrade, Serbia"
-        - "2021: Nordic Learning Analytics Summer Institute"
-        - "2022, 2021: NetSciLA Workshop (LAK22, LAK21)"
-        - "2022: Finnish Learning Analytics and AI in Education (FLAIEC)"
-        - "2020: Quantitative Ethnography as a Framework for Network Analysis (LAK20)"
-    - title: Conference Track Chair
+        - "The 9th International Conference on Smart Learning Environments (Program Chair)"
+    - year: 2024
       items:
-        - "Chair, Learning Analytics Track, International Conference on Computers in Education (ICCE), 2021 (28th edition)"
-        - "Chair, Learning Analytics Track, International Conference on Computers in Education (ICCE) 2022 (29th edition)"
-        - "Chair, Learning Analytics Track, Technological Ecosystems for Enhancing Multiculturality (TEEM), 2023 (11th edition)"
-    - title: Senior PC Member
+        - "Finnish Learning Analytics and Artificial Intelligence in Education (FLAIEC)"
+        - "eLearning Conference, Belgrade, Serbia"
+    - year: 2023
       items:
-        - "Senior Program Committee, International Conference of the Learning Sciences (ICLS), 2025"
-        - "Senior Program Committee, International Conference on Learning Analytics & Knowledge (LAK), 2025"
-        - "Senior Program Committee, International Conference on Artificial Intelligence in Education (AIED), 2023-2025"
-        - "Senior Program Committee, European Conference on Technology-Enhanced Learning (EC-TEL), 2023-2025"
+        - "eLearning Conference, Belgrade, Serbia"
+    - year: 2022
+      items:
+        - "Finnish Learning Analytics and AI in Education (FLAIEC)"
+    - year: 2021 - 2022
+      items:
+        - "NetSciLA Workshop (LAK22, LAK21)"
+    - year: 2021
+      items:
+        - "Nordic Learning Analytics Summer Institute"
+    - year: 2020
+      items:
+        - "Quantitative Ethnography as a Framework for Network Analysis (LAK20)"
+
+- title: Conference Track Chair
+  type: time_table
+  contents:
+    - year: 2023
+      items:
+        - "Chair, Learning Analytics Track, Technological Ecosystems for Enhancing Multiculturality (TEEM) (11th edition)"
+    - year: 2022
+      items:
+        - "Chair, Learning Analytics Track, International Conference on Computers in Education (ICCE) (29th edition)"
+    - year: 2021
+      items:
+        - "Chair, Learning Analytics Track, International Conference on Computers in Education (ICCE) (28th edition)"
+
+- title: Senior PC Member
+  type: time_table
+  contents:
+    - year: 2025
+      items:
+        - "Senior Program Committee, International Conference of the Learning Sciences (ICLS)"
+        - "Senior Program Committee, International Conference on Learning Analytics & Knowledge (LAK)"
+    - year: 2023 - 2025
+      items:
+        - "Senior Program Committee, International Conference on Artificial Intelligence in Education (AIED)"
+        - "Senior Program Committee, European Conference on Technology-Enhanced Learning (EC-TEL)"
 
 - title: Proceedings Editor
   type: time_table

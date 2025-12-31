@@ -116,45 +116,67 @@
       items:
         - "Role: Co-Principal Investigator (20%), Amount: 6 million SEK, Swedish Research Council Grant"
 
-- title: Editorial Roles
+- title: Editorial Leadership Roles
   type: time_table
   contents:
-    - year: 2025 - 2026
+    - year: 2025 - Present
       items:
-        - "Complex Dynamics, British Journal of Educational Technology"
+        - "Editor-in-Chief, Frontiers in Education: Digital Education"
     - year: 2024 - 2025
       items:
-        - "Global Perspectives on Technology, British Journal of Educational Technology"
-        - "AI and Diversity, Education Review"
-    - year: 2024 - 2025 (forthcoming)
-      items:
-        - "AI, Precision and Complexity Book, Springer"
+        - "Editor-in-Chief, Book title: AI, Precision and Complexity Book (forthcoming), Springer"
     - year: 2023 - 2024
       items:
-        - "Learning Analytics Methods and Tutorials, Springer"
-        - "Teaching and Learning Artificial Intelligence, Discover Education"
-        - "Diversity, Learning and Individual Differences"
-    - year: 2023 - Present
-      items:
-        - "British Journal of Educational Technology"
-    - year: 2022 - Present
-      items:
-        - "IEEE Transactions on Learning Technologies"
-        - "Frontiers in Computer Science"
-        - "Frontiers in Education"
+        - "Editor-in-Chief, Book title: Learning Analytics Methods and Tutorials, Springer"
     - year: 2021 - 2022
       items:
-        - "Past, Present and Future of Computing Education Research: A Global Perspective, Springer"
+        - "Editor-in-Chief, Book title: Past, Present and Future of Computing Education Research: A Global Perspective, Springer"
     - year: 2021
       items:
-        - "Diversity in the Social Sciences, Frontiers in Education"
-        - "Reduced Inequalities, Frontiers in Education"
-    - year: 2019 - Present
-      items:
-        - "PLOS One"
+        - "Special Collection Editor, Diversity in the Social Sciences, Frontiers in Education"
+        - "Special Collection Editor, Reduced Inequalities, Frontiers in Education"
     - year: 2019
       items:
-        - "Science of Stories Collection, PLOS One"
+        - "Academic Editor, Science of Stories Collection, PLOS One"
+
+- title: Editor of Special Issues
+  type: time_table
+  contents:
+    - year: 2026
+      items:
+        - "Guest Editor, Special Issue on Learning and Learners' dynamics, Journal of Computer Assisted Learning"
+    - year: 2025 - 2026
+      items:
+        - "Guest Editor, Special Issue on Generative AI Shift of Education, Review of Education"
+    - year: 2024 - 2025
+      items:
+        - "Guest Editor, Special Issue on Complex Dynamics, British Journal of Educational Technology. Dynamics of Learning and Learners in the Changing Digital Landscape."
+        - "Guest Editor, Special Issue on Global Perspectives on Technology, British Journal of Educational Technology"
+    - year: 2023 - 2024
+      items:
+        - "Guest Editor, Special Issue on Teaching and Learning Artificial Intelligence, Discover Education"
+        - "Guest Editor, Special Issue on Diversity, Learning and Individual Differences"
+    - year: 2023
+      items:
+        - "Guest Editor, Special Issue on Education Reimagined, Frontiers in Psychology: Education"
+
+- title: Editorial Board Memberships
+  type: time_table
+  contents:
+    - year: 2025 - Present
+      items:
+        - "Editorial Board Member, British Journal of Educational Technology"
+    - year: 2023 - Present
+      items:
+        - "Editorial Board Member, AERA Open"
+    - year: 2022 - Present
+      items:
+        - "Associate Editor, IEEE Transactions on Learning Technologies"
+        - "Associate Editor, Frontiers in Computer Science"
+        - "Associate Editor, Frontiers in Education"
+    - year: 2019 - Present
+      items:
+        - "Academic Editor, PLOS One"
 
 - title: Conference Organization
   type: nested_list
@@ -186,19 +208,19 @@
   contents:
     - year: 2024
       items:
-        - "The Thirteenth International Conference on E-learning (forthcoming)"
+        - "The Thirteenth International Conference on eLearning"
     - year: 2023
       items:
         - "Technology-Enhanced Learning in Laboratories Symposium"
     - year: 2022
       items:
-        - "The Thirteenth International Conference on E-learning"
+        - "The Thirteenth International Conference on eLearning"
         - "Finnish Learning Analytics and AI in Education Conference"
         - "Networks and Learning Analytics: Addressing Educational Challenges"
         - "Using Network Science in Learning Analytics: Building Bridges towards a Common Agenda"
     - year: 2020
       items:
-        - "STELLA Symposium: Harnessing the Potentials of Technology to Support Self-Directed Language Learning"
+        - "STELLA Symposium 2020: Harnessing the Potentials of Technology to Support Self-Directed Language Learning in Online Learning Settings"
 
 - title: Invited Speaker and Lectures
   type: time_table

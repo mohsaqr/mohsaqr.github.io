@@ -157,31 +157,29 @@
         - "Science of Stories Collection, PLOS One"
 
 - title: Conference Organization
-  type: time_table
+  type: nested_list
   contents:
-    - year: 2025
+    - title: Organizing Committee
       items:
-        - "Senior Program Committee, LAK 2025"
-    - year: 2024
+        - "2025: The 9th International Conference on Smart Learning Environments (Program Chair)"
+        - "2024: Finnish Learning Analytics and Artificial Intelligence in Education (FLAIEC)"
+        - "2024: eLearning Conference, Belgrade, Serbia"
+        - "2023: eLearning Conference, Belgrade, Serbia"
+        - "2021: Nordic Learning Analytics Summer Institute"
+        - "2022, 2021: NetSciLA Workshop (LAK22, LAK21)"
+        - "2022: Finnish Learning Analytics and AI in Education (FLAIEC)"
+        - "2020: Quantitative Ethnography as a Framework for Network Analysis (LAK20)"
+    - title: Conference Track Chair
       items:
-        - "Senior Program Committee, AIED 2024"
-        - "Finnish Learning Analytics and Artificial Intelligence in Education (FLAIEC) 2024"
-    - year: 2023
+        - "Chair, Learning Analytics Track, International Conference on Computers in Education (ICCE), 2021 (28th edition)"
+        - "Chair, Learning Analytics Track, International Conference on Computers in Education (ICCE) 2022 (29th edition)"
+        - "Chair, Learning Analytics Track, Technological Ecosystems for Enhancing Multiculturality (TEEM), 2023 (11th edition)"
+    - title: Senior PC Member
       items:
-        - "Learning Analytics Track, TEEM 2023 (11th edition)"
-        - "Senior Program Committee, EC-TEL 2023"
-        - "E-learning Conference, Belgrade, Serbia (2023, 2024)"
-    - year: 2022
-      items:
-        - "Learning Analytics Track, ICCE 2022 (29th edition)"
-        - "FLAIEC 2022"
-    - year: 2021
-      items:
-        - "Learning Analytics Track, ICCE 2021 (28th edition)"
-        - "Nordic Learning Analytics Summer Institute 2021"
-    - year: 2020
-      items:
-        - "Quantitative Ethnography Workshop LAK20"
+        - "Senior Program Committee, International Conference of the Learning Sciences (ICLS), 2025"
+        - "Senior Program Committee, International Conference on Learning Analytics & Knowledge (LAK), 2025"
+        - "Senior Program Committee, International Conference on Artificial Intelligence in Education (AIED), 2023-2025"
+        - "Senior Program Committee, European Conference on Technology-Enhanced Learning (EC-TEL), 2023-2025"
 
 - title: Proceedings Editor
   type: time_table

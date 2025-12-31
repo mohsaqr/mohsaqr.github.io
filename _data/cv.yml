@@ -5,7 +5,7 @@
       items:
         - "Full Name: Mohammed Saqr"
         - "Full Legal Name: Mohamed Sacr Abdelgalil"
-        - "Current Position: Associate Professor of Computer Science and Head of Learning Analytics Unit"
+        - "Current Position: Professor of Computer Science and Head of Learning Analytics Unit"
         - "Institution: University of Eastern Finland"
         - "Professional Website: https://saqr.me"
     - title: Research IDs
@@ -18,7 +18,7 @@
 - title: Personal Statement
   type: text
   contents: >
-    I am an Associate Professor of Computer Science at the School of Computing, University of Eastern Finland (UEF), where I also lead UEF's Learning Analytics Unit. Over the past five years, my unit – although small – has been the most productive laboratory in Europe and ranked second worldwide in learning analytics research in 2023. My scholarly impact is reflected in several international accolades, including the Stanford Top 2% Scientist Ranking in 2024 and awards for best papers at LAK 2024, ICCE 2020, SITE 2022, TEEM 2023 and 2024, nominations for ECTEL 2024 and ICALT 2024, and the Europe Emerging Scholar Award in 2023. Notably, I collaborate with over 200 researchers from 30 countries and have consulted for governmental organizations and private enterprises. Additionally, I have participated in the evaluation of the World Academy of Sciences, a UNESCO organization.
+    I am a Professor of Computer Science at the School of Computing, University of Eastern Finland (UEF), where I also lead UEF's Learning Analytics Unit. Over the past five years, my unit – although small – has been the most productive laboratory in Europe and ranked second worldwide in learning analytics research in 2023. My scholarly impact is reflected in several international accolades, including the Stanford Top 2% Scientist Ranking in 2024 and awards for best papers at LAK 2024, ICCE 2020, SITE 2022, TEEM 2023 and 2024, nominations for ECTEL 2024 and ICALT 2024, and the Europe Emerging Scholar Award in 2023. Notably, I collaborate with over 200 researchers from 30 countries and have consulted for governmental organizations and private enterprises. Additionally, I have participated in the evaluation of the World Academy of Sciences, a UNESCO organization.
 
 - title: Education and Key Qualifications
   type: time_table
@@ -33,12 +33,17 @@
 - title: Academic Positions
   type: time_table
   contents:
+      - title: Professor of Computer Science
+      institution: University of Eastern Finland
+      year: 2026 - Present
+      description:
+        - Head of Learning Analytics Unit
+        - Faculty of Science, Forestry and Technology
     - title: Associate Professor of Computer Science
       institution: University of Eastern Finland
       year: 2023 - Present
       description:
         - Head of Learning Analytics Unit
-        - Faculty of Science, Forestry and Technology
     - title: Senior Researcher
       institution: University of Eastern Finland, School of Computing
       year: 2020-2023

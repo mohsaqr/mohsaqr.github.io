@@ -1,0 +1,4 @@
+#!/bin/bash
+# Quick launcher for Site Manager
+cd "$(dirname "$0")"
+python3 site_manager.py "$@"

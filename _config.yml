@@ -184,6 +184,9 @@ include: ["_pages", "_scripts"]
 exclude:
   - bin/
   - _posts/
+  - site_manager.py
+  - manage
+  - SITE_MANAGER.md
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile

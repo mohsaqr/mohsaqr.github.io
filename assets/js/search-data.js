@@ -30,12 +30,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
+        },{id: "nav-tutorials",
+          title: "Tutorials",
+          description: "Hands-on tutorials for transition network analysis, sequence analytics, and learning analytics methods in R.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/tutorials/";
+          },
         },{id: "nav-get-in-touch",
           title: "Get in Touch",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/get-in-touch/";
+          },
+        },{id: "nav-software",
+          title: "Software",
+          description: "Scientific software for transition network analysis, learning analytics, AI-powered education, and data science.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/software/";
           },
         },{id: "nav-cv",
           title: "CV",

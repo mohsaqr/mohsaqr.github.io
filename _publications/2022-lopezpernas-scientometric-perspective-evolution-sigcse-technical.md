@@ -1,0 +1,28 @@
+---
+layout: publication
+title: "A Scientometric Perspective on the Evolution of the SIGCSE Technical Symposium: 1970-2021"
+authors:
+  - family: "López-Pernas"
+    given: "Sonsoles"
+  - family: "Apiola"
+    given: "Mikko"
+  - family: "Saqr"
+    given: "Mohammed"
+  - family: "Pears"
+    given: "Arnold"
+  - family: "Tedre"
+    given: "Matti"
+year: 2022
+journal: "SSRN Electronic Journal"
+issue: "2022"
+doi: "10.2139/ssrn.4196584"
+affiliations: "KTH Royal Institute of Technology; Technical University of Madrid; University of Eastern Finland; University of Turku"
+doc_type: "Article"
+abbr: "CompEducBook"
+selected: false
+source: "dimensions_only"
+dimensions_url: "https://app.dimensions.ai/details/publication/pub.1151526003"
+times_cited: 1
+---
+
+ACM's Special Interest Group on Computer Science Education’s (SIGCSE) Technical Symposium is considered by many to be ACM’s flagship conference for computing educators. SIGCSE Technical Symposium has been held annually since 1970 as an in-person conference, with the exception of 2020, when it was cancelled (with some papers presented in 2021). The conference attracts many computing educators, numbering in the thousands in recent times and is by far the top publication outlet in computer science education with regards to number of published articles. This paper explores the evolution of the first 51 years of SIGCSE from its inception in 1970 to the present day, using primarily scientometric data. We explore the evolution of the SIGCSE conference with regards to shifts in research themes, influential authors, author networks and clusters of keywords. We also explore the potential for internationalization of the conference. Participation in the SIGCSE symposium has strong US roots, and we examine the impact on participation as ACM SIGCSE membership expanded to Europe and Australasia, and new conferences such as ACE, ICER and Koli Calling established themselves.

@@ -1,0 +1,156 @@
+---
+layout: default
+---
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    <!-- Authors -->
+    <div class="pub-authors" style="margin-bottom: 0.5rem; font-size: 1.1rem;">
+      {%- for author in page.authors -%}
+        {%- assign author_is_self = false -%}
+        {%- if site.scholar.last_name contains author.family -%}
+          {%- if site.scholar.first_name contains author.given -%}
+            {%- assign author_is_self = true -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- if forloop.first == false -%}
+          {%- if forloop.last %} and {% else %}, {% endif -%}
+        {%- endif -%}
+        {%- if author_is_self -%}
+          <em>{{ author.given }} {{ author.family }}</em>
+        {%- else -%}
+          {{ author.given }} {{ author.family }}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <!-- Journal, Year, Volume, Issue, Pages -->
+    <div class="pub-meta" style="color: var(--global-theme-color); margin-bottom: 1rem;">
+      {%- if page.journal -%}
+        <em>{{ page.journal }}</em>
+      {%- endif -%}
+      {%- if page.year -%}
+        , {{ page.year }}
+      {%- endif -%}
+      {%- if page.volume and page.volume != "" -%}
+        , <strong>{{ page.volume }}</strong>
+      {%- endif -%}
+      {%- if page.issue and page.issue != "" -%}
+        ({{ page.issue }})
+      {%- endif -%}
+      {%- if page.pages and page.pages != "" -%}
+        , pp. {{ page.pages }}
+      {%- endif -%}
+    </div>
+
+    <!-- Action buttons -->
+    <div class="pub-links" style="margin-bottom: 1rem;">
+      {%- if page.doi -%}
+        <a href="https://doi.org/{{ page.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener" style="background-color: var(--global-theme-color); color: white; border-color: var(--global-theme-color);">
+          <i class="fas fa-file-alt"></i> Full Text
+        </a>
+      {%- elsif page.ceur_url -%}
+        <a href="{{ page.ceur_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener" style="background-color: var(--global-theme-color); color: white; border-color: var(--global-theme-color);">
+          <i class="fas fa-file-alt"></i> Full Text
+        </a>
+      {%- endif -%}
+      {%- if page.doi -%}
+        <a href="https://doi.org/{{ page.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">
+          <i class="ai ai-doi"></i> DOI
+        </a>
+      {%- endif -%}
+      {%- if page.dimensions_url -%}
+        <a href="{{ page.dimensions_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">
+          Dimensions
+        </a>
+      {%- endif -%}
+      {%- if page.scopus_eid -%}
+        <a href="https://www.scopus.com/record/display.uri?eid={{ page.scopus_eid }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">
+          Scopus
+        </a>
+      {%- endif -%}
+      {%- if page.ceur_url -%}
+        <a href="{{ page.ceur_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">
+          CEUR-WS
+        </a>
+      {%- endif -%}
+    </div>
+
+    <!-- Keywords as clickable badges -->
+    {%- if page.keywords and page.keywords.size > 0 -%}
+      <div class="pub-keywords" style="margin-bottom: 1rem;">
+        {%- for kw in page.keywords -%}
+          {%- assign kw_slug = kw | slugify -%}
+          <a href="/research/?keyword={{ kw_slug }}"
+             class="badge rounded-pill"
+             style="background-color: var(--global-theme-color); color: white; margin: 0.15rem; padding: 0.35em 0.65em; text-decoration: none; font-weight: normal;">
+            {{ kw }}
+          </a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </header>
+
+  <!-- Badges: Altmetric + Dimensions -->
+  {%- if page.doi -%}
+    <div class="pub-badges" style="margin-bottom: 1.5rem;">
+      {%- if site.enable_publication_badges.altmetric -%}
+        <span class="altmetric-embed" data-badge-type="2" data-badge-popover="right" data-doi="{{ page.doi }}"></span>
+      {%- endif -%}
+      {%- if site.enable_publication_badges.dimensions -%}
+        <span class="__dimensions_badge_embed__" data-doi="{{ page.doi }}" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <!-- Abstract -->
+  {%- assign content_stripped = content | strip | strip_html -%}
+  {%- if content_stripped != "" -%}
+    <div class="pub-abstract">
+      <h3>Abstract</h3>
+      {{ content }}
+    </div>
+  {%- endif -%}
+
+  <!-- Affiliations -->
+  {%- if page.affiliations and page.affiliations != "" -%}
+    <div class="pub-affiliations" style="margin-top: 1.5rem;">
+      <h3>Affiliations</h3>
+      <p>{{ page.affiliations }}</p>
+    </div>
+  {%- endif -%}
+
+  <!-- Related publications (share at least one keyword) -->
+  {%- if page.keywords and page.keywords.size > 0 -%}
+    {%- assign related_pubs = "" | split: "" -%}
+    {%- for pub in site.publications -%}
+      {%- if pub.url != page.url and pub.keywords -%}
+        {%- assign shared = false -%}
+        {%- for kw in page.keywords -%}
+          {%- if pub.keywords contains kw -%}
+            {%- assign shared = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if shared -%}
+          {%- assign related_pubs = related_pubs | push: pub -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if related_pubs.size > 0 -%}
+      <div class="pub-related" style="margin-top: 2rem;">
+        <h3>Related Publications</h3>
+        <ul>
+          {%- for rp in related_pubs limit: 8 -%}
+            <li>
+              <a href="{{ rp.url | relative_url }}">{{ rp.title }}</a>
+              <span class="text-muted">({{ rp.year }})</span>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+</div>

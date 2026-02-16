@@ -151,6 +151,9 @@ collections:
   projects:
     output: false # Changed from true
     permalink: /:collection/:title/
+  publications:
+    output: true
+    permalink: /publication/:title/
 
 announcements:
   enabled: true
@@ -283,8 +286,8 @@ display_categories: [""] # these categories will be displayed on the front page 
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [M.]
-  first_name: [Saqr]
+  last_name: [Saqr]
+  first_name: [Mohammed, M.]
 
   style: apa
   locale: en

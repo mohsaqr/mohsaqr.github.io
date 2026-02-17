@@ -1,10 +1,9 @@
 ---
 layout: page
-permalink: /software/
-title: Software
-description: Scientific software for transition network analysis, learning analytics, AI-powered education, and data science.
+permalink: /works/methods-software/
+title: "Methodological Innovation Software"
+description: Scientific software for transition network analysis, complex dynamic systems, and network visualization.
 nav: false
-nav_order: 4
 ---
 
 <style>
@@ -96,7 +95,7 @@ nav_order: 4
 </style>
 
 <p class="sw-intro">
-These are scientific software tools where I had the leading development role or co-developed with colleagues. They are designed for methodological innovation in learning analytics, transition network analysis, and AI-powered education &mdash; spanning R packages on CRAN, Python libraries, JavaScript modules, desktop applications, and full learning management systems.
+These are scientific software tools for methodological innovation in learning analytics and complex systems research. I had the leading development role or co-developed them with colleagues. They span R packages on CRAN, Python libraries, JavaScript modules, and interactive web applications.
 </p>
 
 <h2 class="sw-section-title">Transition Network Analysis &amp; Complex Dynamic Systems</h2>
@@ -205,56 +204,6 @@ These are scientific software tools where I had the leading development role or 
       <div class="sw-meta">
         <span class="sw-badge sw-lang">R</span>
         <span class="sw-badge sw-cran">CRAN</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<h2 class="sw-section-title">AI-Powered Education</h2>
-
-<div class="sw-grid">
-
-  <div class="sw-card">
-    <div class="sw-icon" style="background: linear-gradient(135deg, #C05746, #EF9A9A); font-size: 1.1rem;">L</div>
-    <div class="sw-body">
-      <h3><a href="https://github.com/mohsaqr/LAILA-v3" target="_blank">LAILA &mdash; AI-Powered Learning Management System</a></h3>
-      <p>
-        A full-featured learning management system built around multi-agent AI tutoring. Ships with seven built-in pedagogical agents (Socratic Guide, Project Coach, Study Buddy, and more), four routing modes including collaborative multi-agent orchestration, and a Student Agent Builder with ten role templates and 38 prompt building blocks. Integrates browser-based R execution via WebR for interactive labs, xAPI-inspired learning analytics with emotional pulse tracking, AI-generated assessments, and multi-provider LLM support (OpenAI, Anthropic, Gemini, Ollama, and others). Built with React, TypeScript, and PostgreSQL.
-      </p>
-      <div class="sw-meta">
-        <span class="sw-badge sw-lang">TypeScript</span>
-        <span class="sw-badge sw-plat">React</span>
-        <span class="sw-badge sw-plat">PostgreSQL</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="sw-card">
-    <div class="sw-icon" style="background: linear-gradient(135deg, #4A6FA5, #90CAF9); font-size: 1.1rem;">R</div>
-    <div class="sw-body">
-      <h3><a href="https://github.com/mohsaqr/rohySimulator" target="_blank">Rohy &mdash; Virtual Patient Simulation System</a></h3>
-      <p>
-        A comprehensive medical simulation platform for clinical education. Features AI-powered patient interaction (OpenAI, LM Studio, Ollama), a real-time patient monitor with ECG waveform generation and alarm systems, a laboratory investigation module covering 77 tests with gender-specific reference ranges, and timeline-based clinical scenarios (STEMI, Sepsis, Respiratory Failure). Includes instructor tools for real-time editing, session recording, and analytics with multi-user role-based access.
-      </p>
-      <div class="sw-meta">
-        <span class="sw-badge sw-lang">JavaScript</span>
-        <span class="sw-badge sw-plat">Web</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="sw-card">
-    <div class="sw-icon" style="background: linear-gradient(135deg, #7B68AD, #CE93D8); font-size: 1.1rem;">H</div>
-    <div class="sw-body">
-      <h3><a href="https://github.com/mohsaqr/handai" target="_blank">Handai &mdash; AI-Powered Data Transformer</a></h3>
-      <p>
-        A versatile tool for AI-driven data transformation, synthetic data generation, and qualitative analysis. Supports document processing (PDF, Word), multi-step AI pipelines, qualitative coding with inter-rater reliability via a Consensus Coder mode (multiple models + Cohen&rsquo;s Kappa), codebook generation, and model comparison. Works with OpenAI, Anthropic, Gemini, Groq, Ollama, LM Studio, and any OpenAI-compatible API. Available as both a Streamlit web app and a Flet desktop application.
-      </p>
-      <div class="sw-meta">
-        <span class="sw-badge sw-lang">Python</span>
-        <span class="sw-badge sw-plat">Streamlit</span>
-        <span class="sw-badge sw-plat">Flet</span>
       </div>
     </div>
   </div>

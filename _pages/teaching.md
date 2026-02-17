@@ -25,8 +25,8 @@ My Learning analytics course is available to all PhD students in Finland and the
 
 **My courses** :
 
-Learning analytics course -5 ECTS (available to everyone in Finland if at PhD level and all students at UEF): The course is the one of the largest learning analytics courses in Europe with around 80 enrolled students with yearly growth of 20%. The course is interned to ground students in how to understand, develop and apply learning analytics techniques. The course starts in September.
+**[Learning Analytics and Artificial Intelligence in Education — Summer Course](https://apply.summerschool.uef.fi/courses/course/119-learning-analytics-and-artificial-intelligence-education-summer-course)** (5 ECTS, available to anyone in the world): A hands-on summer course that has been attended by students from more than 50 countries and continues to be offered each summer. The course covers practical applications of learning analytics and AI methods in education.
 
-Learning analytics Summer course-5 ECTS (available to anyone in the world) the course is a more interactive hands-on course that has been attended by students from more than 50 countries and continues to be offered in the summer of each year.
+**[Learning Analytics](https://opas.peppi.uef.fi/en/course/3621696/83394?period=2023-2024)** (5 ECTS, available to all PhD students in Finland and all UEF students): One of the largest learning analytics courses in Europe with around 80 enrolled students and yearly growth of 20%. The course grounds students in how to understand, develop and apply learning analytics techniques. Starts in September.
 
-Social Network Analysis -5 ECTS: The course introduces students to the paradigm of networks, enables them to analyze several types of networks in several domains, and most importantly, create their own networks.
+**[Social Network Analysis](https://opas.peppi.uef.fi/en/course/3621691/83508?period=2023-2024)** (5 ECTS, UEF and visiting students): Introduces students to the paradigm of networks, enables them to analyze several types of networks in several domains, and most importantly, create their own networks.

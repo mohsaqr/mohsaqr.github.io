@@ -9,6 +9,8 @@ dropdown: true
 children:
   - title: "Overview"
     permalink: /Interests/
+  - title: "Keyword Network"
+    permalink: /publications/
   - title: divider
   - title: "Precision Explainable AI"
     permalink: /interests/precision-xai/

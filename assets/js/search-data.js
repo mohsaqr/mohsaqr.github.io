@@ -158,7 +158,7 @@ ninja.data = [{
               },
             },{id: "nav-cv",
           title: "CV",
-          description: ".",
+          description: "Academic curriculum vitae — positions, awards, grants, publications, and service",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";

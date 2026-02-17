@@ -43,7 +43,7 @@ nav: false
 
 <a href="https://apply.summerschool.uef.fi/courses/course/119-learning-analytics-and-artificial-intelligence-education-summer-course" target="_blank" class="course-btn"><i class="fas fa-external-link-alt"></i> Enroll on UEF Summer School</a>
 
-<div class="course-detail">
+<div class="course-detail" markdown="1">
 
 <div class="course-highlight">
 This course has attracted participants from over 50 countries and continues to grow each year, making it one of the most internationally diverse learning analytics courses available.

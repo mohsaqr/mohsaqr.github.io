@@ -43,7 +43,7 @@ nav: false
 
 <a href="https://opas.peppi.uef.fi/en/course/3621696/83394?period=2023-2024" target="_blank" class="course-btn"><i class="fas fa-external-link-alt"></i> Course Details on Peppi</a>
 
-<div class="course-detail">
+<div class="course-detail" markdown="1">
 
 <div class="course-highlight">
 One of the largest learning analytics courses in Europe, with around 80 enrolled students and consistent yearly growth of 20%.

@@ -38,12 +38,12 @@ nav: false
   <strong>Credits:</strong> 5 ECTS<br>
   <strong>When:</strong> Spring semester<br>
   <strong>Where:</strong> University of Eastern Finland<br>
-  <strong>Who can join:</strong> UEF students &amp; visiting students (contact enrollment for details)
+  <strong>Who can join:</strong> UEF students, exchange students &amp; students from Finland (contact enrollment for details)
 </div>
 
 <a href="https://opas.peppi.uef.fi/en/course/3621691/83508?period=2023-2024" target="_blank" class="course-btn"><i class="fas fa-external-link-alt"></i> Course Details on Peppi</a>
 
-<div class="course-detail">
+<div class="course-detail" markdown="1">
 
 <div class="course-highlight">
 A hands-on course where students not only analyze networks but build their own &mdash; from data collection to visualization and interpretation.

@@ -30,19 +30,47 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/tutorials/";
           },
-        },{id: "nav-get-in-touch",
+        },{id: "dropdown-learning-analytics-methods-and-tutorials",
+              title: "Learning Analytics Methods and Tutorials",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-advanced-learning-analytics-methods",
+              title: "Advanced Learning Analytics Methods",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-computing-education-research",
+              title: "Computing Education Research",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-methodological-innovation-software",
+              title: "Methodological Innovation Software",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-ai-software",
+              title: "AI Software",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "nav-get-in-touch",
           title: "Get in Touch",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/get-in-touch/";
-          },
-        },{id: "nav-software",
-          title: "Software",
-          description: "Scientific software for transition network analysis, learning analytics, AI-powered education, and data science.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/software/";
           },
         },{id: "nav-cv",
           title: "CV",

@@ -16,14 +16,21 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-research",
-          title: "Research",
-          description: "Browse publications by keyword, search by title or author.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/research/";
-          },
-        },{id: "dropdown-learning-analytics-methods-and-tutorials",
+        },{id: "dropdown-browse-by-keyword",
+              title: "Browse by Keyword",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-co-authorship-map",
+              title: "Co-authorship Map",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-learning-analytics-methods-and-tutorials",
               title: "Learning Analytics Methods and Tutorials",
               description: "",
               section: "Dropdown",

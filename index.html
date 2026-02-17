@@ -38,18 +38,18 @@ function initExploreNetwork() {
 
     { id: "publications", label: "Publications", link: "/publications/", ring: 1, icon: "\uf02d",
       desc: "Research papers and academic publications" },
-    { id: "research", label: "Research", link: "/research/", ring: 1, icon: "\uf0c3",
-      desc: "Current research projects and focus areas" },
+    { id: "interests", label: "Interests", link: null, ring: 1, icon: "\uf0eb",
+      desc: "Research interests and specializations" },
+    { id: "cv", label: "CV", link: "/cv/", ring: 1, icon: "\uf15c",
+      desc: "Academic curriculum vitae" },
     { id: "works", label: "Works", link: null, ring: 1, icon: "\uf0b1",
       desc: "Books, software, and major projects" },
     { id: "tutorials", label: "Tutorials", link: "/tutorials/", ring: 1, icon: "\uf19d",
       desc: "Step-by-step guides for analytics methods" },
-    { id: "interests", label: "Interests", link: null, ring: 1, icon: "\uf0eb",
-      desc: "Research interests and specializations" },
     { id: "teaching", label: "Teaching", link: null, ring: 1, icon: "\uf51c",
       desc: "Courses, philosophy, and teaching materials" },
-    { id: "cv", label: "CV", link: "/cv/", ring: 1, icon: "\uf15c",
-      desc: "Academic curriculum vitae" },
+    { id: "research", label: "Research", link: "/research/", ring: 1, icon: "\uf0c3",
+      desc: "Current research projects and focus areas" },
     { id: "contact", label: "Get in Touch", link: "/get-in-touch/", ring: 1, icon: "\uf0e0",
       desc: "Contact information and social links" },
 
@@ -96,9 +96,9 @@ function initExploreNetwork() {
   outerNodes.forEach(function(n) { edges.push({ source: n.parent, target: n.id, type: "child" }); });
 
   // Layout in a 1080x1080 coordinate space, but we crop the viewBox
-  var fullW = 1080;
+  var fullW = 1200;
   var cx = fullW / 2, cy = fullW / 2;
-  var innerRadius = 225, outerRadius = 440;
+  var innerRadius = 225, outerRadius = 500;
 
   var centerFillR = 36, centerRingR = 44, centerGlowR = 52;
   var innerFillR = 25, innerRingR = 31;

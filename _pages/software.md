@@ -4,7 +4,6 @@ permalink: /software/
 title: Software
 description: Scientific software for transition network analysis, learning analytics, AI-powered education, and data science.
 nav: false
-nav_order: 4
 ---
 
 <style>

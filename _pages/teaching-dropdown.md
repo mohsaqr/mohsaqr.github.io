@@ -2,7 +2,7 @@
 layout: page
 title: Teaching
 nav: true
-nav_order: 5
+nav_order: 7
 dropdown: true
 children:
   - title: "Teaching Philosophy"

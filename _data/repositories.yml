@@ -1,14 +1,17 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - mohsaqr
+  - sonsoleslp
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - sonsoleslp/tna
+  - santikka/codyna
+  - mohsaqr/cograph
+  - mohsaqr/tnapy
+  - mohsaqr/tna-js
+  - mohsaqr/JTNA1.2
+  - mohsaqr/Dynalytics
+  - mohsaqr/LAILA-v3
+  - mohsaqr/rohySimulator
+  - mohsaqr/handai

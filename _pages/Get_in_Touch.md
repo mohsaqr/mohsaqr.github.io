@@ -3,7 +3,7 @@ layout: page
 title: Get in Touch
 permalink: /get-in-touch/
 nav: true
-nav_order: 6
+nav_order: 10
 ---
 
 

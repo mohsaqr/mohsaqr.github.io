@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: Teaching
 description: As an academic, teaching and learning are central to everyday job. From teaching formal courses, to supervision tasks to mentoring students. Here, I describe my teaching and assessment philosophy. I also list my courses and how you can enrol in them. If you are looking for a PhD supervision please reach out by email.
-nav: true
+nav: false
 nav_order: 6
 ---
 
@@ -21,12 +21,60 @@ I use assignments (**No final exams**), practical exercises, projects, and criti
 
 **Another  a sample of students feedback** `“The support and understanding from the lecturer was really motivating and helped boost my morale especially during this pandemic. The facilitation for a number of international guest lectures and the practical sessions were very helpful in understanding more about the course and am currently thinking of writing my masters thesis in relation to learning analytics field”`
 
-My Learning analytics course is available to all PhD students in Finland and the summer learning analytics and AI course is open to all students from all around the world. You can join the social network analysis course only if you are a University of Eastern Finland student or a visiting student (you many need to contact the enrollment for details)
+<style>
+.course-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1rem; }
+.course-card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-bg-color);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.course-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.course-card h4 { margin: 0 0 0.5rem 0; font-size: 1.2rem; }
+.course-card h4 a { color: var(--global-theme-color); text-decoration: none; }
+.course-card h4 a:hover { text-decoration: underline; }
+.course-card .course-badge {
+  display: inline-block;
+  background-color: var(--global-theme-color);
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.course-card p { margin: 0; font-size: 1.02rem; line-height: 1.7; text-align: justify; }
+</style>
 
-**My courses** :
+---
 
-**[Learning Analytics and Artificial Intelligence in Education — Summer Course](https://apply.summerschool.uef.fi/courses/course/119-learning-analytics-and-artificial-intelligence-education-summer-course)** (5 ECTS, available to anyone in the world): A hands-on summer course that has been attended by students from more than 50 countries and continues to be offered each summer. The course covers practical applications of learning analytics and AI methods in education.
+## Courses
 
-**[Learning Analytics](https://opas.peppi.uef.fi/en/course/3621696/83394?period=2023-2024)** (5 ECTS, available to all PhD students in Finland and all UEF students): One of the largest learning analytics courses in Europe with around 80 enrolled students and yearly growth of 20%. The course grounds students in how to understand, develop and apply learning analytics techniques. Starts in September.
+<div class="course-grid">
 
-**[Social Network Analysis](https://opas.peppi.uef.fi/en/course/3621691/83508?period=2023-2024)** (5 ECTS, UEF and visiting students): Introduces students to the paradigm of networks, enables them to analyze several types of networks in several domains, and most importantly, create their own networks.
+<div class="course-card">
+  <h4><a href="https://apply.summerschool.uef.fi/courses/course/119-learning-analytics-and-artificial-intelligence-education-summer-course" target="_blank">Learning Analytics and Artificial Intelligence in Education &mdash; Summer Course</a></h4>
+  <span class="course-badge">5 ECTS</span>
+  <span class="course-badge">Open to all</span>
+  <p>A hands-on international summer course that has been attended by students from more than 50 countries and continues to be offered each summer. The course covers practical applications of learning analytics and AI methods in education through interactive sessions, real datasets, and collaborative projects.</p>
+</div>
+
+<div class="course-card">
+  <h4><a href="https://opas.peppi.uef.fi/en/course/3621696/83394?period=2023-2024" target="_blank">Learning Analytics</a></h4>
+  <span class="course-badge">5 ECTS</span>
+  <span class="course-badge">PhD & UEF students</span>
+  <p>One of the largest learning analytics courses in Europe with around 80 enrolled students and yearly growth of 20%. The course grounds students in how to understand, develop, and apply learning analytics techniques. Available to all PhD students in Finland and all UEF students. Starts in September.</p>
+</div>
+
+<div class="course-card">
+  <h4><a href="https://opas.peppi.uef.fi/en/course/3621691/83508?period=2023-2024" target="_blank">Social Network Analysis</a></h4>
+  <span class="course-badge">5 ECTS</span>
+  <span class="course-badge">UEF & visiting students</span>
+  <p>Introduces students to the paradigm of networks, enables them to analyze several types of networks in several domains, and most importantly, create their own networks. Open to University of Eastern Finland students and visiting students.</p>
+</div>
+
+</div>

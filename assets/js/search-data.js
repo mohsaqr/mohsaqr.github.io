@@ -65,6 +65,41 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
+            },{id: "nav-cv",
+          title: "CV",
+          description: ".",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "dropdown-teaching-philosophy",
+              title: "Teaching Philosophy",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-summer-course-la-amp-ai-in-education",
+              title: "Summer Course: LA &amp; AI in Education",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-learning-analytics",
+              title: "Learning Analytics",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-social-network-analysis",
+              title: "Social Network Analysis",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
             },{id: "nav-get-in-touch",
           title: "Get in Touch",
           description: "",
@@ -72,28 +107,78 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/get-in-touch/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: ".",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "nav-interests",
-          title: "Interests",
+        },{id: "dropdown-overview",
+              title: "Overview",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-precision-explainable-ai",
+              title: "Precision Explainable AI",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-transition-network-analysis",
+              title: "Transition Network Analysis",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-network-analysis-in-education",
+              title: "Network Analysis in Education",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-temporal-networks",
+              title: "Temporal Networks",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-complex-systems",
+              title: "Complex Systems",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-temporal-and-sequence-methods",
+              title: "Temporal and Sequence Methods",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-learning-analytics",
+              title: "Learning Analytics",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-scientometrics-and-bibliometrics",
+              title: "Scientometrics and Bibliometrics",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "news-our-open-access-book-past-present-and-future-of-computing-education-research-a-global-perspective-is-published-by-springer-21-chapters-mapping-the-intellectual-landscape-of-computing-education-research-through-scientometric-analyses-meta-studies-and-case-studies-edited-with-mikko-apiola-and-sonsoles-lópez-pernas",
+          title: 'Our open-access book Past, Present and Future of Computing Education Research: A Global...',
           description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/Interests/";
-          },
-        },{id: "nav-teaching",
-          title: "Teaching",
-          description: "As an academic, teaching and learning are central to everyday job. From teaching formal courses, to supervision tasks to mentoring students. Here, I describe my teaching and assessment philosophy. I also list my courses and how you can enrol in them. If you are looking for a PhD supervision please reach out by email.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
-        },{id: "news-transition-network-analysis-is-released",
+          section: "News",},{id: "news-learning-analytics-methods-and-tutorials-a-practical-guide-using-r",
+          title: 'Learning Analytics Methods and Tutorials: A Practical Guide Using R',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_11/";
+            },},{id: "news-transition-network-analysis-is-released",
           title: 'Transition Network Analysis is released',
           description: "",
           section: "News",handler: () => {
@@ -105,6 +190,29 @@ ninja.data = [{
               window.location.href = "/news/announcement_3/";
             },},{id: "news-just-got-a-turkish-chapter-published-and-it-feels-great-having-my-research-in-other-languages",
           title: 'Just got a Turkish chapter published and it feels great having my research...',
+          description: "",
+          section: "News",},{id: "news-dynalytics-is-released-a-comprehensive-shiny-web-application-for-interactive-transition-network-analysis-group-comparison-cluster-analysis-co-occurrence-networks-and-social-network-analysis-with-full-visualization-support",
+          title: 'Dynalytics is released — a comprehensive Shiny web application for interactive Transition Network...',
+          description: "",
+          section: "News",},{id: "news-the-tna-r-package-paper-is-published-in-the-journal-of-educational-measurement-tikka-s-lópez-pernas-s-amp-amp-saqr-m-2025-tna-an-r-package-for-transition-network-analysis",
+          title: 'The tna R package paper is published in the Journal of Educational Measurement...',
+          description: "",
+          section: "News",},{id: "news-tna-is-now-available-across-platforms-tnapy-for-python-tnaj-for-javascript-typescript-zero-dependency-browser-ready-and-jtna-as-a-point-and-click-jamovi-module",
+          title: 'TNA is now available across platforms — tnapy for Python, tnaj for JavaScript/TypeScript...',
+          description: "",
+          section: "News",},{id: "news-laila-v3-is-now-open-source-a-full-featured-ai-powered-learning-management-system-with-multi-agent-tutoring-7-pedagogical-agents-browser-based-r-execution-via-webr-xapi-inspired-learning-analytics-and-multi-provider-llm-support",
+          title: 'LAILA v3 is now open source — a full-featured AI-powered learning management system...',
+          description: "",
+          section: "News",},{id: "news-advanced-learning-analytics-methods-ai-precision-and-complexity",
+          title: 'Advanced Learning Analytics Methods: AI, Precision and Complexity',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_6/";
+            },},{id: "news-our-new-r-package-codyna-for-complex-dynamic-systems-analysis-is-now-on-cran-tools-for-complexity-analysis-pattern-detection-trend-identification-regime-shift-detection-sequence-classification-and-early-warning-signals",
+          title: 'Our new R package codyna for complex dynamic systems analysis is now on...',
+          description: "",
+          section: "News",},{id: "news-the-tna-r-package-reaches-v1-2-0-on-cran-now-with-frequency-based-tna-ftna-n-gram-and-attention-models-expanded-centrality-measures-and-formal-model-comparison-functions",
+          title: 'The tna R package reaches v1.2.0 on CRAN — now with frequency-based TNA...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',

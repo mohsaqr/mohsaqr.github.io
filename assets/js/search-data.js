@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
-        },{id: "nav-tutorials",
-          title: "Tutorials",
-          description: "Hands-on tutorials for transition network analysis, sequence analytics, and learning analytics methods in R.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/tutorials/";
-          },
         },{id: "dropdown-learning-analytics-methods-and-tutorials",
               title: "Learning Analytics Methods and Tutorials",
               description: "",
@@ -65,47 +58,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "nav-cv",
-          title: "CV",
-          description: ".",
+            },{id: "nav-tutorials",
+          title: "Tutorials",
+          description: "Hands-on tutorials for transition network analysis, sequence analytics, and learning analytics methods in R.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "dropdown-teaching-philosophy",
-              title: "Teaching Philosophy",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-summer-course-la-amp-ai-in-education",
-              title: "Summer Course: LA &amp; AI in Education",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-learning-analytics",
-              title: "Learning Analytics",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-social-network-analysis",
-              title: "Social Network Analysis",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "nav-get-in-touch",
-          title: "Get in Touch",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/get-in-touch/";
+            window.location.href = "/tutorials/";
           },
         },{id: "dropdown-overview",
               title: "Overview",
@@ -170,7 +128,49 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "news-our-open-access-book-past-present-and-future-of-computing-education-research-a-global-perspective-is-published-by-springer-21-chapters-mapping-the-intellectual-landscape-of-computing-education-research-through-scientometric-analyses-meta-studies-and-case-studies-edited-with-mikko-apiola-and-sonsoles-lópez-pernas",
+            },{id: "dropdown-teaching-philosophy",
+              title: "Teaching Philosophy",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-summer-course-la-amp-ai-in-education",
+              title: "Summer Course: LA &amp; AI in Education",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-learning-analytics",
+              title: "Learning Analytics",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-social-network-analysis",
+              title: "Social Network Analysis",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "nav-cv",
+          title: "CV",
+          description: ".",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-get-in-touch",
+          title: "Get in Touch",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/get-in-touch/";
+          },
+        },{id: "news-our-open-access-book-past-present-and-future-of-computing-education-research-a-global-perspective-is-published-by-springer-21-chapters-mapping-the-intellectual-landscape-of-computing-education-research-through-scientometric-analyses-meta-studies-and-case-studies-edited-with-mikko-apiola-and-sonsoles-lópez-pernas",
           title: 'Our open-access book Past, Present and Future of Computing Education Research: A Global...',
           description: "",
           section: "News",},{id: "news-learning-analytics-methods-and-tutorials-a-practical-guide-using-r",

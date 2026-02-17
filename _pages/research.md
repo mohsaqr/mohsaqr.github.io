@@ -11,6 +11,10 @@ children:
     permalink: /research/
   - title: "Co-authorship Map"
     permalink: /research/coauthorship-map/
+  - title: "Author Network"
+    permalink: /research/author-network/
+  - title: "Institution Network"
+    permalink: /research/institution-network/
 ---
 
 <style>

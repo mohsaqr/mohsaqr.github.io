@@ -25,10 +25,12 @@
   contents:
     - title: PhD in Computer Science and Information Society
       institution: Stockholm University, Department of Computer and Systems Sciences
+      year: 2018
       description:
         - "Thesis: Using Learning Analytics to Understand and Support Collaborative Learning"
     - title: Title of Docent in Learning Analytics
       institution: Oulu University
+      year: 2022
 
 - title: Academic Positions
   type: time_table
@@ -104,6 +106,7 @@
        - "Co-Investigator (Amount: 886.391 Euros), Finnish Academy of Science 'Generation AI'"
     - year: 2023
       items:
+        - "Finnish National Agency for Education (Amount: 17.1K Euros)"
         - "Amount: 68K Euros, BalticSeaBioMed"
         - "Role: Principal Investigator, Total Amount: 250K Euros (78K for UEF), ISILA Erasmus Project"
     - year: 2021
@@ -251,6 +254,12 @@
 - title: Invited Speaker and Lectures
   type: time_table
   contents:
+    - year: 2025
+      items:
+        - "Seminar Speaker: Department of Psychology and Neuroscience, University of Colorado"
+        - "Guest Lecture: Ludwig-Maximilians-Universität, Germany"
+        - "Webinar Speaker: Complexity Theories in Education SIG (AERA)"
+        - "Webinar Speaker: Society for Learning Analytics Research (SoLAR)"
     - year: 2024
       items:
         - "Keynote: Finnish Learning Analytics and Artificial Intelligence in Education"
@@ -264,11 +273,20 @@
         - "Keynote: 14th International Conference on eLearning"
         - "Guest Lecture: Centre for the Science of Learning & Technology (SLATE)"
         - "Keynote: Helsinki Node Network Analysis Research on Teaching and Learning"
+        - "Guest Lecture: American University Cairo, Egypt"
+        - "Guest Lecture: Oulu University, Finland"
+        - "Guest Lecture: Turku University, Finland"
+        - "Guest Lecture: Åbo Akademi, Finland"
     - year: 2021 - 2022
       items:
         - "Keynote: Spanish Network of Learning Analytics (SNOLA)"
         - "Lecture: Bridging from Remote to In-Person Teaching, Åbo Akademi University"
         - "Lecture: Swedish Higher Education and E-Learning (HEEL)"
+        - "Guest Lecture: Osnabrück University, Germany"
+        - "Guest Lecture: Kassel University, Germany"
+    - year: 2020
+      items:
+        - "Lecture: Virtual Congress on E-learning Design and Use of Learning Analytics"
 
 - title: Research Stays
   type: time_table
@@ -303,6 +321,12 @@
         - "Bonface Abima: Temporal learning analytics"
         - "Aisha Khairat: Analytics of community learning"
         - "Mabberi Enock: Artificial intelligence in community schools"
+        - "Chengxin Zhang: Clinical reasoning in virtual patients"
+    - title: Post-Doc and Intern Supervision
+      items:
+        - "Post-Doc: Javier Conde, Universidad Politécnica de Madrid"
+        - "Post-Doc: Halil Kayaduman, Inonu University"
+        - "Interns: Six students from France, Belgium, Italy and Spain"
     - title: Completed Master's Theses as Main Supervisor
       items:
         - "Mihtsun, H. (2025): Analysis of Clinical Reasoning and Interaction Patterns in Virtual Patients"
@@ -315,24 +339,34 @@
         - "Winberg, M. (2021): Implementation of a Mobile Device Eye-Tracking System Using Augmented Reality. KTH, School of Electrical Engineering and Computer Science (EECS)."
         - "Tavakoli, M. (2021): Optimizing the Usability of Reading Assessments with Eye-Tracking on a Mobile Device. KTH, School of Electrical Engineering and Computer Science (EECS)."
         - "Johansson, E. (2021): Applying Gamification to a Mobile Application to Motivate Children to Learn Math. KTH, School of Electrical Engineering and Computer Science (EECS)."
+    - title: Completed Undergraduate Theses as Main Supervisor
+      items:
+        - "Holmberg, M., & Modee, A. (2021): Random Rewards in Video Games and Their Impact on Player Engagement. KTH, EECS."
+        - "Obreykov, N. (2021): Evaluating Network Generation Algorithms for Decentralized Social Media Platforms. KTH, EECS."
+        - "Svanholm, F., & von Schele, L. (2021): Fonts and Their Correlation to Reading Speed and Information Recall."
+        - "Tor, S., & von Huth, S. (2021): The Impact of Gesture Navigation on Mobile Usage. KTH, EECS."
 
 - title: Thesis Committee and Opponent Roles
   type: nested_list
   contents:
-    - title: 2023
+    - title: "2025"
       items:
-        - "First opponent for Kamila Misiejuk's PhD thesis, Bergen University, Norway"
-        - "Examination Committee, Esteban Villalobos, Toulouse University"
         - "Examination Committee, Pavani Vemuri, KU Leuven"
         - "Examination Committee, Tudor Cristea, Eindhoven University of Technology"
+    - title: "2024"
+      items:
+        - "Examination Committee, Esteban Villalobos, Toulouse University"
+    - title: "2023"
+      items:
+        - "First opponent for Kamila Misiejuk's PhD thesis, Bergen University, Norway"
 
 - title: Collaborations
   type: nested_list
   contents:
     - title: International
       items:
-        - "Collaboration network with leading researchers including Dragan Gasevic, Jelena Jovanovic, Barbara Wasson"
-        - "Research partnerships across Germany, Switzerland, USA, UK, Sweden, Luxembourg, Netherlands, Serbia, Bulgaria, Turkey, Australia, Austria"
+        - "Collaboration network with leading researchers including Dragan Gasevic, Jelena Jovanovic, Barbara Wasson, Oleksandra Poquet, Samuel Greiff, Rogers Kaliisa, Ángel Hernández-García, and Miguel Conde-González"
+        - "Research partnerships with over 250 researchers from 40 countries including Germany, Switzerland, USA, UK, Sweden, Luxembourg, Netherlands, Serbia, Bulgaria, Turkey, Australia, Austria"
     - title: Methodological
       items:
         - "Satu Helske (Mixed Hidden Markov Models)"
@@ -341,10 +375,13 @@
         - "Leonie Vogelsmeier (transition analysis)"
     - title: Within Finland
       items:
-        - "Oulu University: Sanna Järvelä, Hanna Järvenoja, Jonna Malmberg"
+        - "Oulu University: Sanna Järvelä, Hanna Järvenoja, Jonna Malmberg, Tiina Törmanen"
         - "University of Helsinki: Petri Ihantola"
-        - "Aalto University: Lauri Malmi"
+        - "Aalto University: Lauri Malmi, Petter Holme"
         - "University of Jyväskylä: Pekka Mertala"
+    - title: Within My University
+      items:
+        - "Laura Hirsto, Teemu Valtonen, Henriikka Vartiainen, Matti Tedre, Erkko Sointu, Kwok Ng, and Sonsoles López-Pernas"
 
 - title: Peer Reviews
   type: nested_list
@@ -363,6 +400,10 @@
         - Journal of Learning Analytics
         - IEEE Transactions on Learning Technologies
         - PLOS One
+        - Medical Education
+        - Educational Technology Research and Development
+        - Journal of Affective Disorders
+        - Learning and Individual Differences
         - Advances in Health Sciences Education
         - Medical Teacher
         - International Journal of Computers and Applications
@@ -411,11 +452,15 @@
         - KU Leuven (University of Leuven, Belgium)
         - Dutch Research Council (NWO)
         - The World Academy of Sciences (TWAS)
+        - The Swiss National Science Foundation
         - Research Council of Oman
 
 - title: Industry Collaboration
   type: time_table
   contents:
+    - year: 2024 - 2025
+      items:
+        - "Anni Advisor: AI support for school pupils"
     - year: 2020
       items:
         - "City of Helsinki (Finland): AI in education development"
@@ -426,6 +471,15 @@
 - title: Projects
   type: time_table
   contents:
+    - year: 2025 - 2027
+      items:
+        - "ENDGAME: European Commission Creative Europe programme on using educational escape rooms for media literacy training"
+    - year: 2024 - 2026
+      items:
+        - "IGLUE: Erasmus+ project on educational escape room pedagogy and tools in higher education"
+    - year: 2023 - 2026
+      items:
+        - "ISILA: Erasmus+ project on developing multimodal learning analytics dashboards"
     - year: 2022
       items:
         - "TOPEILA - University of Eastern Finland: Academy of Finland funded project to study idiographic learning analytics"
@@ -461,6 +515,7 @@
     - title: Societies
       items:
         - Association for Computing Machinery (ACM)
+        - The International Society of the Learning Sciences (ISLS)
         - American Psychological Association (APA)
         - Society for Learning Analytics Research (SoLAR)
         - European Association for Technology-Enhanced Learning (EATEL)
@@ -494,13 +549,27 @@
         - Member of the graduates and community service committee
         - Member of the university planning for flu committee
 
+- title: Pedagogical Training
+  type: nested_list
+  contents:
+    - title: Courses (35.5 ECTS total)
+      items:
+        - "Planning of Learning Processes for Web-Based and Contact Teaching (4 ECTS) - University of Eastern Finland"
+        - "Pedagogical Communication (2 ECTS, 2020) - University of Eastern Finland"
+        - "Doctoral Supervision (5 ECTS, 2021) - KTH Royal Institute of Technology, Sweden"
+        - "Basics of Learning and Expertise (2 ECTS) - University of Eastern Finland"
+        - "Advanced Course: Curriculum and Course Design in Medical Education (5 ECTS) - Maastricht University"
+        - "Technology-Enhanced Learning (7.5 ECTS) - Stockholm University, Sweden"
+        - "Introduction to Learning Theories (7.5 ECTS) - Stockholm University, Sweden"
+        - "Maastricht International PBL Course (5 ECTS) - Maastricht University"
+
 - title: Teaching
   type: nested_list
   contents:
     - title: Courses Taught
       items:
         - "Learning analytics course (5 ECTS): The course is the largest learning analytics course in Europe with around 50 enrolled students with yearly growth of 20%. The course aims to ground students in how to understand, develop, and apply learning analytics techniques (2019 - 2021)."
-        - "Learning analytics summer course (5 ECTS) (2022)."
+        - "Learning analytics summer course (5 ECTS) (2022 - 2025)."
         - "Social Network Analysis (5 ECTS): The course introduces students to the paradigm of networks, enables them to analyze several types of networks, and most importantly, create their own networks (2019 - 2022)."
     - title: Additional Teaching Contributions
       items:

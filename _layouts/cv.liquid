@@ -26,7 +26,37 @@ layout: default
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+            <h3 class="card-title font-weight-medium">
+              {% case entry.title %}
+                {% when 'General Information' %}<i class="fa-solid fa-circle-info cv-section-icon"></i>
+                {% when 'Personal Statement' %}<i class="fa-solid fa-quote-left cv-section-icon"></i>
+                {% when 'Education and Key Qualifications' %}<i class="fa-solid fa-graduation-cap cv-section-icon"></i>
+                {% when 'Academic Positions' %}<i class="fa-solid fa-building-columns cv-section-icon"></i>
+                {% when 'Awards and Honors' %}<i class="fa-solid fa-trophy cv-section-icon"></i>
+                {% when 'Research Funding' %}<i class="fa-solid fa-coins cv-section-icon"></i>
+                {% when 'Editorial Leadership Roles' %}<i class="fa-solid fa-pen-fancy cv-section-icon"></i>
+                {% when 'Editor of Special Issues' %}<i class="fa-solid fa-newspaper cv-section-icon"></i>
+                {% when 'Editorial Board Memberships' %}<i class="fa-solid fa-clipboard-list cv-section-icon"></i>
+                {% when 'Organizing Committee' %}<i class="fa-solid fa-users-gear cv-section-icon"></i>
+                {% when 'Conference Track Chair' %}<i class="fa-solid fa-gavel cv-section-icon"></i>
+                {% when 'Senior PC Member' %}<i class="fa-solid fa-user-check cv-section-icon"></i>
+                {% when 'Proceedings Editor' %}<i class="fa-solid fa-book-open cv-section-icon"></i>
+                {% when 'Invited Speaker and Lectures' %}<i class="fa-solid fa-microphone cv-section-icon"></i>
+                {% when 'Research Stays' %}<i class="fa-solid fa-plane cv-section-icon"></i>
+                {% when 'Supervision' %}<i class="fa-solid fa-user-graduate cv-section-icon"></i>
+                {% when 'Thesis Committee and Opponent Roles' %}<i class="fa-solid fa-scale-balanced cv-section-icon"></i>
+                {% when 'Collaborations' %}<i class="fa-solid fa-handshake cv-section-icon"></i>
+                {% when 'Peer Reviews' %}<i class="fa-solid fa-magnifying-glass cv-section-icon"></i>
+                {% when 'Professional Reviews of Grant Applications' %}<i class="fa-solid fa-file-invoice-dollar cv-section-icon"></i>
+                {% when 'Industry Collaboration' %}<i class="fa-solid fa-industry cv-section-icon"></i>
+                {% when 'Projects' %}<i class="fa-solid fa-diagram-project cv-section-icon"></i>
+                {% when 'Membership in Societies' %}<i class="fa-solid fa-id-card cv-section-icon"></i>
+                {% when 'Roles I Served' %}<i class="fa-solid fa-briefcase cv-section-icon"></i>
+                {% when 'Pedagogical Training' %}<i class="fa-solid fa-book-open-reader cv-section-icon"></i>
+                {% when 'Teaching' %}<i class="fa-solid fa-chalkboard-user cv-section-icon"></i>
+              {% endcase %}
+              {{ entry.title }}
+            </h3>
             <div>
               {% if entry.type == 'list' %}
                 {% include cv/list.liquid %}
@@ -39,7 +69,7 @@ layout: default
               {% elsif entry.type == 'list_groups' %}
                 {% include cv/list_groups.liquid %}
               {% else %}
-                {{ entry.contents }}
+                <div class="cv-text-block">{{ entry.contents }}</div>
               {% endif %}
             </div>
           </div>

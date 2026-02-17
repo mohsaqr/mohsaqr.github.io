@@ -2,6 +2,25 @@
  * CV shared styles
  *****************************/
 
+/* Section icon styling */
+i.cv-section-icon {
+  color: var(--global-theme-color);
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Card accent border in CV context */
+div.cv .card {
+  border-left: 3px solid var(--global-theme-color);
+}
+
+/* Personal Statement / text block styling */
+div.cv .cv-text-block {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
 div.container-link-button {
   margin-right: 0.5rem;
 }

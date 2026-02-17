@@ -19,7 +19,7 @@ layout: default
     Define default section order. Can be overridden in page front matter with section_order.
     Available sections: profile, content, news, contact_note, books, newsletter, latest_posts, selected_papers, social
     {% endcomment %}
-    {% assign default_order = "profile,content,news,contact_note,books,newsletter,latest_posts,selected_papers,social" | split: "," %}
+    {% assign default_order = "profile,content,explore,news,contact_note,books,newsletter,latest_posts,selected_papers,social" | split: "," %}
     {% if page.section_order %}
       {% assign sections = page.section_order %}
     {% else %}
@@ -53,6 +53,11 @@ layout: default
 
         {% when 'content' %}
           <div class="clearfix">{{ content }}</div>
+
+        {% when 'explore' %}
+          {% if page.explore != false %}
+            {% include explore_network.html %}
+          {% endif %}
 
         {% when 'news' %}
           {% if page.news and site.announcements and site.announcements.enabled %}

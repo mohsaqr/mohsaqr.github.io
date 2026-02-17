@@ -194,23 +194,3 @@ These tutorials provide step-by-step, reproducible guides for applying advanced 
   </div>
 
 </div>
-
-<h2 class="tutorial-section-title">Books</h2>
-
-<div class="tutorial-grid">
-
-  <div class="tutorial-card">
-    <img src="{{ '/assets/img/tutorials/labook.jpeg' | relative_url }}" alt="Learning Analytics Methods and Tutorials book cover">
-    <div class="tutorial-body">
-      <h3><a href="https://sonsoles.me/posts/labook/index.html" target="_blank">Learning Analytics Methods and Tutorials: A Practical Guide Using R</a></h3>
-      <p>
-        This open-access Springer book is a comprehensive guide to learning analytics methods, covering everything from R programming basics and data wrangling to advanced techniques including network analysis, sequence mining, process mining, machine learning, and psychological networks. Each chapter pairs methodological explanation with reproducible R tutorials using real educational data. Co-edited with Sonsoles L&oacute;pez-Pernas.
-      </p>
-      <div class="tutorial-meta">
-        <span class="badge-tut">Book</span> <span class="badge-tut">R</span> <span class="badge-tut">Springer</span>
-        Mohammed Saqr &amp; Sonsoles L&oacute;pez-Pernas &middot; 2024
-      </div>
-    </div>
-  </div>
-
-</div>

@@ -5,6 +5,12 @@ title: Research
 description: Browse publications by keyword, search by title or author.
 nav: true
 nav_order: 2
+dropdown: true
+children:
+  - title: "Browse by Keyword"
+    permalink: /research/
+  - title: "Co-authorship Map"
+    permalink: /research/coauthorship-map/
 ---
 
 <style>

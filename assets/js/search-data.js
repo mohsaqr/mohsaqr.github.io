@@ -163,6 +163,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-explore",
+          title: "Explore",
+          description: "Interactive map of all pages on this site.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/explore/";
+          },
         },{id: "nav-get-in-touch",
           title: "Get in Touch",
           description: "",

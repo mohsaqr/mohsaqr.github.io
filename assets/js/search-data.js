@@ -72,6 +72,13 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
+            },{id: "dropdown-keyword-network",
+              title: "Keyword Network",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
             },{id: "dropdown-precision-explainable-ai",
               title: "Precision Explainable AI",
               description: "",

@@ -30,6 +30,20 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
+            },{id: "dropdown-author-network",
+              title: "Author Network",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-institution-network",
+              title: "Institution Network",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
             },{id: "dropdown-learning-analytics-methods-and-tutorials",
               title: "Learning Analytics Methods and Tutorials",
               description: "",

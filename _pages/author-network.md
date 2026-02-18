@@ -1,14 +1,16 @@
 ---
 layout: page
 permalink: /research/author-network/
-title: "Author Network"
+title: "Co-authorship Network"
 description: "Interactive co-authorship network showing collaboration communities"
 nav: false
 ---
 
+This network maps **89 co-authors** across **502 collaboration links**, built from shared publications. Node size reflects the number of papers an author has contributed — larger nodes indicate more prolific collaborators. Edge thickness and opacity scale with the number of co-authored papers between two researchers, so the thickest, darkest lines mark the strongest partnerships. Colors represent **7 communities** detected by the Louvain algorithm, grouping authors who co-publish most frequently with each other. Only authors with at least two publications are included. Scroll to zoom, drag to pan, and hover over a node for details.
+
 <style>
-.network-wrap { position: relative; width: 100%; padding-top: 65%; margin: 0 -1rem; }
-.network-wrap iframe { position: absolute; top: 0; left: 0; width: calc(100% + 2rem); height: 100%; border: none; border-radius: 8px; }
+.network-wrap { position: relative; width: calc(100% + 2rem); margin: 0 -1rem; height: 80vh; min-height: 500px; }
+.network-wrap iframe { width: 100%; height: 100%; border: none; border-radius: 8px; }
 </style>
 
 <div class="network-wrap">

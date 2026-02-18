@@ -1,14 +1,16 @@
 ---
 layout: page
 permalink: /research/institution-network/
-title: "Institution Network"
+title: "Institution Collaboration Network"
 description: "Interactive institution collaboration network colored by country"
 nav: false
 ---
 
+This network visualizes collaboration between **39 institutions** across **18 countries**, connected by **110 co-publication links**. Each node represents a university or research institute — larger nodes have contributed more papers. Edge thickness and opacity reflect the number of jointly authored publications between two institutions. Nodes are colored by country, with a legend bar at the bottom. Only institutions with at least two publications are included. Scroll to zoom, drag to pan, and hover over a node for details.
+
 <style>
-.network-wrap { position: relative; width: 100%; padding-top: 65%; margin: 0 -1rem; }
-.network-wrap iframe { position: absolute; top: 0; left: 0; width: calc(100% + 2rem); height: 100%; border: none; border-radius: 8px; }
+.network-wrap { position: relative; width: calc(100% + 2rem); margin: 0 -1rem; height: 80vh; min-height: 500px; }
+.network-wrap iframe { width: 100%; height: 100%; border: none; border-radius: 8px; }
 </style>
 
 <div class="network-wrap">

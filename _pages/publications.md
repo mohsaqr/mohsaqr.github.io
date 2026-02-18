@@ -149,16 +149,12 @@ nav_order: 1
 }
 </style>
 
-<p class="chord-intro">
-Each arc represents a research interest area. Ribbons connect areas that share publications&mdash;thicker ribbons mean more co-occurring papers.
-Click any arc to explore that interest area.
-</p>
-
 <div id="chord-diagram" class="chord-container"></div>
 <div id="chord-tooltip" class="chord-tooltip"></div>
 <div id="chord-legend" class="chord-legend"></div>
-<p class="chord-note">
-Built from keyword metadata across {{ site.publications | size }} publications.
+
+<p class="chord-intro">
+This chord diagram maps the overlap between <strong>8 research interest areas</strong> derived from keyword metadata across {{ site.publications | size }} publications. Each arc around the circle represents one interest area — its angular width reflects the number of publications tagged to that area. Ribbons connecting two arcs show papers that belong to both areas simultaneously; thicker ribbons indicate stronger topical overlap. Hover over any ribbon for the exact co-occurrence count, or click an arc to navigate to that interest area's page.
 </p>
 
 <script>

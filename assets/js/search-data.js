@@ -191,12 +191,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-explore",
-          title: "Explore",
+        },{id: "nav-sitemap",
+          title: "Sitemap",
           description: "Interactive map of all pages on this site.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/explore/";
+            window.location.href = "/sitemap-visual/";
           },
         },{id: "nav-get-in-touch",
           title: "Get in Touch",

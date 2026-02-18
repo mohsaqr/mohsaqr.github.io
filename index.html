@@ -16,237 +16,516 @@
     }
   </script> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%93%82&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://saqr.me/"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5QY9QMC46"></script> <script src="/assets/js/theme.js?9a0c749ec5240d9cda97bc72359a72c0"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/research/">Browse by Keyword</a> <a class="dropdown-item " href="/research/coauthorship-map/">Co-authorship Map</a> <a class="dropdown-item " href="/research/author-network/">Author Network</a> <a class="dropdown-item " href="/research/institution-network/">Institution Network</a> </div> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Works </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/works/lamethods/">Learning Analytics Methods and Tutorials</a> <a class="dropdown-item " href="/works/advanced/">Advanced Learning Analytics Methods</a> <a class="dropdown-item " href="/works/cer/">Computing Education Research</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/works/methods-software/">Methodological Innovation Software</a> <a class="dropdown-item " href="/works/ai-software/">AI Software</a> </div> </li> <li class="nav-item "> <a class="nav-link" href="/tutorials/">Tutorials </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Interests </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/Interests/">Overview</a> <a class="dropdown-item " href="/publications/">Keyword Network</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/interests/precision-xai/">Precision Explainable AI</a> <a class="dropdown-item " href="/interests/transition-network-analysis/">Transition Network Analysis</a> <a class="dropdown-item " href="/interests/network-analysis/">Network Analysis in Education</a> <a class="dropdown-item " href="/interests/temporal-networks/">Temporal Networks</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/interests/complex-systems/">Complex Systems</a> <a class="dropdown-item " href="/interests/temporal-methods/">Temporal and Sequence Methods</a> <a class="dropdown-item " href="/interests/learning-analytics/">Learning Analytics</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/interests/scientometrics/">Scientometrics and Bibliometrics</a> </div> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teaching </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/teaching/">Teaching Philosophy</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/teaching/summer-course/">Summer Course: LA &amp; AI in Education</a> <a class="dropdown-item " href="/teaching/learning-analytics/">Learning Analytics</a> <a class="dropdown-item " href="/teaching/social-network-analysis/">Social Network Analysis</a> </div> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/explore/">Explore </a> </li> <li class="nav-item "> <a class="nav-link" href="/get-in-touch/">Get in Touch </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <style>.contact-highlight{margin:1.5rem 0;padding:1.2rem 1.5rem;border-left:4px solid var(--global-theme-color);background:color-mix(in srgb,var(--global-theme-color) 6%,var(--global-bg-color));border-radius:0 8px 8px 0;font-size:1.02rem;line-height:1.7;color:var(--global-text-color)}.contact-highlight i{color:var(--global-theme-color);margin-right:.5rem;font-size:1.1rem}.contact-highlight a{color:var(--global-theme-color);font-weight:600}</style> <div class="post"> <header class="post-header"> <h1 class="post-title"> Mohammed Saqr </h1> <p class="desc">Professor of Computer Science</p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw"> <img src="/assets/img/prof_pic.jpg?36c166afb3ff9ae8ca1adf891773aecc" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </source></picture> </figure> <div class="more-info"> <p>Office number B344 </p> <p>Lansikatu 15</p> <p>Joensuu, 80100, Finland</p> </div> </div> <div class="clearfix"> <p>I am a <a href="https://sites.uef.fi/edtech/learning-analytics-2/saqr/" rel="external nofollow noopener" target="_blank">Professor of Learning Analytics and Artificial Intelligence at the School of Computing at University of Eastern Finland</a>. I lead <a href="https://sites.uef.fi/learning-analytics/" rel="external nofollow noopener" target="_blank">UEF’s Learning Analytics Unit</a>, which has emerged as Europe’s most productive learning analytics lab, as recognized by Scopus and Web of Science over the past five years (2019-2024). I have a PhD in Learning Analytics from <a href="https://www.su.se/department-of-computer-and-systems-sciences/" rel="external nofollow noopener" target="_blank">Stockholm University, Sweden</a>, followed by a postdoctoral position at <a href="https://u-paris.fr/" rel="external nofollow noopener" target="_blank">Université Paris Cité, France.</a> Later, I earned the title of Docent in Learning Analytics from the <a href="https://www.oulu.fi/en/research-groups/let-lab-learning-and-educational-technology-research-lab" rel="external nofollow noopener" target="_blank">University of Oulu, Finland</a>. His scholarly work is diverse, interdisciplinary, and prolific.</p> <p>I am a well-published researcher with national and international standing, and extensive publications in leading outlets across learning analytics, individualized machine learning, precision explainable AI, network science, the science of science, and medicine. My interdisciplinary body of work includes over <a href="https://saqr.me/publications/">250 peer-reviewed studies, three books, and scientific software</a>. I have chaired several conference tracks and given invited keynotes and lectures at 40+ events. My research has garnered international recognition, including the Stanford Top 2% Scientist Ranking (2024–2025), the Europe Emerging Scholar Award in 2023 for Learning Analytics, and best paper awards at LAK 2024, ICCE 2020, SITE 2022, ICSLE 2025, and TEEM 2023, 2024, and 2025. In addition, my research has secured funding from esteemed organizations, such as the Research Council of Finland (Academy of Finland), which funded my precision AI project (as Principal Investigator), and the Swedish Research Council, which funded our project on Learning Analytics in the classroom (as Co-Principal Investigator). I also received several grants as part of different consortia in Learning Analytics and virtual laboratories from the European Commission and Nordplus. I maintain extensive international networks, collaborating with over 250 researchers from 40 different countries. I serves on the editorial boards of prominent journals such as Transactions of Learning Technologies, British Journal of Education Technologies, and PLOS ONE. Chaired several conferences, conference proceedings and served as senior program member of several conferences such as LAK, AIED, ECTEL and ISLS.</p> <p>I established and now lead the Learning Analytics Unit at the University of Eastern Finland, which—over the past five years—has become the most productive laboratory of its kind in Europe and ranked second worldwide in 2023, 2024, and 2025. My research group has grown from a single investigator to a dynamic team comprising eight hired researchers and PhD students. It has also developed into a hub for international collaboration, having hosted more than 20 research visitors from France, Spain, Turkey, Morocco, Finland, the Czech Republic, Belgium, and Germany and is always welcoming collaborators and visitors. I have also collaborated with governmental organizations and companies and international organizations, for example, the evaluation of the World Academy of Sciences (a UNESCO organization). My future work focuses on using and advancing methods to study problems of significance to the community, including how machine and human dynamics interact across learning, decision-making, and complex systems. In that, I am particularly interested in Artificiail Intelligence, Analytics, dynamics of problem solving, collaboration, cognitiona and metacognition as well as engagement and regulation– among others.</p> </div> <style>.explore-section{margin:.5rem 0 1.5rem}.explore-section h2 a{color:inherit}.network-container{width:100%;max-width:900px;margin:0 auto;position:relative}.network-container svg{width:100%;height:auto;display:block;animation:netFadeIn .6s ease-in}@keyframes netFadeIn{from{opacity:0}to{opacity:1}}@keyframes centerPulse{0%,100%{opacity:.4}50%{opacity:.8}}.guide-ring{fill:none;stroke:var(--global-divider-color);stroke-width:1;stroke-dasharray:5 10;opacity:.4}.network-edge{fill:none;stroke:var(--global-theme-color);opacity:.18;transition:opacity .3s,stroke-width .3s}.network-edge.hub-edge{stroke-width:2;opacity:.22}.network-edge.child-edge{stroke-width:1.2}.network-edge.highlighted{opacity:.7;stroke-width:2.5}.node-ring{fill:none;stroke:var(--global-theme-color);stroke-width:2;opacity:.5;transition:opacity .3s}.node-ring.hub-ring{stroke-dasharray:4 3}.node-fill{fill:var(--global-theme-color);transition:filter .3s}.node-fill.center-fill{filter:drop-shadow(0 0 8px var(--global-theme-color))}.center-glow{fill:var(--global-theme-color);opacity:.4;animation:centerPulse 4s ease-in-out infinite}.node-icon{fill:var(--global-bg-color);font-family:'Font Awesome 6 Free';font-weight:900;text-anchor:middle;dominant-baseline:central;pointer-events:none}.node-label{fill:var(--global-text-color);text-anchor:middle;font-family:inherit;pointer-events:none;transition:opacity .3s}.node-label.center-label{font-weight:700}.node-group{cursor:pointer}.node-group.no-link{cursor:default}.node-group:hover .node-ring{opacity:1}.node-group:hover .node-fill{filter:brightness(1.2) drop-shadow(0 0 10px var(--global-theme-color))}.network-tooltip{position:fixed;background:var(--global-bg-color);border:1px solid var(--global-divider-color);border-radius:10px;padding:.7rem 1rem;font-size:.85rem;max-width:240px;line-height:1.4;box-shadow:0 4px 20px rgba(0,0,0,0.15);pointer-events:none;opacity:0;transition:opacity .2s;z-index:50}.network-tooltip strong{display:block;margin-bottom:.2rem;color:var(--global-theme-color)}.network-tooltip .tt-desc{color:var(--global-text-color);opacity:.75}</style> <div class="explore-section"> <h2><a href="/explore/">explore</a></h2> <div id="network-graph" class="network-container"></div> <div id="network-tooltip" class="network-tooltip"></div> </div> <script>
-document.addEventListener("DOMContentLoaded", function() {
-  if (typeof d3 === "undefined") {
-    var s = document.createElement("script");
-    s.src = "https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js";
-    s.onload = initExploreNetwork;
-    document.head.appendChild(s);
-  } else {
-    initExploreNetwork();
-  }
-});
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/research/">Browse by Keyword</a> <a class="dropdown-item " href="/research/coauthorship-map/">Co-authorship Map</a> <a class="dropdown-item " href="/research/author-network/">Author Network</a> <a class="dropdown-item " href="/research/institution-network/">Institution Network</a> </div> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Works </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/works/lamethods/">Learning Analytics Methods and Tutorials</a> <a class="dropdown-item " href="/works/advanced/">Advanced Learning Analytics Methods</a> <a class="dropdown-item " href="/works/cer/">Computing Education Research</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/works/methods-software/">Methodological Innovation Software</a> <a class="dropdown-item " href="/works/ai-software/">AI Software</a> </div> </li> <li class="nav-item "> <a class="nav-link" href="/tutorials/">Tutorials </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Interests </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/Interests/">Overview</a> <a class="dropdown-item " href="/publications/">Keyword Network</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/interests/precision-xai/">Precision Explainable AI</a> <a class="dropdown-item " href="/interests/transition-network-analysis/">Transition Network Analysis</a> <a class="dropdown-item " href="/interests/network-analysis/">Network Analysis in Education</a> <a class="dropdown-item " href="/interests/temporal-networks/">Temporal Networks</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/interests/complex-systems/">Complex Systems</a> <a class="dropdown-item " href="/interests/temporal-methods/">Temporal and Sequence Methods</a> <a class="dropdown-item " href="/interests/learning-analytics/">Learning Analytics</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/interests/scientometrics/">Scientometrics and Bibliometrics</a> </div> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teaching </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/teaching/">Teaching Philosophy</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/teaching/summer-course/">Summer Course: LA &amp; AI in Education</a> <a class="dropdown-item " href="/teaching/learning-analytics/">Learning Analytics</a> <a class="dropdown-item " href="/teaching/social-network-analysis/">Social Network Analysis</a> </div> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/sitemap-visual/">Sitemap </a> </li> <li class="nav-item "> <a class="nav-link" href="/get-in-touch/">Get in Touch </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <style>.contact-highlight{margin:1.5rem 0;padding:1.2rem 1.5rem;border-left:4px solid var(--global-theme-color);background:color-mix(in srgb,var(--global-theme-color) 6%,var(--global-bg-color));border-radius:0 8px 8px 0;font-size:1.02rem;line-height:1.7;color:var(--global-text-color)}.contact-highlight i{color:var(--global-theme-color);margin-right:.5rem;font-size:1.1rem}.contact-highlight a{color:var(--global-theme-color);font-weight:600}</style> <div class="post"> <header class="post-header"> <h1 class="post-title"> Mohammed Saqr </h1> <p class="desc">Professor of Computer Science</p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw"> <img src="/assets/img/prof_pic.jpg?36c166afb3ff9ae8ca1adf891773aecc" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </source></picture> </figure> <div class="more-info"> <p>Office number B344 </p> <p>Lansikatu 15</p> <p>Joensuu, 80100, Finland</p> </div> </div> <div class="clearfix"> <p>I am a <a href="https://sites.uef.fi/edtech/learning-analytics-2/saqr/" rel="external nofollow noopener" target="_blank">Professor of Learning Analytics and Artificial Intelligence at the School of Computing at University of Eastern Finland</a>. I lead <a href="https://sites.uef.fi/learning-analytics/" rel="external nofollow noopener" target="_blank">UEF’s Learning Analytics Unit</a>, which has emerged as Europe’s most productive learning analytics lab, as recognized by Scopus and Web of Science over the past five years (2019-2024). I have a PhD in Learning Analytics from <a href="https://www.su.se/department-of-computer-and-systems-sciences/" rel="external nofollow noopener" target="_blank">Stockholm University, Sweden</a>, followed by a postdoctoral position at <a href="https://u-paris.fr/" rel="external nofollow noopener" target="_blank">Université Paris Cité, France.</a> Later, I earned the title of Docent in Learning Analytics from the <a href="https://www.oulu.fi/en/research-groups/let-lab-learning-and-educational-technology-research-lab" rel="external nofollow noopener" target="_blank">University of Oulu, Finland</a>. His scholarly work is diverse, interdisciplinary, and prolific.</p> <p>I am a well-published researcher with national and international standing, and extensive publications in leading outlets across learning analytics, individualized machine learning, precision explainable AI, network science, the science of science, and medicine. My interdisciplinary body of work includes over <a href="https://saqr.me/publications/">250 peer-reviewed studies, three books, and scientific software</a>. I have chaired several conference tracks and given invited keynotes and lectures at 40+ events. My research has garnered international recognition, including the Stanford Top 2% Scientist Ranking (2024–2025), the Europe Emerging Scholar Award in 2023 for Learning Analytics, and best paper awards at LAK 2024, ICCE 2020, SITE 2022, ICSLE 2025, and TEEM 2023, 2024, and 2025. In addition, my research has secured funding from esteemed organizations, such as the Research Council of Finland (Academy of Finland), which funded my precision AI project (as Principal Investigator), and the Swedish Research Council, which funded our project on Learning Analytics in the classroom (as Co-Principal Investigator). I also received several grants as part of different consortia in Learning Analytics and virtual laboratories from the European Commission and Nordplus. I maintain extensive international networks, collaborating with over 250 researchers from 40 different countries. I serves on the editorial boards of prominent journals such as Transactions of Learning Technologies, British Journal of Education Technologies, and PLOS ONE. Chaired several conferences, conference proceedings and served as senior program member of several conferences such as LAK, AIED, ECTEL and ISLS.</p> <p>I established and now lead the Learning Analytics Unit at the University of Eastern Finland, which—over the past five years—has become the most productive laboratory of its kind in Europe and ranked second worldwide in 2023, 2024, and 2025. My research group has grown from a single investigator to a dynamic team comprising eight hired researchers and PhD students. It has also developed into a hub for international collaboration, having hosted more than 20 research visitors from France, Spain, Turkey, Morocco, Finland, the Czech Republic, Belgium, and Germany and is always welcoming collaborators and visitors. I have also collaborated with governmental organizations and companies and international organizations, for example, the evaluation of the World Academy of Sciences (a UNESCO organization). My future work focuses on using and advancing methods to study problems of significance to the community, including how machine and human dynamics interact across learning, decision-making, and complex systems. In that, I am particularly interested in Artificiail Intelligence, Analytics, dynamics of problem solving, collaboration, cognitiona and metacognition as well as engagement and regulation– among others.</p> </div> <style>.chord-container{width:100%;max-width:760px;margin:0 auto;position:relative}.chord-container svg{width:100%;height:auto;display:block;animation:chordFadeIn .6s ease-in}@keyframes chordFadeIn{from{opacity:0}to{opacity:1}}.chord-intro{text-align:center;margin-bottom:1.5rem;color:var(--global-text-color);font-size:.95rem;line-height:1.6;opacity:.85}.chord-ribbon{fill-opacity:.6;transition:fill-opacity .25s;cursor:pointer}.chord-ribbon.dimmed{fill-opacity:.06}.chord-ribbon.highlighted{fill-opacity:.85}.chord-arc{cursor:pointer;transition:opacity .25s}.chord-arc.dimmed{opacity:.25}.chord-arc-label{fill:var(--global-text-color);font-family:inherit;font-size:12px;font-weight:600;pointer-events:none;transition:opacity .25s}.chord-arc-label.dimmed{opacity:.2}.chord-tooltip{position:fixed;background:var(--global-bg-color);border:1px solid var(--global-divider-color);border-radius:10px;padding:.6rem .9rem;font-size:.82rem;max-width:280px;line-height:1.45;box-shadow:0 4px 20px rgba(0,0,0,0.15);pointer-events:none;opacity:0;transition:opacity .2s;z-index:50}.chord-tooltip strong{display:block;margin-bottom:.15rem}.chord-tooltip .tt-detail{color:var(--global-text-color);opacity:.7}.chord-tooltip .tt-hint{color:var(--global-theme-color);opacity:.6;font-size:.75rem;margin-top:.3rem;display:block}.chord-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.2rem;margin-top:1.5rem;padding:0 1rem}.chord-legend-item{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--global-text-color);cursor:pointer;text-decoration:none;transition:opacity .2s;white-space:nowrap}.chord-legend-item:hover{opacity:.7}.chord-legend-swatch{width:12px;height:12px;border-radius:3px;flex-shrink:0}@media(max-width:600px){.chord-container{max-width:100%}.chord-arc-label{font-size:10px}.chord-legend{gap:.35rem .8rem}.chord-legend-item{font-size:.75rem}}</style> <div id="chord-diagram" class="chord-container"></div> <div id="chord-tooltip" class="chord-tooltip"></div> <div id="chord-legend" class="chord-legend"></div> <p class="chord-intro"> This chord diagram maps the connections between <strong>8 research interest areas</strong> derived from keyword metadata across 247 publications. Each arc represents one interest area — its angular width reflects the number of publications tagged to that area. Ribbons connecting two arcs show papers that belong to both areas simultaneously; thicker ribbons indicate stronger topical overlap. Hover over any ribbon for the exact co-occurrence count, or click an arc to navigate to that interest area's page. </p> <script>
+window.pubKeywords = [
+["blended learning","Case discussions","Clinical","Collaborative learning","Computer-supported collaborative learning","Online learning","Learning analytics","Social network analysis","Network methods"],
+["Completion","Dropout","Learning analytics","Machine learning","Retention","Artificial Intelligence"],
+["Educational Assessment","Feedback","Flipped classroom","Learning analytics","Machine learning","Artificial Intelligence"],
+["Collaborative learning","Complexity","Group size","Interaction analysis","Learning analytics","Medical education","Problem-based learning","Social network analysis","Network methods"],
+["blended learning","blended problem-based learning","Learning analytics","Problem-based learning","Social network analysis","Network methods"],
+["Collaborative learning","Learning analytics","Problem-based learning","Self-regulated learning","Social network analysis","Temporality","time","Network methods"],
+["Future research","Game Design Elements","Gamification"],
+["Academic writing","Higher education","Learning analytics","Self-regulated learning","Social networking sites","Network methods"],
+["Centrality measures","Computer-supported collaborative learning","Learning analytics","Network configurations","Participatory and social dimensions","Social network analysis","Validity","Network methods"],
+["Collaborative learning","Learning analytics","Medical education","Problem-based learning","Social network analysis","Temporal networks","Temporality","Network methods"],
+["Collaborative learning","Computer-supported collaborative learning","Learning analytics","Medical education","Social network analysis","Social networks","Network methods"],
+["Multimodal learning analytics","Social network analysis","Temporal networks","Network methods"],
+["Computer-supported collaborative learning","Higher education","Information exchange metrics","Knowledge exchange","Student performance","Students’ roles","Network methods"],
+["Data analytics","Learning analytics","Online learning","Problem-based learning","Small groups","Social network analysis","Social networking","Network methods"],
+["brain","ECD","functional imaging","pain","SPECT"],
+["Data science applications in education","Distance education and online learning"],
+["automated assessment","computer science education","Hidden Markov models","Learning analytics","Programming education","Sequence mining","Sequence \u0026 process methods","Artificial Intelligence"],
+["automated assessment","Computer science","Learning analytics","Process mining","Programming education","Sequence mining","Sequence \u0026 process methods","Artificial Intelligence"],
+["Education","Learning analytics","Learning sciences","Network science","Recommendations","Network methods"],
+["Common challenges","Learning analytics","Network science","Network methods"],
+["Early disengagement","Learning analytics","Trajectories of engagement"],
+["Idiographic","Learning analytics","Network science","Psychological networks","Graphical Gaussian models","Network methods"],
+["Graphical Gaussian models","Idiographic","Network science","Psychological networks","Network methods"],
+["Learning analytics","Longitudinal engagement","Sequence mining","Survival analysis","Trajectories of engagement","Sequence \u0026 process methods"],
+["Centrality measures","Computer-supported collaborative learning","Diffusion","Learning analytics","Social network analysis","Students’ roles","Study success","Network methods"],
+["Learning analytics","Peer relations","Performance","Social capital","Social network analysis","Network methods"],
+["Academic writing","Epistemic network analysis","Learning analytics","Process mining","Self-regulated learning","Sequence mining","Social network analysis","Temporal networks","Network methods","Sequence \u0026 process methods"],
+["Computer-supported collaborative learning","Foreign language learning","Graphical Gaussian models","Psychological networks","Self-regulated learning","Network methods"],
+["Bibliometrics","Game concepts","Games","Gamification","Mobile learning","Simulations","Bibliometrics \u0026 scientometrics"],
+["computer science education","Computer science education","review","science mapping","scientometrics","Bibliometrics \u0026 scientometrics"],
+["computer science education","Computer science education","review","science mapping","scientometrics","Bibliometrics \u0026 scientometrics"],
+["Computer-supported collaborative learning","Learning analytics","online discussion","Problem-based learning","Process mining","Sequence mining","Sequence \u0026 process methods"],
+["Epistemic network analysis","Learning analytics","network analysis","quantitative ethnography","systematic review","Network methods"],
+["academic achievement","Learning analytics","learning tactics","micro-level SRL processes","project management","Sequence mining","Sequence \u0026 process methods"],
+["Educational data mining","elementary school","K-12","Learning analytics","Review","Artificial Intelligence"],
+["bibliometrics","citations","country productivity","impact factor","multiple sclerosis","publication trends","scientific collaboration","Bibliometrics \u0026 scientometrics"],
+["Multimodal learning analytics","Psychological networks","Self-regulated learning","Network methods"],
+["Collaborative learning","idiographic network analysis","network analysis","Psychological networks","Self-regulated learning","Network methods"],
+["Feedback","learning strategies","opt-in","privacy","Self-regulated learning","Engagement","teaching augmentation","Artificial Intelligence"],
+["Assessment analytics","entrance examine","multiple choice question"],
+["Learning analytics","network analysis","Network science","semantic networks","Transition network analysis","Network methods"],
+["Computer-supported collaborative learning","Learning analytics","Longitudinal","Person-centered","Roles"],
+["Centrality measures","Learning analytics","meta-analysis","replicability","reproducibility","Social network analysis","Network methods"],
+["Computer-supported collaborative learning","Learning analytics","Social network analysis","Transition network analysis","Network methods"],
+["bibliometrics","Education","Learning analytics","Network science","Social network analysis","Network methods","Bibliometrics \u0026 scientometrics"],
+["Learning analytics","network analysis","Network science","Social network analysis","Network methods"],
+["clustering","Educational data mining","in-service teachers","Learning analytics","learning strategies","MOOCs","Process mining","Self-regulated learning","Sequence \u0026 process methods","Artificial Intelligence"],
+["Collaborative learning","Computer-supported collaborative learning","Learning analytics","Social network analysis","Temporal networks","uptake","Network methods"],
+["Learning analytics","meta-analysis","portability","reproducibility","student success"],
+["Achievement","Centrality measures","Computer-supported collaborative learning","Educational data mining","Learning analytics","Predictive modeling","Social network analysis","Network methods","Artificial Intelligence"],
+["Learning analytics","Social network analysis","Transition network analysis","Network methods"],
+["Collaborative learning","emotions","Multimodal learning analytics","Person-centered","Self-regulated learning","socio-emotional interaction"],
+["bibliometrics","educational games","rewards","Scientometrics","serious games","Bibliometrics \u0026 scientometrics"],
+["Collaborative learning","computer science education","educational escape rooms","teacher education"],
+["Higher education","impact","Latent class analysis","Learning analytics","Person-centered","Students’ expectations"],
+["bibliometrics","Computer science","computer science education","Computer science education","Education","Education research","Educational data","History of computing","History of computing education","Large-scale analyses","Learning analytics","Meta-review","Programming education","review","science mapping","scientometrics","Software engineering education","Technology ethics","Bibliometrics \u0026 scientometrics"],
+["dashboards","Ecosystems","Evidences","Interoperability","Learning analytics"],
+["blended learning","COVID-19 period","Online learning","Higher education","Learning analytics"],
+["Accessibility barriers","Accessible learning","Educational technology","Learning analytics","Online learning","Remote laboratories","Virtual laboratories"],
+["Distance education","Learning analytics","Online learning","Remote laboratories","Virtual laboratories"],
+["Collaborative learning","Virtual laboratories","Learning analytics","Online learning"],
+["Intervention","Learning analytics","Self-regulated learning","Systematic review"],
+["Cognitive presence","community of inquiry","online mathematics tutoring","time"],
+["Epistemic network analysis","Latent class analysis","Learning analytics","Mixed-methods approach","Motivational profiles","Non-traditional students","Practical nurse students","Study motives","Vocational education and training","Network methods"],
+["computer science education","educational escape rooms","game-based learning","Learning analytics","Sequence mining","serious games","Sequence \u0026 process methods"],
+["clustering","Learning analytics","life-events methods","Longitudinal","Sequence analysis","Sequence \u0026 process methods"],
+["community of inquiry","Discord","Learning analytics","online team-based learning","Online teamwork","virtual collaborative learning"],
+["Altmetrics","Computer science education","scientometrics","Social media","Twitter","Bibliometrics \u0026 scientometrics"],
+["expectations","Learning analytics","students","survey"],
+["Learning analytics","learning strategies","Longitudinal","Sequence analysis","Sequence \u0026 process methods"],
+["academic achievement","Learning analytics","Longitudinal engagement","Mixture Markov models","Multichannel sequence analysis","Person-centered","Student profiles","Sequence \u0026 process methods"],
+["Idiographic","Learning analytics","personalized","predictive","within-person","Artificial Intelligence"],
+["Computer-supported collaborative learning","Learning analytics","Problem-based learning","Process mining","Sequence mining","Sequence \u0026 process methods"],
+["Learning analytics","learning strategies","Problem-based learning","Process mining","Sequence mining","Sequence \u0026 process methods"],
+["Engagement","Heterogeneity","Hidden Markov models","Learning analytics","Longitudinal engagement","Online engagement","Person-centered","Transition network analysis","Network methods","Sequence \u0026 process methods"],
+["affect","co-regulation","Collaborative learning","Self-regulated learning","Socially shared regulation","socio-emotional interaction"],
+["Graphical Gaussian models","Dashboards","Learning analytics","Process mining","Sequence analysis","Network methods","Sequence \u0026 process methods"],
+["Artificial intelligence","ChatGPT","Education","Educational technology","Large language models","systematic review","Artificial Intelligence"],
+["Communication","Educational Assessment","Educational Innovation","Identity","smart learning"],
+["Bibliometrics","Education","Individual differences","learning","Trends","Bibliometrics \u0026 scientometrics"],
+["academic procrastination","Automated assessment","Learning analytics","Programming education","Sequence analysis","Sequence \u0026 process methods","Artificial Intelligence"],
+["accessible educational environment","inclusive technologies","online experiment","Online learning","Virtual laboratories"],
+["Computer-supported collaborative learning","Learning analytics","online discussion","Problem-based learning","Process mining","Sequence mining","Sequence \u0026 process methods"],
+["Learning analytics","Process mining","project management","Self-efficacy beliefs","Sequence analysis","Sequence \u0026 process methods"],
+["Learning analytics","Markov models","Sequence analysis","Transition network analysis","Network methods","Sequence \u0026 process methods"],
+["Community detection","Educational data mining","Learning analytics","Social network analysis","Network methods","Artificial Intelligence"],
+["bibliometrics","Educational technology","legal education","topic modeling","Bibliometrics \u0026 scientometrics"],
+["Idiographic","Learning analytics","Person-specific","Systematic review","within-person"],
+["Learning analytics","SEM","Structural equation modeling"],
+["Learning analytics","Machine learning","Predictive modeling","R programming","Tutorial","Artificial Intelligence"],
+["impact","Dashboards","learning outcomes","systematic review"],
+["digital education","diversity","global south","information communication technologies","information education"],
+["Data cleaning","Data wrangling","Learning analytics","R programming","Tidyverse"],
+["Generative AI","Large language models","Learning analytics","retrieval-augmented generation (RAG)","Artificial Intelligence"],
+["Datasets","Educational data mining","Learning analytics","Open data","Artificial Intelligence"],
+["Curriculum","Educational data mining","Learning analytics","Methods","Tutorial","Artificial Intelligence"],
+["Complex systems","Disengagement","Engagement","Individual differences","Learning analytics","Longitudinal","Markov models","Sequence analysis","Sequence \u0026 process methods"],
+["educational escape rooms","game-based learning","Gaussian mixture models","latent profile analysis","Learning analytics","Person-centered"],
+["Learning analytics","life-events methods","Longitudinal","Person-centered","Sequence analysis","Sequence \u0026 process methods"],
+["Learning analytics","Mixture Markov models","Multichannel sequence analysis","Multimodal learning analytics","Sequence \u0026 process methods"],
+["dashboards","educational escape rooms","game-based learning","Learning analytics","Sequence analysis","Sequence \u0026 process methods"],
+["Data visualization","ggplot2","Learning analytics","Visual analytics"],
+["Bupaverse","Educational data mining","Learning analytics","Process mining","Sequence \u0026 process methods","Artificial Intelligence"],
+["bibliometrics","Digital immigrants","Digital natives","structured topic modeling","Bibliometrics \u0026 scientometrics"],
+["Agglomerative hierarchical clustering","Average silhouette width","Dissimilarity-based clustering","K-means","K-medoids","Learning analytics"],
+["Artificial intelligence","Education","Future research","Generative AI","Review","Meta-synthesis","smart learning","Artificial Intelligence"],
+["data mining","early predictions","Learning analytics","Predictive modeling","Artificial Intelligence"],
+["Heterogeneity","Idiographic","Learning analytics","Person-centered","Person-specific"],
+["Idiographic engagement","Learning analytics","Precision education","Psychological networks","within-person","Network methods"],
+["Computer-supported collaborative learning","Emerging roles","Learning analytics","Model-based clustering","Problem-based learning","Social network analysis","Network methods"],
+["Artificial intelligence","Explainable AI","Idiographic","Learning analytics","Machine learning","Person-specific","personalized learning","Self-regulated learning","within-person","Artificial Intelligence"],
+["Artificial intelligence","Educational data mining","epistemic networks","learning analytics methods","machine learning in education","open access","Process mining","quantitative methods in education","Sequence analysis","Social network analysis","Temporal networks","Network methods","Sequence \u0026 process methods","Artificial Intelligence","Bibliometrics \u0026 scientometrics"],
+["Complex systems","experience sampling method","Idiographic","Learning analytics","personalized learning","Psychological networks","Self-regulated learning","within-person","Network methods"],
+["academic emotions","affect","Individual differences","Learning analytics","Longitudinal","Sequence analysis","Sequence \u0026 process methods"],
+["Complex systems","Learning analytics","Partial correlation networks","Psychological networks","Network methods"],
+["Learning analytics","Sequence analysis","Sequence mining","Sequence \u0026 process methods"],
+["Centrality measures","Learning analytics","Social network analysis","Tutorial","Network methods"],
+["Learning analytics","Social network analysis","Temporality","Temporal networks","Network methods"],
+["Complex systems","Individual differences","Learning analytics"],
+["computer science education","data mining","Learning analytics","Psychological networks","Sequence analysis","Network methods","Sequence \u0026 process methods"],
+["Bibliometrics","Chatbot","ChatGPT","Conversational agent","Generative AI","Large language models","Voice assistant","Artificial Intelligence","Bibliometrics \u0026 scientometrics"],
+["Gaussian mixture models","latent profile analysis","Learning analytics","Model-based clustering"],
+["Learning analytics","R programming","R studio"],
+["Hypothesis testing","Learning analytics","Statistics"],
+["Confirmatory factor analysis","Exploratory factor analysis","Factor analysis","Learning analytics"],
+["Generative AI","Large language models","Predictive Learning Analytics","User-centric Evaluation","Artificial Intelligence"],
+["Learning analytics","Pattern analysis","Self-regulated learning","Strategy transition","Tactics and strategies","Sequence \u0026 process methods"],
+["Accessibility","Artificial intelligence","User interface","User-centered Design","Artificial Intelligence"],
+["Computer-supported collaborative learning","Epistemic network analysis","Learning analytics","Problem-based learning","Process mining","Roles","Sequence mining","Temporality","Network methods","Sequence \u0026 process methods"],
+["Engagement","Learning analytics","Process mining","Self-regulated learning","Sequence \u0026 process methods"],
+["Asynchronous learning","Hidden Markov models","Learning analytics","Multi-channel clustering","Online learning","Self-regulated learning","Sequence analysis","Engagement","Sequence \u0026 process methods"],
+["digital games","Epistemic network analysis","Learning analytics","metagame","player profiles","player types","Network methods"],
+["Bibliometrics","Collaborative learning","Collaborative processes","Computer-supported collaborative learning","Bibliometrics \u0026 scientometrics"],
+["Artificial intelligence","Generative AI","Large language models","Learning analytics","Sequence analysis","Social network analysis","synthetic data generation","Transition network analysis","Network methods","Sequence \u0026 process methods","Artificial Intelligence"],
+["Artificial intelligence","ChatGPT","human-AI interaction","Learning analytics","R package","Artificial Intelligence"],
+["computer science education","Generative AI","Human-AI interaction","Large language models","Learning analytics","Transition network analysis","web programming","Network methods","Artificial Intelligence"],
+["Complex systems","Learning analytics","Psychological networks","Self-regulated learning","Network methods"],
+["Complex systems","Graphical Gaussian models","Learning analytics","panel VAR","Psychological networks","Self-regulated learning","Network methods"],
+["Epistemic network analysis","Large language models","Prompt Engineering","Social network analysis","Synthetic Data","Network methods","Artificial Intelligence"],
+["Educational data mining","Generative AI","Learning analytics","systematic review","Artificial Intelligence"],
+["Changes","Complex systems","Complexity","Idiographic","Learning analytics","Longitudinal","Sequence analysis","Transition network analysis","within-person","Network methods","Sequence \u0026 process methods"],
+["Learning analytics","Learning process","Process mining","Social network analysis","Transition network analysis","Network methods","Sequence \u0026 process methods"],
+["Complex systems","Learning analytics","Markov models","R package","Sequence analysis","Social network analysis","Transition network analysis","Network methods","Sequence \u0026 process methods"],
+["Collaborative learning","Emotion regulation","emotions","Multimodal learning analytics","Socially shared regulation"],
+["Classroom","Elementary level","Latent class analysis","Learning analytics","Qualitative research","Secondary level","Teachers"],
+["Artificial intelligence","Educational psychology","Psychometric validation","Self-regulated learning","Survey simulation","Artificial Intelligence"],
+["Artificial intelligence","blended learning","hybrid learning","learning achievement","learning performance","meta-analysis","quantitative evidence","smart learning","Artificial Intelligence"],
+["MOOCs","network analysis","SIENA","Temporality","TERGM","Transition network analysis","Network methods"],
+["Bibliometrics","Higher education","learning","Soft skills","twenty-first century","Bibliometrics \u0026 scientometrics"],
+["Artificial intelligence","Digital accessibility","Feedback","Generative AI impact","Inclusivity","Learning analytics","Artificial Intelligence"],
+["Across disciplines","Complex systems","Learning patterns","Multi-channel longitudinal analysis","Programming education","Sequence \u0026 process methods"],
+["Artificial intelligence-feedback","human-feedback","Learning analytics","meta-analysis","Artificial Intelligence"],
+["Artificial intelligence","Education","Explainable AI","Learning analytics","Artificial Intelligence"],
+["Automated feedback","Explainable AI","Generative AI","Large language models","Learning analytics","LM studio","Artificial Intelligence"],
+["clustering","Heterogeneity","Learning analytics","Mixture Markov models","Transition network analysis","Network methods","Sequence \u0026 process methods"],
+["escape rooms","game-based learning","review","structured topic modeling","Bibliometrics \u0026 scientometrics"],
+["Heterogeneity","Idiographic","Learning analytics","Nomothetic","Person-centered"],
+["Complex systems","Explainable AI","Idiographic","Learning analytics","Artificial Intelligence"],
+["Artificial intelligence","Automatic coding","BERT","Large language models","Learning analytics","Natural language processing","Artificial Intelligence"],
+["Transition network analysis","Learning analytics","Mixed Methods","quantitative ethnography","Network methods"],
+["Artificial intelligence","Large language models","Learning analytics","Artificial Intelligence"],
+["Artificial intelligence","Classification","Learning analytics","Machine learning","Predictive modeling","Artificial Intelligence"],
+["Artificial intelligence","Learning analytics","Predictive modeling","Regression","Artificial Intelligence"],
+["Automated machine learning","Explainable AI","Idiographic","Learning analytics","Precision education","Artificial Intelligence"],
+["Learning analytics","Stochastic process mining","Transition network analysis","Network methods","Sequence \u0026 process methods"],
+["Complex systems","Learning analytics","network analysis","Recurrence quantification analysis","Network methods","Sequence \u0026 process methods"],
+["DALEX","Explainable AI","Learning analytics","Machine learning","Artificial Intelligence"],
+["Complex systems","Graphical vector autoregression","Idiographic","Learning analytics","network analysis","Unified structural equation modeling","Network methods"],
+["Idiographic","Learning analytics","N = 1","Nomothetic","Within-person"],
+["DALEX","Explainable AI","Learning analytics","LIME","Machine learning","SHAP","Artificial Intelligence"],
+["Learning analytics","Markov models","Stochastic process mining","Transition network analysis","Network methods","Sequence \u0026 process methods"]
+];
+</script> <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js" integrity="sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw=" crossorigin="anonymous"></script> <script>
+(function() {
 
-function initExploreNetwork() {
+  var tooltip = document.getElementById("chord-tooltip");
 
-  var tooltip = document.getElementById("network-tooltip");
-
-  var nodes = [
-    { id: "home", label: "Saqr", link: "/", ring: 0, icon: "\uf015",
-      desc: "Main landing page" },
-
-    { id: "publications", label: "Publications", link: "/publications/", ring: 1, icon: "\uf02d",
-      desc: "Research papers and academic publications" },
-    { id: "interests", label: "Interests", link: null, ring: 1, icon: "\uf0eb",
-      desc: "Research interests and specializations" },
-    { id: "cv", label: "CV", link: "/cv/", ring: 1, icon: "\uf15c",
-      desc: "Academic curriculum vitae" },
-    { id: "works", label: "Works", link: null, ring: 1, icon: "\uf0b1",
-      desc: "Books, software, and major projects" },
-    { id: "tutorials", label: "Tutorials", link: "/tutorials/", ring: 1, icon: "\uf19d",
-      desc: "Step-by-step guides for analytics methods" },
-    { id: "teaching", label: "Teaching", link: null, ring: 1, icon: "\uf51c",
-      desc: "Courses, philosophy, and teaching materials" },
-    { id: "research", label: "Research", link: "/research/", ring: 1, icon: "\uf0c3",
-      desc: "Current research projects and focus areas" },
-    { id: "contact", label: "Get in Touch", link: "/get-in-touch/", ring: 1, icon: "\uf0e0",
-      desc: "Contact information and social links" },
-
-    { id: "la-methods", label: "LA Methods Book", link: "/works/lamethods/", ring: 2, parent: "works",
-      desc: "Learning Analytics Methods and Tutorials textbook" },
-    { id: "advanced-la", label: "Advanced LA Book", link: "/works/advanced-la/", ring: 2, parent: "works",
-      desc: "Advanced Learning Analytics textbook" },
-    { id: "cer", label: "Computing Education", link: "/works/cer/", ring: 2, parent: "works",
-      desc: "Computing education research" },
-    { id: "software", label: "Methods Software", link: "/software/", ring: 2, parent: "works",
-      desc: "Research software and analytical tools" },
-    { id: "ai-software", label: "AI Software", link: "/works/ai-software/", ring: 2, parent: "works",
-      desc: "AI-powered software tools" },
-
-    { id: "precision-xai", label: "Precision XAI", link: "/interests/precision-xai/", ring: 2, parent: "interests",
-      desc: "Explainable AI for precision education" },
-    { id: "temporal-net", label: "Temporal Networks", link: "/interests/temporal-networks/", ring: 2, parent: "interests",
-      desc: "Temporal network analysis methods" },
-    { id: "sequence", label: "Sequence Analytics", link: "/interests/sequence-analytics/", ring: 2, parent: "interests",
-      desc: "Sequence and process mining in education" },
-    { id: "psych-net", label: "Psych. Networks", link: "/interests/psychological-networks/", ring: 2, parent: "interests",
-      desc: "Psychological network analysis" },
-    { id: "network-sci", label: "Network Science", link: "/interests/network-science/", ring: 2, parent: "interests",
-      desc: "Network science and complex networks" },
-    { id: "sci-of-sci", label: "Science of Science", link: "/interests/science-of-science/", ring: 2, parent: "interests",
-      desc: "Scientometrics and research analytics" },
-    { id: "complex-sys", label: "Complex Systems", link: "/interests/complex-systems/", ring: 2, parent: "interests",
-      desc: "Complex systems and emergence" },
-
-    { id: "teach-phil", label: "Teaching Philosophy", link: "/teaching/", ring: 2, parent: "teaching",
-      desc: "Teaching philosophy and pedagogical approach" },
-    { id: "summer", label: "Summer Course", link: "/teaching/summer-course/", ring: 2, parent: "teaching",
-      desc: "Summer school courses" },
-    { id: "teach-la", label: "Learning Analytics", link: "/teaching/learning-analytics/", ring: 2, parent: "teaching",
-      desc: "Learning analytics course" },
-    { id: "teach-sna", label: "Social Network Analysis", link: "/teaching/social-network-analysis/", ring: 2, parent: "teaching",
-      desc: "Social network analysis course" }
+  // --- Categories ---
+  var categories = [
+    {
+      name: "Precision\nExplainable AI",
+      shortName: "Precision Explainable AI",
+      slug: "precision-xai",
+      link: "/interests/precision-xai/",
+      color: "#e63946",
+      patterns: [
+        "artificial intelligence", "explainable ai", "machine learning",
+        "idiographic", "person-centered", "person-specific", "within-person",
+        "predictive", "generative ai", "large language model",
+        "precision education", "shap", "dalex", "lime",
+        "natural language processing", "chatgpt", "chatbot",
+        "human-ai", "n = 1", "heterogeneity", "individual differences",
+        "personalized", "bert", "prompt engineering",
+        "retrieval-augmented", "lm studio", "conversational agent",
+        "voice assistant", "automated machine learning", "automated feedback",
+        "automated assessment", "synthetic data"
+      ]
+    },
+    {
+      name: "Transition Network\nAnalysis",
+      shortName: "Transition Network Analysis",
+      slug: "transition-network-analysis",
+      link: "/interests/transition-network-analysis/",
+      color: "#457b9d",
+      patterns: [
+        "transition network", "markov model", "stochastic process",
+        "process mining", "hidden markov", "mixture markov", "bupaverse"
+      ]
+    },
+    {
+      name: "Network Analysis\nin Education",
+      shortName: "Network Analysis in Education",
+      slug: "network-analysis",
+      link: "/interests/network-analysis/",
+      color: "#2a9d8f",
+      patterns: [
+        "network method", "social network", "network analysis",
+        "epistemic network", "graphical gaussian", "network science",
+        "centrality measure", "community detection", "network configuration",
+        "quantitative ethnography", "semantic network", "siena", "tergm"
+      ]
+    },
+    {
+      name: "Temporal\nNetworks",
+      shortName: "Temporal Networks",
+      slug: "temporal-networks",
+      link: "/interests/temporal-networks/",
+      color: "#e9c46a",
+      patterns: [
+        "temporal network", "diffusion"
+      ]
+    },
+    {
+      name: "Complex\nSystems",
+      shortName: "Complex Systems",
+      slug: "complex-systems",
+      link: "/interests/complex-systems/",
+      color: "#f4a261",
+      patterns: [
+        "complex system", "psychological network", "partial correlation",
+        "graphical vector autoregression", "panel var",
+        "recurrence quantification"
+      ]
+    },
+    {
+      name: "Temporal &\nSequence Methods",
+      shortName: "Temporal & Sequence Methods",
+      slug: "temporal-methods",
+      link: "/interests/temporal-methods/",
+      color: "#a8dadc",
+      patterns: [
+        "sequence", "longitudinal", "temporality",
+        "latent class", "latent profile", "trajectories",
+        "strategy transition", "survival analysis",
+        "multi-channel", "multichannel", "dissimilarity"
+      ]
+    },
+    {
+      name: "Learning\nAnalytics",
+      shortName: "Learning Analytics",
+      slug: "learning-analytics",
+      link: "/interests/learning-analytics/",
+      color: "#6a4c93",
+      patterns: [
+        "learning analytics", "educational data mining",
+        "self-regulated", "collaborative learning",
+        "computer-supported", "online learning",
+        "problem-based", "multimodal learning", "engagement",
+        "flipped classroom", "blended learning",
+        "moocs", "distance education", "assessment analytics",
+        "game-based learning", "gamification",
+        "learning strategies", "learning tactics",
+        "co-regulation", "socially shared regulation",
+        "learning outcome", "learning performance",
+        "academic achievement", "emotion regulation",
+        "educational escape"
+      ]
+    },
+    {
+      name: "Scientometrics",
+      shortName: "Scientometrics & Bibliometrics",
+      slug: "scientometrics",
+      link: "/interests/scientometrics/",
+      color: "#b5838d",
+      patterns: [
+        "bibliometric", "scientometric", "science of science",
+        "altmetric", "citation", "science mapping",
+        "topic model", "structured topic", "impact factor",
+        "open access", "publication trend", "scientific collaboration",
+        "country productivity"
+      ]
+    }
   ];
 
-  var edges = [];
-  var innerNodes = nodes.filter(function(n) { return n.ring === 1; });
-  var outerNodes = nodes.filter(function(n) { return n.ring === 2; });
-  innerNodes.forEach(function(n) { edges.push({ source: "home", target: n.id, type: "hub" }); });
-  outerNodes.forEach(function(n) { edges.push({ source: n.parent, target: n.id, type: "child" }); });
+  // --- Map publications to categories ---
+  var n = categories.length;
+  var matrix = [];
+  var catCounts = new Array(n).fill(0);
+  var i, j;
 
-  // Layout in a 1080x1080 coordinate space, but we crop the viewBox
-  var fullW = 1200;
-  var cx = fullW / 2, cy = fullW / 2;
-  var innerRadius = 225, outerRadius = 500;
-
-  var centerFillR = 36, centerRingR = 44, centerGlowR = 52;
-  var innerFillR = 25, innerRingR = 31;
-  var outerFillR = 16, outerRingR = 20;
-
-  var centerFontSize = 20, innerFontSize = 14;
-  var centerLabelSize = 16, innerLabelSize = 13, outerLabelSize = 11;
-
-  innerNodes.forEach(function(n, i) {
-    var angle = (2 * Math.PI * i / innerNodes.length) - Math.PI / 2;
-    n.x = cx + innerRadius * Math.cos(angle);
-    n.y = cy + innerRadius * Math.sin(angle);
-    n.angle = angle;
-  });
-
-  var parentGroups = {};
-  outerNodes.forEach(function(n) {
-    if (!parentGroups[n.parent]) parentGroups[n.parent] = [];
-    parentGroups[n.parent].push(n);
-  });
-
-  Object.keys(parentGroups).forEach(function(pid) {
-    var parent = nodes.find(function(n) { return n.id === pid; });
-    var children = parentGroups[pid];
-    var spread = Math.PI * 0.32;
-    if (children.length > 5) spread = Math.PI * 0.52;
-    var startAngle = parent.angle - spread / 2;
-    var step = children.length > 1 ? spread / (children.length - 1) : 0;
-    children.forEach(function(c, i) {
-      var a = startAngle + step * i;
-      c.x = cx + outerRadius * Math.cos(a);
-      c.y = cy + outerRadius * Math.sin(a);
-      c.angle = a;
-    });
-  });
-
-  nodes[0].x = cx;
-  nodes[0].y = cy;
-
-  var nodeMap = {};
-  nodes.forEach(function(n) { nodeMap[n.id] = n; });
-
-  // Compute tight bounding box around all nodes + labels
-  var pad = 60;
-  var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-  nodes.forEach(function(n) {
-    var r = n.ring === 0 ? centerGlowR : n.ring === 1 ? innerRingR : outerRingR;
-    var labelH = n.ring === 0 ? centerRingR + 25 : n.ring === 1 ? innerRingR + 22 : outerRingR + 18;
-    if (n.x - r < minX) minX = n.x - r;
-    if (n.x + r > maxX) maxX = n.x + r;
-    if (n.y - r < minY) minY = n.y - r;
-    if (n.y + labelH > maxY) maxY = n.y + labelH;
-  });
-  var vbX = minX - pad;
-  var vbY = minY - pad;
-  var vbW = maxX - minX + 2 * pad;
-  var vbH = maxY - minY + 2 * pad;
-
-  var svg = d3.select("#network-graph")
-    .append("svg")
-    .attr("viewBox", vbX + " " + vbY + " " + vbW + " " + vbH)
-    .attr("preserveAspectRatio", "xMidYMid meet");
-
-  var g = svg.append("g");
-
-  // Guide rings
-  g.append("circle").attr("class", "guide-ring")
-    .attr("cx", cx).attr("cy", cy).attr("r", innerRadius);
-  g.append("circle").attr("class", "guide-ring")
-    .attr("cx", cx).attr("cy", cy).attr("r", outerRadius);
-
-  // Edges
-  var edgeEls = g.selectAll(".network-edge")
-    .data(edges).enter().append("path")
-    .attr("class", function(d) {
-      return "network-edge " + (d.type === "hub" ? "hub-edge" : "child-edge");
-    });
-
-  function computeEdgePath(e) {
-    var s = nodeMap[e.source], t = nodeMap[e.target];
-    var sx = s.x, sy = s.y, tx = t.x, ty = t.y;
-    if (e.type === "hub") {
-      var mx = (sx + tx) / 2, my = (sy + ty) / 2;
-      var dx = tx - sx, dy = ty - sy;
-      var len = Math.sqrt(dx * dx + dy * dy) || 1;
-      mx += (-dy / len) * 35;
-      my += (dx / len) * 35;
-      return "M" + sx + "," + sy + " Q" + mx + "," + my + " " + tx + "," + ty;
-    }
-    return "M" + sx + "," + sy + " L" + tx + "," + ty;
+  for (i = 0; i < n; i++) {
+    matrix[i] = new Array(n).fill(0);
   }
 
-  edgeEls.attr("d", computeEdgePath);
+  function matchCategory(kw) {
+    var lower = kw.toLowerCase();
+    var matched = [];
+    for (var c = 0; c < n; c++) {
+      var patterns = categories[c].patterns;
+      for (var p = 0; p < patterns.length; p++) {
+        if (lower.indexOf(patterns[p]) !== -1) {
+          matched.push(c);
+          break;
+        }
+      }
+    }
+    return matched;
+  }
 
-  // Node groups
-  var nodeGroups = g.selectAll(".node-group")
-    .data(nodes).enter().append("g")
-    .attr("class", function(d) {
-      return "node-group" + (d.link ? "" : " no-link");
+  var pubs = window.pubKeywords || [];
+  pubs.forEach(function(kwList) {
+    var catSet = {};
+    kwList.forEach(function(kw) {
+      var matches = matchCategory(kw);
+      matches.forEach(function(idx) { catSet[idx] = true; });
+    });
+    var cats = Object.keys(catSet).map(Number);
+    cats.forEach(function(ci) { catCounts[ci]++; });
+    for (i = 0; i < cats.length; i++) {
+      for (j = i + 1; j < cats.length; j++) {
+        matrix[cats[i]][cats[j]]++;
+        matrix[cats[j]][cats[i]]++;
+      }
+    }
+  });
+
+  // Add small self-value so arcs appear even if a category has no connections
+  for (i = 0; i < n; i++) {
+    var rowSum = 0;
+    for (j = 0; j < n; j++) rowSum += matrix[i][j];
+    if (rowSum === 0) matrix[i][i] = 1;
+  }
+
+  // --- D3 Chord Layout ---
+  var size = 700;
+  var outerRadius = size / 2 - 80;
+  var innerRadius = outerRadius - 20;
+
+  var chord = d3.chord()
+    .padAngle(0.04)
+    .sortSubgroups(d3.descending);
+
+  var arc = d3.arc()
+    .innerRadius(innerRadius)
+    .outerRadius(outerRadius);
+
+  var ribbon = d3.ribbon()
+    .radius(innerRadius);
+
+  var chords = chord(matrix);
+
+  var svg = d3.select("#chord-diagram")
+    .append("svg")
+    .attr("viewBox", "0 0 " + size + " " + size)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .append("g")
+    .attr("transform", "translate(" + size / 2 + "," + size / 2 + ")");
+
+  // --- Ribbons ---
+  var ribbons = svg.append("g")
+    .selectAll("path")
+    .data(chords)
+    .enter().append("path")
+    .attr("class", "chord-ribbon")
+    .attr("d", ribbon)
+    .style("fill", function(d) { return categories[d.source.index].color; })
+    .on("mouseenter", function(event, d) {
+      highlightConnection(d.source.index, d.target.index);
+      var si = d.source.index, ti = d.target.index;
+      var count = matrix[si][ti];
+      showTooltip(event,
+        "<strong style='color:" + categories[si].color + "'>" +
+        categories[si].shortName + " &harr; " + categories[ti].shortName + "</strong>" +
+        "<span class='tt-detail'>" + count + " shared publication" + (count !== 1 ? "s" : "") + "</span>" +
+        "<span class='tt-hint'>Click an arc to see papers</span>"
+      );
+    })
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    });
+
+  // --- Arcs ---
+  var arcs = svg.append("g")
+    .selectAll("g")
+    .data(chords.groups)
+    .enter().append("g");
+
+  arcs.append("path")
+    .attr("class", "chord-arc")
+    .attr("d", arc)
+    .style("fill", function(d) { return categories[d.index].color; })
+    .style("stroke", function(d) { return d3.color(categories[d.index].color).darker(0.3); })
+    .style("stroke-width", 1)
+    .on("mouseenter", function(event, d) {
+      highlightArc(d.index);
+      var connected = [];
+      chords.forEach(function(ch) {
+        if (ch.source.index === d.index) connected.push(categories[ch.target.index].shortName + " (" + matrix[d.index][ch.target.index] + ")");
+        else if (ch.target.index === d.index) connected.push(categories[ch.source.index].shortName + " (" + matrix[ch.source.index][d.index] + ")");
+      });
+      showTooltip(event,
+        "<strong style='color:" + categories[d.index].color + "'>" + categories[d.index].shortName + "</strong>" +
+        "<span class='tt-detail'>" +
+        (connected.length > 0 ? "Overlaps with: " + connected.join(", ") : "") + "</span>" +
+        "<span class='tt-hint'>Click to see papers</span>"
+      );
+    })
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    })
+    .on("click", function(event, d) {
+      window.location.href = categories[d.index].link;
+    });
+
+  // --- Arc labels ---
+  var labels = svg.append("g")
+    .selectAll("text")
+    .data(chords.groups)
+    .enter().append("text")
+    .attr("class", "chord-arc-label")
+    .each(function(d) {
+      d.angle = (d.startAngle + d.endAngle) / 2;
     })
     .attr("transform", function(d) {
-      return "translate(" + d.x + "," + d.y + ")";
-    });
-
-  nodeGroups.filter(function(d) { return d.ring === 0; })
-    .append("circle").attr("class", "center-glow").attr("r", centerGlowR);
-
-  nodeGroups.append("circle")
-    .attr("class", function(d) { return "node-ring" + (!d.link ? " hub-ring" : ""); })
-    .attr("r", function(d) {
-      if (d.ring === 0) return centerRingR;
-      if (d.ring === 1) return innerRingR;
-      return outerRingR;
-    });
-
-  nodeGroups.append("circle")
-    .attr("class", function(d) { return "node-fill" + (d.ring === 0 ? " center-fill" : ""); })
-    .attr("r", function(d) {
-      if (d.ring === 0) return centerFillR;
-      if (d.ring === 1) return innerFillR;
-      return outerFillR;
-    });
-
-  nodeGroups.filter(function(d) { return d.ring <= 1 && d.icon; })
-    .append("text").attr("class", "node-icon")
-    .attr("font-size", function(d) { return d.ring === 0 ? centerFontSize : innerFontSize; })
-    .attr("dy", "0.05em")
-    .text(function(d) { return d.icon; });
-
-  nodeGroups.append("text")
-    .attr("class", function(d) { return "node-label" + (d.ring === 0 ? " center-label" : ""); })
-    .attr("y", function(d) {
-      if (d.ring === 0) return centerRingR + 20;
-      if (d.ring === 1) return innerRingR + 18;
-      return outerRingR + 15;
+      var a = d.angle * 180 / Math.PI - 90;
+      var r = outerRadius + 12;
+      return "rotate(" + a + ") translate(" + r + ",0)" +
+        (d.angle > Math.PI ? " rotate(180)" : "");
     })
-    .attr("font-size", function(d) {
-      if (d.ring === 0) return centerLabelSize;
-      if (d.ring === 1) return innerLabelSize;
-      return outerLabelSize;
+    .attr("text-anchor", function(d) {
+      return d.angle > Math.PI ? "end" : "start";
     })
-    .text(function(d) { return d.label; });
+    .each(function(d) {
+      var lines = categories[d.index].name.split("\n");
+      var el = d3.select(this);
+      lines.forEach(function(line, li) {
+        el.append("tspan")
+          .attr("x", 0)
+          .attr("dy", li === 0 ? "0.35em" : "1.15em")
+          .text(line);
+      });
+    });
 
-  // Interaction
-  function showTooltip(event, d) {
-    tooltip.innerHTML = "<strong>" + d.label + "</strong>" +
-      (d.desc ? "<span class='tt-desc'>" + d.desc + "</span>" : "");
+  // --- Legend ---
+  var legendDiv = document.getElementById("chord-legend");
+  categories.forEach(function(cat) {
+    var a = document.createElement("a");
+    a.className = "chord-legend-item";
+    a.href = cat.link;
+    a.innerHTML = '<span class="chord-legend-swatch" style="background:' + cat.color + '"></span>' + cat.shortName;
+    legendDiv.appendChild(a);
+  });
+
+  // --- Interactions ---
+  function highlightArc(idx) {
+    ribbons.classed("dimmed", function(d) {
+      return d.source.index !== idx && d.target.index !== idx;
+    }).classed("highlighted", function(d) {
+      return d.source.index === idx || d.target.index === idx;
+    });
+    arcs.select("path").classed("dimmed", function(d) { return d.index !== idx; });
+    labels.classed("dimmed", function(d) { return d.index !== idx; });
+  }
+
+  function highlightConnection(si, ti) {
+    ribbons.classed("dimmed", function(d) {
+      return !((d.source.index === si && d.target.index === ti) ||
+               (d.source.index === ti && d.target.index === si));
+    }).classed("highlighted", function(d) {
+      return (d.source.index === si && d.target.index === ti) ||
+             (d.source.index === ti && d.target.index === si);
+    });
+    arcs.select("path").classed("dimmed", function(d) {
+      return d.index !== si && d.index !== ti;
+    });
+    labels.classed("dimmed", function(d) {
+      return d.index !== si && d.index !== ti;
+    });
+  }
+
+  function clearHighlight() {
+    ribbons.classed("dimmed", false).classed("highlighted", false);
+    arcs.select("path").classed("dimmed", false);
+    labels.classed("dimmed", false);
+  }
+
+  function showTooltip(event, html) {
+    tooltip.innerHTML = html;
     tooltip.style.opacity = "1";
+    tooltip.style.left = (event.clientX + 16) + "px";
+    tooltip.style.top = (event.clientY - 12) + "px";
+  }
+
+  function moveTooltip(event) {
     tooltip.style.left = (event.clientX + 16) + "px";
     tooltip.style.top = (event.clientY - 12) + "px";
   }
@@ -255,38 +534,19 @@ function initExploreNetwork() {
     tooltip.style.opacity = "0";
   }
 
-  nodeGroups.on("mouseenter", function(event, d) {
-    var connected = new Set();
-    edges.forEach(function(e) {
-      if (e.source === d.id || e.target === d.id) {
-        connected.add(e.source);
-        connected.add(e.target);
+  // --- URL highlight parameter ---
+  var params = new URLSearchParams(window.location.search);
+  var hlSlug = params.get("highlight");
+  if (hlSlug) {
+    for (var h = 0; h < categories.length; h++) {
+      if (categories[h].slug === hlSlug) {
+        highlightArc(h);
+        break;
       }
-    });
-    edgeEls.classed("highlighted", function(e) {
-      return e.source === d.id || e.target === d.id;
-    });
-    nodeGroups.style("opacity", function(n) {
-      return connected.has(n.id) || n.id === d.id ? 1 : 0.2;
-    });
-    showTooltip(event, d);
-  });
+    }
+  }
 
-  nodeGroups.on("mousemove", function(event) {
-    tooltip.style.left = (event.clientX + 16) + "px";
-    tooltip.style.top = (event.clientY - 12) + "px";
-  });
-
-  nodeGroups.on("mouseleave", function() {
-    edgeEls.classed("highlighted", false);
-    nodeGroups.style("opacity", 1);
-    hideTooltip();
-  });
-
-  nodeGroups.on("click", function(event, d) {
-    if (d.link) window.location.href = d.link;
-  });
-}
+})();
 </script> <h2> <a href="/news/" style="color: inherit">news</a> </h2> <div class="news"> <div class="table-responsive" style="max-height: 60vw"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">Feb 12, 2026</th> <td> The <a href="https://cran.r-project.org/package=tna" rel="external nofollow noopener" target="_blank">tna</a> R package reaches <strong>v1.2.0</strong> on CRAN — now with frequency-based TNA (FTNA), n-gram and attention models, expanded centrality measures, and formal model comparison functions. </td> </tr> <tr> <th scope="row" style="width: 20%">Jan 16, 2026</th> <td> Our new R package <a href="https://cran.r-project.org/package=codyna" rel="external nofollow noopener" target="_blank">codyna</a> for <strong>complex dynamic systems</strong> analysis is now on CRAN — tools for complexity analysis, pattern detection, trend identification, regime shift detection, sequence classification, and early warning signals. </td> </tr> <tr> <th scope="row" style="width: 20%">Oct 25, 2025</th> <td> <a class="news-title" href="/news/announcement_6/">Advanced Learning Analytics Methods: AI, Precision and Complexity</a> </td> </tr> </table> </div> </div> <div class="contact-highlight"> <i class="fas fa-envelope"></i> If you have a research idea, are thinking of spending a research mobility or collaborating on a funding proposal, looking for a PhD or master supervision, I will be happy to discuss these with you, please send me an e-mail at <a href="mailto:mohammed.saqr@uef.fi">mohammed.saqr@uef.fi</a>. </div> <h2> Books </h2> <div class="publications"> <div class="row"> <div class="col-12 col-sm-4 abbr text-center"> <a href="https://lamethods.org" target="_blank" rel="external nofollow noopener"> <img src="/assets/img/labook.jpeg" style="width: 85%;"> </a> </div> <div class="col-12 col-sm-4 abbr text-center"> <a href="https://lamethods.org" target="_blank" rel="external nofollow noopener"> <img src="/assets/img/advanced.png" style="width: 85%;"> </a> </div> <div class="col-12 col-sm-4 abbr text-center"> <a href="https://doi.org/10.1007/978-3-031-25336-2" target="_blank" rel="external nofollow noopener"> <img src="/assets/img/pastprsent.png" style="width: 82.5%;"> </a> </div> </div> </div> <hr> <h2> <a href="/publications/" style="color: inherit">selected publications</a> </h2> <p>This is a selection of my publications which includes some of the papers that I enjoyed working on. A full list of my work can be found <a target="_blank" rel="noopener noreferrer" href="https://saqr.me/publications">here</a>, a more updated list can be seen on my <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=U-O6R7YAAAAJ">Google Scholar</a>.</p> <p><br><br> </p> <div class="publications"> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Computers&amp;Education</abbr> </div> <div id="SaqrM2021i" class="col-sm-8"> <div class="title">The longitudinal trajectories of online engagement over a full program</div> <div class="author"> Saqr M., and López-Pernas S. </div> <div class="periodical"> <em>In Computers and Education</em>, 2021 </div> <div class="periodical"> 104325 </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1016/j.compedu.2021.104325" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="/assets/pdf/long.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a> <a href="https://doi.org/10.1016/j.compedu.2021.104325" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Website</a> </div> <div class="abstract hidden"> <p>Student engagement has a trajectory (a timeline) that unfolds over time and can be shaped by different factors including learners’ motivation, school conditions, and the nature of learning tasks. Such factors may result in either a stable, declining or fluctuating engagement trajectory. While research on online engagement is abundant, most authors have examined student engagement in a single course or two. Little research has been devoted to studying online longitudinal engagement, i.e., the evolution of student engagement over a full educational program. This learning analytics study examines the engagement states (sequences, successions, stability, and transitions) of 106 students in 1396 course enrollments over a full program. All data of students enrolled in the academic year 2014–2015, and their subsequent data in 2015–2016, 2016–2017, and 2017–2018 (15 courses) were collected. The engagement states were clustered using Hidden Markov Models (HMM) to uncover the hidden engagement trajectories which resulted in a mostly-engaged (33% of students), an intermediate (39.6%), and a troubled (27.4%) trajectory. The mostly-engaged trajectory was stable with infrequent changes, scored the highest, and was less likely to drop out. The troubled trajectory showed early disengagement, frequent dropouts and scored the lowest grades. The results of our study show how to identify early program disengagement (activities within the third decile) and when students may drop out (first year and early second year). © 2021 The Author(s)</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">SaqrM2021i</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{M., Saqr and S., López-Pernas}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>

@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /explore/
-title: Explore
+permalink: /sitemap-visual/
+title: Sitemap
 description: Interactive map of all pages on this site.
 nav: true
 nav_order: 9

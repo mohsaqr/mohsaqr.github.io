@@ -75,6 +75,9 @@ layout: default
         {% when 'content' %}
           <div class="clearfix">{{ content }}</div>
 
+        {% when 'chord' %}
+          {% include chord_diagram.html %}
+
         {% when 'explore' %}
           {% if page.explore != false %}
             {% include explore_network.html %}

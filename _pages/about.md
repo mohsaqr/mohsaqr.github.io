@@ -17,6 +17,7 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 special: true  # includes a list of papers in special.bib
+section_order: [profile, content, chord, news, contact_note, books, newsletter, latest_posts, selected_papers, social]
 ---
 I am a [Professor of Learning Analytics and Artificial Intelligence at the School of Computing at University of Eastern Finland](https://sites.uef.fi/edtech/learning-analytics-2/saqr/). I lead [UEF’s Learning Analytics Unit](https://sites.uef.fi/learning-analytics/), which has emerged as Europe’s most productive learning analytics lab, as recognized by Scopus and Web of Science over the past five years (2019-2024). 
 I have a PhD in Learning Analytics from [Stockholm University, Sweden](https://www.su.se/department-of-computer-and-systems-sciences/), followed by a postdoctoral position at [Université Paris Cité, France.](https://u-paris.fr/) Later, I earned the title of Docent in Learning Analytics from the [University of Oulu, Finland](https://www.oulu.fi/en/research-groups/let-lab-learning-and-educational-technology-research-lab). His scholarly work is diverse, interdisciplinary, and prolific. 

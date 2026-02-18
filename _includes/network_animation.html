@@ -1,0 +1,261 @@
+<style>
+.net-anim-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.net-anim-wrap canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.net-anim-wrap .post-header,
+.net-anim-wrap article {
+  position: relative;
+  z-index: 1;
+}
+</style>
+
+<canvas id="net-anim-canvas"></canvas>
+
+<script>
+(function() {
+  var canvas = document.getElementById('net-anim-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var can_w, can_h;
+
+  // --- Config ---
+  var NUM_NODES = 8;
+  var NODE_R_MIN = 18;
+  var NODE_R_MAX = 38;
+  var EDGE_WIDTH = 3.5;
+  var ARROW_SIZE = 12;
+  var REPEL_DIST = 200;
+  var REPEL_FORCE = 0.08;
+  var SPRING_LEN = 250;
+  var SPRING_K = 0.0005;
+  var DAMPING = 0.985;
+  var CENTER_PULL = 0.00008;
+  var MOUSE_REPEL = 200;
+  var MOUSE_FORCE = 0.6;
+  var DRIFT_SPEED = 0.08;
+
+  // Center target: absolute top of page
+  var CENTER_Y = 160;
+
+  var nodeColors = ['#e63946', '#457b9d', '#2a9d8f', '#f4a261', '#6a4c93', '#e76f51', '#1d3557', '#b5838d'];
+  var edgeAlpha = 0.16;
+
+  // Edge color — light grey in light mode, light grey in dark mode (visible on both)
+  var edgeColorStr = '160,160,180';
+  var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var htmlTheme = document.documentElement.getAttribute('data-theme');
+  if (htmlTheme === 'dark' || (!htmlTheme && isDark)) {
+    edgeColorStr = '180,190,210';
+  }
+
+  var nodes = [];
+  var edges = [];
+  var mouse = { x: -9999, y: -9999, active: false };
+
+  function rand(a, b) { return Math.random() * (b - a) + a; }
+
+  function initGraph() {
+    nodes = [];
+    edges = [];
+    var cx = can_w / 2;
+    var cy = CENTER_Y;
+
+    // Place nodes in a loose circle around center
+    for (var i = 0; i < NUM_NODES; i++) {
+      var angle = (i / NUM_NODES) * Math.PI * 2 + rand(-0.3, 0.3);
+      var dist = rand(100, 220);
+      nodes.push({
+        x: cx + Math.cos(angle) * dist,
+        y: cy + Math.sin(angle) * dist * 0.5,
+        vx: rand(-DRIFT_SPEED, DRIFT_SPEED),
+        vy: rand(-DRIFT_SPEED, DRIFT_SPEED),
+        r: rand(NODE_R_MIN, NODE_R_MAX),
+        color: nodeColors[i % nodeColors.length],
+        alpha: rand(0.18, 0.35)
+      });
+    }
+
+    // Create directed edges — each node gets 1-3 outgoing edges
+    var edgeSet = {};
+    for (var i = 0; i < NUM_NODES; i++) {
+      var numOut = Math.floor(rand(1, 3.5));
+      for (var e = 0; e < numOut; e++) {
+        var target = Math.floor(rand(0, NUM_NODES));
+        if (target !== i) {
+          var key = i + '-' + target;
+          if (!edgeSet[key]) {
+            edgeSet[key] = true;
+            edges.push({ from: i, to: target });
+          }
+        }
+      }
+    }
+  }
+
+  function simulate() {
+    var i, j, dx, dy, d, f, nx, ny;
+
+    // Node-node repulsion
+    for (i = 0; i < nodes.length; i++) {
+      for (j = i + 1; j < nodes.length; j++) {
+        dx = nodes[j].x - nodes[i].x;
+        dy = nodes[j].y - nodes[i].y;
+        d = Math.sqrt(dx * dx + dy * dy) || 1;
+        if (d < REPEL_DIST) {
+          f = REPEL_FORCE * (REPEL_DIST - d) / d;
+          nx = dx * f; ny = dy * f;
+          nodes[i].vx -= nx; nodes[i].vy -= ny;
+          nodes[j].vx += nx; nodes[j].vy += ny;
+        }
+      }
+    }
+
+    // Edge spring forces
+    for (i = 0; i < edges.length; i++) {
+      var a = nodes[edges[i].from];
+      var b = nodes[edges[i].to];
+      dx = b.x - a.x;
+      dy = b.y - a.y;
+      d = Math.sqrt(dx * dx + dy * dy) || 1;
+      f = SPRING_K * (d - SPRING_LEN);
+      nx = (dx / d) * f; ny = (dy / d) * f;
+      a.vx += nx; a.vy += ny;
+      b.vx -= nx; b.vy -= ny;
+    }
+
+    // Center pull + gentle drift + mouse + update
+    var cx = can_w / 2;
+    var cy = CENTER_Y;
+    for (i = 0; i < nodes.length; i++) {
+      var n = nodes[i];
+
+      // Pull toward upper center
+      n.vx += (cx - n.x) * CENTER_PULL;
+      n.vy += (cy - n.y) * CENTER_PULL;
+
+      // Continuous gentle drift — never fully stops
+      n.vx += rand(-DRIFT_SPEED, DRIFT_SPEED) * 0.06;
+      n.vy += rand(-DRIFT_SPEED, DRIFT_SPEED) * 0.06;
+
+      // Mouse repulsion
+      if (mouse.active) {
+        dx = n.x - mouse.x;
+        dy = n.y - mouse.y;
+        d = Math.sqrt(dx * dx + dy * dy) || 1;
+        if (d < MOUSE_REPEL) {
+          f = MOUSE_FORCE * (MOUSE_REPEL - d) / (d * d) * 5;
+          n.vx += dx * f;
+          n.vy += dy * f;
+        }
+      }
+
+      n.vx *= DAMPING;
+      n.vy *= DAMPING;
+      n.x += n.vx;
+      n.y += n.vy;
+
+      // Soft boundaries
+      if (n.x < n.r) n.vx += 0.2;
+      if (n.x > can_w - n.r) n.vx -= 0.2;
+      if (n.y < n.r) n.vy += 0.2;
+      if (n.y > can_h - n.r) n.vy -= 0.2;
+    }
+  }
+
+  function drawArrow(fromN, toN) {
+    var dx = toN.x - fromN.x;
+    var dy = toN.y - fromN.y;
+    var d = Math.sqrt(dx * dx + dy * dy) || 1;
+    var ux = dx / d, uy = dy / d;
+
+    var sx = fromN.x + ux * (fromN.r + 2);
+    var sy = fromN.y + uy * (fromN.r + 2);
+    var ex = toN.x - ux * (toN.r + 4);
+    var ey = toN.y - uy * (toN.r + 4);
+
+    // Edge line
+    ctx.beginPath();
+    ctx.moveTo(sx, sy);
+    ctx.lineTo(ex, ey);
+    ctx.stroke();
+
+    // Arrowhead
+    var angle = Math.atan2(ey - sy, ex - sx);
+    ctx.beginPath();
+    ctx.moveTo(ex, ey);
+    ctx.lineTo(ex - ARROW_SIZE * Math.cos(angle - 0.4), ey - ARROW_SIZE * Math.sin(angle - 0.4));
+    ctx.lineTo(ex - ARROW_SIZE * Math.cos(angle + 0.4), ey - ARROW_SIZE * Math.sin(angle + 0.4));
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function render() {
+    simulate();
+    ctx.clearRect(0, 0, can_w, can_h);
+
+    // Edges
+    ctx.strokeStyle = 'rgba(' + edgeColorStr + ',' + edgeAlpha + ')';
+    ctx.lineWidth = EDGE_WIDTH;
+    ctx.fillStyle = 'rgba(' + edgeColorStr + ',' + edgeAlpha + ')';
+    for (var i = 0; i < edges.length; i++) {
+      drawArrow(nodes[edges[i].from], nodes[edges[i].to]);
+    }
+
+    // Nodes
+    for (var j = 0; j < nodes.length; j++) {
+      var n = nodes[j];
+      ctx.globalAlpha = n.alpha;
+      ctx.fillStyle = n.color;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.12)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+
+    window.requestAnimationFrame(render);
+  }
+
+  function updateSize() {
+    var wrap = canvas.parentElement;
+    can_w = canvas.width = wrap.offsetWidth;
+    can_h = canvas.height = wrap.offsetHeight;
+  }
+
+  function init() {
+    updateSize();
+    initGraph();
+    window.requestAnimationFrame(render);
+  }
+
+  canvas.addEventListener('mouseenter', function() { mouse.active = true; });
+  canvas.addEventListener('mouseleave', function() { mouse.active = false; });
+  canvas.addEventListener('mousemove', function(e) {
+    var rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+
+  window.addEventListener('resize', updateSize);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>

@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "dropdown-browse-by-keyword",
-              title: "Browse by Keyword",
+        },{id: "dropdown-research-themes",
+              title: "Research Themes",
               description: "",
               section: "Dropdown",
               handler: () => {
@@ -30,15 +30,15 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "dropdown-author-network",
-              title: "Author Network",
+            },{id: "dropdown-collaboration-network",
+              title: "Collaboration Network",
               description: "",
               section: "Dropdown",
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "dropdown-institution-network",
-              title: "Institution Network",
+            },{id: "dropdown-institutional-collaboration",
+              title: "Institutional Collaboration",
               description: "",
               section: "Dropdown",
               handler: () => {

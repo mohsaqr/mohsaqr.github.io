@@ -9,7 +9,7 @@ nav_order: 1
 ---
 <!-- _pages/publications.md -->
 
-{% include chord_diagram.html %}
+{% include chord_diagram_detailed.html %}
 
 <hr style="margin: 2rem 0;">
 

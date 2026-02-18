@@ -1,0 +1,496 @@
+<style>
+.chordI-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+  position: relative;
+}
+
+.chordI-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chordI-ribbon {
+  fill-opacity: 0.45;
+  transition: fill-opacity 0.25s, stroke-opacity 0.25s;
+  cursor: pointer;
+  stroke-width: 0.5;
+  stroke-opacity: 0;
+}
+
+.chordI-ribbon.dimmed {
+  fill-opacity: 0.04;
+}
+
+.chordI-ribbon.highlighted {
+  fill-opacity: 0.75;
+  stroke-opacity: 0.5;
+}
+
+.chordI-arc {
+  cursor: pointer;
+  transition: opacity 0.25s;
+}
+
+.chordI-arc.dimmed {
+  opacity: 0.2;
+}
+
+.chordI-arc-label {
+  fill: var(--global-text-color);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.chordI-arc-label.dimmed {
+  opacity: 0.15;
+}
+
+.chordI-tooltip {
+  position: fixed;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.82rem;
+  max-width: 300px;
+  line-height: 1.5;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 50;
+}
+
+.chordI-tooltip strong {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.chordI-tooltip .tt-detail {
+  color: var(--global-text-color);
+  opacity: 0.7;
+}
+
+.chordI-tooltip .tt-hint {
+  color: var(--global-theme-color);
+  opacity: 0.6;
+  font-size: 0.72rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.chordI-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.4rem;
+  margin-top: 1.2rem;
+  padding: 0 1rem;
+}
+
+.chordI-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.chordI-legend-item:hover {
+  opacity: 0.7;
+}
+
+.chordI-legend-swatch {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .chordI-container { max-width: 100%; }
+  .chordI-arc-label { font-size: 9px; }
+  .chordI-legend { gap: 0.35rem 0.8rem; }
+  .chordI-legend-item { font-size: 0.72rem; }
+}
+</style>
+
+<div id="chordI-diagram" class="chordI-container"></div>
+<div id="chordI-tooltip" class="chordI-tooltip"></div>
+<div id="chordI-legend" class="chordI-legend"></div>
+
+<script>
+window.pubKeywords = window.pubKeywords || [
+{% for pub in site.publications %}{% if pub.keywords %}{{ pub.keywords | jsonify }}{% unless forloop.last %},{% endunless %}
+{% endif %}{% endfor %}];
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js" integrity="sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw=" crossorigin="anonymous"></script>
+
+<script>
+(function() {
+
+  var tooltip = document.getElementById("chordI-tooltip");
+
+  var categories = [
+    {
+      name: "Precision &\nExplainable AI",
+      shortName: "Precision & Explainable AI",
+      link: "/interests/precision-xai/",
+      color: "#c0392b",
+      patterns: [
+        "artificial intelligence", "explainable ai", "machine learning",
+        "idiographic", "person-centered", "person-specific", "within-person",
+        "predictive", "generative ai", "large language model",
+        "precision education", "shap", "dalex", "lime",
+        "natural language processing", "chatgpt", "chatbot",
+        "human-ai", "n = 1", "heterogeneity", "individual differences",
+        "personalized", "bert", "prompt engineering",
+        "retrieval-augmented", "lm studio", "conversational agent",
+        "voice assistant", "automated machine learning", "automated feedback",
+        "automated assessment", "synthetic data"
+      ]
+    },
+    {
+      name: "Transition\nNetworks",
+      shortName: "Transition Network Analysis",
+      link: "/interests/transition-network-analysis/",
+      color: "#2471a3",
+      patterns: [
+        "transition network", "markov model", "stochastic process",
+        "process mining", "hidden markov", "mixture markov", "bupaverse"
+      ]
+    },
+    {
+      name: "Network Analysis\nin Education",
+      shortName: "Network Analysis in Education",
+      link: "/interests/network-analysis/",
+      color: "#148f77",
+      patterns: [
+        "network method", "social network", "network analysis",
+        "epistemic network", "graphical gaussian", "network science",
+        "centrality measure", "community detection", "network configuration",
+        "quantitative ethnography", "semantic network", "siena", "tergm",
+        "community of inquiry", "cognitive presence"
+      ]
+    },
+    {
+      name: "Temporal\nNetworks",
+      shortName: "Temporal Networks",
+      link: "/interests/temporal-networks/",
+      color: "#d4ac0d",
+      patterns: [
+        "temporal network", "diffusion"
+      ]
+    },
+    {
+      name: "Complex\nSystems",
+      shortName: "Complex Systems",
+      link: "/interests/complex-systems/",
+      color: "#ca6702",
+      patterns: [
+        "complex system", "psychological network", "partial correlation",
+        "graphical vector autoregression", "panel var",
+        "recurrence quantification"
+      ]
+    },
+    {
+      name: "Temporal &\nSequence Methods",
+      shortName: "Temporal & Sequence Methods",
+      link: "/interests/temporal-methods/",
+      color: "#1a8a6e",
+      patterns: [
+        "sequence", "longitudinal", "temporality",
+        "latent class", "latent profile", "trajectories",
+        "strategy transition", "survival analysis", "time series",
+        "multi-channel", "multichannel", "dissimilarity"
+      ]
+    },
+    {
+      name: "Learning\nAnalytics",
+      shortName: "Learning Analytics",
+      link: "/interests/learning-analytics/",
+      color: "#7d3c98",
+      patterns: [
+        "learning analytics", "educational data mining",
+        "self-regulated", "collaborative learning",
+        "computer-supported", "online learning",
+        "problem-based", "multimodal learning", "engagement",
+        "flipped classroom", "blended learning",
+        "moocs", "distance education", "assessment analytics",
+        "game-based learning", "gamification",
+        "learning strategies", "learning tactics",
+        "co-regulation", "socially shared regulation",
+        "learning outcome", "learning performance",
+        "academic achievement", "emotion regulation",
+        "educational escape", "medical education",
+        "cscl", "knowledge exchange", "knowledge sharing",
+        "higher education", "student performance"
+      ]
+    },
+    {
+      name: "Scientometrics",
+      shortName: "Scientometrics & Bibliometrics",
+      link: "/interests/scientometrics/",
+      color: "#85929e",
+      patterns: [
+        "bibliometric", "scientometric", "science of science",
+        "altmetric", "citation", "science mapping",
+        "topic model", "structured topic", "impact factor",
+        "open access", "publication trend", "scientific collaboration",
+        "country productivity"
+      ]
+    }
+  ];
+
+  var n = categories.length;
+  var matrix = [];
+  var catCounts = new Array(n).fill(0);
+  var i, j;
+
+  for (i = 0; i < n; i++) matrix[i] = new Array(n).fill(0);
+
+  function matchCategory(kw) {
+    var lower = kw.toLowerCase();
+    var matched = [];
+    for (var c = 0; c < n; c++) {
+      var patterns = categories[c].patterns;
+      for (var p = 0; p < patterns.length; p++) {
+        if (lower.indexOf(patterns[p]) !== -1) {
+          matched.push(c);
+          break;
+        }
+      }
+    }
+    return matched;
+  }
+
+  var pubs = window.pubKeywords || [];
+  pubs.forEach(function(kwList) {
+    var catSet = {};
+    kwList.forEach(function(kw) {
+      matchCategory(kw).forEach(function(idx) { catSet[idx] = true; });
+    });
+    var cats = Object.keys(catSet).map(Number);
+    cats.forEach(function(ci) { catCounts[ci]++; });
+    for (i = 0; i < cats.length; i++) {
+      for (j = i + 1; j < cats.length; j++) {
+        matrix[cats[i]][cats[j]]++;
+        matrix[cats[j]][cats[i]]++;
+      }
+    }
+  });
+
+  for (i = 0; i < n; i++) {
+    var rowSum = 0;
+    for (j = 0; j < n; j++) rowSum += matrix[i][j];
+    if (rowSum === 0) matrix[i][i] = 1;
+  }
+
+  // --- D3 Chord ---
+  var size = 780;
+  var outerRadius = size / 2 - 90;
+  var innerRadius = outerRadius - 22;
+
+  var chord = d3.chord()
+    .padAngle(0.05)
+    .sortSubgroups(d3.descending);
+
+  var arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
+  var ribbon = d3.ribbon().radius(innerRadius);
+  var chords = chord(matrix);
+
+  var svg = d3.select("#chordI-diagram")
+    .append("svg")
+    .attr("viewBox", "0 0 " + size + " " + size)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .append("g")
+    .attr("transform", "translate(" + size / 2 + "," + size / 2 + ")");
+
+  // Ribbons
+  var ribbons = svg.append("g")
+    .selectAll("path")
+    .data(chords)
+    .enter().append("path")
+    .attr("class", "chordI-ribbon")
+    .attr("d", ribbon)
+    .style("fill", function(d) { return categories[d.source.index].color; })
+    .style("stroke", function(d) { return d3.color(categories[d.source.index].color).darker(0.3); })
+    .on("mouseenter", function(event, d) {
+      highlightConnection(d.source.index, d.target.index);
+      var si = d.source.index, ti = d.target.index;
+      var count = matrix[si][ti];
+      showTooltip(event,
+        "<strong style='color:" + categories[si].color + "'>" +
+        categories[si].shortName + " &harr; " + categories[ti].shortName + "</strong>" +
+        "<span class='tt-detail'>Edge weight: " + count + " co-occurrence" + (count !== 1 ? "s" : "") + "</span>" +
+        "<span class='tt-hint'>Click a node to explore</span>"
+      );
+    })
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", function() { clearHighlight(); hideTooltip(); });
+
+  // Arcs
+  var arcs = svg.append("g")
+    .selectAll("g")
+    .data(chords.groups)
+    .enter().append("g");
+
+  arcs.append("path")
+    .attr("class", "chordI-arc")
+    .attr("d", arc)
+    .style("fill", function(d) { return categories[d.index].color; })
+    .style("stroke", function(d) { return d3.color(categories[d.index].color).darker(0.4); })
+    .style("stroke-width", 1)
+    .on("mouseenter", function(event, d) {
+      highlightArc(d.index);
+      var degree = 0;
+      var connected = [];
+      chords.forEach(function(ch) {
+        var ci, count;
+        if (ch.source.index === d.index && ch.target.index !== d.index) {
+          ci = ch.target.index; count = matrix[d.index][ci];
+        } else if (ch.target.index === d.index && ch.source.index !== d.index) {
+          ci = ch.source.index; count = matrix[ci][d.index];
+        } else return;
+        if (count > 0) { degree++; connected.push(categories[ci].shortName + ": " + count); }
+      });
+      connected.sort(function(a, b) {
+        return parseInt(b.split(": ")[1]) - parseInt(a.split(": ")[1]);
+      });
+      showTooltip(event,
+        "<strong style='color:" + categories[d.index].color + "'>" + categories[d.index].shortName + "</strong>" +
+        "<span class='tt-detail'>" + catCounts[d.index] + " occurrence" + (catCounts[d.index] !== 1 ? "s" : "") +
+        " &middot; degree " + degree +
+        (connected.length > 0 ? "<br><br>Connected to:<br>" + connected.join("<br>") : "") + "</span>" +
+        "<span class='tt-hint'>Click to explore</span>"
+      );
+    })
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", function() { clearHighlight(); hideTooltip(); })
+    .on("click", function(event, d) { window.location.href = categories[d.index].link; });
+
+  // Labels — horizontal, positioned radially with collision avoidance
+  var labelR = outerRadius + 30;
+  var minSpacing = 15;
+
+  var labelData = chords.groups.map(function(g) {
+    var angle = (g.startAngle + g.endAngle) / 2;
+    var a = angle - Math.PI / 2;
+    return {
+      index: g.index, angle: angle,
+      ax: Math.cos(a) * (outerRadius + 4),
+      ay: Math.sin(a) * (outerRadius + 4),
+      x: Math.cos(a) * labelR,
+      y: Math.sin(a) * labelR,
+      side: (angle > 0 && angle < Math.PI) ? "right" : "left"
+    };
+  });
+
+  ["right", "left"].forEach(function(side) {
+    var items = labelData.filter(function(d) { return d.side === side; });
+    items.sort(function(a, b) { return a.y - b.y; });
+    for (var pass = 0; pass < 12; pass++) {
+      for (var k = 1; k < items.length; k++) {
+        var gap = items[k].y - items[k - 1].y;
+        if (gap < minSpacing) {
+          var shift = (minSpacing - gap) / 2;
+          items[k - 1].y -= shift;
+          items[k].y += shift;
+        }
+      }
+    }
+  });
+
+  var labelsG = svg.append("g");
+
+  labelsG.selectAll("line")
+    .data(labelData)
+    .enter().append("line")
+    .style("stroke", "var(--global-text-color)")
+    .style("stroke-opacity", 0.15)
+    .style("stroke-width", 0.7)
+    .attr("x1", function(d) { return d.ax; })
+    .attr("y1", function(d) { return d.ay; })
+    .attr("x2", function(d) { return d.x; })
+    .attr("y2", function(d) { return d.y; });
+
+  var labels = labelsG.selectAll("text")
+    .data(labelData)
+    .enter().append("text")
+    .attr("class", "chordI-arc-label")
+    .attr("x", function(d) { return d.x; })
+    .attr("y", function(d) { return d.y; })
+    .attr("dx", function(d) { return d.side === "right" ? 5 : -5; })
+    .attr("dy", "0.35em")
+    .attr("text-anchor", function(d) { return d.side === "right" ? "start" : "end"; })
+    .style("fill", function(d) { return categories[d.index].color; })
+    .text(function(d) { return categories[d.index].shortName; });
+
+  // Legend
+  var legendDiv = document.getElementById("chordI-legend");
+  categories.forEach(function(cat) {
+    var a = document.createElement("a");
+    a.className = "chordI-legend-item";
+    a.href = cat.link;
+    a.innerHTML = '<span class="chordI-legend-swatch" style="background:' + cat.color + '"></span>' + cat.shortName;
+    legendDiv.appendChild(a);
+  });
+
+  // Interactions
+  function highlightArc(idx) {
+    ribbons.classed("dimmed", function(d) {
+      return d.source.index !== idx && d.target.index !== idx;
+    }).classed("highlighted", function(d) {
+      return d.source.index === idx || d.target.index === idx;
+    });
+    arcs.select("path").classed("dimmed", function(d) { return d.index !== idx; });
+    labels.classed("dimmed", function(d) { return d.index !== idx; });
+  }
+
+  function highlightConnection(si, ti) {
+    ribbons.classed("dimmed", function(d) {
+      return !((d.source.index === si && d.target.index === ti) ||
+               (d.source.index === ti && d.target.index === si));
+    }).classed("highlighted", function(d) {
+      return (d.source.index === si && d.target.index === ti) ||
+             (d.source.index === ti && d.target.index === si);
+    });
+    arcs.select("path").classed("dimmed", function(d) { return d.index !== si && d.index !== ti; });
+    labels.classed("dimmed", function(d) { return d.index !== si && d.index !== ti; });
+  }
+
+  function clearHighlight() {
+    ribbons.classed("dimmed", false).classed("highlighted", false);
+    arcs.select("path").classed("dimmed", false);
+    labels.classed("dimmed", false);
+  }
+
+  function showTooltip(event, html) {
+    tooltip.innerHTML = html;
+    tooltip.style.opacity = "1";
+    tooltip.style.left = (event.clientX + 16) + "px";
+    tooltip.style.top = (event.clientY - 12) + "px";
+  }
+
+  function moveTooltip(event) {
+    tooltip.style.left = (event.clientX + 16) + "px";
+    tooltip.style.top = (event.clientY - 12) + "px";
+  }
+
+  function hideTooltip() {
+    tooltip.style.opacity = "0";
+  }
+
+})();
+</script>

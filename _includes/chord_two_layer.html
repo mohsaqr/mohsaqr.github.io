@@ -1,0 +1,799 @@
+<style>
+.chord2-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.chord2-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chord2-ribbon {
+  fill-opacity: 0.55;
+  transition: fill-opacity 0.25s, stroke-opacity 0.25s;
+  cursor: pointer;
+  stroke-width: 0.5;
+  stroke-opacity: 0;
+}
+
+.chord2-ribbon.dimmed {
+  fill-opacity: 0.04;
+}
+
+.chord2-ribbon.highlighted {
+  fill-opacity: 0.8;
+  stroke-opacity: 0.6;
+}
+
+.chord2-arc {
+  cursor: pointer;
+  transition: opacity 0.25s;
+}
+
+.chord2-arc.dimmed {
+  opacity: 0.2;
+}
+
+.chord2-group-arc {
+  pointer-events: none;
+}
+
+.chord2-group-label {
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 700;
+  fill: var(--global-text-color);
+  pointer-events: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.chord2-sub-label {
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  fill: var(--global-text-color);
+  cursor: pointer;
+  transition: opacity 0.25s;
+}
+
+.chord2-sub-label:hover {
+  opacity: 0.7;
+}
+
+.chord2-sub-label.dimmed {
+  opacity: 0.15;
+}
+
+.chord2-leader {
+  fill: none;
+  stroke: var(--global-text-color);
+  stroke-opacity: 0.2;
+  stroke-width: 0.8;
+  pointer-events: none;
+  transition: stroke-opacity 0.25s;
+}
+
+.chord2-leader.dimmed {
+  stroke-opacity: 0.04;
+}
+
+.chord2-tooltip {
+  position: fixed;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.82rem;
+  max-width: 340px;
+  line-height: 1.5;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 50;
+}
+
+.chord2-tooltip strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.chord2-tooltip .tt-group {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.5;
+  margin-bottom: 0.1rem;
+  display: block;
+}
+
+.chord2-tooltip .tt-detail {
+  color: var(--global-text-color);
+  opacity: 0.7;
+}
+
+.chord2-tooltip .tt-hint {
+  color: var(--global-theme-color);
+  opacity: 0.6;
+  font-size: 0.72rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.chord2-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem 2rem;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+.chord2-legend-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.chord2-legend-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--global-text-color);
+  opacity: 0.5;
+}
+
+.chord2-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--global-text-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.chord2-legend-item:hover {
+  opacity: 0.7;
+}
+
+.chord2-legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.chord2-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1.2rem;
+  padding: 0.8rem 1rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.chord2-stat {
+  text-align: center;
+}
+
+.chord2-stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--global-theme-color);
+  display: block;
+}
+
+.chord2-stat-label {
+  font-size: 0.72rem;
+  color: var(--global-text-color);
+  opacity: 0.55;
+  display: block;
+}
+
+.chord2-intro {
+  text-align: center;
+  color: var(--global-text-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .chord2-wrap { max-width: 100%; }
+  .chord2-group-label { font-size: 10px; }
+  .chord2-sub-label { font-size: 9px; }
+  .chord2-legend { gap: 0.8rem 1.2rem; }
+}
+</style>
+
+<div id="chord2-diagram" class="chord2-wrap"></div>
+<div id="chord2-tooltip" class="chord2-tooltip"></div>
+<div id="chord2-legend" class="chord2-legend"></div>
+<div id="chord2-stats" class="chord2-stats"></div>
+
+<p class="chord2-intro">
+This network maps the co-occurrence ties between research subcategories grouped into thematic clusters, derived from keyword metadata across {{ site.publications | size }} publications. The outer ring encodes thematic clustering; each inner arc is a node representing a subcategory. Edges (ribbons) connect nodes that co-occur in the same publications &mdash; thicker edges indicate stronger ties. Hover for degree and edge weight details, click a node to explore that area.
+</p>
+
+<script>
+window.pubKeywords = window.pubKeywords || [
+{% for pub in site.publications %}{% if pub.keywords %}{{ pub.keywords | jsonify }}{% unless forloop.last %},{% endunless %}
+{% endif %}{% endfor %}];
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js" integrity="sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw=" crossorigin="anonymous"></script>
+
+<script>
+(function() {
+
+  var tooltip = document.getElementById("chord2-tooltip");
+
+  var groupPalettes = {
+    "Artificial Intelligence & Precision": ["#e63946", "#c1121f", "#f07167", "#d62839"],
+    "Network Science": ["#457b9d", "#1d3557", "#2a9d8f", "#168aad"],
+    "Complex Systems & Dynamics": ["#f4a261", "#e76f51", "#e9c46a"],
+    "Learning Analytics": ["#6a4c93", "#7b2d8e", "#9b5de5", "#8338ec"],
+    "Scientometrics": ["#b5838d", "#a4616d"]
+  };
+
+  var groups = [
+    {
+      name: "Artificial Intelligence & Precision",
+      subcats: [
+        {
+          name: "Explainable AI",
+          link: "/interests/precision-xai/",
+          patterns: ["explainable ai", "shap", "dalex", "lime", "interpretab"]
+        },
+        {
+          name: "Generative AI & LLMs",
+          link: "/interests/precision-xai/",
+          patterns: ["generative ai", "large language model", "chatgpt", "chatbot",
+                     "prompt engineering", "retrieval-augmented", "lm studio",
+                     "conversational agent", "voice assistant", "bert",
+                     "natural language processing", "synthetic data"]
+        },
+        {
+          name: "Predictive Analytics",
+          link: "/interests/precision-xai/",
+          patterns: ["machine learning", "predictive", "artificial intelligence",
+                     "automated machine learning", "automated feedback",
+                     "automated assessment", "random forest", "xgboost",
+                     "deep learning", "neural network"]
+        },
+        {
+          name: "Precision Education",
+          link: "/interests/precision-xai/",
+          patterns: ["precision education", "idiographic", "person-centered",
+                     "person-specific", "within-person", "n = 1",
+                     "heterogeneity", "individual differences", "personalized"]
+        }
+      ]
+    },
+    {
+      name: "Network Science",
+      subcats: [
+        {
+          name: "Social Network Analysis",
+          link: "/interests/network-analysis/",
+          patterns: ["social network", "network analysis", "centrality measure",
+                     "community detection", "network configuration",
+                     "network science", "graphical gaussian", "siena", "tergm",
+                     "network method"]
+        },
+        {
+          name: "Transition Networks",
+          link: "/interests/transition-network-analysis/",
+          patterns: ["transition network", "markov model", "stochastic process",
+                     "process mining", "hidden markov", "mixture markov", "bupaverse"]
+        },
+        {
+          name: "Temporal Networks",
+          link: "/interests/temporal-networks/",
+          patterns: ["temporal network", "diffusion"]
+        },
+        {
+          name: "Epistemic Networks",
+          link: "/interests/network-analysis/",
+          patterns: ["epistemic network", "quantitative ethnography", "semantic network",
+                     "community of inquiry", "cognitive presence"]
+        }
+      ]
+    },
+    {
+      name: "Complex Systems & Dynamics",
+      subcats: [
+        {
+          name: "Complex Systems",
+          link: "/interests/complex-systems/",
+          patterns: ["complex system", "psychological network", "partial correlation",
+                     "recurrence quantification"]
+        },
+        {
+          name: "Sequence Methods",
+          link: "/interests/temporal-methods/",
+          patterns: ["sequence", "latent class", "latent profile", "trajectories",
+                     "strategy transition", "multi-channel", "multichannel",
+                     "dissimilarity"]
+        },
+        {
+          name: "Time Series & Dynamics",
+          link: "/interests/complex-systems/",
+          patterns: ["longitudinal", "temporality", "survival analysis",
+                     "graphical vector autoregression", "panel var", "time series"]
+        }
+      ]
+    },
+    {
+      name: "Learning Analytics",
+      subcats: [
+        {
+          name: "Self-Regulated Learning",
+          link: "/interests/learning-analytics/",
+          patterns: ["self-regulated", "metacognition", "learning strategies",
+                     "learning tactics", "emotion regulation"]
+        },
+        {
+          name: "Collaborative Learning",
+          link: "/interests/learning-analytics/",
+          patterns: ["collaborative learning", "computer-supported",
+                     "co-regulation", "socially shared regulation",
+                     "cscl", "knowledge exchange", "information exchange",
+                     "knowledge sharing"]
+        },
+        {
+          name: "Engagement & Performance",
+          link: "/interests/learning-analytics/",
+          patterns: ["engagement", "learning outcome", "learning performance",
+                     "academic achievement", "online learning", "distance education",
+                     "moocs", "learning analytics", "educational data mining",
+                     "student performance", "higher education"]
+        },
+        {
+          name: "Learning Design",
+          link: "/interests/learning-analytics/",
+          patterns: ["flipped classroom", "blended learning", "game-based learning",
+                     "gamification", "problem-based", "multimodal learning",
+                     "assessment analytics", "educational escape",
+                     "medical education", "mobile learning", "e-library",
+                     "research education", "research curriculum",
+                     "undergraduate research", "usability", "prototyping"]
+        }
+      ]
+    },
+    {
+      name: "Scientometrics",
+      subcats: [
+        {
+          name: "Bibliometrics",
+          link: "/interests/scientometrics/",
+          patterns: ["bibliometric", "scientometric", "altmetric", "citation",
+                     "impact factor", "open access", "publication trend",
+                     "scientific collaboration", "country productivity",
+                     "science of science", "science mapping", "topic model",
+                     "structured topic"]
+        }
+      ]
+    }
+  ];
+
+  // Flatten subcategories
+  var subcats = [];
+  var groupRanges = [];
+  groups.forEach(function(g) {
+    var start = subcats.length;
+    var palette = groupPalettes[g.name];
+    g.subcats.forEach(function(sc, si) {
+      subcats.push({
+        name: sc.name,
+        link: sc.link,
+        patterns: sc.patterns,
+        groupName: g.name,
+        color: palette[si % palette.length]
+      });
+    });
+    groupRanges.push({ start: start, end: subcats.length - 1, name: g.name });
+  });
+
+  var n = subcats.length;
+  var matrix = [];
+  var catCounts = new Array(n).fill(0);
+  var crossAreaCount = 0;
+  var totalMapped = 0;
+  var i, j;
+
+  for (i = 0; i < n; i++) matrix[i] = new Array(n).fill(0);
+
+  function matchSubcats(kw) {
+    var lower = kw.toLowerCase();
+    var matched = [];
+    for (var c = 0; c < n; c++) {
+      var patterns = subcats[c].patterns;
+      for (var p = 0; p < patterns.length; p++) {
+        if (lower.indexOf(patterns[p]) !== -1) {
+          matched.push(c);
+          break;
+        }
+      }
+    }
+    return matched;
+  }
+
+  var pubs = window.pubKeywords || [];
+  pubs.forEach(function(kwList) {
+    var catSet = {};
+    kwList.forEach(function(kw) {
+      matchSubcats(kw).forEach(function(idx) { catSet[idx] = true; });
+    });
+    var cats = Object.keys(catSet).map(Number);
+    if (cats.length > 0) totalMapped++;
+    if (cats.length > 1) crossAreaCount++;
+    cats.forEach(function(ci) { catCounts[ci]++; });
+    for (i = 0; i < cats.length; i++) {
+      for (j = i + 1; j < cats.length; j++) {
+        matrix[cats[i]][cats[j]]++;
+        matrix[cats[j]][cats[i]]++;
+      }
+    }
+  });
+
+  var totalConnections = 0;
+  for (i = 0; i < n; i++) {
+    for (j = i + 1; j < n; j++) {
+      if (matrix[i][j] > 0) totalConnections++;
+    }
+  }
+
+  // Ensure every subcat has at least a tiny self-value
+  for (i = 0; i < n; i++) {
+    var rowSum = 0;
+    for (j = 0; j < n; j++) rowSum += matrix[i][j];
+    if (rowSum === 0) matrix[i][i] = 1;
+  }
+
+  // --- D3 Layout ---
+  var size = 1100;
+  var outerRadius = 335;
+  var innerRadius = outerRadius - 20;
+  var groupRadius = outerRadius + 6;
+  var groupOuterRadius = outerRadius + 18;
+
+  var groupPad = 0.06;
+  var scienPad = 0.14;
+  var subPad = 0.015;
+
+  var chord = d3.chord()
+    .padAngle(subPad)
+    .sortSubgroups(d3.descending);
+
+  var chords = chord(matrix);
+
+  // Add extra padding between groups
+  var extraPerBoundary = groupPad - subPad;
+  var boundaries = [];
+  groupRanges.forEach(function(gr) { boundaries.push(gr.end); });
+
+  var shiftAccum = 0;
+  var shifts = new Array(n).fill(0);
+  var scienBoundary = groupRanges.length > 1 ? groupRanges[groupRanges.length - 2].end : -1;
+
+  chords.groups.forEach(function(g, idx) {
+    shifts[idx] = shiftAccum;
+    g.startAngle += shiftAccum;
+    g.endAngle += shiftAccum;
+    if (boundaries.indexOf(idx) !== -1 && idx < n - 1) {
+      var pad = (idx === scienBoundary) ? (scienPad - subPad) : extraPerBoundary;
+      shiftAccum += pad;
+    }
+  });
+
+  chords.forEach(function(ch) {
+    ch.source.startAngle += shifts[ch.source.index];
+    ch.source.endAngle += shifts[ch.source.index];
+    ch.target.startAngle += shifts[ch.target.index];
+    ch.target.endAngle += shifts[ch.target.index];
+  });
+
+  var arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
+  var groupArc = d3.arc().innerRadius(groupRadius).outerRadius(groupOuterRadius);
+  var ribbon = d3.ribbon().radius(innerRadius);
+
+  var svg = d3.select("#chord2-diagram")
+    .append("svg")
+    .attr("viewBox", "0 0 " + size + " " + size)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .append("g")
+    .attr("transform", "translate(" + size / 2 + "," + size / 2 + ")");
+
+  // --- Outer group arcs ---
+  var groupArcs = svg.append("g");
+  var groupMidAngles = {};
+  groupRanges.forEach(function(gr) {
+    var startAngle = chords.groups[gr.start].startAngle;
+    var endAngle = chords.groups[gr.end].endAngle;
+    var midAngle = (startAngle + endAngle) / 2;
+    var palette = groupPalettes[gr.name];
+    groupMidAngles[gr.name] = midAngle;
+
+    groupArcs.append("path")
+      .attr("class", "chord2-group-arc")
+      .attr("d", groupArc({ startAngle: startAngle - 0.01, endAngle: endAngle + 0.01 }))
+      .style("fill", palette[0])
+      .style("opacity", 0.18);
+  });
+
+  // --- Ribbons ---
+  var ribbons = svg.append("g")
+    .selectAll("path")
+    .data(chords.filter(function(d) { return d.source.index !== d.target.index; }))
+    .enter().append("path")
+    .attr("class", "chord2-ribbon")
+    .attr("d", ribbon)
+    .style("fill", function(d) { return subcats[d.source.index].color; })
+    .style("stroke", function(d) { return d3.color(subcats[d.source.index].color).darker(0.5); })
+    .on("mouseenter", function(event, d) {
+      highlightConnection(d.source.index, d.target.index);
+      var si = d.source.index, ti = d.target.index;
+      var count = matrix[si][ti];
+      var pctS = catCounts[si] > 0 ? Math.round(count / catCounts[si] * 100) : 0;
+      var pctT = catCounts[ti] > 0 ? Math.round(count / catCounts[ti] * 100) : 0;
+      showTooltip(event,
+        "<span class='tt-group'>" + subcats[si].groupName + " &harr; " + subcats[ti].groupName + "</span>" +
+        "<strong style='color:" + subcats[si].color + "'>" + subcats[si].name +
+        " &harr; " + subcats[ti].name + "</strong>" +
+        "<span class='tt-detail'>Edge weight: " + count + " co-occurrence" + (count !== 1 ? "s" : "") +
+        "<br>" + pctS + "% of " + subcats[si].name + " &middot; " + pctT + "% of " + subcats[ti].name + "</span>" +
+        "<span class='tt-hint'>Click a node to explore that area</span>"
+      );
+    })
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", function() { clearHighlight(); hideTooltip(); });
+
+  // --- Inner subcategory arcs ---
+  var arcs = svg.append("g")
+    .selectAll("g")
+    .data(chords.groups)
+    .enter().append("g");
+
+  arcs.append("path")
+    .attr("class", "chord2-arc")
+    .attr("d", arc)
+    .style("fill", function(d) { return subcats[d.index].color; })
+    .style("stroke", function(d) { return d3.color(subcats[d.index].color).darker(0.4); })
+    .style("stroke-width", 0.8)
+    .on("mouseenter", function(event, d) {
+      highlightArc(d.index);
+      var degree = 0;
+      var connected = [];
+      chords.forEach(function(ch) {
+        var ci, count;
+        if (ch.source.index === d.index && ch.target.index !== d.index) {
+          ci = ch.target.index; count = matrix[d.index][ci];
+        } else if (ch.target.index === d.index && ch.source.index !== d.index) {
+          ci = ch.source.index; count = matrix[ci][d.index];
+        } else return;
+        if (count > 0) {
+          degree++;
+          var pct = catCounts[d.index] > 0 ? Math.round(count / catCounts[d.index] * 100) : 0;
+          connected.push(subcats[ci].name + ": " + count + " (" + pct + "%)");
+        }
+      });
+      connected.sort(function(a, b) {
+        var na = parseInt(a.split(": ")[1]); var nb = parseInt(b.split(": ")[1]);
+        return nb - na;
+      });
+      showTooltip(event,
+        "<span class='tt-group'>" + subcats[d.index].groupName + "</span>" +
+        "<strong style='color:" + subcats[d.index].color + "'>" + subcats[d.index].name + "</strong>" +
+        "<span class='tt-detail'>" + catCounts[d.index] + " occurrence" + (catCounts[d.index] !== 1 ? "s" : "") +
+        " &middot; degree " + degree +
+        (connected.length > 0 ? "<br><br>Connected to:<br>" + connected.join("<br>") : "") + "</span>" +
+        "<span class='tt-hint'>Click to explore this area</span>"
+      );
+    })
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", function() { clearHighlight(); hideTooltip(); })
+    .on("click", function(event, d) { window.location.href = subcats[d.index].link; });
+
+  // --- Unified label system: radial placement, horizontal text, collision avoidance ---
+  var subLabelR = outerRadius + 40;
+  var grpLabelR = groupOuterRadius + 55;
+  var minSpacing = 14;
+
+  var labelItems = chords.groups.map(function(g) {
+    var angle = (g.startAngle + g.endAngle) / 2;
+    return {
+      index: g.index, angle: angle, type: "sub",
+      name: subcats[g.index].name,
+      color: subcats[g.index].color,
+      link: subcats[g.index].link,
+      r: subLabelR
+    };
+  });
+
+  var groupLabelItems = [];
+  groupRanges.forEach(function(gr) {
+    var angle = groupMidAngles[gr.name];
+    var palette = groupPalettes[gr.name];
+    groupLabelItems.push({
+      index: -1, angle: angle, type: "group",
+      groupRange: gr,
+      name: gr.name,
+      color: palette[0],
+      r: grpLabelR
+    });
+  });
+
+  var allLabels = labelItems.concat(groupLabelItems);
+
+  allLabels.forEach(function(d) {
+    var a = d.angle - Math.PI / 2;
+    d.ax = Math.cos(a) * (outerRadius + 4);
+    d.ay = Math.sin(a) * (outerRadius + 4);
+    d.x = Math.cos(a) * d.r;
+    d.y = Math.sin(a) * d.r;
+    d.side = (d.angle > 0 && d.angle < Math.PI) ? "right" : "left";
+  });
+
+  ["right", "left"].forEach(function(side) {
+    var items = allLabels.filter(function(d) { return d.side === side; });
+    items.sort(function(a, b) { return a.y - b.y; });
+    for (var pass = 0; pass < 15; pass++) {
+      for (var k = 1; k < items.length; k++) {
+        var gap = items[k].y - items[k - 1].y;
+        if (gap < minSpacing) {
+          var shift = (minSpacing - gap) / 2;
+          items[k - 1].y -= shift;
+          items[k].y += shift;
+        }
+      }
+    }
+  });
+
+  var labelsG = svg.append("g");
+
+  labelsG.selectAll("line.chord2-leader")
+    .data(allLabels)
+    .enter().append("line")
+    .attr("class", "chord2-leader")
+    .attr("data-idx", function(d) { return d.index; })
+    .attr("x1", function(d) { return d.ax; })
+    .attr("y1", function(d) { return d.ay; })
+    .attr("x2", function(d) { return d.x; })
+    .attr("y2", function(d) { return d.y; })
+    .style("stroke-width", function(d) { return d.type === "group" ? 1.5 : 0.8; })
+    .style("stroke-opacity", function(d) { return d.type === "group" ? 0.3 : 0.2; });
+
+  labelsG.selectAll("text.chord2-group-label")
+    .data(groupLabelItems)
+    .enter().append("text")
+    .attr("class", "chord2-group-label")
+    .attr("x", function(d) { return d.x; })
+    .attr("y", function(d) { return d.y; })
+    .attr("dx", function(d) { return d.side === "right" ? 6 : -6; })
+    .attr("dy", "0.35em")
+    .attr("text-anchor", function(d) { return d.side === "right" ? "start" : "end"; })
+    .style("fill", function(d) { return d.color; })
+    .text(function(d) { return d.name; });
+
+  labelsG.selectAll("text.chord2-sub-label")
+    .data(labelItems)
+    .enter().append("text")
+    .attr("class", "chord2-sub-label")
+    .attr("data-idx", function(d) { return d.index; })
+    .attr("x", function(d) { return d.x; })
+    .attr("y", function(d) { return d.y; })
+    .attr("dx", function(d) { return d.side === "right" ? 6 : -6; })
+    .attr("dy", "0.35em")
+    .attr("text-anchor", function(d) { return d.side === "right" ? "start" : "end"; })
+    .style("fill", function(d) { return d.color; })
+    .text(function(d) { return d.name; })
+    .on("mouseenter", function(event, d) { highlightArc(d.index); })
+    .on("mouseleave", function() { clearHighlight(); })
+    .on("click", function(event, d) { window.location.href = d.link; });
+
+  // --- Legend ---
+  var legendDiv = document.getElementById("chord2-legend");
+  groups.forEach(function(g) {
+    var gdiv = document.createElement("div");
+    gdiv.className = "chord2-legend-group";
+    var title = document.createElement("div");
+    title.className = "chord2-legend-title";
+    title.textContent = g.name;
+    gdiv.appendChild(title);
+    g.subcats.forEach(function(sc) {
+      var idx = subcats.findIndex(function(s) { return s.name === sc.name && s.groupName === g.name; });
+      var item = document.createElement("a");
+      item.className = "chord2-legend-item";
+      item.href = sc.link;
+      item.innerHTML = '<span class="chord2-legend-swatch" style="background:' + subcats[idx].color + '"></span>' +
+        sc.name;
+      gdiv.appendChild(item);
+    });
+    legendDiv.appendChild(gdiv);
+  });
+
+  // --- Stats ---
+  var statsDiv = document.getElementById("chord2-stats");
+  [{value: totalMapped, label: "classified"},
+   {value: n, label: "nodes"},
+   {value: groups.length, label: "clusters"},
+   {value: totalConnections, label: "edges"},
+   {value: crossAreaCount, label: "bridging papers"}
+  ].forEach(function(s) {
+    var div = document.createElement("div");
+    div.className = "chord2-stat";
+    div.innerHTML = '<span class="chord2-stat-value">' + s.value + '</span><span class="chord2-stat-label">' + s.label + '</span>';
+    statsDiv.appendChild(div);
+  });
+
+  // --- Interactions ---
+  var subLabels = labelsG.selectAll(".chord2-sub-label");
+  var leaders = labelsG.selectAll(".chord2-leader");
+
+  function highlightArc(idx) {
+    var connected = {};
+    connected[idx] = true;
+    chords.forEach(function(ch) {
+      if (ch.source.index === idx) connected[ch.target.index] = true;
+      if (ch.target.index === idx) connected[ch.source.index] = true;
+    });
+    ribbons.classed("dimmed", function(d) {
+      return d.source.index !== idx && d.target.index !== idx;
+    }).classed("highlighted", function(d) {
+      return d.source.index === idx || d.target.index === idx;
+    });
+    arcs.select("path").classed("dimmed", function(d) { return d.index !== idx; });
+    subLabels.classed("dimmed", function(d) { return !connected[d.index]; });
+    leaders.classed("dimmed", function(d) { return !connected[d.index]; });
+  }
+
+  function highlightConnection(si, ti) {
+    ribbons.classed("dimmed", function(d) {
+      return !((d.source.index === si && d.target.index === ti) ||
+               (d.source.index === ti && d.target.index === si));
+    }).classed("highlighted", function(d) {
+      return (d.source.index === si && d.target.index === ti) ||
+             (d.source.index === ti && d.target.index === si);
+    });
+    arcs.select("path").classed("dimmed", function(d) { return d.index !== si && d.index !== ti; });
+    subLabels.classed("dimmed", function(d) { return d.index !== si && d.index !== ti; });
+    leaders.classed("dimmed", function(d) { return d.index !== si && d.index !== ti; });
+  }
+
+  function clearHighlight() {
+    ribbons.classed("dimmed", false).classed("highlighted", false);
+    arcs.select("path").classed("dimmed", false);
+    subLabels.classed("dimmed", false);
+    leaders.classed("dimmed", false);
+  }
+
+  function showTooltip(event, html) {
+    tooltip.innerHTML = html;
+    tooltip.style.opacity = "1";
+    tooltip.style.left = (event.clientX + 16) + "px";
+    tooltip.style.top = (event.clientY - 12) + "px";
+  }
+
+  function moveTooltip(event) {
+    tooltip.style.left = (event.clientX + 16) + "px";
+    tooltip.style.top = (event.clientY - 12) + "px";
+  }
+
+  function hideTooltip() {
+    tooltip.style.opacity = "0";
+  }
+
+})();
+</script>

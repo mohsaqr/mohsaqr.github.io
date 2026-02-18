@@ -6,7 +6,7 @@ description: "Interactive collaboration network showing co-authorship communitie
 nav: false
 ---
 
-This network maps **89 co-authors** across **502 collaboration links**, built from shared publications. Node size reflects the number of papers an author has contributed — larger nodes indicate more prolific collaborators. Edge thickness and opacity scale with the number of co-authored papers between two researchers, so the thickest, darkest lines mark the strongest partnerships. Colors represent **7 communities** detected by the Louvain algorithm, grouping authors who co-publish most frequently with each other. Only authors with at least two publications are included. Scroll to zoom, drag to pan, and hover over a node for details.
+This network maps **87 co-authors** across **484 collaboration links**, built from shared publications. Node size reflects the number of papers an author has contributed — larger nodes indicate more prolific collaborators. Edge thickness and opacity scale with the number of co-authored papers between two researchers, so the thickest, darkest lines mark the strongest partnerships. Colors represent **9 communities** detected by the Louvain algorithm, grouping authors who co-publish most frequently with each other. Only authors with at least two publications are included. Scroll to zoom, drag to pan, and hover over a node for details.
 
 <style>
 .network-wrap { position: relative; width: calc(100% + 2rem); margin: 0 -1rem; height: 80vh; min-height: 500px; }

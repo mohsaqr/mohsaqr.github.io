@@ -7,13 +7,13 @@ nav: true
 nav_order: 2
 dropdown: true
 children:
-  - title: "Browse by Keyword"
+  - title: "Research Themes"
     permalink: /research/
   - title: "Co-authorship Map"
     permalink: /research/coauthorship-map/
-  - title: "Author Network"
+  - title: "Collaboration Network"
     permalink: /research/author-network/
-  - title: "Institution Network"
+  - title: "Institutional Collaboration"
     permalink: /research/institution-network/
 ---
 

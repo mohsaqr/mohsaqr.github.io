@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /research/author-network/
-title: "Co-authorship Network"
-description: "Interactive co-authorship network showing collaboration communities"
+title: "Collaboration Network"
+description: "Interactive collaboration network showing co-authorship communities"
 nav: false
 ---
 

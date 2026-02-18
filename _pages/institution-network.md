@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /research/institution-network/
-title: "Institution Collaboration Network"
-description: "Interactive institution collaboration network colored by country"
+title: "Institutional Collaboration"
+description: "Interactive institutional collaboration network colored by country"
 nav: false
 ---
 

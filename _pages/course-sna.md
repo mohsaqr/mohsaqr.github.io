@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/social-network-analysis/
 title: "Social Network Analysis"
-description: "5 ECTS · UEF & visiting students"
+description: "5 ECTS · UEF & exchange students (students doing a PhD in Finland too)"
 nav: false
 ---
 
@@ -55,14 +55,14 @@ This course introduces students to the paradigm of network science and its appli
 
 ### What You Will Learn
 
-The course spans the fundamentals of network science: graph theory basics, network metrics (centrality, density, reciprocity, clustering), community detection algorithms, network visualization techniques, and advanced topics such as temporal networks and diffusion processes. Students work with diverse types of networks &mdash; social, collaboration, knowledge, and information networks &mdash; drawn from education, social media, and other domains.
+The course spans the fundamentals of network science:network metrics (centrality, density, reciprocity, clustering), community detection, network visualization techniques and transition networks. Students work with diverse types of networks &mdash; social, collaboration, knowledge, and information networks &mdash; drawn from education, social media, and other domains.
 
 ### Format
 
-The course combines lectures with intensive practical lab sessions where students analyze real network datasets. The centerpiece is a course project where students collect their own network data, analyze it using the methods learned in class, and present their findings. Assessment is based on practical assignments, the network analysis project, and peer presentations. No final exam.
+The course combines lectures with practical sessions where students analyze real network datasets. The centerpiece is a course project where students collect their own network data, analyze it using the methods learned in class, and present their findings. Assessment is based on practical assignments, the network analysis projects, and presentations. No final exam.
 
 ### Who Should Take This Course
 
-The course is open to University of Eastern Finland students and visiting students. It is suitable for anyone interested in understanding relational structures in data &mdash; whether in education, social sciences, health, or technology. Basic familiarity with R is helpful but not strictly required.
+The course is open to University of Eastern Finland students and exchange students. It is suitable for anyone interested in understanding relational structures in data &mdash; whether in education, social sciences, health, or technology. Basic familiarity with R is helpful but not strictly required.
 
 </div>

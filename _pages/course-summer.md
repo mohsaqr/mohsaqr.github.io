@@ -36,7 +36,7 @@ nav: false
 
 <div class="course-meta">
   <strong>Credits:</strong> 5 ECTS<br>
-  <strong>When:</strong> Every summer (June&ndash;July)<br>
+  <strong>When:</strong> Every summer (August&ndash)<br>
   <strong>Where:</strong> Online &mdash; University of Eastern Finland Summer School<br>
   <strong>Who can join:</strong> Open to students, researchers, and professionals from anywhere in the world
 </div>

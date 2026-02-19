@@ -55,11 +55,10 @@ This course grounds students in the theory, methods, and practice of learning an
 
 ### What You Will Learn
 
-The course covers the full learning analytics pipeline: from data collection and ethical considerations, through data cleaning and exploration, to advanced analytical methods including predictive modeling, network analysis, clustering, and visualization. Students work with R throughout the course, building a practical toolkit they can apply to their own research or professional contexts.
-
+The course covers the full learning analytics pipeline: from data collection and ethical considerations, through data cleaning and exploration, to advanced analytical methods including predictive modeling, network analysis, and process visualization.
 ### Format
 
-The course uses a blend of lectures, hands-on labs, collaborative group projects, and individual assignments. Assessment is entirely through coursework &mdash; practical exercises, a data analysis project, and critical literature review. Every student receives detailed individualized feedback on each assignment. Collaborative learning and peer feedback are integral components.
+The course uses a blend of lectures, hands-on, collaborative group projects, and individual assignments. Assessment is entirely through coursework &mdash; practical exercises, a data analysis project, and critical literature review. Every student receives detailed individualized feedback on each assignment. Collaborative learning and peer feedback are integral components.
 
 ### Who Should Take This Course
 

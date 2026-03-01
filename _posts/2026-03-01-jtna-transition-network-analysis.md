@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is Transition Network Analysis, and What Does JTNA Do?"
+title: "JTNA for Transition Network Analysis"
 date: 2026-03-01 10:00:00
 description: TNA brings statistical rigor to sequential behavioral analysis — p-values, effect sizes, and confidence intervals at the edge level — now available in jamovi through JTNA.
 tags: tna learning-analytics jamovi network-analysis

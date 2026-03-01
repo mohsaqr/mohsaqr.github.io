@@ -212,9 +212,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/get-in-touch/";
           },
-        },{id: "post-what-is-transition-network-analysis-and-what-does-jtna-do",
+        },{id: "post-jtna-for-transition-network-analysis",
       
-        title: "What is Transition Network Analysis, and What Does JTNA Do?",
+        title: "JTNA for Transition Network Analysis",
       
       description: "TNA brings statistical rigor to sequential behavioral analysis — p-values, effect sizes, and confidence intervals at the edge level — now available in jamovi through JTNA.",
       section: "Posts",

@@ -16,3 +16,17 @@ Relying on group averages has led the scientific community into a reproducibilit
 You might think artificial intelligence is the solution to these problems, but if our state-of-the-art knowledge is deficient, AI will be too. Current AI models are trained on population-level, averaged data, which often fails to represent individual learners accurately. As a result, AI reproduces broad trends rather than generating genuinely novel, personalized insights. It cannot exceed the boundaries of its training data and lacks essential human interpretive abilities, such as reading body language or understanding the physical dynamics of a classroom. Because its training data is shaped by existing theoretical gaps and biases, AI would likely replicate and possibly amplify these biases, resulting in harmful outputs.
 
 The real solution lies in precision education and idiographic research. Behavioral science is unlikely to change the world without a heterogeneity revolution. We must move from variable-centered approaches to person-specific approaches. Instead of a one-size-fits-all law, we need a law for each specific profile, or even better, a unique law for Sofia, a law for Layla, and a law for Chen. In our precision research, we treat individual students as whole units of analysis. We tracked 120 students over 40 days using ecological momentary assessment data twice a day, gathering over a million multimodal time points and thousands of survey responses. Using complex dynamic systems approaches, we mapped how students self-regulate on a deeply personal level.
+
+---
+
+## References
+
+Saqr, M. (2023). Modelling within-person idiographic variance could help explain and individualize learning. *British Journal of Educational Technology*, 54(5), 1077–1094. [https://doi.org/10.1111/bjet.13309](https://doi.org/10.1111/bjet.13309)
+
+Saqr, M., & López-Pernas, S. (2024). Mapping the self in self-regulation using complex dynamic systems approach. *British Journal of Educational Technology*, 55, 1376–1397. [https://doi.org/10.1111/bjet.13452](https://doi.org/10.1111/bjet.13452)
+
+Saqr, M., Cheng, R., López-Pernas, S., & Beck, E. D. (2024). Idiographic artificial intelligence to explain students' self-regulation: Toward precision education. *Learning and Individual Differences*, 114, 102499. [https://doi.org/10.1016/j.lindif.2024.102499](https://doi.org/10.1016/j.lindif.2024.102499)
+
+Saqr, M., Ito, H., & López-Pernas, S. (2026). Individualized Analytics: Within-Person and Idiographic Analysis. In M. Saqr & S. López-Pernas (Eds.), *Advanced Learning Analytics Methods: AI, Precision and Complexity*. Springer. [https://lamethods.org/book2/chapters/ch18-idio/ch18-idio.html](https://lamethods.org/book2/chapters/ch18-idio/ch18-idio.html)
+
+López-Pernas, S., Kayaduman, H., Vogelsmeier, L.V.D.E., & Saqr, M. (2026). The three levels of analysis: Variable-centered, person-centered and person-specific analysis in education. In M. Saqr & S. López-Pernas (Eds.), *Advanced Learning Analytics Methods: AI, Precision and Complexity*. Springer. [https://lamethods.org/book2/chapters/ch19-three-levels/ch19-three-levels.html](https://lamethods.org/book2/chapters/ch19-three-levels/ch19-three-levels.html)

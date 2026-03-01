@@ -212,7 +212,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/get-in-touch/";
           },
-        },{id: "post-jtna-for-transition-network-analysis",
+        },{id: "post-precision-education-is-the-answer",
+      
+        title: "Precision Education is the Answer",
+      
+      description: "The quest to explain and predict student performance has long relied on group averages — a statistical convenience that does not exist in real life. Precision education offers a way out.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/precision-education/";
+        
+      },
+    },{id: "post-jtna-for-transition-network-analysis",
       
         title: "JTNA for Transition Network Analysis",
       

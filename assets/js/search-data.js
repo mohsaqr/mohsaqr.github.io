@@ -79,12 +79,19 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "nav-tutorials",
-          title: "Tutorials",
-          description: "Hands-on tutorials for transition network analysis, sequence analytics, and learning analytics methods in R.",
+            },{id: "dropdown-tutorials",
+              title: "Tutorials",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "nav-blog",
+          title: "Blog",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/tutorials/";
+            window.location.href = "/blog/";
           },
         },{id: "dropdown-overview",
               title: "Overview",

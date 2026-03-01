@@ -16,4 +16,7 @@ children:
     permalink: /works/methods-software/
   - title: "AI Software"
     permalink: /works/ai-software/
+  - title: divider
+  - title: "Tutorials"
+    permalink: /tutorials/
 ---

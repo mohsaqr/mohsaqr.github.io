@@ -3,7 +3,7 @@ layout: page
 permalink: /tutorials/
 title: Tutorials
 description: Hands-on tutorials for transition network analysis, sequence analytics, and learning analytics methods in R.
-nav: true
+nav: false
 nav_order: 4
 ---
 

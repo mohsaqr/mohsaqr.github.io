@@ -5,6 +5,7 @@ date: 2026-03-01 10:00:00
 description: TNA brings statistical rigor to sequential behavioral analysis — p-values, effect sizes, and confidence intervals at the edge level — now available in jamovi through JTNA.
 tags: tna learning-analytics jamovi network-analysis
 categories: research
+thumbnail: assets/img/tutorials/tna-tutorial.png
 ---
 
 Transition Network Analysis (TNA) is a method for studying how people move through behavioral states over time. It was developed by [Mohammed Saqr](https://saqr.me), [Sonsoles López-Pernas](https://sonsoles.me), and [Santtu Tikka](https://arxiv.org/abs/2411.15486) to address a problem that anyone who works with sequential behavioral data will recognize: most methods can only read one kind of signal at a time. Process mining handles sequences and temporal ordering but has no native notion of centrality, community structure, or network-level metrics. Social network analysis captures relational patterns between states but discards the order in which they occur. TNA was designed to hold both simultaneously — modeling the temporal flow of behavior and the relational structure of that flow within a single, unified framework.

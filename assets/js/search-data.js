@@ -590,8 +590,8 @@ ninja.data = [{
           section: "News",},{id: "news-the-tna-r-package-reaches-v1-2-0-on-cran-now-with-frequency-based-tna-ftna-n-gram-and-attention-models-expanded-centrality-measures-and-formal-model-comparison-functions",
           title: 'The tna R package reaches v1.2.0 on CRAN — now with frequency-based TNA...',
           description: "",
-          section: "News",},{id: "news-jtna-v1-6-1-cluster-tna-pattern-discovery-and-centrality-stability",
-          title: 'JTNA v1.6.1 — Cluster TNA, Pattern Discovery, and Centrality Stability',
+          section: "News",},{id: "news-jtna-v1-6-1-what-39-s-new",
+          title: 'JTNA v1.6.1 — What&amp;#39;s New',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_13/";

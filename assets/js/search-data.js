@@ -315,6 +315,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_15/";
+            },},{id: "news-laila-multi-agent-ai-learning-management-system",
+          title: 'LAILA — Multi-Agent AI Learning Management System',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_16/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",

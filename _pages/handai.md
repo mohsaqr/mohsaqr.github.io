@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /handai/
-title: "Handai: AI-Powered Research Collaborator for Qualitative Analysis, Data Processing, and Systematic Reviews"
+title: "Handai: AI Collaborator and Automation Software for Data Processing, Synthesis, and Automation"
 description: A free, open-source suite of ten integrated tools for qualitative coding, data transformation, systematic review screening, and AI-powered research workflows.
 nav: false
 ---

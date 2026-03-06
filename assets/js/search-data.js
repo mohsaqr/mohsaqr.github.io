@@ -212,9 +212,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/get-in-touch/";
           },
-        },{id: "post-rohy-a-virtual-patient-simulator-for-medical-education",
+        },{id: "post-rohy-ai-powered-high-fidelity-virtual-patient-dynamic-simulator",
       
-        title: "Rohy: A Virtual Patient Simulator for Medical Education",
+        title: "Rohy: AI-Powered High-Fidelity Virtual Patient Dynamic Simulator",
       
       description: "An open-source medical simulation platform with realistic patient monitoring, AI-driven patient conversations, 695 laboratory tests, and scenario-based clinical deterioration.",
       section: "Posts",

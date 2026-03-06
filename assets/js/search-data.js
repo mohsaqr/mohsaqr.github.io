@@ -212,7 +212,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/get-in-touch/";
           },
-        },{id: "post-cograph-complex-network-analysis-and-visualization",
+        },{id: "post-rohy-a-virtual-patient-simulator-for-medical-education",
+      
+        title: "Rohy: A Virtual Patient Simulator for Medical Education",
+      
+      description: "An open-source medical simulation platform with realistic patient monitoring, AI-driven patient conversations, 695 laboratory tests, and scenario-based clinical deterioration.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/rohy-virtual-patient-simulator/";
+        
+      },
+    },{id: "post-cograph-complex-network-analysis-and-visualization",
       
         title: "cograph: Complex Network Analysis and Visualization",
       
@@ -299,6 +310,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_14/";
+            },},{id: "news-rohy-virtual-patient-simulator",
+          title: 'Rohy — Virtual Patient Simulator',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_15/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",

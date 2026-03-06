@@ -205,14 +205,25 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sitemap-visual/";
           },
-        },{id: "nav-get-in-touch",
-          title: "Get in Touch",
+        },{id: "nav-contact",
+          title: "Contact",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/get-in-touch/";
           },
-        },{id: "post-precision-education-is-the-answer",
+        },{id: "post-cograph-complex-network-analysis-and-visualization",
+      
+        title: "cograph: Complex Network Analysis and Visualization",
+      
+      description: "A modern R package for the analysis, visualization, and manipulation of dynamical, social, and complex networks --- with simple syntax and publication-ready output.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/cograph-network-visualization/";
+        
+      },
+    },{id: "post-precision-education-is-the-answer",
       
         title: "Precision Education is the Answer",
       
@@ -283,6 +294,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_13/";
+            },},{id: "news-cograph-complex-network-analysis-and-visualization",
+          title: 'cograph — Complex Network Analysis and Visualization',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_14/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",

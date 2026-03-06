@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>splot() &mdash; Complete Reference</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a2e;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --border: #e5e7eb;
+    --code-bg: #f8fafc;
+    --code-border: #e2e8f0;
+    --table-stripe: #f9fafb;
+    --header-bg: #0f172a;
+    --success: #059669;
+    --warn: #d97706;
+    --sidebar-w: 260px;
+    --output-bg: #f0fdf4;
+    --output-border: #86efac;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    color: var(--fg);
+    line-height: 1.7;
+    background: var(--bg);
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: var(--sidebar-w);
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--header-bg);
+    color: #cbd5e1;
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    z-index: 100;
+    scrollbar-width: thin;
+    scrollbar-color: #334155 transparent;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+
+  .sidebar .logo {
+    padding: 0 1.5rem 1.2rem;
+    border-bottom: 1px solid #1e293b;
+    margin-bottom: 1rem;
+  }
+  .sidebar .logo h1 { font-size: 1.3rem; color: #f1f5f9; font-weight: 700; letter-spacing: -0.02em; }
+  .sidebar .logo p { font-size: 0.75rem; color: #64748b; margin-top: 0.2rem; }
+
+  .sidebar nav ul { list-style: none; }
+  .sidebar nav > ul > li > a {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color 0.15s;
+  }
+  .sidebar nav > ul > li > a:hover { color: #e2e8f0; }
+  .sidebar nav > ul > li > ul { margin-bottom: 0.5rem; }
+  .sidebar nav > ul > li > ul > li > a {
+    display: block;
+    padding: 0.3rem 1.5rem 0.3rem 2.2rem;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: all 0.15s;
+    border-left: 2px solid transparent;
+  }
+  .sidebar nav > ul > li > ul > li > a:hover {
+    color: #e2e8f0;
+    background: rgba(255,255,255,0.04);
+    border-left-color: var(--accent);
+  }
+
+  /* ── Main content ── */
+  .main {
+    margin-left: var(--sidebar-w);
+    max-width: 920px;
+    padding: 2.5rem 3rem 5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 3rem 0 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--border);
+    color: var(--fg);
+    letter-spacing: -0.02em;
+  }
+  h2:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 2rem 0 0.5rem;
+    color: var(--fg);
+  }
+  h3 code {
+    font-size: 1.05rem;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+  }
+
+  h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.4rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  p { margin: 0.5rem 0; color: #374151; }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+  }
+  .hero h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; }
+  .hero .subtitle { font-size: 1.1rem; color: #94a3b8; margin-top: 0.3rem; font-weight: 400; }
+  .hero p { color: #94a3b8; font-size: 1.05rem; margin-top: 0.5rem; }
+  .hero .badges { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .hero .badge {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .badge-blue { background: #1d4ed8; color: #dbeafe; }
+  .badge-green { background: #065f46; color: #d1fae5; }
+  .badge-purple { background: #5b21b6; color: #ede9fe; }
+  .badge-amber { background: #92400e; color: #fef3c7; }
+  .badge-teal { background: #115e59; color: #ccfbf1; }
+  .badge-rose { background: #9f1239; color: #ffe4e6; }
+
+  /* ── Code blocks ── */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    overflow-x: auto;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin: 0.8rem 0;
+  }
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.88em;
+  }
+  p code, li code, td code {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    color: #be185d;
+    font-size: 0.85em;
+  }
+
+  /* ── Tables ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0 1.2rem;
+    font-size: 0.88rem;
+  }
+  th {
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 2px solid var(--fg);
+    font-weight: 600;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.45rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:nth-child(even) { background: var(--table-stripe); }
+
+  /* ── Collapsible ── */
+  details {
+    margin: 0.8rem 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  summary {
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: #f9fafb;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  summary:hover { background: #f3f4f6; }
+  details[open] summary { border-bottom: 1px solid var(--border); }
+  details .detail-content { padding: 1rem; }
+
+  /* ── Lists ── */
+  ul, ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+  li { margin: 0.25rem 0; color: #374151; }
+
+  /* ── Feature grid ── */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .feature-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+  }
+  .feature-card .number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .feature-card .label {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+
+  /* ── Notes ── */
+  .note {
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 0.6rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin: 0.8rem 0;
+    font-size: 0.88rem;
+  }
+
+  .tip {
+    background: #f0fdf4;
+    border-left: 3px solid #22c55e;
+    padding: 0.6rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin: 0.8rem 0;
+    font-size: 0.88rem;
+  }
+
+  .returns {
+    background: #f0f9ff;
+    border-left: 3px solid #0ea5e9;
+    padding: 0.6rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin: 0.8rem 0;
+    font-size: 0.88rem;
+  }
+
+  /* ── Quick ref cards ── */
+  .quick-ref {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin: 1rem 0 2rem;
+  }
+  .quick-ref-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    transition: box-shadow 0.15s;
+  }
+  .quick-ref-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .quick-ref-card h4 {
+    margin: 0 0 0.4rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--fg);
+    font-size: 0.92rem;
+  }
+  .quick-ref-card .funcs {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    line-height: 1.5;
+  }
+  .quick-ref-card .count {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Param name highlight ── */
+  .param { color: #0369a1; font-weight: 600; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 1.5rem; }
+    .quick-ref { grid-template-columns: 1fr; }
+    .feature-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ SIDEBAR ═══════════════ -->
+<aside class="sidebar">
+  <div class="logo">
+    <h1>splot()</h1>
+    <p>cograph v1.6.0</p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#input">Input &amp; Layout</a>
+        <ul>
+          <li><a href="#input-formats">Accepted Formats</a></li>
+          <li><a href="#input-layout">Layout Algorithms</a></li>
+          <li><a href="#input-plot">Plot Controls</a></li>
+        </ul>
+      </li>
+      <li><a href="#nodes">Node Aesthetics</a>
+        <ul>
+          <li><a href="#nodes-basic">Size, Shape &amp; Color</a></li>
+          <li><a href="#nodes-scaling">Centrality Scaling</a></li>
+          <li><a href="#nodes-labels">Labels</a></li>
+        </ul>
+      </li>
+      <li><a href="#donuts">Donuts &amp; Pies</a>
+        <ul>
+          <li><a href="#donuts-donut">Donut Rings</a></li>
+          <li><a href="#donuts-pie">Pie Charts</a></li>
+          <li><a href="#donuts-double">Double Donut</a></li>
+        </ul>
+      </li>
+      <li><a href="#edges">Edge Aesthetics</a>
+        <ul>
+          <li><a href="#edges-basic">Color, Width &amp; Style</a></li>
+          <li><a href="#edges-scaling">Weight Scaling</a></li>
+          <li><a href="#edges-arrows">Arrows &amp; Curvature</a></li>
+          <li><a href="#edges-start">Start Style</a></li>
+        </ul>
+      </li>
+      <li><a href="#edge-labels">Edge Labels</a>
+        <ul>
+          <li><a href="#edge-labels-basic">Basic Labels</a></li>
+          <li><a href="#edge-labels-template">Templates &amp; Styles</a></li>
+          <li><a href="#edge-labels-stats">CI &amp; P-values</a></li>
+        </ul>
+      </li>
+      <li><a href="#weights">Weight Handling</a></li>
+      <li><a href="#themes">Themes &amp; Legend</a>
+        <ul>
+          <li><a href="#themes-builtin">Built-in Themes</a></li>
+          <li><a href="#themes-legend">Legend</a></li>
+        </ul>
+      </li>
+      <li><a href="#output">Output &amp; Saving</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<div class="main">
+
+<!-- Hero -->
+<div class="hero" id="overview">
+  <h1>splot()</h1>
+  <div class="subtitle">The one-function network plot</div>
+  <p>Pass any network &mdash; matrix, igraph, tna, edge list, cograph &mdash; and get a publication-ready plot. Customize with 100+ parameters for nodes, edges, labels, donuts, pies, confidence intervals, themes, and more. All in base R graphics.</p>
+  <div class="badges">
+    <span class="badge badge-blue">6 Input Formats</span>
+    <span class="badge badge-green">12+ Node Shapes</span>
+    <span class="badge badge-purple">Triple-Layer Donuts</span>
+    <span class="badge badge-teal">CI &amp; P-value Overlays</span>
+    <span class="badge badge-amber">7 Themes</span>
+    <span class="badge badge-rose">100+ Parameters</span>
+  </div>
+</div>
+
+<!-- Numbers -->
+<div class="feature-grid">
+  <div class="feature-card">
+    <div class="number">6</div>
+    <div class="label">Input Formats</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">100+</div>
+    <div class="label">Parameters</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">12+</div>
+    <div class="label">Node Shapes</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">8+</div>
+    <div class="label">Layout Algorithms</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">7</div>
+    <div class="label">Built-in Themes</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">3</div>
+    <div class="label">Donut + Pie Layers</div>
+  </div>
+</div>
+
+<!-- Quick ref -->
+<div class="quick-ref">
+  <div class="quick-ref-card">
+    <h4>Nodes</h4>
+    <div class="funcs">node_size &middot; node_shape &middot; node_fill &middot; node_border_color &middot; node_alpha &middot; scale_nodes_by</div>
+    <div class="count">18 parameters</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Edges</h4>
+    <div class="funcs">edge_color &middot; edge_width &middot; edge_alpha &middot; curvature &middot; arrow_size &middot; edge_style</div>
+    <div class="count">20 parameters</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Donuts &amp; Pies</h4>
+    <div class="funcs">donut_fill &middot; donut_color &middot; pie_values &middot; pie_colors &middot; donut2_values &middot; donut_shape</div>
+    <div class="count">22 parameters</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Edge Labels</h4>
+    <div class="funcs">edge_labels &middot; edge_label_style &middot; edge_label_template &middot; edge_label_p &middot; edge_label_stars</div>
+    <div class="count">25 parameters</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Layout &amp; Theme</h4>
+    <div class="funcs">layout &middot; theme &middot; background &middot; seed &middot; layout_scale &middot; rescale</div>
+    <div class="count">14 parameters</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Output</h4>
+    <div class="funcs">filetype &middot; filename &middot; width &middot; height &middot; res &middot; title</div>
+    <div class="count">7 parameters</div>
+  </div>
+</div>
+
+<pre><code># That's it. One line.
+splot(model)</code></pre>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="input">Input &amp; Layout</h2>
+
+<h3 id="input-formats">Accepted Formats</h3>
+
+<p><code>splot()</code> auto-detects the input type. Directionality is inferred from matrix symmetry or the source object. Override with <code>directed</code>.</p>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>x</code></td><td><em>required</em></td><td>Network data: matrix, data.frame (edge list), igraph, cograph_network, tna, group_tna, bootstrap, or permutation object</td></tr>
+  <tr><td><code>directed</code></td><td><code>NULL</code></td><td>Force directed/undirected. <code>NULL</code> = auto-detect from input</td></tr>
+  <tr><td><code>i</code></td><td><code>NULL</code></td><td>Group index or name when <code>x</code> is group_tna. <code>NULL</code> = plot all groups in a grid</td></tr>
+</table>
+
+<div class="tip"><strong>Tip:</strong> Matrices with symmetric weights are treated as undirected. Edge lists default to directed. igraph/tna objects carry their own directionality.</div>
+
+<h3 id="input-layout">Layout Algorithms</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>layout</code></td><td><code>"oval"</code></td><td>Layout algorithm or coordinate matrix</td></tr>
+  <tr><td><code>seed</code></td><td><code>42</code></td><td>Random seed for reproducible layouts</td></tr>
+  <tr><td><code>rescale</code></td><td><code>TRUE</code></td><td>Rescale layout to &minus;1 to 1 range</td></tr>
+  <tr><td><code>aspect</code></td><td><code>TRUE</code></td><td>Maintain aspect ratio</td></tr>
+</table>
+
+<p>Built-in layouts: <code>"oval"</code>, <code>"circle"</code>, <code>"spring"</code>, <code>"groups"</code>, <code>"grid"</code>, <code>"star"</code>, <code>"bipartite"</code>. Or pass any igraph layout by name (<code>"fr"</code>, <code>"kk"</code>, <code>"drl"</code>, <code>"mds"</code>, <code>"ni"</code>, <code>"tr"</code>) or as a two-column matrix of x,y coordinates.</p>
+
+<details>
+  <summary>Example: Layouts</summary>
+  <div class="detail-content">
+<pre><code>splot(mat, layout = "circle")
+splot(mat, layout = "spring", seed = 123)
+splot(mat, layout = "groups", groups = c("A","A","B","B","B"))
+
+# igraph layout
+splot(mat, layout = "kk")
+
+# Custom coordinates
+coords <- cbind(x = runif(10), y = runif(10))
+splot(mat, layout = coords)</code></pre>
+  </div>
+</details>
+
+<h3 id="input-plot">Plot Controls</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>title</code></td><td><code>NULL</code></td><td>Plot title</td></tr>
+  <tr><td><code>title_size</code></td><td><code>1.2</code></td><td>Title font size</td></tr>
+  <tr><td><code>background</code></td><td><code>"white"</code></td><td>Background color</td></tr>
+  <tr><td><code>layout_scale</code></td><td><code>1</code></td><td>Scale factor: &gt;1 expands, &lt;1 contracts. <code>"auto"</code> scales by node count</td></tr>
+  <tr><td><code>layout_margin</code></td><td><code>0.15</code></td><td>Margin as fraction of layout range</td></tr>
+  <tr><td><code>margins</code></td><td><code>c(.1,.1,.1,.1)</code></td><td>Plot margins: c(bottom, left, top, right)</td></tr>
+  <tr><td><code>scaling</code></td><td><code>"default"</code></td><td><code>"default"</code> (qgraph-matched) or <code>"legacy"</code> (pre-v2.0)</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="nodes">Node Aesthetics</h2>
+
+<h3 id="nodes-basic">Size, Shape &amp; Color</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>node_size</code></td><td><code>NULL</code></td><td>Node size. Scalar or per-node vector. Default 3</td></tr>
+  <tr><td><code>node_size2</code></td><td><code>NULL</code></td><td>Secondary size for ellipse/rectangle height</td></tr>
+  <tr><td><code>node_shape</code></td><td><code>"circle"</code></td><td>Shape name or per-node vector</td></tr>
+  <tr><td><code>node_svg</code></td><td><code>NULL</code></td><td>Custom SVG: file path or inline string</td></tr>
+  <tr><td><code>svg_preserve_aspect</code></td><td><code>TRUE</code></td><td>Maintain SVG aspect ratio</td></tr>
+  <tr><td><code>node_fill</code></td><td><code>NULL</code></td><td>Fill color(s). Uses theme default if NULL</td></tr>
+  <tr><td><code>node_border_color</code></td><td><code>NULL</code></td><td>Border color(s)</td></tr>
+  <tr><td><code>node_border_width</code></td><td><code>1</code></td><td>Border width(s)</td></tr>
+  <tr><td><code>node_alpha</code></td><td><code>1</code></td><td>Transparency (0&ndash;1)</td></tr>
+  <tr><td><code>use_pch</code></td><td><code>FALSE</code></td><td>Use <code>points()</code> for simple circles (faster for large networks)</td></tr>
+</table>
+
+<p><strong>Available shapes:</strong> <code>"circle"</code>, <code>"square"</code>, <code>"triangle"</code>, <code>"diamond"</code>, <code>"pentagon"</code>, <code>"hexagon"</code>, <code>"star"</code>, <code>"heart"</code>, <code>"ellipse"</code>, <code>"cross"</code>, <code>"rectangle"</code>, <code>"pie"</code>, plus any registered SVG shape.</p>
+
+<details>
+  <summary>Example: Node styling</summary>
+  <div class="detail-content">
+<pre><code># Per-node shapes and colors
+splot(mat,
+  node_shape = c("circle", "hexagon", "diamond", "square", "star"),
+  node_fill = c("#E63946", "#457B9D", "#2A9D8F", "#E9C46A", "#F4A261"),
+  node_size = 8,
+  node_border_width = 2
+)
+
+# Custom SVG nodes
+splot(mat, node_svg = "path/to/icon.svg", node_size = 10)</code></pre>
+  </div>
+</details>
+
+<h3 id="nodes-scaling">Centrality Scaling</h3>
+
+<p>Size nodes proportionally to any centrality measure. The value is computed internally &mdash; just pass the measure name.</p>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>scale_nodes_by</code></td><td><code>NULL</code></td><td>Centrality measure name: <code>"degree"</code>, <code>"strength"</code>, <code>"betweenness"</code>, <code>"closeness"</code>, <code>"eigenvector"</code>, <code>"pagerank"</code>, <code>"authority"</code>, <code>"hub"</code>, <code>"harmonic"</code>, <code>"indegree"</code>, <code>"outdegree"</code>, <code>"instrength"</code>, <code>"outstrength"</code>, &hellip;</td></tr>
+  <tr><td><code>node_size_range</code></td><td><code>c(2, 8)</code></td><td>Output size range c(min, max)</td></tr>
+  <tr><td><code>scale_nodes_scale</code></td><td><code>1</code></td><td>Dampening exponent. &lt;1 compresses differences, &gt;1 exaggerates</td></tr>
+</table>
+
+<details>
+  <summary>Example: Size by centrality</summary>
+  <div class="detail-content">
+<pre><code># PageRank scaling
+splot(mat, scale_nodes_by = "pagerank", node_size_range = c(3, 12))
+
+# In-strength with dampening
+splot(mat, scale_nodes_by = "instrength", scale_nodes_scale = 0.5)</code></pre>
+  </div>
+</details>
+
+<h3 id="nodes-labels">Labels</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>labels</code></td><td><code>TRUE</code></td><td><code>TRUE</code> (use names), <code>FALSE</code> (none), or character vector</td></tr>
+  <tr><td><code>label_size</code></td><td><code>NULL</code></td><td>Label text size (cex)</td></tr>
+  <tr><td><code>label_color</code></td><td><code>"black"</code></td><td>Label color</td></tr>
+  <tr><td><code>label_position</code></td><td><code>"center"</code></td><td><code>"center"</code>, <code>"above"</code>, <code>"below"</code>, <code>"left"</code>, <code>"right"</code></td></tr>
+  <tr><td><code>label_fontface</code></td><td><code>"plain"</code></td><td><code>"plain"</code>, <code>"bold"</code>, <code>"italic"</code>, <code>"bold.italic"</code></td></tr>
+  <tr><td><code>label_fontfamily</code></td><td><code>"sans"</code></td><td><code>"sans"</code>, <code>"serif"</code>, <code>"mono"</code></td></tr>
+  <tr><td><code>label_hjust</code></td><td><code>0.5</code></td><td>Horizontal justification (0=left, 1=right)</td></tr>
+  <tr><td><code>label_vjust</code></td><td><code>0.5</code></td><td>Vertical justification (0=bottom, 1=top)</td></tr>
+  <tr><td><code>label_angle</code></td><td><code>0</code></td><td>Rotation angle in degrees</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="donuts">Donuts &amp; Pies</h2>
+
+<p>Nodes can carry up to three data layers: an outer donut ring, an inner donut ring, and a pie chart core. Use these to encode multiple variables per node without cluttering the graph.</p>
+
+<h3 id="donuts-donut">Donut Rings</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>donut_fill</code></td><td><code>NULL</code></td><td>Fill proportion (0&ndash;1) per node. Scalar or vector</td></tr>
+  <tr><td><code>donut_color</code></td><td><code>NULL</code></td><td>Fill color(s) for the ring. Scalar, vector, or list of vectors for segmented donuts</td></tr>
+  <tr><td><code>donut_inner_ratio</code></td><td><code>0.8</code></td><td>Inner radius as fraction of outer (0&ndash;1). Smaller = thicker ring</td></tr>
+  <tr><td><code>donut_bg_color</code></td><td><code>"gray90"</code></td><td>Background color for unfilled portion</td></tr>
+  <tr><td><code>donut_shape</code></td><td><code>"circle"</code></td><td>Base shape: <code>"circle"</code>, <code>"square"</code>, <code>"hexagon"</code>, <code>"triangle"</code>, <code>"diamond"</code>, <code>"pentagon"</code></td></tr>
+  <tr><td><code>donut_border_color</code></td><td><code>NULL</code></td><td>Border color. NULL inherits from <code>node_border_color</code></td></tr>
+  <tr><td><code>donut_border_width</code></td><td><code>NULL</code></td><td>Border width. NULL inherits from <code>node_border_width</code></td></tr>
+  <tr><td><code>donut_outer_border_color</code></td><td><code>NULL</code></td><td>Outer boundary color (enables double border)</td></tr>
+  <tr><td><code>donut_line_type</code></td><td><code>"solid"</code></td><td>Line type: <code>"solid"</code>, <code>"dashed"</code>, <code>"dotted"</code></td></tr>
+  <tr><td><code>donut_empty</code></td><td><code>TRUE</code></td><td>Render empty rings for NA values</td></tr>
+</table>
+
+<h4>Donut Value Display</h4>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>donut_show_value</code></td><td><code>FALSE</code></td><td>Show numeric value in donut center</td></tr>
+  <tr><td><code>donut_value_size</code></td><td><code>0.8</code></td><td>Font size for center value</td></tr>
+  <tr><td><code>donut_value_color</code></td><td><code>"black"</code></td><td>Color for center value</td></tr>
+  <tr><td><code>donut_value_fontface</code></td><td><code>"bold"</code></td><td>Font face for center value</td></tr>
+  <tr><td><code>donut_value_digits</code></td><td><code>2</code></td><td>Decimal places</td></tr>
+  <tr><td><code>donut_value_prefix</code></td><td><code>""</code></td><td>Text before value (e.g., <code>"$"</code>)</td></tr>
+  <tr><td><code>donut_value_suffix</code></td><td><code>""</code></td><td>Text after value (e.g., <code>"%"</code>)</td></tr>
+</table>
+
+<details>
+  <summary>Example: Donut rings</summary>
+  <div class="detail-content">
+<pre><code># Simple progress ring
+splot(mat, donut_fill = c(0.9, 0.7, 0.5), donut_color = "steelblue")
+
+# Segmented donut (3 categories per node)
+splot(mat,
+  donut_fill = lapply(1:5, function(i) c(runif(1), runif(1), runif(1))),
+  donut_color = list(c("#E63946", "#457B9D", "#2A9D8F")),
+  donut_inner_ratio = 0.6
+)
+
+# Hexagonal donut with value display
+splot(mat,
+  donut_fill = c(0.85, 0.72, 0.93),
+  donut_color = "coral",
+  donut_shape = "hexagon",
+  donut_show_value = TRUE,
+  donut_value_suffix = "%",
+  donut_value_digits = 0
+)</code></pre>
+  </div>
+</details>
+
+<h3 id="donuts-pie">Pie Charts</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>pie_values</code></td><td><code>NULL</code></td><td>List of numeric vectors: segment sizes per node</td></tr>
+  <tr><td><code>pie_colors</code></td><td><code>NULL</code></td><td>Color vector or list of vectors for pie segments</td></tr>
+  <tr><td><code>pie_border_width</code></td><td><code>NULL</code></td><td>Border width for slice dividers</td></tr>
+</table>
+
+<details>
+  <summary>Example: Pie + Donut combo</summary>
+  <div class="detail-content">
+<pre><code>splot(mat,
+  node_shape = "donut",
+  donut_fill = c(0.9, 0.7, 0.5),
+  donut_color = "steelblue",
+  pie_values = list(c(3,2,1), c(1,1,4), c(2,3,1)),
+  pie_colors = c("#E41A1C", "#377EB8", "#4DAF4A"),
+  node_size = 8
+)</code></pre>
+  </div>
+</details>
+
+<h3 id="donuts-double">Double Donut</h3>
+
+<p>A second donut ring inside the first, for encoding a third data dimension.</p>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>donut2_values</code></td><td><code>NULL</code></td><td>Values for inner donut ring</td></tr>
+  <tr><td><code>donut2_colors</code></td><td><code>NULL</code></td><td>Colors for inner donut ring</td></tr>
+  <tr><td><code>donut2_inner_ratio</code></td><td><code>0.4</code></td><td>Inner radius ratio for inner donut</td></tr>
+</table>
+
+<details>
+  <summary>Example: Triple layer (donut + donut + pie)</summary>
+  <div class="detail-content">
+<pre><code>splot(mat,
+  donut_fill = lapply(1:5, function(i) runif(3)),
+  donut_color = list(c("#E63946", "#457B9D", "#2A9D8F")),
+  donut_inner_ratio = 0.7,
+  donut2_values = as.list(runif(5, 0.4, 0.9)),
+  donut2_colors = list("#F4A261"),
+  donut2_inner_ratio = 0.45,
+  pie_values = lapply(1:5, function(i) sample(1:5, 4)),
+  pie_colors = list(c("#264653", "#E9C46A", "#F4A261", "#E76F51")),
+  node_size = 7
+)</code></pre>
+  </div>
+</details>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="edges">Edge Aesthetics</h2>
+
+<h3 id="edges-basic">Color, Width &amp; Style</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>edge_color</code></td><td><code>NULL</code></td><td>Edge color(s). NULL = positive/negative coloring by weight sign</td></tr>
+  <tr><td><code>edge_positive_color</code></td><td><code>"#2E7D32"</code></td><td>Color for positive weights</td></tr>
+  <tr><td><code>edge_negative_color</code></td><td><code>"#C62828"</code></td><td>Color for negative weights</td></tr>
+  <tr><td><code>edge_width</code></td><td><code>NULL</code></td><td>Edge width(s). NULL = scale by weight</td></tr>
+  <tr><td><code>edge_alpha</code></td><td><code>0.8</code></td><td>Transparency (0&ndash;1)</td></tr>
+  <tr><td><code>edge_style</code></td><td><code>1</code></td><td>Line type: 1=solid, 2=dashed, 3=dotted, etc.</td></tr>
+</table>
+
+<h3 id="edges-scaling">Weight Scaling</h3>
+
+<p>How edge weights map to visual width. The default is adaptive &mdash; it adjusts to network size and weight distribution.</p>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>edge_size</code></td><td><code>NULL</code></td><td>Base size for weight scaling. NULL = adaptive: <code>15 * exp(-n/90) + 1</code></td></tr>
+  <tr><td><code>edge_width_range</code></td><td><code>c(0.1, 4)</code></td><td>Output width range c(min, max)</td></tr>
+  <tr><td><code>edge_scale_mode</code></td><td><code>"linear"</code></td><td>Scaling: <code>"linear"</code>, <code>"log"</code>, <code>"sqrt"</code>, or <code>"rank"</code></td></tr>
+  <tr><td><code>edge_cutoff</code></td><td><code>NULL</code></td><td>Two-tier width threshold. NULL = auto (75th percentile), 0 = disabled</td></tr>
+</table>
+
+<div class="note"><strong>Note:</strong> <code>edge_scale_mode = "log"</code> is useful when weights span several orders of magnitude. <code>"rank"</code> equalizes spacing and is useful for heavy-tailed distributions.</div>
+
+<h3 id="edges-arrows">Arrows &amp; Curvature</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>curvature</code></td><td><code>0</code></td><td>Edge curvature. 0 = straight</td></tr>
+  <tr><td><code>curve_scale</code></td><td><code>TRUE</code></td><td>Auto-curve reciprocal edges</td></tr>
+  <tr><td><code>curve_shape</code></td><td><code>0</code></td><td>Spline tension (&minus;1 to 1)</td></tr>
+  <tr><td><code>curve_pivot</code></td><td><code>0.5</code></td><td>Control point position along edge (0&ndash;1)</td></tr>
+  <tr><td><code>curves</code></td><td><code>TRUE</code></td><td><code>TRUE</code> = auto-curve reciprocals, <code>FALSE</code> = all straight, <code>"force"</code> = all curved</td></tr>
+  <tr><td><code>arrow_size</code></td><td><code>1</code></td><td>Arrow head size</td></tr>
+  <tr><td><code>arrow_angle</code></td><td><code>pi/6</code></td><td>Arrow head angle (radians). Default = 30&deg;</td></tr>
+  <tr><td><code>show_arrows</code></td><td><code>TRUE</code></td><td>Show arrows on directed edges. Logical or per-edge vector</td></tr>
+  <tr><td><code>bidirectional</code></td><td><code>FALSE</code></td><td>Arrows at both ends. Logical or per-edge vector</td></tr>
+  <tr><td><code>loop_rotation</code></td><td><code>NULL</code></td><td>Self-loop direction angle(s) in radians</td></tr>
+</table>
+
+<h3 id="edges-start">Edge Start Style</h3>
+
+<p>A visual cue at the source end of directed edges &mdash; a dashed or dotted segment that indicates direction without relying solely on arrowheads.</p>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>edge_start_style</code></td><td><code>"solid"</code></td><td><code>"solid"</code>, <code>"dashed"</code>, or <code>"dotted"</code></td></tr>
+  <tr><td><code>edge_start_length</code></td><td><code>0.15</code></td><td>Fraction of edge length for styled segment (0&ndash;0.5)</td></tr>
+  <tr><td><code>edge_start_dot_density</code></td><td><code>"12"</code></td><td>Dot pattern: two-char string (dot length, gap length)</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="edge-labels">Edge Labels</h2>
+
+<h3 id="edge-labels-basic">Basic Labels</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>edge_labels</code></td><td><code>FALSE</code></td><td><code>TRUE</code> (show weights), <code>FALSE</code> (none), or character vector</td></tr>
+  <tr><td><code>edge_label_size</code></td><td><code>0.8</code></td><td>Label text size</td></tr>
+  <tr><td><code>edge_label_color</code></td><td><code>"gray30"</code></td><td>Text color</td></tr>
+  <tr><td><code>edge_label_bg</code></td><td><code>NA</code></td><td>Background color for label box</td></tr>
+  <tr><td><code>edge_label_position</code></td><td><code>0.5</code></td><td>Position along edge (0=source, 1=target)</td></tr>
+  <tr><td><code>edge_label_offset</code></td><td><code>0</code></td><td>Perpendicular offset (positive = above curve)</td></tr>
+  <tr><td><code>edge_label_fontface</code></td><td><code>"plain"</code></td><td>Font face</td></tr>
+  <tr><td><code>edge_label_halo</code></td><td><code>TRUE</code></td><td>White halo for readability</td></tr>
+  <tr><td><code>edge_label_digits</code></td><td><code>2</code></td><td>Decimal places for numeric values</td></tr>
+  <tr><td><code>edge_label_leading_zero</code></td><td><code>TRUE</code></td><td>Show leading zero for values &lt; 1</td></tr>
+  <tr><td><code>edge_label_oneline</code></td><td><code>TRUE</code></td><td>Single line format</td></tr>
+</table>
+
+<h4>Shadow</h4>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>edge_label_shadow</code></td><td><code>FALSE</code></td><td>Enable drop shadow</td></tr>
+  <tr><td><code>edge_label_shadow_color</code></td><td><code>"gray40"</code></td><td>Shadow color</td></tr>
+  <tr><td><code>edge_label_shadow_offset</code></td><td><code>0.5</code></td><td>Shadow offset in points</td></tr>
+  <tr><td><code>edge_label_shadow_alpha</code></td><td><code>0.5</code></td><td>Shadow transparency</td></tr>
+</table>
+
+<h3 id="edge-labels-template">Templates &amp; Styles</h3>
+
+<p>The template system composes edge labels from multiple data sources. Use preset styles or build your own with placeholders.</p>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>edge_label_style</code></td><td><code>"none"</code></td><td>Preset: <code>"none"</code>, <code>"estimate"</code>, <code>"full"</code>, <code>"range"</code>, <code>"stars"</code></td></tr>
+  <tr><td><code>edge_label_template</code></td><td><code>NULL</code></td><td>Custom template with placeholders. Overrides <code>edge_label_style</code></td></tr>
+</table>
+
+<p><strong>Template placeholders:</strong> <code>{est}</code> = estimate, <code>{low}</code> = lower CI, <code>{up}</code> = upper CI, <code>{range}</code> = [low, up], <code>{p}</code> = p-value, <code>{stars}</code> = significance stars.</p>
+
+<table>
+  <tr><th>Style</th><th>Produces</th></tr>
+  <tr><td><code>"estimate"</code></td><td><code>.23</code></td></tr>
+  <tr><td><code>"full"</code></td><td><code>.23 [.18, .29]*</code></td></tr>
+  <tr><td><code>"range"</code></td><td><code>[.18, .29]</code></td></tr>
+  <tr><td><code>"stars"</code></td><td><code>***</code></td></tr>
+</table>
+
+<details>
+  <summary>Example: Custom template</summary>
+  <div class="detail-content">
+<pre><code># Effect size with stars
+splot(mat,
+  edge_labels = TRUE,
+  edge_label_template = "{est}{stars}",
+  edge_label_p = pval_matrix,
+  edge_label_stars = TRUE,
+  edge_label_leading_zero = FALSE
+)
+
+# Full annotation
+splot(mat,
+  edge_label_style = "full",
+  edge_ci_lower = ci_lo,
+  edge_ci_upper = ci_hi,
+  edge_label_p = pvals,
+  edge_label_stars = TRUE
+)</code></pre>
+  </div>
+</details>
+
+<h3 id="edge-labels-stats">Confidence Intervals &amp; P-values</h3>
+
+<p>Overlay confidence intervals as semi-transparent bands on edges, and annotate with p-values and significance stars.</p>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>edge_ci</code></td><td><code>NULL</code></td><td>CI width vector (0&ndash;1). Rendered as semi-transparent underlay</td></tr>
+  <tr><td><code>edge_ci_scale</code></td><td><code>2.0</code></td><td>Width multiplier for underlay thickness</td></tr>
+  <tr><td><code>edge_ci_alpha</code></td><td><code>0.15</code></td><td>Underlay transparency</td></tr>
+  <tr><td><code>edge_ci_color</code></td><td><code>NA</code></td><td>Underlay color. NA = match edge color</td></tr>
+  <tr><td><code>edge_ci_style</code></td><td><code>2</code></td><td>Underlay line type: 1=solid, 2=dashed, 3=dotted</td></tr>
+  <tr><td><code>edge_ci_arrows</code></td><td><code>FALSE</code></td><td>Show arrows on underlay</td></tr>
+  <tr><td><code>edge_ci_lower</code></td><td><code>NULL</code></td><td>Lower CI bounds (for label annotation)</td></tr>
+  <tr><td><code>edge_ci_upper</code></td><td><code>NULL</code></td><td>Upper CI bounds (for label annotation)</td></tr>
+  <tr><td><code>edge_label_p</code></td><td><code>NULL</code></td><td>P-values per edge</td></tr>
+  <tr><td><code>edge_label_p_digits</code></td><td><code>3</code></td><td>Decimal places for p-values</td></tr>
+  <tr><td><code>edge_label_p_prefix</code></td><td><code>"p="</code></td><td>Prefix for p-value display</td></tr>
+  <tr><td><code>edge_label_stars</code></td><td><code>NULL</code></td><td>Significance stars: <code>TRUE</code> (compute from p), character vector, or numeric (treated as p-values)</td></tr>
+  <tr><td><code>edge_label_ci_format</code></td><td><code>"bracket"</code></td><td><code>"bracket"</code> [low, up] or <code>"dash"</code> low&ndash;up</td></tr>
+  <tr><td><code>edge_priority</code></td><td><code>NULL</code></td><td>Render priority per edge. Higher = drawn on top</td></tr>
+</table>
+
+<details>
+  <summary>Example: Full statistical annotation</summary>
+  <div class="detail-content">
+<pre><code>splot(mat,
+  edge_ci_lower = ci_lower_matrix,
+  edge_ci_upper = ci_upper_matrix,
+  edge_label_p = pvalue_matrix,
+  edge_label_stars = TRUE,
+  edge_label_style = "full",
+  edge_label_leading_zero = FALSE,
+  edge_label_color = "#800020"
+)</code></pre>
+  </div>
+</details>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="weights">Weight Handling</h2>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>threshold</code></td><td><code>0</code></td><td>Minimum absolute weight to display an edge</td></tr>
+  <tr><td><code>minimum</code></td><td><code>0</code></td><td>Alias for <code>threshold</code> (qgraph compatibility). Uses <code>max(threshold, minimum)</code></td></tr>
+  <tr><td><code>maximum</code></td><td><code>NULL</code></td><td>Maximum weight for scaling. NULL = auto from data</td></tr>
+  <tr><td><code>weight_digits</code></td><td><code>2</code></td><td>Decimal places to round weights. Edges rounding to 0 are removed. NULL = disable</td></tr>
+  <tr><td><code>edge_duplicates</code></td><td><code>NULL</code></td><td>Handle duplicate edges in undirected networks: <code>"sum"</code>, <code>"mean"</code>, <code>"first"</code>, <code>"max"</code>, <code>"min"</code>, or custom function</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="themes">Themes &amp; Legend</h2>
+
+<h3 id="themes-builtin">Built-in Themes</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>theme</code></td><td><code>NULL</code></td><td>Theme name. NULL = default styling</td></tr>
+</table>
+
+<p><strong>Available themes:</strong> <code>"classic"</code> (white bg, blue nodes), <code>"dark"</code> (dark bg for slides), <code>"minimal"</code> (subtle, thin edges), <code>"colorblind"</code> (CVD-optimized), <code>"gray"</code> (grayscale), <code>"nature"</code> (earth tones), <code>"viridis"</code> (viridis palette). Register custom themes with <code>register_theme()</code>.</p>
+
+<h3 id="themes-legend">Legend</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>legend</code></td><td><code>FALSE</code></td><td>Show legend</td></tr>
+  <tr><td><code>legend_position</code></td><td><code>"topright"</code></td><td><code>"topright"</code>, <code>"topleft"</code>, <code>"bottomright"</code>, <code>"bottomleft"</code></td></tr>
+  <tr><td><code>legend_size</code></td><td><code>0.8</code></td><td>Legend text size</td></tr>
+  <tr><td><code>legend_edge_colors</code></td><td><code>TRUE</code></td><td>Show positive/negative edge colors</td></tr>
+  <tr><td><code>legend_node_sizes</code></td><td><code>FALSE</code></td><td>Show node size scale</td></tr>
+  <tr><td><code>groups</code></td><td><code>NULL</code></td><td>Group assignments for node coloring and legend entries</td></tr>
+  <tr><td><code>node_names</code></td><td><code>NULL</code></td><td>Alternative names for legend (separate from plot labels)</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="output">Output &amp; Saving</h2>
+
+<table>
+  <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+  <tr><td><code>filetype</code></td><td><code>"default"</code></td><td><code>"default"</code> (screen), <code>"png"</code>, <code>"pdf"</code>, <code>"svg"</code>, <code>"jpeg"</code>, <code>"tiff"</code></td></tr>
+  <tr><td><code>filename</code></td><td><code>tempdir()</code></td><td>Output path (without extension)</td></tr>
+  <tr><td><code>width</code></td><td><code>7</code></td><td>Width in inches</td></tr>
+  <tr><td><code>height</code></td><td><code>7</code></td><td>Height in inches</td></tr>
+  <tr><td><code>res</code></td><td><code>600</code></td><td>Resolution (DPI) for raster formats</td></tr>
+</table>
+
+<details>
+  <summary>Example: Save to file</summary>
+  <div class="detail-content">
+<pre><code># Save as PDF
+splot(mat, filetype = "pdf", filename = "network", width = 10, height = 8)
+
+# Save as high-res PNG
+splot(mat, filetype = "png", filename = "network", width = 10, height = 8, res = 300)</code></pre>
+  </div>
+</details>
+
+<div class="returns" style="margin-top: 2rem;">
+  <strong>S3 Methods:</strong> splot has specialized methods for <code>tna_bootstrap</code> (solid/dashed by significance, stars on labels), <code>tna_permutation</code> (green/red by group direction), and <code>group_tna_permutation</code> objects. These add parameters like <code>display</code>, <code>show_ci</code>, <code>show_stars</code>, and <code>width_by</code> on top of the full parameter set above.
+</div>
+
+</div><!-- /main -->
+</body>
+</html>

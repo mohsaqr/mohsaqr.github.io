@@ -95,7 +95,7 @@ AI-powered tools designed for education, clinical training, and research data sc
   <div class="sw-card">
     <div class="sw-icon" style="background: linear-gradient(135deg, #C05746, #EF9A9A); font-size: 1.1rem;">L</div>
     <div class="sw-body">
-      <h3><a href="https://github.com/mohsaqr/LAILA-v3" target="_blank">LAILA &mdash; AI-Powered Learning Management System</a></h3>
+      <h3><a href="/laila/">LAILA &mdash; AI-Powered Learning Management System</a></h3>
       <p>
         A full-featured learning management system built around multi-agent AI tutoring. Ships with seven built-in pedagogical agents (Socratic Guide, Project Coach, Study Buddy, and more), four routing modes including collaborative multi-agent orchestration, and a Student Agent Builder with ten role templates and 38 prompt building blocks. Integrates browser-based R execution via WebR for interactive labs, xAPI-inspired learning analytics with emotional pulse tracking, AI-generated assessments, and multi-provider LLM support (OpenAI, Anthropic, Gemini, Ollama, and others). Built with React, TypeScript, and PostgreSQL.
       </p>

@@ -8,7 +8,7 @@ categories: software
 thumbnail: assets/img/cograph/mcml.png
 ---
 
-[cograph](https://sonsoleslp.github.io/cograph/) is our latest methodological work that aims to offer a powerful toolset for network analysis. The package provides tools for the analysis, visualization, and manipulation of dynamical, social, and complex networks. It supports multiple network formats and offers flexible tools for heterogeneous, multi-layer, and hierarchical network analysis --- with simple syntax and an extensive toolset. Hand it a matrix, a tna object, an igraph graph, or a data frame, and get a publication-quality plot in one line. Override what you want; the defaults handle the rest.
+[cograph](https://sonsoleslp.github.io/cograph/) is our latest methodological work that aims to offer a powerful toolset for network analysis. The package provides tools for the analysis, visualization, and manipulation of dynamical, social, and complex networks. It supports multiple network formats and offers flexible tools for heterogeneous, multi-layer, and hierarchical network analysis --- with simple syntax and an extensive toolset. Hand it a matrix, a tna object, an igraph graph, or a data frame, and get a publication-quality plot in one line. Override what you want; the defaults handle the rest. For a comprehensive overview of all functions and parameters, see the [full cograph reference](/cograph/) and the [plotting reference](/cograph/splot-reference.html).
 
 <figure>
   <img src="/assets/img/cograph/tna-basic.png" alt="Basic TNA network plot with cograph" style="width:100%; border-radius:6px;">

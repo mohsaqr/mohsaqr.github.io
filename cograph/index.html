@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cograph &mdash; Introduction</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a2e;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --border: #e5e7eb;
+    --code-bg: #f8fafc;
+    --code-border: #e2e8f0;
+    --table-stripe: #f9fafb;
+    --header-bg: #0f172a;
+    --success: #059669;
+    --warn: #d97706;
+    --sidebar-w: 260px;
+    --output-bg: #f0fdf4;
+    --output-border: #86efac;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    color: var(--fg);
+    line-height: 1.7;
+    background: var(--bg);
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: var(--sidebar-w);
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--header-bg);
+    color: #cbd5e1;
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    z-index: 100;
+    scrollbar-width: thin;
+    scrollbar-color: #334155 transparent;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+
+  .sidebar .logo {
+    padding: 0 1.5rem 1.2rem;
+    border-bottom: 1px solid #1e293b;
+    margin-bottom: 1rem;
+  }
+  .sidebar .logo h1 { font-size: 1.3rem; color: #f1f5f9; font-weight: 700; letter-spacing: -0.02em; }
+  .sidebar .logo p { font-size: 0.75rem; color: #64748b; margin-top: 0.2rem; }
+
+  .sidebar nav ul { list-style: none; }
+  .sidebar nav > ul > li > a {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color 0.15s;
+  }
+  .sidebar nav > ul > li > a:hover { color: #e2e8f0; }
+  .sidebar nav > ul > li > ul { margin-bottom: 0.5rem; }
+  .sidebar nav > ul > li > ul > li > a {
+    display: block;
+    padding: 0.3rem 1.5rem 0.3rem 2.2rem;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: all 0.15s;
+    border-left: 2px solid transparent;
+  }
+  .sidebar nav > ul > li > ul > li > a:hover {
+    color: #e2e8f0;
+    background: rgba(255,255,255,0.04);
+    border-left-color: var(--accent);
+  }
+
+  /* ── Main content ── */
+  .main {
+    margin-left: var(--sidebar-w);
+    max-width: 900px;
+    padding: 2.5rem 3rem 5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 3rem 0 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--border);
+    color: var(--fg);
+    letter-spacing: -0.02em;
+  }
+  h2:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 2rem 0 0.5rem;
+    color: var(--fg);
+  }
+  h3 code {
+    font-size: 1.05rem;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+  }
+
+  h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.4rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  p { margin: 0.5rem 0; color: #374151; }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+  }
+  .hero h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; }
+  .hero p { color: #94a3b8; font-size: 1.05rem; margin-top: 0.5rem; }
+  .hero .badges { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .hero .badge {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .badge-blue { background: #1d4ed8; color: #dbeafe; }
+  .badge-green { background: #065f46; color: #d1fae5; }
+  .badge-purple { background: #5b21b6; color: #ede9fe; }
+  .badge-amber { background: #92400e; color: #fef3c7; }
+  .badge-teal { background: #115e59; color: #ccfbf1; }
+  .badge-rose { background: #9f1239; color: #ffe4e6; }
+
+  /* ── Code blocks ── */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    overflow-x: auto;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin: 0.8rem 0;
+  }
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.88em;
+  }
+  p code, li code, td code {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    color: #be185d;
+    font-size: 0.85em;
+  }
+
+  /* ── Tables ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0 1.2rem;
+    font-size: 0.88rem;
+  }
+  th {
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 2px solid var(--fg);
+    font-weight: 600;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.45rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:nth-child(even) { background: var(--table-stripe); }
+
+  /* ── Collapsible ── */
+  details {
+    margin: 0.8rem 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  summary {
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: #f9fafb;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  summary:hover { background: #f3f4f6; }
+  details[open] summary { border-bottom: 1px solid var(--border); }
+  details .detail-content { padding: 1rem; }
+
+  /* ── Lists ── */
+  ul, ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+  li { margin: 0.25rem 0; color: #374151; }
+
+  /* ── Install box ── */
+  .install-box {
+    background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0 2rem;
+  }
+
+  /* ── Quick ref cards ── */
+  .quick-ref {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin: 1rem 0 2rem;
+  }
+  .quick-ref-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    transition: box-shadow 0.15s;
+  }
+  .quick-ref-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .quick-ref-card h4 {
+    margin: 0 0 0.4rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--fg);
+    font-size: 0.92rem;
+  }
+  .quick-ref-card .funcs {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+  .quick-ref-card .count {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Notes ── */
+  .note {
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 0.6rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin: 0.8rem 0;
+    font-size: 0.88rem;
+  }
+
+  .returns {
+    background: #f0f9ff;
+    border-left: 3px solid #0ea5e9;
+    padding: 0.6rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin: 0.8rem 0;
+    font-size: 0.88rem;
+  }
+
+  /* ── Feature grid ── */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .feature-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+  }
+  .feature-card .number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .feature-card .label {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 1.5rem; }
+    .quick-ref { grid-template-columns: 1fr; }
+    .feature-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ SIDEBAR ═══════════════ -->
+<aside class="sidebar">
+  <div class="logo">
+    <h1>cograph</h1>
+    <p>v1.6.0 &middot; R Package</p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#import">1. Network Import</a>
+        <ul>
+          <li><a href="#import-formats">6 Input Formats</a></li>
+          <li><a href="#import-convert">Conversion Utilities</a></li>
+        </ul>
+      </li>
+      <li><a href="#utilities">2. Network Utilities</a>
+        <ul>
+          <li><a href="#util-filter">filter_edges / filter_nodes</a></li>
+          <li><a href="#util-select">select_nodes / select_edges</a></li>
+          <li><a href="#util-getset">Getters &amp; Setters</a></li>
+        </ul>
+      </li>
+      <li><a href="#centrality">3. Centrality &amp; Properties</a>
+        <ul>
+          <li><a href="#cent-measures">25 Centrality Measures</a></li>
+          <li><a href="#cent-edge">Edge Centrality</a></li>
+          <li><a href="#cent-network">Network Properties</a></li>
+        </ul>
+      </li>
+      <li><a href="#communities">4. Community Detection</a>
+        <ul>
+          <li><a href="#comm-algorithms">11 Algorithms</a></li>
+          <li><a href="#comm-consensus">Consensus &amp; Comparison</a></li>
+        </ul>
+      </li>
+      <li><a href="#plotting">5. Rich Plotting</a>
+        <ul>
+          <li><a href="#plot-splot">splot() &amp; soplot()</a></li>
+          <li><a href="#plot-specialized">Specialized Plots</a></li>
+          <li><a href="#plot-themes">Themes, Shapes, Layouts</a></li>
+        </ul>
+      </li>
+      <li><a href="#pipe-api">6. Pipe-Friendly Plotting</a>
+        <ul>
+          <li><a href="#pipe-workflow">sn_* Workflow</a></li>
+        </ul>
+      </li>
+      <li><a href="#tna">7. TNA Integration</a>
+        <ul>
+          <li><a href="#tna-direct">Direct Plotting</a></li>
+          <li><a href="#tna-bootstrap">Bootstrap &amp; Permutation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<div class="main">
+
+<!-- Hero -->
+<div class="hero" id="overview">
+  <h1>cograph</h1>
+  <p>The easiest way to go from network data to publication-ready visualization in R. One function plots any network. One pipe does everything. No boilerplate, no format wrangling &mdash; just pass your data and get results.</p>
+  <div class="badges">
+    <span class="badge badge-blue">6 Input Formats</span>
+    <span class="badge badge-green">25 Centrality Measures</span>
+    <span class="badge badge-purple">11 Community Algorithms</span>
+    <span class="badge badge-teal">12+ Node Shapes</span>
+    <span class="badge badge-amber">Pipe-Friendly API</span>
+    <span class="badge badge-rose">Full TNA Integration</span>
+  </div>
+</div>
+
+<!-- Numbers at a glance -->
+<div class="feature-grid">
+  <div class="feature-card">
+    <div class="number">6</div>
+    <div class="label">Input Formats</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">25</div>
+    <div class="label">Centrality Measures</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">11</div>
+    <div class="label">Community Algorithms</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">10+</div>
+    <div class="label">Network Properties</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">12+</div>
+    <div class="label">Plot Types</div>
+  </div>
+  <div class="feature-card">
+    <div class="number">7</div>
+    <div class="label">Built-in Themes</div>
+  </div>
+</div>
+
+<!-- Quick ref cards -->
+<div class="quick-ref">
+  <div class="quick-ref-card">
+    <h4>Import &amp; Convert</h4>
+    <div class="funcs">as_cograph() &middot; to_igraph() &middot; to_matrix() &middot; to_data_frame()</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Filter &amp; Select</h4>
+    <div class="funcs">filter_edges() &middot; filter_nodes() &middot; select_nodes() &middot; select_edges()</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Centrality</h4>
+    <div class="funcs">centrality() &middot; centrality_degree() &middot; centrality_pagerank() &middot; &hellip;25 total</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Communities</h4>
+    <div class="funcs">communities() &middot; community_louvain() &middot; community_leiden() &middot; &hellip;11 total</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Plotting</h4>
+    <div class="funcs">splot() &middot; soplot() &middot; plot_chord() &middot; plot_heatmap() &middot; plot_transitions()</div>
+  </div>
+  <div class="quick-ref-card">
+    <h4>Pipe API</h4>
+    <div class="funcs">sn_nodes() &middot; sn_edges() &middot; sn_layout() &middot; sn_theme() &middot; sn_render()</div>
+  </div>
+</div>
+
+<!-- Installation -->
+<div class="install-box">
+  <h4 style="margin-top:0">Installation</h4>
+<pre><code># From CRAN (core plotting features)
+install.packages("cograph")
+
+# Development version from GitHub (full feature set described below)
+devtools::install_github("sonsoleslp/cograph")
+library(cograph)</code></pre>
+  <div class="note" style="margin-top:0.8rem; margin-bottom:0"><strong>Note:</strong> The full feature set described on this page &mdash; centrality functions, community detection, network properties, filtering/selection utilities, and specialized plots &mdash; is available in the <strong>GitHub development version</strong>. The CRAN release includes the core plotting engine. Install from GitHub to access everything.</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="import">1. Universal Network Import</h2>
+
+<p>No format conversion needed. Pass a matrix, edge list, igraph, statnet, qgraph, or tna object to <em>any</em> cograph function and it just works. Directionality is auto-detected from matrix symmetry or the source object &mdash; override with <code>directed = TRUE/FALSE</code> when needed.</p>
+
+<table>
+  <tr><th>Format</th><th>Type</th><th>Auto-detect</th></tr>
+  <tr><td><code>matrix</code></td><td>Square adjacency or weight matrix</td><td>Symmetric &rarr; undirected</td></tr>
+  <tr><td><code>data.frame</code></td><td>Edge list with <code>from</code>, <code>to</code>, <code>weight</code> columns</td><td>Directed</td></tr>
+  <tr><td><code>igraph</code></td><td>igraph object</td><td>From object</td></tr>
+  <tr><td><code>network</code></td><td>statnet network object</td><td>From object</td></tr>
+  <tr><td><code>qgraph</code></td><td>qgraph object (full style extraction)</td><td>From object</td></tr>
+  <tr><td><code>tna</code></td><td>tna, group_tna, ctna, ftna, atna objects</td><td>Directed</td></tr>
+</table>
+
+<details>
+  <summary>Example: From adjacency matrix</summary>
+  <div class="detail-content">
+<pre><code>mat &lt;- matrix(c(
+  0.0, 0.4, 0.2,
+  0.3, 0.0, 0.3,
+  0.2, 0.3, 0.0
+), 3, 3, byrow = TRUE)
+rownames(mat) &lt;- colnames(mat) &lt;- c("A", "B", "C")
+
+# Any function accepts matrices directly
+splot(mat)
+centrality(mat)
+communities(mat)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: From edge list</summary>
+  <div class="detail-content">
+<pre><code>edges &lt;- data.frame(
+  from = c("A", "A", "B", "C"),
+  to   = c("B", "C", "C", "A"),
+  weight = c(0.5, 0.3, 0.8, 0.2)
+)
+
+splot(edges)
+centrality(edges)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: From igraph</summary>
+  <div class="detail-content">
+<pre><code>library(igraph)
+g &lt;- make_graph("Zachary")
+
+splot(g)
+centrality(g, measures = c("degree", "betweenness"))
+communities(g, method = "louvain")</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: From qgraph (full style extraction)</summary>
+  <div class="detail-content">
+<pre><code>library(qgraph)
+q &lt;- qgraph(mat)
+
+# Extracts layout, colors, shapes, edge styles — everything
+from_qgraph(q)</code></pre>
+  </div>
+</details>
+
+<h3 id="import-convert">Conversion Utilities</h3>
+
+<p>Convert freely between formats. All converters accept any of the six input types.</p>
+
+<table>
+  <tr><th>Function</th><th>Output</th></tr>
+  <tr><td><code>as_cograph(x)</code></td><td><code>cograph_network</code> object (pipe-ready)</td></tr>
+  <tr><td><code>to_igraph(x)</code></td><td><code>igraph</code> object</td></tr>
+  <tr><td><code>to_matrix(x)</code></td><td>Adjacency / weight matrix</td></tr>
+  <tr><td><code>to_data_frame(x)</code></td><td>Edge list data frame</td></tr>
+  <tr><td><code>to_network(x)</code></td><td>statnet <code>network</code> object</td></tr>
+</table>
+
+<details>
+  <summary>Example: Round-trip conversion</summary>
+  <div class="detail-content">
+<pre><code>library(igraph)
+g &lt;- make_graph("Zachary")
+
+# igraph → matrix → cograph_network → back to igraph
+mat &lt;- to_matrix(g)
+net &lt;- as_cograph(mat)
+g2  &lt;- to_igraph(net)</code></pre>
+  </div>
+</details>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="utilities">2. Pipe-Friendly Network Utilities</h2>
+
+<p>Manipulate networks with expressive, chainable functions that read like English. All accept any input format and return the same format by default &mdash; so you can pipe a matrix through filters and straight into <code>splot()</code>. Set <code>keep_format = TRUE</code> to preserve igraph/matrix types when needed.</p>
+
+<h3 id="util-filter"><code>filter_edges()</code> &amp; <code>filter_nodes()</code></h3>
+
+<p>NSE (non-standard evaluation) filters &mdash; use column names directly in expressions, just like <code>dplyr::filter()</code>.</p>
+
+<table>
+  <tr><th>Function</th><th>Available Variables</th></tr>
+  <tr><td><code>filter_edges(x, ...)</code></td><td><code>weight</code>, <code>from</code>, <code>to</code></td></tr>
+  <tr><td><code>filter_nodes(x, ...)</code></td><td><code>degree</code>, <code>label</code>, <code>id</code></td></tr>
+</table>
+
+<details>
+  <summary>Example: Filter edges by weight</summary>
+  <div class="detail-content">
+<pre><code># Keep only strong edges
+splot(filter_edges(mat, weight > 0.3))
+
+# Pipe-friendly
+mat |&gt;
+  filter_edges(weight &gt; 0.3) |&gt;
+  splot()</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Filter nodes by degree</summary>
+  <div class="detail-content">
+<pre><code># Keep high-degree nodes
+mat |&gt;
+  filter_nodes(degree &gt;= 3) |&gt;
+  splot()
+
+# Combine edge and node filters
+mat |&gt;
+  filter_edges(weight &gt; 0.3) |&gt;
+  filter_nodes(degree &gt;= 2) |&gt;
+  splot()</code></pre>
+  </div>
+</details>
+
+<h3 id="util-select"><code>select_nodes()</code> &amp; <code>select_edges()</code></h3>
+
+<p>Advanced selection with built-in centrality computation, community-aware filtering, top-N selection, neighborhood expansion, and component extraction &mdash; all in one function.</p>
+
+<table>
+  <tr><th>Function</th><th>Key Features</th></tr>
+  <tr><td><code>select_nodes(x, ...)</code></td><td>NSE filter, <code>top</code>, <code>by</code> (any centrality), <code>neighbors_of</code>, <code>component</code></td></tr>
+  <tr><td><code>select_edges(x, ...)</code></td><td>NSE filter, <code>top</code>, <code>by</code>, <code>involving</code>, <code>between</code>, <code>bridges_only</code>, <code>mutual_only</code></td></tr>
+  <tr><td><code>select_neighbors(x, of)</code></td><td>Ego-network extraction (multi-hop)</td></tr>
+  <tr><td><code>select_component(x)</code></td><td>Largest or named component</td></tr>
+  <tr><td><code>select_top(x, n)</code></td><td>Top-N nodes by any centrality</td></tr>
+  <tr><td><code>select_bridges(x)</code></td><td>Bridge edges only</td></tr>
+  <tr><td><code>select_top_edges(x, n)</code></td><td>Top-N edges by weight or betweenness</td></tr>
+  <tr><td><code>select_edges_involving(x)</code></td><td>Edges touching specific nodes</td></tr>
+  <tr><td><code>select_edges_between(x)</code></td><td>Edges between two node sets</td></tr>
+</table>
+
+<details>
+  <summary>Example: Top nodes by centrality</summary>
+  <div class="detail-content">
+<pre><code># Top 5 nodes by PageRank
+mat |&gt;
+  select_nodes(top = 5, by = "pagerank") |&gt;
+  splot()
+
+# Top 3 by betweenness, expand to neighbors
+mat |&gt;
+  select_nodes(top = 3, by = "betweenness") |&gt;
+  splot()</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Community-aware edge selection</summary>
+  <div class="detail-content">
+<pre><code># Edges within the same community
+mat |&gt;
+  select_edges(same_community) |&gt;
+  splot()
+
+# Bridge edges (connect different components)
+mat |&gt;
+  select_bridges() |&gt;
+  splot()</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Ego-network extraction</summary>
+  <div class="detail-content">
+<pre><code># 2-hop neighborhood of node "A"
+mat |&gt;
+  select_neighbors(of = "A", order = 2) |&gt;
+  splot()</code></pre>
+  </div>
+</details>
+
+<h3 id="util-getset">Getters, Setters &amp; Groups</h3>
+
+<table>
+  <tr><th>Function</th><th>Purpose</th></tr>
+  <tr><td><code>get_nodes(x)</code> / <code>set_nodes(x, df)</code></td><td>Node data frame</td></tr>
+  <tr><td><code>get_edges(x)</code> / <code>set_edges(x, df)</code></td><td>Edge data frame</td></tr>
+  <tr><td><code>get_labels(x)</code></td><td>Node label vector</td></tr>
+  <tr><td><code>n_nodes(x)</code> / <code>n_edges(x)</code></td><td>Counts</td></tr>
+  <tr><td><code>is_directed(x)</code></td><td>Directedness check</td></tr>
+  <tr><td><code>set_groups(x, ...)</code></td><td>Assign layers / clusters / groups</td></tr>
+  <tr><td><code>get_groups(x)</code></td><td>Retrieve current groupings</td></tr>
+  <tr><td><code>set_layout(x, layout)</code></td><td>Set layout coordinates</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="centrality">3. Centrality &amp; Network Properties</h2>
+
+<h3 id="cent-measures">25 Node Centrality Measures</h3>
+
+<p>One call to <code>centrality(x)</code> computes all 25 measures and returns a tidy data frame. Or use individual functions like <code>centrality_degree(x)</code> for a named vector. Each function has its own focused help page &mdash; no digging through irrelevant parameters.</p>
+
+<table>
+  <tr><th>Category</th><th>Measures</th><th>Directional</th></tr>
+  <tr><td><strong>Degree</strong></td><td><code>centrality_degree()</code>, <code>centrality_strength()</code></td><td>in / out / all</td></tr>
+  <tr><td><strong>Path-based</strong></td><td><code>centrality_betweenness()</code>, <code>centrality_closeness()</code>, <code>centrality_harmonic()</code>, <code>centrality_eccentricity()</code></td><td>in / out / all</td></tr>
+  <tr><td><strong>Spectral</strong></td><td><code>centrality_eigenvector()</code>, <code>centrality_pagerank()</code>, <code>centrality_authority()</code>, <code>centrality_hub()</code>, <code>centrality_alpha()</code>, <code>centrality_power()</code>, <code>centrality_subgraph()</code></td><td>&mdash;</td></tr>
+  <tr><td><strong>Structural</strong></td><td><code>centrality_coreness()</code>, <code>centrality_constraint()</code>, <code>centrality_transitivity()</code>, <code>centrality_laplacian()</code></td><td>&mdash;</td></tr>
+  <tr><td><strong>Flow</strong></td><td><code>centrality_current_flow_closeness()</code>, <code>centrality_current_flow_betweenness()</code>, <code>centrality_load()</code></td><td>&mdash;</td></tr>
+  <tr><td><strong>Spreading</strong></td><td><code>centrality_diffusion()</code>, <code>centrality_leverage()</code>, <code>centrality_kreach()</code>, <code>centrality_voterank()</code>, <code>centrality_percolation()</code></td><td>in / out / all</td></tr>
+</table>
+
+<p>Directional measures also have shorthand functions: <code>centrality_indegree()</code>, <code>centrality_outstrength()</code>, <code>centrality_incloseness()</code>, etc.</p>
+
+<details>
+  <summary>Example: Compute all centralities</summary>
+  <div class="detail-content">
+<pre><code># All 25 measures at once
+centrality(mat)
+
+# Specific measures, sorted
+centrality(mat,
+  measures = c("degree", "betweenness", "pagerank"),
+  sort_by = "pagerank",
+  digits = 3
+)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Individual centrality functions</summary>
+  <div class="detail-content">
+<pre><code># Each returns a named numeric vector
+centrality_degree(mat)
+#&gt; A B C
+#&gt; 4 3 5
+
+centrality_pagerank(mat, damping = 0.9)
+#&gt;     A     B     C
+#&gt; 0.35  0.28  0.37
+
+# Directional shorthands
+centrality_instrength(mat)
+centrality_outdegree(mat)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Scale nodes by centrality in plots</summary>
+  <div class="detail-content">
+<pre><code># Node size proportional to PageRank
+splot(mat, scale_nodes_by = "pagerank")
+
+# Directional shorthand + dampening
+splot(mat,
+  scale_nodes_by = "instrength",
+  scale_nodes_scale = 0.5,
+  node_size_range = c(3, 12)
+)</code></pre>
+  </div>
+</details>
+
+<h3 id="cent-edge">Edge Centrality</h3>
+
+<details>
+  <summary>Example: Edge betweenness</summary>
+  <div class="detail-content">
+<pre><code># All edge measures
+edge_centrality(mat)
+
+# Find bridge edges
+edge_centrality(mat, sort_by = "betweenness")
+
+# Named vector shorthand
+edge_betweenness(mat)</code></pre>
+  </div>
+</details>
+
+<h3 id="cent-network">Network-Level Properties</h3>
+
+<table>
+  <tr><th>Function</th><th>What it Measures</th></tr>
+  <tr><td><code>network_summary(x)</code></td><td>Comprehensive summary: density, reciprocity, transitivity, diameter, components, &hellip;</td></tr>
+  <tr><td><code>network_small_world(x)</code></td><td>Small-world coefficient (sigma, omega)</td></tr>
+  <tr><td><code>network_rich_club(x)</code></td><td>Rich-club coefficient (degree-normalized)</td></tr>
+  <tr><td><code>network_global_efficiency(x)</code></td><td>Global communication efficiency</td></tr>
+  <tr><td><code>network_local_efficiency(x)</code></td><td>Local fault tolerance</td></tr>
+  <tr><td><code>network_girth(x)</code></td><td>Shortest cycle length</td></tr>
+  <tr><td><code>network_radius(x)</code></td><td>Minimum eccentricity</td></tr>
+  <tr><td><code>network_vertex_connectivity(x)</code></td><td>Minimum vertices to disconnect</td></tr>
+  <tr><td><code>network_clique_size(x)</code></td><td>Largest clique size</td></tr>
+  <tr><td><code>network_cut_vertices(x)</code></td><td>Articulation points</td></tr>
+  <tr><td><code>network_bridges(x)</code></td><td>Bridge edges</td></tr>
+  <tr><td><code>degree_distribution(x)</code></td><td>Degree distribution with optional plot</td></tr>
+</table>
+
+<details>
+  <summary>Example: Network summary</summary>
+  <div class="detail-content">
+<pre><code>network_summary(mat)
+#&gt; ── Network Summary ──
+#&gt; Nodes: 8 | Edges: 24 | Directed: TRUE
+#&gt; Density: 0.429 | Reciprocity: 0.833
+#&gt; Transitivity: 0.612 | Diameter: 3
+#&gt; Components: 1 | Mean degree: 6.0</code></pre>
+  </div>
+</details>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="communities">4. Community Detection</h2>
+
+<h3 id="comm-algorithms">11 Algorithms + Consensus</h3>
+
+<p>One unified interface: <code>communities(x, method = "louvain")</code>. Or call each algorithm directly. Every result is a <code>cograph_communities</code> object you can <code>print()</code>, <code>plot()</code>, extract <code>membership()</code> from, or pass to <code>splot()</code> &mdash; no igraph wrangling required.</p>
+
+<table>
+  <tr><th>Algorithm</th><th>Function</th><th>Short</th><th>Best For</th></tr>
+  <tr><td>Louvain</td><td><code>community_louvain()</code></td><td><code>com_lv</code></td><td>Large networks, general use</td></tr>
+  <tr><td>Leiden</td><td><code>community_leiden()</code></td><td><code>com_ld</code></td><td>Better quality than Louvain</td></tr>
+  <tr><td>Fast Greedy</td><td><code>community_fast_greedy()</code></td><td><code>com_fg</code></td><td>Medium networks</td></tr>
+  <tr><td>Walktrap</td><td><code>community_walktrap()</code></td><td><code>com_wt</code></td><td>Clear community structure</td></tr>
+  <tr><td>Infomap</td><td><code>community_infomap()</code></td><td><code>com_im</code></td><td>Directed networks, flow</td></tr>
+  <tr><td>Label Propagation</td><td><code>community_label_propagation()</code></td><td><code>com_lp</code></td><td>Very large, speed-critical</td></tr>
+  <tr><td>Edge Betweenness</td><td><code>community_edge_betweenness()</code></td><td><code>com_eb</code></td><td>Small, hierarchical</td></tr>
+  <tr><td>Leading Eigenvector</td><td><code>community_leading_eigenvector()</code></td><td><code>com_le</code></td><td>Dominant structure</td></tr>
+  <tr><td>Spinglass</td><td><code>community_spinglass()</code></td><td><code>com_sg</code></td><td>Negative weights allowed</td></tr>
+  <tr><td>Optimal</td><td><code>community_optimal()</code></td><td><code>com_op</code></td><td>Exact solution (&lt;50 nodes)</td></tr>
+  <tr><td>Fluid</td><td><code>community_fluid()</code></td><td><code>com_fl</code></td><td>Known number of communities</td></tr>
+  <tr><td>Consensus</td><td><code>community_consensus()</code></td><td><code>com_consensus</code></td><td>Robust, multi-run agreement</td></tr>
+</table>
+
+<details>
+  <summary>Example: Detect and inspect communities</summary>
+  <div class="detail-content">
+<pre><code>library(igraph)
+g &lt;- make_graph("Zachary")
+
+# Via dispatcher
+comm &lt;- communities(g, method = "louvain")
+print(comm)
+#&gt; Community detection: louvain
+#&gt; Communities: 4 | Modularity: 0.42
+#&gt; Sizes: 12  6  5  11
+
+# Direct function
+comm2 &lt;- community_fast_greedy(g)
+
+# Short alias
+comm3 &lt;- com_wt(g)  # walktrap
+
+# Extract results
+membership(comm)
+n_communities(comm)
+community_sizes(comm)
+modularity(comm)</code></pre>
+  </div>
+</details>
+
+<h3 id="comm-consensus">Consensus &amp; Comparison</h3>
+
+<details>
+  <summary>Example: Consensus community detection</summary>
+  <div class="detail-content">
+<pre><code># Run Louvain 100 times, build consensus
+comm &lt;- community_consensus(g,
+  method = "louvain",
+  n_runs = 100,
+  threshold = 0.5
+)
+
+# Compare two community structures
+compare_communities(comm, comm2, method = "nmi")</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Visualize communities</summary>
+  <div class="detail-content">
+<pre><code># Automatic community coloring
+comm &lt;- community_louvain(g)
+plot(comm)  # dispatches to splot with community colors
+
+# Or manually with color_communities()
+splot(g, node_fill = color_communities(comm))</code></pre>
+  </div>
+</details>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="plotting">5. Rich Plotting Functions</h2>
+
+<h3 id="plot-splot"><code>splot()</code> &amp; <code>soplot()</code></h3>
+
+<p><code>splot(mat)</code> &mdash; that's it. One function, any format, publication-ready output. Customize with 80+ parameters for nodes, edges, labels, donuts, pies, and more. <code>soplot()</code> provides the same interface via grid/ggplot2 for layered composition.</p>
+
+<details>
+  <summary>Example: Node shapes, donuts, and pies</summary>
+  <div class="detail-content">
+<pre><code># Mixed node shapes
+splot(mat,
+  node_shape = c("circle", "hexagon", "diamond", "square", "star"),
+  node_fill = c("#E63946", "#457B9D", "#2A9D8F", "#E9C46A", "#F4A261"),
+  layout = "circle"
+)
+
+# Donut charts (outer ring = proportion)
+splot(mat,
+  donut_fill = c(0.9, 0.7, 0.5, 0.3, 0.8),
+  donut_color = "steelblue"
+)
+
+# Pie charts (inner segments)
+splot(mat,
+  node_shape = "pie",
+  pie_values = list(c(0.5, 0.3, 0.2), c(0.4, 0.4, 0.2), ...),
+  pie_colors = c("#E63946", "#457B9D", "#2A9D8F")
+)
+
+# Donut + Pie combo
+splot(mat,
+  donut_fill = c(0.95, 0.87, 0.72),
+  donut_color = "#2E7D32",
+  donut_show_value = TRUE,
+  pie_values = prob_vals,
+  pie_colors = c("#1976D2", "#FFA000", "#C62828")
+)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Edge styling</summary>
+  <div class="detail-content">
+<pre><code>splot(mat,
+  curvature = 0.3,
+  arrow_size = 0.5,
+  edge_width = 3,
+  edge_color = "#546E7A",
+  edge_start_style = "dotted",
+  edge_labels = TRUE,
+  threshold = 0.05
+)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Labels and fonts</summary>
+  <div class="detail-content">
+<pre><code>splot(mat,
+  label_size = 1.1,
+  label_fontface = "bold",
+  label_color = "#1A237E",
+  label_position = "below"
+)</code></pre>
+  </div>
+</details>
+
+<h3 id="plot-specialized">Specialized Plot Types</h3>
+
+<table>
+  <tr><th>Function</th><th>Visualization</th></tr>
+  <tr><td><code>splot()</code></td><td>Network graph (nodes + edges)</td></tr>
+  <tr><td><code>soplot()</code></td><td>Grid-based network (ggplot2 layering)</td></tr>
+  <tr><td><code>plot_chord()</code></td><td>Chord diagram with arcs and ribbons</td></tr>
+  <tr><td><code>plot_heatmap()</code></td><td>Matrix heatmap with clustering support</td></tr>
+  <tr><td><code>plot_ml_heatmap()</code></td><td>Multi-layer comparison heatmaps</td></tr>
+  <tr><td><code>plot_transitions()</code></td><td>Alluvial / Sankey flow diagrams</td></tr>
+  <tr><td><code>plot_alluvial()</code></td><td>Alias for <code>plot_transitions()</code></td></tr>
+  <tr><td><code>plot_trajectories()</code></td><td>Individual tracking flows</td></tr>
+  <tr><td><code>plot_compare()</code></td><td>Difference network (two matrices)</td></tr>
+  <tr><td><code>plot_comparison_heatmap()</code></td><td>Side-by-side heatmap comparison</td></tr>
+  <tr><td><code>plot_permutation()</code></td><td>Permutation test results</td></tr>
+  <tr><td><code>plot_mixed_network()</code></td><td>Mixed network types</td></tr>
+</table>
+
+<details>
+  <summary>Example: Chord diagram</summary>
+  <div class="detail-content">
+<pre><code>plot_chord(mat,
+  segment_colors = c("#E63946", "#457B9D", "#2A9D8F"),
+  ticks = TRUE,
+  tick_labels = TRUE
+)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Heatmap</summary>
+  <div class="detail-content">
+<pre><code>plot_heatmap(mat,
+  show_values = TRUE,
+  color_palette = "viridis",
+  cluster_list = list(
+    Group1 = c("A", "B"),
+    Group2 = c("C", "D", "E")
+  )
+)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Alluvial / transition flow</summary>
+  <div class="detail-content">
+<pre><code># From transition matrices
+plot_transitions(list(mat1, mat2, mat3))
+
+# Individual tracking from data frame
+df &lt;- data.frame(T1 = c("A","B","A"), T2 = c("B","A","C"), T3 = c("C","C","B"))
+plot_trajectories(df)</code></pre>
+  </div>
+</details>
+
+<h3 id="plot-themes">Themes, Shapes &amp; Layouts</h3>
+
+<p><strong>7 built-in themes:</strong> <code>"default"</code>, <code>"dark"</code>, <code>"minimal"</code>, <code>"gray"</code>, <code>"nature"</code>, <code>"colorblind"</code>, <code>"viridis"</code></p>
+
+<p><strong>12+ node shapes:</strong> <code>"circle"</code>, <code>"square"</code>, <code>"triangle"</code>, <code>"diamond"</code>, <code>"pentagon"</code>, <code>"hexagon"</code>, <code>"ellipse"</code>, <code>"heart"</code>, <code>"star"</code>, <code>"cross"</code>, <code>"rectangle"</code>, <code>"pie"</code>, plus custom SVG shapes</p>
+
+<p><strong>Layout algorithms:</strong> <code>"oval"</code>, <code>"circle"</code>, <code>"spring"</code>, <code>"fr"</code>, <code>"kk"</code>, <code>"grid"</code>, <code>"star"</code>, <code>"bipartite"</code>, <code>"groups"</code>, or any custom coordinate matrix</p>
+
+<details>
+  <summary>Example: Custom theme and layout</summary>
+  <div class="detail-content">
+<pre><code># Dark theme for presentations
+splot(mat, theme = "dark", layout = "circle")
+
+# Register a custom theme
+register_theme("my_theme", list(
+  node_fill = "#264653",
+  node_border_color = "white",
+  edge_color = "#2a9d8f",
+  background = "#0f172a"
+))
+splot(mat, theme = "my_theme")
+
+# Register a custom layout
+register_layout("my_layout", function(n, ...) {
+  cbind(x = cos(seq(0, 2*pi, length.out = n+1)[1:n]),
+        y = sin(seq(0, 2*pi, length.out = n+1)[1:n]))
+})</code></pre>
+  </div>
+</details>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="pipe-api">6. Pipe-Friendly Plotting API</h2>
+
+<p>For users who prefer building visualizations incrementally, the <code>sn_*</code> family provides a fully chainable pipe API. Each function modifies the network object and passes it along &mdash; readable, composable, and easy to extend.</p>
+
+<h3 id="pipe-workflow">The <code>sn_*</code> Workflow</h3>
+
+<table>
+  <tr><th>Step</th><th>Function</th><th>Purpose</th></tr>
+  <tr><td>1</td><td><code>cograph(x)</code> or <code>as_cograph(x)</code></td><td>Create the network object</td></tr>
+  <tr><td>2</td><td><code>sn_nodes(...)</code></td><td>Set node size, shape, fill, labels, donuts, pies</td></tr>
+  <tr><td>3</td><td><code>sn_edges(...)</code></td><td>Set edge color, width, arrows, curvature, labels</td></tr>
+  <tr><td>4</td><td><code>sn_layout("...")</code></td><td>Choose layout algorithm</td></tr>
+  <tr><td>5</td><td><code>sn_theme("...")</code></td><td>Apply a visual theme</td></tr>
+  <tr><td>6</td><td><code>sn_palette("...")</code></td><td>Set color palette</td></tr>
+  <tr><td>7</td><td><code>sn_render()</code> / <code>splot()</code></td><td>Render to screen</td></tr>
+  <tr><td>&mdash;</td><td><code>sn_save("file.pdf")</code></td><td>Save to file</td></tr>
+  <tr><td>&mdash;</td><td><code>sn_ggplot()</code></td><td>Convert to ggplot object</td></tr>
+</table>
+
+<details>
+  <summary>Example: Full pipe workflow</summary>
+  <div class="detail-content">
+<pre><code>mat |&gt;
+  cograph(layout = "circle") |&gt;
+  sn_nodes(
+    fill = c("#E63946", "#457B9D", "#2A9D8F", "#E9C46A", "#F4A261"),
+    shape = "hexagon",
+    size = 5
+  ) |&gt;
+  sn_edges(
+    color = "weight",
+    width = "weight",
+    curvature = 0.3
+  ) |&gt;
+  sn_theme("minimal") |&gt;
+  sn_palette("viridis") |&gt;
+  splot(title = "My Network")</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Save to file</summary>
+  <div class="detail-content">
+<pre><code>mat |&gt;
+  cograph() |&gt;
+  sn_nodes(fill = "steelblue") |&gt;
+  sn_save("network.pdf", width = 8, height = 8)
+
+# Or get a ggplot object for further customization
+p &lt;- mat |&gt;
+  cograph() |&gt;
+  sn_ggplot()
+p + ggplot2::labs(title = "Custom title")</code></pre>
+  </div>
+</details>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="tna">7. Complete TNA Integration</h2>
+
+<p>cograph is the official visualization engine for the <a href="https://cran.r-project.org/package=tna"><code>tna</code></a> package. Just call <code>splot(fit)</code> on any TNA model &mdash; transition matrices, initial probabilities, edge labels, arrow styles, and layout are all configured automatically. Every TNA object type is supported: <code>tna</code>, <code>group_tna</code>, <code>ctna</code>, <code>ftna</code>, <code>atna</code>, bootstrap results, and permutation tests.</p>
+
+<h3 id="tna-direct">Direct Plotting</h3>
+
+<details>
+  <summary>Example: One-liner TNA visualization</summary>
+  <div class="detail-content">
+<pre><code>library(tna)
+library(cograph)
+
+fit &lt;- tna(engagement)
+
+# One line — layout, arrows, edge labels, donut fills all auto-configured
+splot(fit)
+
+# Customize on top of TNA defaults
+splot(fit,
+  layout = "circle",
+  node_shape = "hexagon",
+  theme = "dark",
+  scale_nodes_by = "instrength"
+)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Group TNA</summary>
+  <div class="detail-content">
+<pre><code># Group-level TNA models
+gfit &lt;- group_tna(engagement, group = engagement$Group)
+
+# Plot each group
+splot(gfit)
+
+# Comparison heatmap across groups
+plot_heatmap(gfit)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: TNA with centrality scaling</summary>
+  <div class="detail-content">
+<pre><code>fit &lt;- tna(engagement)
+
+# Node size by in-strength (which states are transitioned TO most)
+splot(fit, scale_nodes_by = "instrength")
+
+# Combine with donut showing initial probabilities
+splot(fit,
+  donut_fill = fit$initial_probs,
+  donut_color = "#1976D2",
+  donut_show_value = TRUE,
+  scale_nodes_by = "outstrength",
+  layout = "circle"
+)</code></pre>
+  </div>
+</details>
+
+<h3 id="tna-bootstrap">Bootstrap &amp; Permutation Testing</h3>
+
+<details>
+  <summary>Example: Bootstrap visualization</summary>
+  <div class="detail-content">
+<pre><code>library(tna)
+fit &lt;- tna(engagement)
+
+# Bootstrap analysis
+boot &lt;- bootstrap(fit, iter = 1000)
+
+# Dedicated S3 method — network with CI-based styling
+splot(boot)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Permutation test visualization</summary>
+  <div class="detail-content">
+<pre><code># Permutation test between two groups
+perm &lt;- permutation_test(gfit)
+
+# Dedicated visualization
+splot(perm)
+
+# Or use the specialized plot function
+plot_permutation(perm)</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>Example: Alluvial transitions from TNA data</summary>
+  <div class="detail-content">
+<pre><code># Visualize state transitions as alluvial flows
+plot_transitions(fit)
+
+# Individual trajectory tracking
+plot_trajectories(fit$data)</code></pre>
+  </div>
+</details>
+
+
+</div><!-- /main -->
+</body>
+</html>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get in Touch
+title: Contact
 permalink: /get-in-touch/
 nav: true
 nav_order: 10

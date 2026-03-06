@@ -197,7 +197,7 @@ These are scientific software tools for methodological innovation in learning an
   <div class="sw-card">
     <div class="sw-icon" style="background: linear-gradient(135deg, #3D8B37, #81C784);">co</div>
     <div class="sw-body">
-      <h3><a href="https://github.com/mohsaqr/cograph" target="_blank">cograph &mdash; Modern Network Visualization for R</a></h3>
+      <h3><a href="/blog/2026/cograph-network-visualization/">cograph &mdash; Complex Network Analysis and Visualization</a></h3>
       <p>
         An R package for producing publication-quality network visualizations with first-class support for TNA models. The main function <code>splot()</code> works directly on <code>tna</code> model objects or raw matrices, offering multiple layout algorithms (oval, circle, Kamada-Kawai, Fruchterman-Reingold), rich node styling with five shape options, configurable edge curvature and arrow sizing, and a clean API that reduces a typical network plot to a single function call.
       </p>

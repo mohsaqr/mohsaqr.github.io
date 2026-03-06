@@ -232,7 +232,7 @@ These are scientific software tools where I had the leading development role or 
   <div class="sw-card">
     <div class="sw-icon" style="background: linear-gradient(135deg, #4A6FA5, #90CAF9); font-size: 1.1rem;">R</div>
     <div class="sw-body">
-      <h3><a href="https://github.com/mohsaqr/rohySimulator" target="_blank">Rohy &mdash; Virtual Patient Simulation System</a></h3>
+      <h3><a href="/rohy/">Rohy &mdash; Virtual Patient Simulation System</a></h3>
       <p>
         A comprehensive medical simulation platform for clinical education. Features AI-powered patient interaction (OpenAI, LM Studio, Ollama), a real-time patient monitor with ECG waveform generation and alarm systems, a laboratory investigation module covering 77 tests with gender-specific reference ranges, and timeline-based clinical scenarios (STEMI, Sepsis, Respiratory Failure). Includes instructor tools for real-time editing, session recording, and analytics with multi-user role-based access.
       </p>

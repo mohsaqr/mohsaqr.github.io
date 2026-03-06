@@ -165,4 +165,4 @@ remotes::install_github("sonsoleslp/cograph")
 
 cograph provides a unified environment for network analysis and visualization --- from importing and converting network data, through computing centrality and detecting communities, to producing publication-ready plots that carry statistical annotations. The goal is simple: write one line, get a result you can put in a paper. For a full reference of all functions, parameters, and examples, read the [cograph introduction](/cograph/).
 
-[GitHub](https://github.com/sonsoleslp/cograph) | [Documentation](https://sonsoleslp.github.io/cograph/) | [Full Reference](/cograph/)
+[GitHub](https://github.com/sonsoleslp/cograph) | [Documentation](https://sonsoleslp.github.io/cograph/) | [Full Reference](/cograph/) | [Plotting Reference](/cograph/splot-reference.html)

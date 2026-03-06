@@ -10,4 +10,4 @@ related_posts: false
 
 The package provides network metrics including centrality measures, motif analysis, and community detection. Plotting is publication-ready with customizable layouts, node shapes, edge styles, and themes. The API is intuitive and pipe-friendly, and cograph is fully compatible with the [tna](https://sonsoles.me/tna/) package.
 
-Install with `install.packages("cograph")` or `remotes::install_github("sonsoleslp/cograph")`. Full documentation at [sonsoleslp.github.io/cograph](https://sonsoleslp.github.io/cograph/). See the [blog post](/blog/2026/cograph-network-visualization/) for examples.
+Install with `install.packages("cograph")` or `remotes::install_github("sonsoleslp/cograph")`. Full documentation at [sonsoleslp.github.io/cograph](https://sonsoleslp.github.io/cograph/). See the [blog post](/blog/2026/cograph-network-visualization/) for examples, the [full reference](/cograph/), and the [plotting reference](/cograph/splot-reference.html).

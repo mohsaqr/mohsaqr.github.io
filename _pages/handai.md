@@ -13,7 +13,7 @@ nav: false
 
 Qualitative research involves careful, sustained attention to text. Coding interview transcripts, screening abstracts for systematic reviews, extracting structured information from documents, classifying survey responses --- this work demands expertise and judgment. It also demands time, often far more than the analysis itself.
 
-Handai is a free, open-source suite of ten integrated tools designed to support researchers, educators, and analysts in exactly this kind of work. It runs entirely in your browser. There is nothing to install, no programming required, and no data leaves your machine unless you choose a cloud-based provider. Every tool follows the same interaction pattern: upload your data, configure your task, preview a small sample, then process the full dataset.
+Handai --- a ***handy*** AI --- is a free, open-source suite of ten integrated tools designed to support researchers, educators, and analysts in exactly this kind of work. It runs entirely in your browser. There is nothing to install, no programming required, and no data leaves your machine unless you choose a cloud-based provider. Every tool follows the same interaction pattern: upload your data, configure your task, preview a small sample, then process the full dataset.
 
 The suite is organized into three sections: Data Processing, Qualitative Analysis, and System. Each tool is self-contained but shares a consistent interface. You bring your data and your research questions. Handai applies your instructions at scale.
 

@@ -219,18 +219,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/get-in-touch/";
           },
-        },{id: "post-transition-network-analysis-validated-temporal-modeling-from-sequence-data",
-      
-        title: "Transition Network Analysis: Validated Temporal Modeling from Sequence Data",
-      
-      description: "TNA integrates probabilistic transition modeling with network analysis and four layers of statistical validation — model reliability, edge significance, centrality stability, and permutation-based group comparison.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2026/tna-validated-temporal-modeling/";
-        
-      },
-    },{id: "post-rohy-ai-powered-high-fidelity-virtual-patient-dynamic-simulator",
+        },{id: "post-rohy-ai-powered-high-fidelity-virtual-patient-dynamic-simulator",
       
         title: "Rohy: AI-Powered High-Fidelity Virtual Patient Dynamic Simulator",
       

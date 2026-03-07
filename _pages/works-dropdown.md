@@ -12,6 +12,8 @@ children:
   - title: "Computing Education Research"
     permalink: /works/cer/
   - title: divider
+  - title: "Transition Network Analysis"
+    permalink: /works/tna/
   - title: "Methodological Innovation Software"
     permalink: /works/methods-software/
   - title: "AI Software"

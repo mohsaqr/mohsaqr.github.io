@@ -105,7 +105,7 @@ These are scientific software tools for methodological innovation in learning an
   <div class="sw-card">
     <div class="sw-icon" style="background: linear-gradient(135deg, #2166AC, #67A9CF);">tna</div>
     <div class="sw-body">
-      <h3><a href="https://github.com/sonsoleslp/tna" target="_blank">tna &mdash; Transition Network Analysis for R</a></h3>
+      <h3><a href="/works/tna/">tna &mdash; Transition Network Analysis for R</a></h3>
       <p>
         A rigorous framework for analyzing the dynamics of behavioral processes in learning and beyond. TNA offers a vast array of tools &mdash; from building and visualizing transition networks to computing nine centrality measures, detecting communities and cliques, discovering sequential patterns, and clustering learners by their process signatures. What sets it apart is its emphasis on statistical rigor at every level: bootstrapped significance testing verifies which edges and centralities are reliable, permutation tests assess whether group differences are genuine, and model comparison functions quantify structural similarity across conditions, time points, or populations. Published on CRAN and used across dozens of studies in learning analytics and education research.
       </p>

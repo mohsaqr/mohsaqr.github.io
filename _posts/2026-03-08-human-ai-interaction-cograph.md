@@ -44,15 +44,15 @@ I rejected proposals 2.6% of the time, argued 2.7%, interrupted mid-generation 7
 
 MCML plots cluster fine codes into super-categories and render transitions at both levels: summary edges between clusters show the macro flow; internal edges show micro-dynamics within each cluster.
 
-<figure>
-  <img src="/assets/img/human-ai-tna/unnamed-chunk-1-1.png" alt="Human MCML network">
+<figure style="text-align:center">
+  <img src="/assets/img/human-ai-tna/unnamed-chunk-1-1.png" alt="Human MCML network" style="max-width:70%; height:auto;">
   <figcaption>Human MCML — Fine codes clustered into Directive, Evaluative, and Metacognitive.</figcaption>
 </figure>
 
 The evaluative cluster is internally dense. Refinement, Correction, Frustration, and Verification form tight loops before returning to Directive. Within Metacognitive, Interrupt flows directly to Command — halting the AI is immediately followed by redirection. Within Directive, Specification → Command dominates.
 
-<figure>
-  <img src="/assets/img/human-ai-tna/unnamed-chunk-2-1.png" alt="AI MCML network">
+<figure style="text-align:center">
+  <img src="/assets/img/human-ai-tna/unnamed-chunk-2-1.png" alt="AI MCML network" style="max-width:70%; height:auto;">
   <figcaption>AI MCML — Fine codes clustered into Action, Repair, and Communication.</figcaption>
 </figure>
 
@@ -60,8 +60,8 @@ The AI network is dominated by Execute ↔ Investigate — alternating between w
 
 ## Category frequencies
 
-<figure>
-  <img src="/assets/img/human-ai-tna/unnamed-chunk-3-1.png" alt="Category frequencies for human and AI">
+<figure style="text-align:center">
+  <img src="/assets/img/human-ai-tna/unnamed-chunk-3-1.png" alt="Category frequencies for human and AI" style="max-width:80%; height:auto;">
   <figcaption>Category frequencies for human (left) and AI (right), ordered by proportion.</figcaption>
 </figure>
 
@@ -71,13 +71,13 @@ Specify and Command lead on the human side — but Frustrate outranks Verify. Di
 
 Bootstrap filtering retains only transitions that appear consistently across resamples. The figures below show filtered networks rendered with `cograph::splot()`.
 
-<figure>
-  <img src="/assets/img/human-ai-tna/unnamed-chunk-4-1.png" alt="Human bootstrap TNA">
+<figure style="text-align:center">
+  <img src="/assets/img/human-ai-tna/unnamed-chunk-4-1.png" alt="Human bootstrap TNA" style="max-width:70%; height:auto;">
   <figcaption>Human bootstrap TNA (consistency range 0.75–1.5), visualized with <code>cograph::splot()</code>.</figcaption>
 </figure>
 
-<figure>
-  <img src="/assets/img/human-ai-tna/unnamed-chunk-5-1.png" alt="AI bootstrap TNA">
+<figure style="text-align:center">
+  <img src="/assets/img/human-ai-tna/unnamed-chunk-5-1.png" alt="AI bootstrap TNA" style="max-width:70%; height:auto;">
   <figcaption>AI bootstrap TNA (consistency range 0.75–1.5), visualized with <code>cograph::splot()</code>.</figcaption>
 </figure>
 

@@ -190,7 +190,7 @@ These are scientific software tools where I had the leading development role or 
 
 </div>
 
-<h2 class="sw-section-title">Network Visualization</h2>
+<h2 class="sw-section-title">Visualization</h2>
 
 <div class="sw-grid">
 
@@ -204,6 +204,23 @@ These are scientific software tools where I had the leading development role or 
       <div class="sw-meta">
         <span class="sw-badge sw-lang">R</span>
         <span class="sw-badge sw-cran">CRAN</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sw-card">
+    <div class="sw-icon" style="padding: 0; overflow: hidden;">
+      <img src="/assets/img/snakeplot/timeline.png" alt="snakeplot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+    </div>
+    <div class="sw-body">
+      <h3><a href="/snakeplot/">snakeplot &mdash; Serpentine Visualizations for Sequential Data</a></h3>
+      <p>
+        An R package for displaying sequential data &mdash; surveys, timelines, activity logs, and state sequences &mdash; as compact serpentine layouts using base R graphics with zero dependencies. Long sequences that would stretch beyond screen width are folded into stacked bands connected by U-turn arcs, much like reading lines of text. Eight plotting functions cover categorical sequences, career timelines, survey distributions with inter-item correlations, daily EMA data, activity ribbons, and continuous intensity signals. Ships with 10 color palettes and 3 bundled EMA datasets.
+      </p>
+      <div class="sw-meta">
+        <span class="sw-badge sw-lang">R</span>
+        <span class="sw-badge sw-plat">GitHub</span>
+        &middot; M. Saqr
       </div>
     </div>
   </div>

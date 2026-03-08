@@ -219,7 +219,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/get-in-touch/";
           },
-        },{id: "post-rohy-ai-powered-high-fidelity-virtual-patient-dynamic-simulator",
+        },{id: "post-human-ai-interaction-a-transition-network-analysis-with-cograph",
+      
+        title: "Human–AI Interaction: A Transition Network Analysis with cograph",
+      
+      description: "Sequential analysis of 13,002 turns across 429 sessions of human–AI coding collaboration, using TNA and cograph to map the transition structure of the dialogue.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/human-ai-interaction-cograph/";
+        
+      },
+    },{id: "post-rohy-ai-powered-high-fidelity-virtual-patient-dynamic-simulator",
       
         title: "Rohy: AI-Powered High-Fidelity Virtual Patient Dynamic Simulator",
       

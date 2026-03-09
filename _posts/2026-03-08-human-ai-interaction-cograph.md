@@ -10,13 +10,11 @@ thumbnail: assets/img/human-ai-tna/unnamed-chunk-1-1.png
 
 Most evaluations of AI coding assistants — Copilot, Cursor, Claude Code — measure productivity: lines generated, bugs caught, time saved. The temporal patterns of the conversation with AI itself rarely get analyzed: the repair cycles, the steering moves, the moments where the developer corrects, interrupts, or argues. This post does that.
 I am here analyzing my own data that I complied over the last few weeks using my own interaction with Claude Code. It is my first work with a command line coding agnet and I thought, I would learning from the experience. More importantly, I will show case, cograph, which was developed and released over the past year. I applied the anakysis to 13,002 interleaved turns of interactions with an AI coding assistant — 6,175 from me, 6,827 from the AI — across 429 sessions, and 60 days. During these days, I experimented with coding applications, visualization tools and web platforms. Both sides of every conversation are coded, giving a complete sequential record of the exchange.
-I will be using, TNA, which is a method I developed with colleagues for modelling temporal patterns in process data (Saqr et al., 2025a; Saqr et al., 2025b). The analysis uses two R packages: [`tna`](https://cran.r-project.org/package=tna) ([sonsoles.me/tna](https://sonsoles.me/tna/)), and [`cograph`](https://cran.r-project.org/package=cograph) for network visualization. 
-
-including the Multi-Cluster Multi-Level (MCML) network plots shown below — which cluster fine-grained codes into higher-order groups and display transitions at both levels simultaneously.
+I will be using, TNA, which is a method I developed with colleagues for modelling temporal patterns in process data (Saqr et al., 2025a; Saqr et al., 2025b). The analysis uses two R packages: [`tna`](https://cran.r-project.org/package=tna) ([sonsoles.me/tna](https://sonsoles.me/tna/)), and [`cograph`](https://cran.r-project.org/package=cograph) for network visualization. cograph is a very powerful network visualizaiton and analysis package that supports complex networks with simple interfact and complete comptabiliity with tna and our other analytics stack. I will be demonstrating the Multi-Cluster Multi-Level (MCML) network plots shown below — which cluster fine-grained codes into higher-order groups and display transitions at both levels simultaneously, giving multi-layer view of both perespectives (the fine grained and its summary). I will also show heterogenous transition network analysis which shows two different actors working together (me and AI). The data was collected and coded by AI, so it maybe not very accurate especially the coding.
 
 ## The taxonomy
 
-I built a three-level hierarchical coding scheme. Human messages were coded automatically by an LLM reading the full conversation text. AI responses were coded heuristically from the JSONL transcript structure — tool-use blocks identify action types; text patterns identify communicative function. Multi-coding was permitted. After expansion: **19,347 coded events**.
+With the help of AI, I built a three-level hierarchical coding scheme. My messages were coded automatically by an LLM reading the full conversation text. AI responses were coded heuristically from the the transcript structure — AI tool-use blocks identify action types(debugging planning, coding, correcting); text patterns identify communicative function. Multi-coding was permitted. After expansion we had **19,347 coded events**.
 
 **Human** — 15 fine codes, 9 categories, 3 super-categories:
 
@@ -34,7 +32,8 @@ I built a three-level hierarchical coding scheme. Human messages were coded auto
 | Repair (23%) | Plan, Repair | Plan, Scaffold, Suggest, Apologize, Hedge, Warn, Refuse, Escape |
 | Communication (9%) | Explain, Report, Ask | Explain, Report, Acknowledge, Ask |
 
-Less than half of what I did was directive. Thirty percent was evaluation: refining, correcting, verifying, arguing, expressing frustration. Twenty-one percent was metacognitive: asking questions, thinking out loud, interrupting. More time went to assessing and steering than ordering.
+Less than half of what I did was directive. This is impressive to me, given that these agents are so sure and are notoriosuly capable. Thirty percent was evaluation: refining, correcting, verifying, arguing, expressing frustration. Twenty-one percent was metacognitive: asking questions, thinking out loud, interrupting. This is the part I loved myself. There were these moments that AI 
+More time went to assessing and steering than ordering.
 
 On the AI side, nearly a quarter of its behaviour is repair — planning, suggesting, apologizing, hedging, warning. It plans extensively (18.7%) and investigates heavily (26.5%). Ask and Report barely register.
 

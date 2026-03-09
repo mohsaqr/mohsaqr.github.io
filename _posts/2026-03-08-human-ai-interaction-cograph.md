@@ -87,7 +87,7 @@ Directive turns account for less than half my side. The rest is evaluation, argu
 For a combined view, HTNA (Heterogenous Transition Network Analysis may offer a better view of how both sides interact).
 
 <figure style="text-align:center">
-  <img src="/assets/img/human-ai-tna/htna.png" alt="AI bootstrap TNA" style="max-width:70%; height:auto;">
+  <img src="/assets/img/htna.png" alt="AI bootstrap TNA" style="max-width:70%; height:auto;">
   <figcaption> Heterogenous tna demonstrating the interactions and transitions between me and AI visualized with <code>cograph::splot()</code>.</figcaption>
 </figure>
 

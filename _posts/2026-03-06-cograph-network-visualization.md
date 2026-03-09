@@ -8,7 +8,11 @@ categories: software
 thumbnail: assets/img/cograph/mcml.png
 ---
 
-[cograph](https://sonsoleslp.github.io/cograph/) is our latest methodological work that aims to offer a powerful toolset for network analysis. The package provides tools for the analysis, visualization, and manipulation of dynamical, social, and complex networks. It supports multiple network formats and offers flexible tools for heterogeneous, multi-layer, and hierarchical network analysis --- with simple syntax and an extensive toolset. Hand it a matrix, a tna object, an igraph graph, or a data frame, and get a publication-quality plot in one line. Override what you want; the defaults handle the rest. For a comprehensive overview of all functions and parameters, see the [full cograph reference](/cograph/) and the [plotting reference](/cograph/splot-reference.html).
+[cograph](https://sonsoleslp.github.io/cograph/) is my latest methodological work, offering a powerful toolset for network analysis. The package supports analysis, visualization, and manipulation of dynamical, social, and complex networks — designed to be simple, powerful, and modern. Filtering follows a clean, predictable syntax, and cograph accepts all major network formats out of the box: plot them using its beautiful graphics, compute network measures and communities, or convert between types.
+
+What makes cograph distinctive is its plotting engine, and especially `splot` — a function with an extensive list of arguments built around an easy-to-predict grammar. Beyond standard networks, cograph provides flexible support for heterogeneous, multi-layer, and hierarchical structures, all through the same simple syntax. It also works directly with raw formats, whether that's a matrix, a `tna` object, an `igraph` graph, or a data frame.
+
+For a comprehensive overview of all functions and parameters, see the [full cograph reference](/cograph/) and the [plotting reference](/cograph/splot-reference.html).
 
 <figure>
   <img src="/assets/img/cograph/tna-basic.png" alt="Basic TNA network plot with cograph" style="width:100%; border-radius:6px;">
@@ -17,7 +21,10 @@ thumbnail: assets/img/cograph/mcml.png
 
 ## 1. Universal Network Import
 
-No format conversion needed. Pass a matrix, edge list, igraph object, statnet network, qgraph object, or tna model to any cograph function and it just works. Directionality is auto-detected from matrix symmetry or the source object --- override with `directed = TRUE/FALSE` when needed. Conversion utilities like `to_igraph()`, `to_matrix()`, `to_network()`, `to_data_frame()`, and `as_tna()` let you move freely between all six formats. Import from any source, analyze in cograph, export back to whatever your downstream pipeline expects.
+Cograph works with your data as it is. Matrices, edge lists, `igraph` objects, `statnet` networks, `qgraph` objects, and `tna` models are all accepted natively — no preprocessing, no format negotiation, no boilerplate before the actual analysis begins. Directionality is inferred automatically from matrix symmetry or the source object, with a simple `directed = TRUE/FALSE` override for cases that require it.
+
+Switching between representations is just as frictionless. The conversion functions `to_igraph()`, `to_matrix()`, `to_network()`, `to_data_frame()`, and `as_tna()` cover all pairwise transformations across the six supported types, meaning cograph fits into any existing R pipeline without forcing you to reorganize around it. Bring your data in any format, analyze it in cograph, and send it back out in whatever form your downstream tools expect.
+
 
 ## 2. Fully Compatible with tna
 

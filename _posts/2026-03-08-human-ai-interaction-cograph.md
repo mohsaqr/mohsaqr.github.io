@@ -140,7 +140,7 @@ For a combined view, HTNA (Heterogenous Transition Network Analysis may offer a 
 
 ## Limitations and caveats
 
-The data was collected by AI from scattered json files across several projects and it is likely that some projects were duplicated  (backup copies) or missed. Some of the coding here was automatic labelling. For instance, tool call was all labeled execution, this may not be entirely accurate. I would also like to emphasize that this was mainly demonstrative rather than showing a rigorous piece of empirical work.
+The data was collected by AI from scattered json files across several projects and it is likely that some projects were duplicated  (backup copies), missed some and also may have missed the count in some ways. Some of the coding here was automatic labelling. For instance, tool call was all labeled execution, this may not be entirely accurate. I would also like to emphasize that this was mainly demonstrative rather than showing a rigorous piece of empirical work.
 
 ### References
 
@@ -152,7 +152,4 @@ Tikka, S., López-Pernas, S., & Saqr, M. (2025). tna: An R package for Transitio
 
 Saqr, M. (2025). *cograph: Complex Network Analysis and Visualization*. R package. <https://cran.r-project.org/package=cograph>
 
----
-### Statistics
-*13,002 turns · 429 sessions 
 *Analysis: [`tna`](https://cran.r-project.org/package=tna), [`cograph`](https://cran.r-project.org/package=cograph), `codyna` R packages*

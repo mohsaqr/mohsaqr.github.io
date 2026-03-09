@@ -84,7 +84,7 @@ The AI network is sparser. Execute ↔ Investigate ↔ Plan is the core triangle
 
 Directive turns account for less than half my side. The rest is evaluation, argument, correction, and metacognitive steering. The AI spends a quarter of its turns in repair — planning, hedging, apologizing, retrying. Verification triggered more work. Frustration triggered redirection. Interruption triggered new commands. Direction–evaluation–correction, repeated thousands of times across the corpus.
 
-For a combined view, HTNA (Heterogenous Transition Network Analysis may offer a better view of how both sides interact).
+For a combined view, HTNA (Heterogenous Transition Network Analysis may offer a better view of how both sides interact). AI nodes are sequares and mine are circles
 
 <figure style="text-align:center">
   <img src="/assets/img/htna.png" alt="AI bootstrap TNA" style="max-width:70%; height:auto;">

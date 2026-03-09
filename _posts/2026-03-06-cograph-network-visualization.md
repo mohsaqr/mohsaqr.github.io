@@ -28,7 +28,11 @@ Switching between representations is just as frictionless. The conversion functi
 
 ## 2. Fully Compatible with tna
 
-cograph is built to work seamlessly with the [tna package](https://sonsoles.me/tna/). Pass any tna object directly to `splot()` and get a publication-ready network plot --- no conversion, no extra arguments. The same applies to group models: `splot(group_model)` plots all groups in a grid, or use `splot(group_model, i = "Treatment")` to plot a single group. Bootstrap results from `tna::bootstrap()` render with solid edges for significant transitions and dashed edges for non-significant ones. Permutation test results from `tna::permutation_test()` are plotted with color-coded edges showing which group has stronger transitions. `plot_compare()` produces difference networks between groups. Every tna object type --- `tna`, `group_tna`, `tna_bootstrap`, `tna_permutation`, `group_tna_permutation` --- is recognized and plotted with appropriate defaults.
+Cograph is built to work seamlessly with the [tna package](https://sonsoles.me/tna/). Pass any `tna` object directly to `splot()` and get a publication-ready network plot — no conversion, no extra arguments. The same applies to group models: `splot(group_model)` lays out all groups in a grid, while `splot(group_model, i = "Treatment")` isolates a single group.
+
+The integration goes deeper than basic plotting. Bootstrap results from `tna::bootstrap()` render automatically with solid edges for significant transitions and dashed edges for non-significant ones. Permutation test results from `tna::permutation_test()` come out with color-coded edges that immediately show which group has stronger transitions. For direct group comparisons, `plot_compare()` produces difference networks without any manual setup.
+
+Every `tna` object type is recognized and plotted with appropriate defaults out of the box — `tna`, `group_tna`, `tna_bootstrap`, `tna_permutation`, and `group_tna_permutation`. Whatever stage of the `tna` workflow you are at, `splot()` knows what to do with it.
 
 ```r
 library(tna)

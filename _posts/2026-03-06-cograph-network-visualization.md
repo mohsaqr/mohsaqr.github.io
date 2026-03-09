@@ -45,13 +45,13 @@ splot(model)
 splot(bootstrap(model, iter = 1000))
 ```
 
-## 3. Pipe-Friendly Network Utilities
+ ## 3. Pipe-Friendly Network Utilities
 
-The entire workflow chains with R's native pipe. Getters like `get_nodes()`, `get_edges()`, `get_layout()`, and `get_groups()` extract network structure. Setters like `set_nodes()`, `set_groups()`, and the `sn_*` family --- `sn_nodes()`, `sn_edges()`, `sn_layout()`, `sn_theme()`, `sn_palette()` --- modify it. Every function returns the network object, so you build incrementally: set layout, style nodes, adjust edges, pick a palette, render. No intermediate variables, no juggling objects between packages.
+The entire workflow chains with R's native pipe. Getters like `get_nodes()`, `get_edges()`, `get_layout()`, and `get_groups()` extract network structure; setters like `set_nodes()`, `set_groups()`, and the `sn_*` family — `sn_nodes()`, `sn_edges()`, `sn_layout()`, `sn_theme()`, `sn_palette()` — modify it. Every function returns the network object, so you build incrementally: set layout, style nodes, adjust edges, pick a palette, render. No intermediate variables, no juggling objects between packages.
 
 ## 4. Filter and Select
 
-cograph makes subsetting networks as intuitive as subsetting a data frame:
+Subsetting a network in cograph is as intuitive as subsetting a data frame. Keep only edges above a weight threshold, isolate the top nodes by a centrality measure, or combine both in a single pipeline — the syntax is direct and reads like what you actually want to do.
 
 ```r
 # Filter: keep only edges with weight above 0.3
@@ -61,7 +61,7 @@ filter_edges(net, weight > 0.3)
 select_nodes(net, top = 5, by = "pagerank")
 ```
 
-Every function returns a cograph object, so filtering, selecting, and plotting chain together seamlessly. You think in terms of what you want to keep, and the syntax follows.
+Every function returns a cograph object, so filtering, selecting, and plotting chain together without ceremony. There is no intermediate representation to manage and no context-switching between tools — just a clean sequence from raw network to final figure.
 
 ## 5. Centrality and Network Properties
 
@@ -96,9 +96,9 @@ Ten node shapes are available out of the box: circle, square, triangle, diamond,
 
 ### Visualizing Statistical Data on Networks
 
-Network plots often live in one world and statistical results in another --- tables of coefficients, separate forest plots, lists of p-values. cograph brings them together. Confidence intervals render as semi-transparent bands along the edges. P-values map to significance stars directly on the edge labels. The edge label template system lets you compose estimates, CI bounds, and stars in any combination, so regression coefficients, bootstrap intervals, or effect sizes sit on the network itself rather than in a separate table.
+Communicating statistical properties of the network or its connections has always been hard. igraph, statnet, and qgraph are built for network computation, not for communicating statistical results through the network itself. Coefficients end up in a table, confidence intervals in a separate forest plot, p-values in a list — disconnected from the structure the analysis was about. cograph is designed around that problem. Confidence intervals render as semi-transparent bands along the edges; p-values map to significance stars directly on the edge labels. The edge label template system lets you compose estimates, CI bounds, and stars in any combination, so regression coefficients, bootstrap intervals, or effect sizes sit on the network itself rather than in a separate table.
 
-Bootstrap analysis results can be plotted directly: edges that survive resampling appear solid, those that do not appear dashed, with significance stars on the labels. Permutation tests between groups receive the same visual treatment --- color-coded by which group shows a stronger edge, with non-significant edges suppressed. The package also supports side-by-side group comparison plots, difference networks, and network overlay views, giving you multiple ways to present the same statistical story depending on the audience and the question.
+Bootstrap results plot directly from the output of `tna::bootstrap()`: edges that survive resampling appear solid, those that do not appear dashed, with significance stars on the labels. Permutation tests between groups receive the same treatment — edges color-coded by which group shows the stronger effect, non-significant edges suppressed. Side-by-side group plots, difference networks, and overlay views cover the rest, giving you multiple ways to present the same result depending on the question and the audience.
 
 <figure>
   <img src="/assets/img/cograph/ci-pvalues.png" alt="Confidence intervals and p-values on edges" style="width:100%; border-radius:6px;">

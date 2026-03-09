@@ -19,6 +19,14 @@ For a comprehensive overview of all functions and parameters, see the [full cogr
   <figcaption>One function call: <code>splot(model)</code>. Edge width encodes transition probability. Donut rings show initial state distribution. Every example in this post uses the <code>group_regulation</code> dataset from the <a href="https://sonsoles.me/tna/">tna package</a>.</figcaption>
 </figure>
 
+
+
+## 1. Do we need another R package for network analysis
+
+R has no shortage of network packages. igraph and statnet are computationally capable, but their function interfaces are inconsistent — argument names, conventions, and behaviors shift depending on what you are doing, and neither was designed with visualization in mind. Each also locks you into its own object format: moving between them means explicit conversion, and anything outside their ecosystem requires manual wrangling. qgraph was built for psychometric computations with tons of depedencies. tidygraph introduced a cleaner grammar, but it still requires non-intuitive synatx that is not very easy with mutate, activate and other conventions. Furthermore, there is no built-in statistical annotation. None of them were built with the full workflow in mind: computation, predictable syntax, beautiful output, statistical results on the figure, and the freedom to move between formats without friction. cograph is.
+
+
+
 ## 1. Universal Network Import
 
 Cograph works with your data as it is. Matrices, edge lists, `igraph` objects, `statnet` networks, `qgraph` objects, and `tna` models are all accepted natively — no preprocessing, no format negotiation, no boilerplate before the actual analysis begins. Directionality is inferred automatically from matrix symmetry or the source object, with a simple `directed = TRUE/FALSE` override for cases that require it.

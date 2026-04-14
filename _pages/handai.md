@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /handai/
+permalink: /handai-about/
 title: "Handai: AI Collaborator and Automation Software for Data Processing, Synthesis, and Qualitative Analysis"
 description: A free, open-source suite of ten integrated tools for qualitative coding, data transformation, systematic review screening, and AI-powered research workflows.
 nav: false
@@ -65,4 +65,4 @@ Open Handai in your browser. Add a provider in Settings, or connect a local one.
 
 Handai is developed by Mohammed Saqr, Professor of Computer Science at the University of Eastern Finland.
 
-[GitHub](https://github.com/mohsaqr/handai)
+[Try Handai](https://saqr.me/handai/) &nbsp;·&nbsp; [GitHub](https://github.com/mohsaqr/handai)

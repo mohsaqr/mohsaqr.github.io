@@ -124,7 +124,7 @@ AI-powered tools designed for education, clinical training, and research data sc
   <div class="sw-card">
     <div class="sw-icon" style="background: linear-gradient(135deg, #7B68AD, #CE93D8); font-size: 1.1rem;">H</div>
     <div class="sw-body">
-      <h3><a href="/handai/">Handai &mdash; AI-Powered Data Transformer</a></h3>
+      <h3><a href="/handai-about/">Handai &mdash; AI-Powered Data Transformer</a></h3>
       <p>
         A versatile tool for AI-driven data transformation, synthetic data generation, and qualitative analysis. Supports document processing (PDF, Word), multi-step AI pipelines, qualitative coding with inter-rater reliability via a Consensus Coder mode (multiple models + Cohen&rsquo;s Kappa), codebook generation, and model comparison. Works with OpenAI, Anthropic, Gemini, Groq, Ollama, LM Studio, and any OpenAI-compatible API. Available as both a Streamlit web app and a Flet desktop application.
       </p>
